@@ -1,1241 +1,2021 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>ZÊ DECOR | Decorações que transformam momentos</title>
 
-<meta name="description" content="ZÊ DECOR — Decorações de festas, Festa na Mesa, Decoração Pocket e grandes celebrações no Rio de Janeiro.">
+<meta
+name="description"
+content="ZÊ DECOR — Decorações de festas, Festa na Mesa, Decoração Pocket e grandes celebrações no Rio de Janeiro."
+>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link
+rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin
+>
+
+<link
+href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+rel="stylesheet"
+>
 
 <style>
 
+/* =====================================================
+   CORES
+===================================================== */
+
 :root {
-  --cream: #f6f1e8;
-  --cream-dark: #e9dfd0;
-  --brown: #33231c;
-  --brown-light: #5d473b;
-  --gold: #b18a50;
-  --white: #fffdf9;
-  --black: #171412;
+
+  --creme: #f6f0e6;
+  --creme-claro: #fbf8f2;
+  --bege: #e9ddcc;
+
+  --marrom: #34241c;
+  --marrom-claro: #654f41;
+
+  --dourado: #b28a4f;
+
+  --branco: #ffffff;
+
+  --preto: #171310;
+
 }
 
+
+/* =====================================================
+   RESET
+===================================================== */
+
 * {
+
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 html {
+
   scroll-behavior: smooth;
+
 }
 
 body {
-  background: var(--cream);
-  color: var(--brown);
-  font-family: "DM Sans", sans-serif;
-  overflow-x: hidden;
-}
 
-a {
-  color: inherit;
-  text-decoration: none;
+  background: var(--creme);
+
+  color: var(--marrom);
+
+  font-family: "DM Sans", sans-serif;
+
+  overflow-x: hidden;
+
 }
 
 img {
+
   max-width: 100%;
   display: block;
+
 }
 
-/* =========================
+a {
+
+  color: inherit;
+  text-decoration: none;
+
+}
+
+
+/* =====================================================
    HEADER
-========================= */
+===================================================== */
 
 header {
+
   position: fixed;
+
   top: 0;
   left: 0;
+
   width: 100%;
+
   z-index: 1000;
+
   padding: 18px 5%;
-  transition: 0.3s;
+
+  transition: .35s ease;
+
 }
 
 header.scrolled {
-  background: rgba(246,241,232,0.94);
+
+  background: rgba(246,240,230,.94);
+
   backdrop-filter: blur(14px);
-  box-shadow: 0 5px 25px rgba(40,25,15,0.06);
+
+  box-shadow:
+  0 8px 30px rgba(50,35,25,.08);
+
 }
 
 .navbar {
+
   max-width: 1400px;
+
   margin: auto;
+
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
+
 }
 
 .logo {
+
   width: 105px;
+
 }
 
 .nav-links {
+
   display: flex;
+
   align-items: center;
+
   gap: 35px;
-  font-size: 12px;
+
+  font-size: 11px;
+
   font-weight: 700;
+
   letter-spacing: 1.5px;
+
 }
 
 .nav-links a {
-  transition: 0.3s;
+
+  transition: .25s ease;
+
 }
 
 .nav-links a:hover {
-  color: var(--gold);
+
+  color: var(--dourado);
+
 }
 
 .whatsapp-btn {
-  background: var(--brown);
+
+  background: var(--marrom);
+
   color: white;
-  padding: 13px 21px;
-  border-radius: 40px;
-  font-size: 11px;
+
+  padding: 13px 22px;
+
+  border-radius: 50px;
+
+  font-size: 10px;
+
   font-weight: 700;
+
   letter-spacing: 1px;
-  transition: 0.3s;
+
+  transition: .3s ease;
+
 }
 
 .whatsapp-btn:hover {
-  background: var(--gold);
+
+  background: var(--dourado);
+
   transform: translateY(-2px);
+
 }
 
 .menu-btn {
+
   display: none;
+
   border: none;
+
   background: none;
+
+  color: var(--marrom);
+
   font-size: 28px;
+
   cursor: pointer;
-  color: var(--brown);
+
 }
 
-/* =========================
+
+/* =====================================================
    HERO
-========================= */
+===================================================== */
 
 .hero {
+
   min-height: 100vh;
+
   position: relative;
+
   display: flex;
+
   align-items: flex-end;
+
   overflow: hidden;
+
   background:
+
     linear-gradient(
       180deg,
-      rgba(25,15,10,0.08),
-      rgba(25,15,10,0.75)
+      rgba(20,12,8,.05),
+      rgba(20,12,8,.78)
     ),
-    url("padrao-03.webp") center/cover no-repeat;
+
+    url("padrao-03.webp")
+    center center / cover
+    no-repeat;
+
 }
 
 .hero-content {
+
   width: 100%;
+
   max-width: 1400px;
+
   margin: auto;
-  padding: 150px 5% 75px;
+
+  padding: 160px 5% 80px;
+
   color: white;
+
 }
 
 .hero-small {
-  font-size: 12px;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
   letter-spacing: 4px;
-  font-weight: 600;
+
   margin-bottom: 25px;
+
 }
 
 .hero h1 {
-  font-family: "Playfair Display", serif;
-  font-size: clamp(55px, 10vw, 145px);
-  line-height: 0.9;
+
+  font-family:
+  "Playfair Display",
+  Georgia,
+  serif;
+
+  font-size:
+  clamp(55px, 9vw, 130px);
+
   font-weight: 500;
-  letter-spacing: -5px;
-  max-width: 900px;
+
+  line-height: .92;
+
+  letter-spacing: -4px;
+
+  max-width: 1000px;
+
 }
 
 .hero-subtitle {
-  margin-top: 30px;
-  font-size: 20px;
-  max-width: 520px;
-  line-height: 1.5;
+
+  margin-top: 28px;
+
+  font-size: 18px;
+
+  letter-spacing: 3px;
+
 }
 
-.hero-actions {
+.hero-buttons {
+
   margin-top: 35px;
+
   display: flex;
-  gap: 15px;
+
   flex-wrap: wrap;
+
+  gap: 12px;
+
 }
 
 .hero-button {
-  padding: 16px 27px;
-  border-radius: 40px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 16px 26px;
+
+  border-radius: 50px;
+
   background: white;
-  color: var(--brown);
+
+  color: var(--marrom);
+
+  font-size: 11px;
+
   font-weight: 700;
-  font-size: 12px;
+
   letter-spacing: 1px;
+
+  transition: .3s ease;
+
+}
+
+.hero-button:hover {
+
+  transform: translateY(-3px);
+
 }
 
 .hero-button.outline {
+
   background: transparent;
+
   color: white;
-  border: 1px solid rgba(255,255,255,0.7);
+
+  border: 1px solid rgba(255,255,255,.7);
+
 }
 
-/* =========================
-   GENERAL
-========================= */
+
+/* =====================================================
+   SEÇÕES
+===================================================== */
 
 .section {
+
   max-width: 1400px;
+
   margin: auto;
-  padding: 130px 5%;
+
+  padding: 125px 5%;
+
 }
 
 .section-number {
-  font-size: 11px;
-  letter-spacing: 3px;
+
+  color: var(--dourado);
+
+  font-size: 10px;
+
   font-weight: 700;
-  color: var(--gold);
+
+  letter-spacing: 3px;
+
   margin-bottom: 25px;
+
 }
 
 .section-title {
-  font-family: "Playfair Display", serif;
-  font-size: clamp(42px, 6vw, 82px);
-  line-height: 1;
+
+  font-family:
+  "Playfair Display",
+  Georgia,
+  serif;
+
+  font-size:
+  clamp(42px, 6vw, 82px);
+
   font-weight: 500;
+
+  line-height: .98;
+
   letter-spacing: -2px;
+
 }
 
-.editorial {
+
+/* =====================================================
+   ESSÊNCIA
+===================================================== */
+
+.intro {
+
   display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-  gap: 80px;
+
+  grid-template-columns:
+  .9fr 1.1fr;
+
+  gap: 90px;
+
   align-items: center;
+
 }
 
-.editorial-text {
+.intro-text {
+
+  max-width: 520px;
+
   font-size: 18px;
+
   line-height: 1.8;
-  color: var(--brown-light);
-  max-width: 480px;
+
+  color: var(--marrom-claro);
+
 }
 
-.editorial-image img {
-  width: 100%;
-  height: 650px;
-  object-fit: cover;
-}
 
-/* =========================
+/* =====================================================
    COLEÇÕES
-========================= */
+===================================================== */
 
 .collections {
-  margin-top: 65px;
+
+  margin-top: 60px;
+
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
+
+  grid-template-columns:
+  repeat(2, 1fr);
+
+  gap: 24px;
+
 }
 
 .collection {
+
   position: relative;
+
   height: 650px;
+
   overflow: hidden;
+
+  background: var(--bege);
+
   cursor: pointer;
-  background: #ddd;
+
 }
 
 .collection img {
+
   width: 100%;
+
   height: 100%;
-  object-fit: cover;
-  transition: transform 0.8s ease;
+
+  object-fit: contain;
+
+  background: var(--bege);
+
+  transition:
+  transform .7s ease;
+
 }
 
 .collection:hover img {
-  transform: scale(1.05);
+
+  transform: scale(1.025);
+
 }
 
 .collection-overlay {
+
   position: absolute;
+
   inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(20,12,8,0.75),
-    rgba(20,12,8,0.05) 65%
-  );
+
+  background:
+
+    linear-gradient(
+      to top,
+      rgba(25,15,10,.72),
+      rgba(25,15,10,0)
+      65%
+    );
+
 }
 
 .collection-info {
+
   position: absolute;
-  bottom: 40px;
-  left: 40px;
-  right: 40px;
+
+  left: 38px;
+
+  right: 38px;
+
+  bottom: 38px;
+
   color: white;
+
 }
 
 .collection-number {
-  font-size: 11px;
+
+  font-size: 10px;
+
   letter-spacing: 3px;
+
   margin-bottom: 12px;
+
 }
 
 .collection-info h3 {
-  font-family: "Playfair Display", serif;
-  font-size: clamp(32px, 4vw, 58px);
+
+  font-family:
+  "Playfair Display",
+  Georgia,
+  serif;
+
+  font-size:
+  clamp(32px, 4vw, 58px);
+
   font-weight: 500;
-  line-height: 1;
+
+  line-height: .98;
+
 }
 
 .collection-info p {
+
   margin-top: 15px;
-  font-size: 14px;
+
+  font-size: 13px;
+
 }
 
-/* =========================
-   GALERIA
-========================= */
+
+/* =====================================================
+   GALERIAS DAS COLEÇÕES
+===================================================== */
 
 .gallery-section {
-  background: var(--white);
+
+  background: var(--creme-claro);
+
 }
 
 .gallery {
-  margin-top: 65px;
+
+  margin-top: 60px;
+
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 14px;
+
+  grid-template-columns:
+  repeat(2, 1fr);
+
+  gap: 18px;
+
 }
 
 .gallery-item {
+
+  background: var(--bege);
+
   overflow: hidden;
+
   cursor: pointer;
+
 }
 
 .gallery-item img {
+
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: 0.7s ease;
+
+  height: auto;
+
+  object-fit: contain;
+
+  background: var(--bege);
+
+  transition:
+  transform .6s ease;
+
 }
 
 .gallery-item:hover img {
-  transform: scale(1.04);
+
+  transform: scale(1.02);
+
 }
 
-.gallery-item:nth-child(1) {
-  grid-column: span 7;
-  height: 550px;
-}
 
-.gallery-item:nth-child(2) {
-  grid-column: span 5;
-  height: 550px;
-}
-
-.gallery-item:nth-child(3) {
-  grid-column: span 4;
-  height: 450px;
-}
-
-.gallery-item:nth-child(4) {
-  grid-column: span 8;
-  height: 450px;
-}
-
-.gallery-item:nth-child(5) {
-  grid-column: span 6;
-  height: 500px;
-}
-
-.gallery-item:nth-child(6) {
-  grid-column: span 6;
-  height: 500px;
-}
-
-/* =========================
+/* =====================================================
    AVALIAÇÕES
-========================= */
+===================================================== */
 
 .reviews {
-  text-align: center;
-  max-width: 800px;
+
+  max-width: 850px;
+
   margin: auto;
+
+  text-align: center;
+
+}
+
+.reviews .section-title {
+
+  font-size:
+  clamp(38px, 5vw, 65px);
+
 }
 
 .stars {
-  margin: 30px 0 15px;
+
+  margin-top: 35px;
+
+  color: var(--dourado);
+
   font-size: 28px;
-  color: var(--gold);
-  letter-spacing: 6px;
+
+  letter-spacing: 5px;
+
 }
 
 .rating {
-  font-family: "Playfair Display", serif;
-  font-size: 60px;
+
+  margin-top: 10px;
+
+  font-family:
+  "Playfair Display",
+  Georgia,
+  serif;
+
+  font-size: 65px;
+
 }
 
-.review-text {
-  margin-top: 20px;
-  font-size: 18px;
-  line-height: 1.7;
-  color: var(--brown-light);
+.rating-text {
+
+  color: var(--marrom-claro);
+
+  font-size: 17px;
+
 }
 
-/* =========================
-   REGIÕES
-========================= */
+.review-button {
 
-.locations {
-  background: var(--brown);
+  display: inline-block;
+
+  margin-top: 35px;
+
+  padding: 16px 27px;
+
+  border-radius: 50px;
+
+  background: var(--marrom);
+
   color: white;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  transition: .3s ease;
+
 }
 
-.locations-grid {
-  margin-top: 60px;
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  border-top: 1px solid rgba(255,255,255,0.2);
+.review-button:hover {
+
+  background: var(--dourado);
+
 }
 
-.location {
-  padding: 35px 15px;
-  border-right: 1px solid rgba(255,255,255,0.2);
-  font-family: "Playfair Display", serif;
-  font-size: 27px;
-}
 
-.location:last-child {
-  border-right: none;
-}
-
-/* =========================
+/* =====================================================
    CONTATO
-========================= */
+===================================================== */
 
 .contact {
+
   text-align: center;
+
 }
 
-.contact-title {
-  max-width: 850px;
+.contact-inner {
+
+  max-width: 900px;
+
   margin: auto;
+
+}
+
+.contact-text {
+
+  margin-top: 30px;
+
+  color: var(--marrom-claro);
+
+  font-size: 18px;
+
+  line-height: 1.7;
+
 }
 
 .contact-button {
+
   display: inline-block;
-  margin-top: 45px;
-  padding: 18px 35px;
-  border-radius: 50px;
-  background: var(--brown);
+
+  margin-top: 38px;
+
+  padding: 18px 32px;
+
+  background: var(--marrom);
+
   color: white;
+
+  border-radius: 50px;
+
+  font-size: 11px;
+
   font-weight: 700;
-  font-size: 12px;
+
   letter-spacing: 1.5px;
-  transition: 0.3s;
+
+  transition: .3s ease;
+
 }
 
 .contact-button:hover {
-  background: var(--gold);
+
+  background: var(--dourado);
+
   transform: translateY(-3px);
+
 }
 
 .contact-info {
-  margin-top: 40px;
-  color: var(--brown-light);
+
+  margin-top: 35px;
+
+  color: var(--marrom-claro);
+
+  font-size: 14px;
+
   line-height: 2;
+
 }
 
-/* =========================
+
+/* =====================================================
    FOOTER
-========================= */
+===================================================== */
 
 footer {
-  padding: 50px 5%;
+
   background: #211712;
+
   color: white;
+
+  padding: 55px 5%;
+
 }
 
-.footer-inner {
+.footer {
+
   max-width: 1400px;
+
   margin: auto;
+
   display: flex;
+
   justify-content: space-between;
+
   align-items: flex-end;
+
   gap: 30px;
+
 }
 
 .footer-logo {
-  font-family: "Playfair Display", serif;
+
+  font-family:
+  "Playfair Display",
+  Georgia,
+  serif;
+
   font-size: 42px;
+
 }
 
-.footer-small {
+.footer-tagline {
+
   margin-top: 10px;
-  font-size: 11px;
+
+  font-size: 10px;
+
   letter-spacing: 2px;
-  opacity: 0.7;
+
+  opacity: .7;
+
 }
 
 .footer-right {
+
   text-align: right;
+
   font-size: 13px;
+
   line-height: 1.8;
+
 }
 
-/* =========================
+
+/* =====================================================
    MODAL
-========================= */
+===================================================== */
 
 .modal {
+
   position: fixed;
+
   inset: 0;
-  background: rgba(10,7,5,0.95);
+
   z-index: 5000;
+
+  background:
+  rgba(15,9,6,.96);
+
   display: none;
+
   align-items: center;
+
   justify-content: center;
-  padding: 30px;
+
+  padding: 25px;
+
 }
 
 .modal.active {
+
   display: flex;
+
 }
 
 .modal img {
-  max-width: 95%;
-  max-height: 90vh;
+
+  max-width: 96%;
+
+  max-height: 92vh;
+
+  width: auto;
+
+  height: auto;
+
   object-fit: contain;
+
 }
 
 .close {
+
   position: absolute;
-  top: 25px;
-  right: 35px;
+
+  top: 20px;
+
+  right: 30px;
+
   color: white;
+
   font-size: 42px;
+
   cursor: pointer;
+
 }
 
-/* =========================
-   ANIMAÇÃO
-========================= */
+
+/* =====================================================
+   ANIMAÇÕES
+===================================================== */
 
 .reveal {
+
   opacity: 0;
-  transform: translateY(35px);
-  transition: 1s ease;
+
+  transform:
+  translateY(30px);
+
+  transition:
+  opacity .9s ease,
+  transform .9s ease;
+
 }
 
 .reveal.visible {
+
   opacity: 1;
-  transform: translateY(0);
+
+  transform:
+  translateY(0);
+
 }
 
-/* =========================
-   MOBILE
-========================= */
 
-@media (max-width: 800px) {
+/* =====================================================
+   TABLET
+===================================================== */
 
-  header {
-    padding: 15px 5%;
-  }
+@media(max-width: 900px) {
 
-  .logo {
-    width: 85px;
-  }
+  .intro {
 
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 75px;
-    left: 5%;
-    right: 5%;
-    background: var(--cream);
-    padding: 25px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 22px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .menu-btn {
-    display: block;
-  }
-
-  .navbar .whatsapp-btn {
-    display: none;
-  }
-
-  .hero {
-    min-height: 90vh;
-  }
-
-  .hero-content {
-    padding: 120px 7% 55px;
-  }
-
-  .hero h1 {
-    font-size: 65px;
-    letter-spacing: -3px;
-  }
-
-  .hero-subtitle {
-    font-size: 17px;
-  }
-
-  .section {
-    padding: 85px 6%;
-  }
-
-  .editorial {
     grid-template-columns: 1fr;
-    gap: 45px;
-  }
 
-  .editorial-image img {
-    height: 500px;
+    gap: 35px;
+
   }
 
   .collections {
+
     grid-template-columns: 1fr;
+
   }
 
   .collection {
-    height: 500px;
-  }
 
-  .gallery {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
+    height: 550px;
 
-  .gallery-item:nth-child(n) {
-    grid-column: span 1;
-    height: 300px;
-  }
-
-  .gallery-item:nth-child(1),
-  .gallery-item:nth-child(4) {
-    grid-column: span 2;
-  }
-
-  .locations-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .location {
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-    font-size: 21px;
-  }
-
-  .footer-inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .footer-right {
-    text-align: left;
   }
 
 }
 
-@media (max-width: 480px) {
 
-  .hero h1 {
-    font-size: 54px;
+/* =====================================================
+   CELULAR
+===================================================== */
+
+@media(max-width: 700px) {
+
+  header {
+
+    padding:
+    15px 6%;
+
   }
 
-  .hero-actions {
+  .logo {
+
+    width: 85px;
+
+  }
+
+  .nav-links {
+
+    display: none;
+
+    position: absolute;
+
+    top: 70px;
+
+    left: 5%;
+
+    right: 5%;
+
+    padding: 25px;
+
+    background: var(--creme);
+
     flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 22px;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.12);
+
+  }
+
+  .nav-links.active {
+
+    display: flex;
+
+  }
+
+  .navbar > .whatsapp-btn {
+
+    display: none;
+
+  }
+
+  .menu-btn {
+
+    display: block;
+
+  }
+
+  .hero {
+
+    min-height: 90vh;
+
+  }
+
+  .hero-content {
+
+    padding:
+    130px 7% 55px;
+
+  }
+
+  .hero h1 {
+
+    font-size: 56px;
+
+    letter-spacing: -2.5px;
+
+  }
+
+  .hero-subtitle {
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+  }
+
+  .hero-buttons {
+
+    flex-direction: column;
+
   }
 
   .hero-button {
+
     text-align: center;
+
+    width: 100%;
+
+  }
+
+  .section {
+
+    padding:
+    85px 6%;
+
+  }
+
+  .section-title {
+
+    font-size: 48px;
+
+  }
+
+  .collection {
+
+    height: auto;
+
+    min-height: 430px;
+
+  }
+
+  .collection img {
+
+    height: auto;
+
+    min-height: 430px;
+
   }
 
   .gallery {
+
     grid-template-columns: 1fr;
+
   }
 
-  .gallery-item:nth-child(n) {
-    grid-column: span 1;
-    height: 400px;
+  .gallery-item img {
+
+    width: 100%;
+
+    height: auto;
+
   }
 
-  .locations-grid {
-    grid-template-columns: 1fr;
+  .footer {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+  }
+
+  .footer-right {
+
+    text-align: left;
+
+  }
+
+}
+
+
+/* =====================================================
+   CELULAR PEQUENO
+===================================================== */
+
+@media(max-width:430px) {
+
+  .hero h1 {
+
+    font-size: 49px;
+
+  }
+
+  .section-title {
+
+    font-size: 42px;
+
+  }
+
+  .collection-info {
+
+    left: 25px;
+
+    right: 25px;
+
+    bottom: 25px;
+
+  }
+
+  .collection-info h3 {
+
+    font-size: 38px;
+
+  }
+
+  .gallery-item img {
+
+    width: 100%;
+
+    height: auto;
+
   }
 
 }
 
 </style>
+
 </head>
+
 
 <body>
 
-<!-- HEADER -->
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <header id="header">
 
   <div class="navbar">
 
+
     <a href="#inicio">
-      <img src="logo-ze-decor.png" class="logo" alt="Zê Decor">
+
+      <img
+      src="logo-ze-decor.png"
+      class="logo"
+      alt="Zê Decor"
+      >
+
     </a>
 
-    <nav class="nav-links" id="navLinks">
-      <a href="#colecoes">COLEÇÕES</a>
-      <a href="#avaliacoes">AVALIAÇÕES</a>
-      <a href="#galeria">GALERIA</a>
-      <a href="#contato">CONTATO</a>
+
+    <nav
+    class="nav-links"
+    id="navLinks"
+    >
+
+      <a href="#colecoes">
+        COLEÇÕES
+      </a>
+
+      <a href="#avaliacoes">
+        AVALIAÇÕES
+      </a>
+
+      <a href="#contato">
+        CONTATO
+      </a>
+
     </nav>
 
+
     <a
-      class="whatsapp-btn"
-      href="https://wa.me/5521999999999"
-      target="_blank">
+    href="https://wa.me/5521999999999"
+    target="_blank"
+    class="whatsapp-btn"
+    >
+
       RESERVE PELO WHATSAPP
+
     </a>
 
-    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    <button
+    class="menu-btn"
+    onclick="toggleMenu()"
+    >
+
+      ☰
+
+    </button>
+
 
   </div>
 
 </header>
 
 
-<!-- HERO -->
+<!-- =====================================================
+     HERO
+===================================================== -->
 
-<section class="hero" id="inicio">
+<section
+class="hero"
+id="inicio"
+>
 
-  <div class="hero-content reveal">
+  <div
+  class="hero-content reveal"
+  >
 
     <div class="hero-small">
+
       ZÊ DECOR
+
     </div>
+
 
     <h1>
-      Decorações que transformam momentos.
+
+      Decorações que
+      transformam momentos.
+
     </h1>
 
+
     <p class="hero-subtitle">
-      Festa • Pocket • Celebration
+
+      FESTA • POCKET • CELEBRATION
+
     </p>
 
-    <div class="hero-actions">
 
-      <a href="#colecoes" class="hero-button">
+    <div class="hero-buttons">
+
+
+      <a
+      href="#colecoes"
+      class="hero-button"
+      >
+
         CONHEÇA NOSSAS COLEÇÕES
+
       </a>
 
-      <a href="#contato" class="hero-button outline">
+
+      <a
+      href="#contato"
+      class="hero-button outline"
+      >
+
         FALAR COM A ZÊ DECOR
+
       </a>
+
 
     </div>
+
 
   </div>
 
 </section>
 
 
-<!-- INTRO -->
+<!-- =====================================================
+     ESSÊNCIA
+===================================================== -->
 
 <section class="section">
 
-  <div class="editorial reveal">
+
+  <div class="intro reveal">
+
 
     <div>
 
       <div class="section-number">
+
         01 — A NOSSA ESSÊNCIA
+
       </div>
 
+
       <h2 class="section-title">
-        Celebrar é transformar.
+
+        Celebrar é
+        transformar.
+
       </h2>
 
     </div>
 
+
     <div>
 
-      <p class="editorial-text">
-        Criamos decorações que transformam momentos especiais
+      <p class="intro-text">
+
+        Criamos
+        <strong>
+        decorações que transformam momentos especiais
         em memórias que permanecem.
+        </strong>
+
         Cada composição é pensada para unir estética,
         cuidado e personalidade.
+
       </p>
 
     </div>
 
+
   </div>
+
 
 </section>
 
 
-<!-- COLEÇÕES -->
+<!-- =====================================================
+     COLEÇÕES
+===================================================== -->
 
-<section class="section" id="colecoes">
+<section
+class="section"
+id="colecoes"
+>
+
 
   <div class="reveal">
 
+
     <div class="section-number">
+
       02 — NOSSAS COLEÇÕES
+
     </div>
 
+
     <h2 class="section-title">
-      Escolha o cenário<br>
+
+      Escolha o cenário
       para o seu momento.
+
     </h2>
+
 
   </div>
 
 
   <div class="collections">
 
+
     <!-- POCKET -->
 
-    <a href="#pocket" class="collection reveal">
+    <a
+    href="#pocket"
+    class="collection reveal"
+    >
 
-      <img src="pocket-01.webp" alt="">
+      <img
+      src="pocket-01.webp"
+      alt=""
+      >
 
       <div class="collection-overlay"></div>
 
+
       <div class="collection-info">
 
+
         <div class="collection-number">
+
           01
+
         </div>
 
+
         <h3>
-          Festa na Mesa<br>
+
+          Festa na Mesa
+          <br>
           <em>POCKET</em>
+
         </h3>
 
+
         <p>
-          Pequenos formatos, grandes momentos.
+
+          Pequenos formatos,
+          grandes momentos.
+
         </p>
 
+
       </div>
+
 
     </a>
 
 
-    <!-- PADRÃO -->
+    <!-- DECORAÇÕES MAIORES -->
 
-    <a href="#padrao" class="collection reveal">
+    <a
+    href="#padrao"
+    class="collection reveal"
+    >
 
-      <img src="padrao-01.webp" alt="">
+      <img
+      src="padrao-01.webp"
+      alt=""
+      >
 
       <div class="collection-overlay"></div>
 
+
       <div class="collection-info">
 
+
         <div class="collection-number">
+
           02
+
         </div>
 
+
         <h3>
-          Decoração<br>
+
+          Decorações
+          <br>
           Maiores
+
         </h3>
 
+
         <p>
-          Composições completas para celebrar.
+
+          Composições completas
+          para celebrar.
+
         </p>
+
 
       </div>
 
+
     </a>
 
+
   </div>
+
 
 </section>
 
 
-<!-- POCKET -->
+<!-- =====================================================
+     FESTA NA MESA — POCKET
+===================================================== -->
 
-<section class="section gallery-section" id="pocket">
+<section
+class="section gallery-section"
+id="pocket"
+>
+
 
   <div class="reveal">
 
+
     <div class="section-number">
+
       FESTA NA MESA — POCKET
+
     </div>
 
+
     <h2 class="section-title">
-      Detalhes que<br>
+
+      Detalhes que
       fazem celebrar.
+
     </h2>
+
 
   </div>
 
 
   <div class="gallery">
 
-    <div class="gallery-item reveal"
-         onclick="openModal('pocket-01.webp')">
-      <img src="pocket-01.webp" alt="">
+
+    <div
+    class="gallery-item reveal"
+    onclick="openModal('pocket-01.webp')"
+    >
+
+      <img
+      src="pocket-01.webp"
+      alt=""
+      >
+
     </div>
 
-    <div class="gallery-item reveal"
-         onclick="openModal('pocket-02.webp')">
-      <img src="pocket-02.webp" alt="">
+
+    <div
+    class="gallery-item reveal"
+    onclick="openModal('pocket-02.webp')"
+    >
+
+      <img
+      src="pocket-02.webp"
+      alt=""
+      >
+
     </div>
 
-    <div class="gallery-item reveal"
-         onclick="openModal('pocket-03.webp')">
-      <img src="pocket-03.webp" alt="">
+
+    <div
+    class="gallery-item reveal"
+    onclick="openModal('pocket-03.webp')"
+    >
+
+      <img
+      src="pocket-03.webp"
+      alt=""
+      >
+
     </div>
 
-    <div class="gallery-item reveal"
-         onclick="openModal('pocket-04.webp')">
-      <img src="pocket-04.webp" alt="">
+
+    <div
+    class="gallery-item reveal"
+    onclick="openModal('pocket-04.webp')"
+    >
+
+      <img
+      src="pocket-04.webp"
+      alt=""
+      >
+
     </div>
 
-    <div class="gallery-item reveal"
-         onclick="openModal('pocket-05.webp')">
-      <img src="pocket-05.webp" alt="">
+
+    <div
+    class="gallery-item reveal"
+    onclick="openModal('pocket-05.webp')"
+    >
+
+      <img
+      src="pocket-05.webp"
+      alt=""
+      >
+
     </div>
 
-    <div class="gallery-item reveal"
-         onclick="openModal('pocket-06.webp')">
-      <img src="pocket-06.webp" alt="">
+
+    <div
+    class="gallery-item reveal"
+    onclick="openModal('pocket-06.webp')"
+    >
+
+      <img
+      src="pocket-06.webp"
+      alt=""
+      >
+
     </div>
+
 
   </div>
+
 
 </section>
 
 
-<!-- PADRÃO -->
+<!-- =====================================================
+     DECORAÇÕES MAIORES
+===================================================== -->
 
-<section class="section" id="padrao">
+<section
+class="section"
+id="padrao"
+>
+
 
   <div class="reveal">
 
+
     <div class="section-number">
-      DECORAÇÃO MAIORES
+
+      DECORAÇÕES MAIORES
+
     </div>
 
+
     <h2 class="section-title">
-      Para celebrar<br>
+
+      Para celebrar
       sem limites.
+
     </h2>
+
 
   </div>
 
 
   <div class="gallery">
 
-    <div class="gallery-item reveal"
-         onclick="openModal('padrao-01.webp')">
-      <img src="padrao-01.webp" alt="">
+
+    <div
+    class="gallery-item reveal"
+    onclick="openModal('padrao-01.webp')"
+    >
+
+      <img
+      src="padrao-01.webp"
+      alt=""
+      >
+
     </div>
 
-    <div class="gallery-item reveal"
-         onclick="openModal('padrao-02.webp')">
-      <img src="padrao-02.webp" alt="">
+
+    <div
+    class="gallery-item reveal"
+    onclick="openModal('padrao-02.webp')"
+    >
+
+      <img
+      src="padrao-02.webp"
+      alt=""
+      >
+
     </div>
 
-    <div class="gallery-item reveal"
-         onclick="openModal('padrao-03.webp')">
-      <img src="padrao-03.webp" alt="">
+
+    <div
+    class="gallery-item reveal"
+    onclick="openModal('padrao-03.webp')"
+    >
+
+      <img
+      src="padrao-03.webp"
+      alt=""
+      >
+
     </div>
 
-    <div class="gallery-item reveal"
-         onclick="openModal('padrao-04.webp')">
-      <img src="padrao-04.webp" alt="">
+
+    <div
+    class="gallery-item reveal"
+    onclick="openModal('padrao-04.webp')"
+    >
+
+      <img
+      src="padrao-04.webp"
+      alt=""
+      >
+
     </div>
 
-    <div class="gallery-item reveal"
-         onclick="openModal('padrao-05.webp')">
-      <img src="padrao-05.webp" alt="">
+
+    <div
+    class="gallery-item reveal"
+    onclick="openModal('padrao-05.webp')"
+    >
+
+      <img
+      src="padrao-05.webp"
+      alt=""
+      >
+
     </div>
 
-    <div class="gallery-item reveal"
-         onclick="openModal('padrao-06.webp')">
-      <img src="padrao-06.webp" alt="">
+
+    <div
+    class="gallery-item reveal"
+    onclick="openModal('padrao-06.webp')"
+    >
+
+      <img
+      src="padrao-06.webp"
+      alt=""
+      >
+
     </div>
+
 
   </div>
+
 
 </section>
 
 
-<!-- AVALIAÇÕES -->
+<!-- =====================================================
+     AVALIAÇÕES
+===================================================== -->
 
-<section class="section" id="avaliacoes">
+<section
+class="section"
+id="avaliacoes"
+>
+
 
   <div class="reviews reveal">
 
+
     <div class="section-number">
-      06 — O QUE NOSSOS CLIENTES DIZEM
+
+      03 — O QUE NOSSOS CLIENTES DIZEM
+
     </div>
 
+
     <h2 class="section-title">
-      A experiência de cada cliente faz parte da nossa história.
+
+      A experiência de cada cliente
+      faz parte da nossa história.
+
     </h2>
+
 
     <div class="stars">
+
       ★★★★★
+
     </div>
+
 
     <div class="rating">
+
       5,0
+
     </div>
 
-    <p class="review-text">
+
+    <div class="rating-text">
+
       no Google
-    </p>
+
+    </div>
+
 
     <a
-      href="https://www.google.com/maps/search/?api=1&query=Z%C3%A9+Pegue+e+Monte+Rio+de+Janeiro"
-      target="_blank"
-      class="contact-button">
+    href="https://www.google.com/maps/search/?api=1&query=Z%C3%A9+Pegue+e+Monte+Rio+de+Janeiro"
+    target="_blank"
+    class="review-button"
+    >
+
       VER AVALIAÇÕES NO GOOGLE
+
     </a>
 
+
   </div>
+
 
 </section>
 
 
-<!-- GALERIA -->
+<!-- =====================================================
+     CONTATO
+===================================================== -->
 
-<section class="section gallery-section" id="galeria">
+<section
+class="section contact"
+id="contato"
+>
 
-  <div class="reveal">
+
+  <div class="contact-inner reveal">
+
 
     <div class="section-number">
-      07 — GALERIA
+
+      04 — CONTATO
+
     </div>
+
 
     <h2 class="section-title">
-      Alguns dos nossos<br>
-      momentos.
-    </h2>
 
-  </div>
-
-
-  <div class="gallery">
-
-    <div class="gallery-item reveal"
-         onclick="openModal('pocket-01.webp')">
-      <img src="pocket-01.webp" alt="">
-    </div>
-
-    <div class="gallery-item reveal"
-         onclick="openModal('padrao-01.webp')">
-      <img src="padrao-01.webp" alt="">
-    </div>
-
-    <div class="gallery-item reveal"
-         onclick="openModal('pocket-03.webp')">
-      <img src="pocket-03.webp" alt="">
-    </div>
-
-    <div class="gallery-item reveal"
-         onclick="openModal('padrao-03.webp')">
-      <img src="padrao-03.webp" alt="">
-    </div>
-
-    <div class="gallery-item reveal"
-         onclick="openModal('pocket-05.webp')">
-      <img src="pocket-05.webp" alt="">
-    </div>
-
-    <div class="gallery-item reveal"
-         onclick="openModal('padrao-05.webp')">
-      <img src="padrao-05.webp" alt="">
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- REGIÕES -->
-
-<section class="section locations">
-
-  <div class="reveal">
-
-    <div class="section-number">
-      08 — CELEBRE COM A ZÊ DECOR
-    </div>
-
-    <h2 class="section-title">
-      Onde estamos.
-    </h2>
-
-  </div>
-
-
-  <div class="locations-grid">
-
-    <div class="location">Barra</div>
-
-    <div class="location">Recreio</div>
-
-    <div class="location">Jacarepaguá</div>
-
-    <div class="location">Vargens</div>
-
-  </div>
-
-</section>
-
-
-<!-- CONTATO -->
-
-<section class="section contact" id="contato">
-
-  <div class="contact-title reveal">
-
-    <div class="section-number">
-      09 — CONTATO
-    </div>
-
-    <h2 class="section-title">
       Vamos celebrar?
+
     </h2>
 
-    <p class="editorial-text" style="margin:30px auto 0;">
-      Conte para a gente o que você está planejando.
+
+    <p class="contact-text">
+
+      Conte para a gente
+      o que você está planejando.
+
     </p>
 
+
     <a
-      href="https://wa.me/5521999999999"
-      target="_blank"
-      class="contact-button">
+    href="https://wa.me/5521999999999"
+    target="_blank"
+    class="contact-button"
+    >
+
       FALAR PELO WHATSAPP
+
     </a>
+
 
     <div class="contact-info">
 
       Instagram:
       <strong>@zedecorofc</strong>
+
       <br>
 
       Site:
       <strong>zedecor.com.br</strong>
+
       <br><br>
 
       Barra • Recreio • Jacarepaguá • Vargens
 
     </div>
 
+
   </div>
+
 
 </section>
 
 
-<!-- FOOTER -->
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
-  <div class="footer-inner">
+
+  <div class="footer">
+
 
     <div>
 
       <div class="footer-logo">
+
         ZÊ DECOR
+
       </div>
 
-      <div class="footer-small">
+
+      <div class="footer-tagline">
+
         FESTA • POCKET • CELEBRATION
+
       </div>
 
-      <div class="footer-small">
+
+      <div class="footer-tagline">
+
         Decorações que transformam momentos.
+
       </div>
+
 
     </div>
 
+
     <div class="footer-right">
 
-      @zedecorofc<br>
+      @zedecorofc
+
+      <br>
+
       Barra • Recreio • Jacarepaguá • Vargens
 
     </div>
 
+
   </div>
+
 
 </footer>
 
 
-<!-- MODAL -->
+<!-- =====================================================
+     MODAL
+===================================================== -->
 
-<div class="modal" id="modal" onclick="closeModal()">
+<div
+class="modal"
+id="modal"
+onclick="closeModal()"
+>
 
-  <span class="close">&times;</span>
 
-  <img id="modalImage" src="" alt="">
+  <span
+  class="close"
+  >
+
+    &times;
+
+  </span>
+
+
+  <img
+  id="modalImage"
+  src=""
+  alt=""
+  >
+
 
 </div>
 
 
 <script>
 
-/* HEADER */
 
-window.addEventListener("scroll", function() {
+/* =====================================================
+   HEADER
+===================================================== */
 
-  const header = document.getElementById("header");
+window.addEventListener(
+"scroll",
+function() {
+
+  const header =
+  document.getElementById("header");
 
   if (window.scrollY > 50) {
+
     header.classList.add("scrolled");
+
   } else {
+
     header.classList.remove("scrolled");
+
   }
 
 });
 
 
-/* MENU MOBILE */
+/* =====================================================
+   MENU MOBILE
+===================================================== */
 
 function toggleMenu() {
 
   document
-    .getElementById("navLinks")
-    .classList.toggle("active");
+  .getElementById("navLinks")
+  .classList.toggle("active");
 
 }
 
 
-/* MODAL */
+document
+.querySelectorAll(".nav-links a")
+.forEach(function(link) {
+
+  link.addEventListener(
+  "click",
+  function() {
+
+    document
+    .getElementById("navLinks")
+    .classList.remove("active");
+
+  });
+
+});
+
+
+/* =====================================================
+   MODAL DAS FOTOS
+===================================================== */
 
 function openModal(src) {
 
-  const modal = document.getElementById("modal");
+  const modal =
+  document.getElementById("modal");
 
-  const image = document.getElementById("modalImage");
+  const image =
+  document.getElementById("modalImage");
 
   image.src = src;
 
@@ -1247,52 +2027,62 @@ function openModal(src) {
 function closeModal() {
 
   document
-    .getElementById("modal")
-    .classList.remove("active");
+  .getElementById("modal")
+  .classList.remove("active");
 
 }
 
 
-document.addEventListener("keydown", function(event) {
+document.addEventListener(
+"keydown",
+function(event) {
 
   if (event.key === "Escape") {
+
     closeModal();
+
   }
 
 });
 
 
-/* REVEAL */
+/* =====================================================
+   ANIMAÇÕES
+===================================================== */
 
-const observer = new IntersectionObserver(
-  function(entries) {
+const observer =
+new IntersectionObserver(
+function(entries) {
 
-    entries.forEach(function(entry) {
+  entries.forEach(function(entry) {
 
-      if (entry.isIntersecting) {
+    if (entry.isIntersecting) {
 
-        entry.target.classList.add("visible");
+      entry.target
+      .classList
+      .add("visible");
 
-      }
-
-    });
-
-  },
-  {
-    threshold: 0.12
-  }
-);
-
-
-document
-  .querySelectorAll(".reveal")
-  .forEach(function(element) {
-
-    observer.observe(element);
+    }
 
   });
 
+},
+{
+  threshold: 0.12
+});
+
+
+document
+.querySelectorAll(".reveal")
+.forEach(function(element) {
+
+  observer.observe(element);
+
+});
+
 </script>
 
+
 </body>
+
 </html>
