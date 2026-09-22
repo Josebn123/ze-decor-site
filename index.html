@@ -1,440 +1,341 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="description" content="Zê Decor — Festa na Mesa (Pocket) e Decoração Padrão. Decorações que transformam momentos.">
-
-  <title>Zê Decor | Decorações que transformam momentos</title>
-
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Georgia, "Times New Roman", serif;
-      background: #f7f0e5;
-      color: #3b2418;
-    }
-
-    header {
-      background: #f7f0e5;
-      padding: 25px 20px 15px;
-      text-align: center;
-      border-bottom: 1px solid #dfcfb8;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    header img {
-      width: 150px;
-      max-width: 45%;
-      height: auto;
-    }
-
-    nav {
-      margin-top: 18px;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 25px;
-    }
-
-    nav a {
-      color: #3b2418;
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
-
-    nav a:hover {
-      color: #a67c38;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 70px 20px 55px;
-    }
-
-    .hero h1 {
-      font-size: clamp(38px, 7vw, 72px);
-      letter-spacing: 2px;
-      margin-bottom: 12px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      letter-spacing: 1px;
-    }
-
-    .section {
-      padding: 65px 24px;
-      max-width: 1250px;
-      margin: auto;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 38px;
-      margin-bottom: 40px;
-      letter-spacing: 1px;
-    }
-
-    .collections {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 25px;
-    }
-
-    .collection-card {
-      background: #eadfce;
-      border-radius: 18px;
-      padding: 40px 25px;
-      text-align: center;
-      border: 1px solid #ddcdb5;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .collection-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 30px rgba(60, 35, 20, 0.12);
-    }
-
-    .collection-card h3 {
-      font-size: 25px;
-      margin-bottom: 10px;
-    }
-
-    .collection-card p {
-      font-size: 15px;
-      opacity: 0.8;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-
-    .gallery img {
-      width: 100%;
-      height: 360px;
-      object-fit: cover;
-      display: block;
-      border-radius: 16px;
-      cursor: pointer;
-      background: #eadfce;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .gallery img:hover {
-      transform: scale(1.015);
-      box-shadow: 0 10px 25px rgba(60, 35, 20, 0.15);
-    }
-
-    .reviews {
-      text-align: center;
-      background: #eee3d2;
-      border-radius: 22px;
-      padding: 55px 25px;
-    }
-
-    .stars {
-      font-size: 30px;
-      letter-spacing: 5px;
-      margin: 15px 0;
-      color: #b78b42;
-    }
-
-    .reviews p {
-      font-size: 17px;
-      line-height: 1.7;
-      max-width: 650px;
-      margin: auto;
-    }
-
-    .button {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 14px 25px;
-      background: #3b2418;
-      color: white;
-      text-decoration: none;
-      border-radius: 30px;
-      font-size: 14px;
-      letter-spacing: 1px;
-    }
-
-    .button:hover {
-      background: #a67c38;
-    }
-
-    .contact {
-      text-align: center;
-    }
-
-    .contact p {
-      font-size: 18px;
-      line-height: 1.9;
-    }
-
-    footer {
-      text-align: center;
-      padding: 35px 20px;
-      border-top: 1px solid #dfcfb8;
-      font-size: 14px;
-    }
-
-    /* Modal da foto */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 9999;
-      inset: 0;
-      background: rgba(20, 12, 8, 0.92);
-      align-items: center;
-      justify-content: center;
-      padding: 25px;
-    }
-
-    .modal.active {
-      display: flex;
-    }
-
-    .modal img {
-      max-width: 95%;
-      max-height: 90vh;
-      object-fit: contain;
-      border-radius: 10px;
-    }
-
-    .close {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      color: white;
-      font-size: 42px;
-      cursor: pointer;
-      line-height: 1;
-    }
-
-    @media (max-width: 800px) {
-      .collections {
-        grid-template-columns: 1fr;
-      }
-
-      .gallery {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .gallery img {
-        height: 280px;
-      }
-
-      nav {
-        gap: 15px;
-      }
-    }
-
-    @media (max-width: 500px) {
-      .gallery {
-        grid-template-columns: 1fr;
-      }
-
-      .gallery img {
-        height: 380px;
-      }
-
-      .section {
-        padding: 45px 15px;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-<header>
-  <img src="logo-ze-decor.png" alt="Zê Decor">
-
-  <nav>
-    <a href="#colecoes">COLEÇÕES</a>
-    <a href="#avaliacoes">AVALIAÇÕES</a>
-    <a href="#galeria">GALERIA</a>
-    <a href="#contato">CONTATO</a>
-  </nav>
-</header>
-
-<section class="hero">
-  <h1>ZÊ DECOR</h1>
-  <p>Decorações que transformam momentos.</p>
-</section>
-
-<!-- COLEÇÕES -->
-<section class="section" id="colecoes">
-
-  <h2 class="section-title">COLEÇÕES</h2>
-
-  <div class="collections">
-
-    <div class="collection-card" onclick="document.getElementById('pocket').scrollIntoView({behavior:'smooth'})">
-      <h3>FESTA NA MESA (POCKET)</h3>
-      <p>Momentos especiais em cada detalhe.</p>
-    </div>
-
-    <div class="collection-card" onclick="document.getElementById('padrao').scrollIntoView({behavior:'smooth'})">
-      <h3>DECORAÇÃO PADRÃO</h3>
-      <p>Decorações completas para celebrar.</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- FESTA NA MESA -->
-<section class="section" id="pocket">
-
-  <h2 class="section-title">FESTA NA MESA (POCKET)</h2>
-
-  <div class="gallery">
-
-    <img src="pocket-01.webp" alt="" onclick="openModal(this.src)">
-    <img src="pocket-02.webp" alt="" onclick="openModal(this.src)">
-    <img src="pocket-03.webp" alt="" onclick="openModal(this.src)">
-    <img src="pocket-04.webp" alt="" onclick="openModal(this.src)">
-    <img src="pocket-05.webp" alt="" onclick="openModal(this.src)">
-    <img src="pocket-06.webp" alt="" onclick="openModal(this.src)">
-
-  </div>
-
-</section>
-
-<!-- DECORAÇÃO PADRÃO -->
-<section class="section" id="padrao">
-
-  <h2 class="section-title">DECORAÇÃO PADRÃO</h2>
-
-  <div class="gallery">
-
-    <img src="padrao-01.webp" alt="" onclick="openModal(this.src)">
-    <img src="padrao-02.webp" alt="" onclick="openModal(this.src)">
-    <img src="padrao-03.webp" alt="" onclick="openModal(this.src)">
-    <img src="padrao-04.webp" alt="" onclick="openModal(this.src)">
-    <img src="padrao-05.webp" alt="" onclick="openModal(this.src)">
-    <img src="padrao-06.webp" alt="" onclick="openModal(this.src)">
-
-  </div>
-
-</section>
-
-<!-- AVALIAÇÕES -->
-<section class="section" id="avaliacoes">
-
-  <div class="reviews">
-
-    <h2 class="section-title">O QUE NOSSOS CLIENTES DIZEM</h2>
-
-    <div class="stars">★★★★★</div>
-
-    <p>
-      Avaliações reais de clientes que escolheram a ZÊ DECOR
-      para transformar momentos especiais.
-    </p>
-
-    <a
-      class="button"
-      href="https://www.google.com/maps/search/?api=1&query=Z%C3%A9+Pegue+e+Monte+Rio+de+Janeiro"
-      target="_blank"
-    >
-      VER TODAS AS AVALIAÇÕES NO GOOGLE
-    </a>
-
-  </div>
-
-</section>
-
-<!-- GALERIA -->
-<section class="section" id="galeria">
-
-  <h2 class="section-title">GALERIA</h2>
-
-  <div class="gallery">
-
-    <img src="pocket-01.webp" alt="" onclick="openModal(this.src)">
-    <img src="pocket-02.webp" alt="" onclick="openModal(this.src)">
-    <img src="pocket-03.webp" alt="" onclick="openModal(this.src)">
-    <img src="padrao-01.webp" alt="" onclick="openModal(this.src)">
-    <img src="padrao-02.webp" alt="" onclick="openModal(this.src)">
-    <img src="padrao-03.webp" alt="" onclick="openModal(this.src)">
-
-  </div>
-
-</section>
-
-<!-- CONTATO -->
-<section class="section contact" id="contato">
-
-  <h2 class="section-title">CONTATO</h2>
-
-  <p>
-    📍 Barra • Recreio • Jacarepaguá • Vargens
-  </p>
-
-  <p>
-    Instagram: @zedecorofc
-  </p>
-
-  <a
-    class="button"
-    href="https://wa.me/5521999999999"
-    target="_blank"
-  >
-    FALAR PELO WHATSAPP
-  </a>
-
-</section>
-
-<footer>
-  © ZÊ DECOR — FESTA • POCKET • CELEBRATION
-</footer>
-
-<!-- MODAL -->
-<div class="modal" id="modal" onclick="closeModal()">
-
-  <span class="close">&times;</span>
-
-  <img id="modalImage" src="" alt="">
-
-</div>
-
-<script>
-
-  function openModal(src) {
-    document.getElementById("modalImage").src = src;
-    document.getElementById("modal").classList.add("active");
-  }
-
-  function closeModal() {
-    document.getElementById("modal").classList.remove("active");
-  }
-
-  document.addEventListener("keydown", function(event) {
-    if (event.key === "Escape") {
-      closeModal();
-    }
-  });
-
-</script>
-
-</body>
-</html>
+Crie um novo site premium e sofisticado para a marca brasileira de decoração de festas ZÊ DECOR.
+
+O objetivo é criar uma experiência visual marcante, elegante e contemporânea, com aparência de uma marca de decoração premium, e não de um site genérico de festas.
+
+MARCA
+
+ZÊ DECOR
+
+FESTA • POCKET • CELEBRATION
+
+Slogan:
+“Decorações que transformam momentos.”
+
+CONCEITO VISUAL
+
+Criar uma identidade visual editorial, sofisticada e minimalista.
+
+A estética deve transmitir:
+- elegância
+- exclusividade
+- criatividade
+- cuidado com os detalhes
+- celebração
+- sofisticação
+- experiência premium
+
+Utilizar uma paleta baseada em:
+- creme
+- bege
+- off-white
+- marrom espresso
+- dourado discreto
+- tons neutros
+
+Evitar excesso de cores fortes.
+
+Utilizar tipografia elegante, com títulos grandes e impactantes, combinando uma fonte editorial sofisticada com uma fonte limpa para textos menores.
+
+Usar bastante espaço em branco.
+
+As fotografias devem ser protagonistas do site.
+
+A experiência deve parecer uma marca de decoração profissional e sofisticada.
+
+NAVEGAÇÃO
+
+Criar uma navegação fixa no topo da página.
+
+Logo:
+ZÊ DECOR
+
+Menu:
+
+COLEÇÕES
+AVALIAÇÕES
+GALERIA
+CONTATO
+
+Adicionar um botão de destaque:
+
+RESERVE PELO WHATSAPP
+
+O menu deve funcionar perfeitamente no computador e no celular.
+
+HOME / HERO
+
+Criar uma abertura cinematográfica utilizando uma fotografia grande de uma decoração de festa.
+
+A imagem deve ocupar grande parte da tela.
+
+Sobre a imagem, apresentar:
+
+ZÊ DECOR
+
+FESTA • POCKET • CELEBRATION
+
+“Decorações que transformam momentos.”
+
+Adicionar um botão:
+
+CONHEÇA NOSSAS COLEÇÕES
+
+O primeiro impacto deve ser sofisticado e visualmente forte.
+
+SEÇÃO 01 — A ZÊ DECOR
+
+Criar uma seção editorial apresentando a marca.
+
+Título:
+
+01 — CELEBRAR É TRANSFORMAR
+
+Texto:
+
+“Criamos decorações que transformam momentos especiais em memórias que permanecem.”
+
+Apresentar a ZÊ DECOR como uma empresa especializada em decoração de festas, com soluções para diferentes tamanhos e estilos de celebração.
+
+Não exagerar no texto.
+
+Usar layout editorial com bastante espaço em branco e uma fotografia grande ao lado ou abaixo do texto.
+
+SEÇÃO 02 — COLEÇÕES
+
+Criar uma seção visual chamada:
+
+02 — NOSSAS COLEÇÕES
+
+Apresentar três categorias:
+
+FESTA NA MESA
+POCKET
+
+DECORAÇÃO
+PADRÃO
+
+CELEBRATION
+DECORAÇÕES MAIORES
+
+Cada categoria deve possuir uma imagem grande e elegante.
+
+IMPORTANTE:
+
+Ao clicar em uma coleção, abrir uma página ou seção exclusiva com uma galeria de fotos.
+
+As fotos devem ser o foco principal.
+
+NÃO colocar nomes individuais nas fotos.
+
+NÃO colocar descrições sobre cada foto.
+
+NÃO colocar preços sobre as fotos.
+
+NÃO colocar textos desnecessários sobre as imagens.
+
+Apenas fotografia + experiência visual.
+
+As fotos devem abrir em tamanho grande quando clicadas.
+
+SEÇÃO 03 — FESTA NA MESA / POCKET
+
+Criar uma galeria premium para mostrar as decorações Pocket.
+
+Utilizar as fotos reais fornecidas pela ZÊ DECOR.
+
+Organizar as imagens de maneira editorial, alternando tamanhos para criar uma composição sofisticada.
+
+As imagens devem carregar rapidamente e funcionar perfeitamente no celular.
+
+Ao clicar, abrir a fotografia em tela maior.
+
+Não colocar nomes ou descrições nas fotografias.
+
+SEÇÃO 04 — DECORAÇÃO PADRÃO
+
+Criar uma segunda galeria premium utilizando as fotos reais das decorações padrão.
+
+Manter o mesmo estilo editorial.
+
+Fotografias grandes.
+
+Sem nomes sobre as imagens.
+
+Sem preços.
+
+Sem textos desnecessários.
+
+Clique na fotografia para ampliar.
+
+SEÇÃO 05 — CELEBRATION
+
+Criar uma seção especial para as decorações maiores.
+
+Utilizar uma fotografia grande como destaque.
+
+Texto curto:
+
+“Grandes momentos merecem grandes celebrações.”
+
+Adicionar botão:
+
+SOLICITAR ORÇAMENTO
+
+SEÇÃO 06 — AVALIAÇÕES
+
+Criar uma seção elegante:
+
+06 — O QUE NOSSOS CLIENTES DIZEM
+
+Mostrar:
+
+★★★★★
+
+5,0 no Google
+
+Adicionar um texto curto:
+
+“A experiência de cada cliente faz parte da nossa história.”
+
+Adicionar botão:
+
+VER AVALIAÇÕES NO GOOGLE
+
+IMPORTANTE:
+
+Não inventar avaliações ou depoimentos.
+
+Caso sejam exibidos depoimentos, utilizar somente avaliações reais fornecidas posteriormente.
+
+SEÇÃO 07 — GALERIA
+
+Criar uma galeria geral com as melhores fotografias da ZÊ DECOR.
+
+A galeria deve ter aparência de portfólio profissional.
+
+Utilizar imagens em tamanhos diferentes, criando um layout editorial e sofisticado.
+
+As fotografias devem ser o elemento principal.
+
+Ao clicar em qualquer fotografia, abrir em tamanho grande.
+
+SEÇÃO 08 — ONDE ESTAMOS
+
+Título:
+
+08 — CELEBRE COM A ZÊ DECOR
+
+Mostrar as regiões de atendimento:
+
+BARRA
+RECREIO
+JACAREPAGUÁ
+VARGENS
+
+Apresentar essa informação de forma elegante e minimalista.
+
+SEÇÃO 09 — CONTATO
+
+Criar uma seção final forte:
+
+09 — VAMOS CELEBRAR?
+
+Texto:
+
+“Conte para a gente o que você está planejando.”
+
+Adicionar botão grande:
+
+FALAR PELO WHATSAPP
+
+Também mostrar:
+
+Instagram:
+@zedecorofc
+
+SITE:
+zedecor.com.br
+
+RODAPÉ
+
+Criar um rodapé minimalista contendo:
+
+ZÊ DECOR
+
+FESTA • POCKET • CELEBRATION
+
+“Decorações que transformam momentos.”
+
+Instagram:
+@zedecorofc
+
+WhatsApp
+
+Barra • Recreio • Jacarepaguá • Vargens
+
+EXPERIÊNCIA E INTERAÇÕES
+
+Utilizar animações suaves durante a rolagem.
+
+Elementos devem aparecer de maneira elegante conforme o usuário percorre a página.
+
+Utilizar:
+- fade-in
+- movimentos suaves
+- transições delicadas
+- efeitos de hover nas fotografias
+- zoom sutil nas imagens
+- abertura elegante das fotografias
+
+Não exagerar nas animações.
+
+O site deve parecer sofisticado, e não uma apresentação cheia de efeitos.
+
+RESPONSIVIDADE
+
+Criar o site pensando primeiro no celular.
+
+No celular:
+- imagens grandes e bonitas;
+- navegação simples;
+- menu responsivo;
+- botões fáceis de tocar;
+- textos bem dimensionados;
+- carregamento rápido;
+- galerias perfeitamente adaptadas à tela.
+
+No computador, utilizar uma composição editorial com bastante espaço em branco e fotografias grandes.
+
+SEO
+
+Título:
+
+ZÊ DECOR | Decorações que transformam momentos
+
+Descrição:
+
+“ZÊ DECOR — Decorações de festas, Festa na Mesa, Decoração Pocket e grandes celebrações no Rio de Janeiro.”
+
+IMPORTANTE SOBRE AS IMAGENS
+
+As fotografias reais fornecidas pela ZÊ DECOR devem ser utilizadas como protagonistas do site.
+
+Não substituir as fotografias fornecidas por imagens genéricas quando as imagens reais estiverem disponíveis.
+
+Preparar o projeto para que novas fotografias possam ser adicionadas facilmente no futuro.
+
+IMPORTANTE SOBRE A MARCA
+
+Manter exatamente:
+
+ZÊ DECOR
+
+FESTA • POCKET • CELEBRATION
+
+“Decorações que transformam momentos.”
+
+Não alterar o nome da marca.
+
+Não criar informações, preços, avaliações ou depoimentos que não foram fornecidos.
+
+O resultado final deve parecer um site de uma marca de decoração premium, moderna e estabelecida, com forte impacto visual e excelente experiência no celular.
