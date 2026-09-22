@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
   <meta charset="UTF-8">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,41 +15,76 @@
   >
 
   <meta name="robots" content="index, follow">
+
   <link rel="canonical" href="https://zedecor.com.br/">
 
   <meta property="og:title" content="ZÊ DECOR | Pegue e Monte, Montagem e Decoração de Festas">
+
   <meta
     property="og:description"
     content="Pegue e Monte, montagem e decorações que transformam momentos."
   >
+
   <meta property="og:type" content="website">
+
   <meta property="og:url" content="https://zedecor.com.br/">
-  <meta property="og:image" content="https://zedecor.com.br/logo-ze-decor.png">
+
+  <meta
+    property="og:image"
+    content="https://zedecor.com.br/logo-ze-decor.png"
+  >
 
   <meta name="theme-color" content="#ded0bf">
 
+
+  <!-- FONTES -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
+
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Allura&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
     rel="stylesheet"
   >
 
+
   <style>
+
+    /* =====================================================
+       CORES
+    ===================================================== */
+
     :root {
+
       --fendi: #ded0bf;
+
       --fendi-claro: #e8ddd0;
+
       --fendi-suave: #eee5da;
+
       --creme: #f7f0e7;
+
       --marrom: #35231c;
+
       --marrom-2: #594238;
+
       --marrom-3: #765f51;
+
       --dourado: #b58a4e;
+
       --dourado-claro: #d0b27d;
+
       --branco: #fffdf9;
-      --sombra: rgba(53, 35, 28, 0.12);
+
+      --sombra: rgba(53,35,28,.12);
+
     }
+
+
+    /* =====================================================
+       RESET
+    ===================================================== */
 
     * {
       margin: 0;
@@ -60,865 +97,1464 @@
     }
 
     body {
+
       font-family: "DM Sans", sans-serif;
+
       color: var(--marrom);
+
       background:
-        radial-gradient(circle at 10% 10%, rgba(255,255,255,.42), transparent 28%),
-        radial-gradient(circle at 90% 35%, rgba(255,255,255,.28), transparent 30%),
         linear-gradient(
           180deg,
           var(--fendi) 0%,
-          var(--fendi-claro) 35%,
-          var(--creme) 72%,
+          var(--fendi-claro) 38%,
+          var(--creme) 75%,
           var(--fendi-suave) 100%
         );
+
       line-height: 1.6;
+
       overflow-x: hidden;
+
     }
+
 
     a {
       color: inherit;
       text-decoration: none;
     }
 
+
     img {
       max-width: 100%;
       display: block;
     }
 
-    button,
-    a {
-      -webkit-tap-highlight-color: transparent;
+
+    /* =====================================================
+       RELEVO LATERAL
+    ===================================================== */
+
+    .lateral-relevo {
+
+      position: fixed;
+
+      top: 0;
+
+      bottom: 0;
+
+      width: min(29vw, 440px);
+
+      z-index: 0;
+
+      pointer-events: none;
+
+      background-image: url("fundo-lateral-ze-decor.png");
+
+      background-repeat: no-repeat;
+
+      background-size: auto 100%;
+
+      opacity: .88;
+
     }
+
+
+    .lateral-relevo.left {
+
+      left: 0;
+
+      background-position: left center;
+
+    }
+
+
+    .lateral-relevo.right {
+
+      right: 0;
+
+      transform: scaleX(-1);
+
+      background-position: left center;
+
+      opacity: .42;
+
+    }
+
+
+    /* =====================================================
+       CONTAINER
+    ===================================================== */
 
     .container {
+
       width: min(1180px, calc(100% - 40px));
+
       margin: 0 auto;
+
+      position: relative;
+
+      z-index: 2;
+
     }
 
-    /* =========================
-       DECORAÇÃO LATERAL
-    ========================= */
 
-    .side-decoration {
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 0;
-      overflow: hidden;
-    }
-
-    .side-decoration::before,
-    .side-decoration::after {
-      content: "";
-      position: absolute;
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      border: 1px solid rgba(181,138,78,.10);
-      filter: blur(.2px);
-    }
-
-    .side-decoration::before {
-      left: -120px;
-      top: 22%;
-    }
-
-    .side-decoration::after {
-      right: -125px;
-      top: 62%;
-    }
-
-    .gold-dot {
-      position: absolute;
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: rgba(181,138,78,.28);
-    }
-
-    .dot-1 {
-      left: 5%;
-      top: 35%;
-    }
-
-    .dot-2 {
-      right: 6%;
-      top: 48%;
-    }
-
-    .dot-3 {
-      left: 8%;
-      top: 76%;
-    }
-
-    .dot-4 {
-      right: 8%;
-      top: 82%;
-    }
-
-    .leaf {
-      position: absolute;
-      width: 55px;
-      height: 28px;
-      border: 1px solid rgba(89,66,56,.10);
-      border-radius: 100% 0 100% 0;
-      transform: rotate(-25deg);
-    }
-
-    .leaf-1 {
-      left: 2%;
-      top: 52%;
-    }
-
-    .leaf-2 {
-      right: 2%;
-      top: 30%;
-      transform: rotate(150deg);
-    }
-
-    /* =========================
+    /* =====================================================
        HEADER
-    ========================= */
+    ===================================================== */
 
     header {
+
       position: fixed;
+
       top: 0;
+
       left: 0;
+
       width: 100%;
+
       z-index: 100;
+
       background: rgba(247,240,231,.90);
+
       backdrop-filter: blur(16px);
+
       border-bottom: 1px solid rgba(181,138,78,.16);
+
     }
+
 
     .nav {
+
       min-height: 78px;
+
       display: flex;
+
       align-items: center;
+
       justify-content: space-between;
+
       gap: 30px;
+
     }
 
+
     .brand-mini {
+
       font-family: "Playfair Display", serif;
+
       font-size: 22px;
+
       font-weight: 700;
+
       letter-spacing: .06em;
-      color: var(--marrom);
+
     }
+
 
     .brand-mini span {
       color: var(--dourado);
     }
 
+
     .menu {
+
       display: flex;
+
       align-items: center;
+
       gap: 34px;
+
     }
 
+
     .menu a {
-      font-size: 12px;
+
+      font-size: 11px;
+
       font-weight: 700;
+
       letter-spacing: .13em;
+
       transition: .25s ease;
+
     }
+
 
     .menu a:hover {
       color: var(--dourado);
     }
 
-    /* =========================
+
+    /* =====================================================
        HERO
-    ========================= */
+    ===================================================== */
 
     .hero {
+
       position: relative;
+
       min-height: 100vh;
+
       display: flex;
+
       align-items: center;
+
       padding: 130px 0 80px;
+
       background:
         linear-gradient(
           90deg,
-          rgba(53,35,28,.76) 0%,
-          rgba(53,35,28,.46) 42%,
+          rgba(53,35,28,.78) 0%,
+          rgba(53,35,28,.48) 43%,
           rgba(53,35,28,.12) 100%
         ),
         url("padrao-03.webp") center/cover no-repeat;
+
       color: white;
+
       z-index: 1;
+
     }
+
 
     .hero-content {
-      max-width: 690px;
+
+      max-width: 720px;
+
     }
+
 
     .hero-kicker {
-      font-size: 12px;
-      letter-spacing: .28em;
+
+      font-size: 11px;
+
+      letter-spacing: .30em;
+
       font-weight: 700;
-      margin-bottom: 22px;
+
+      margin-bottom: 20px;
+
       color: #f4dfb8;
+
     }
 
+
     .hero h1 {
+
       font-family: "Playfair Display", serif;
+
       font-size: clamp(48px, 7vw, 88px);
+
       line-height: .98;
-      margin-bottom: 24px;
+
       font-weight: 600;
+
+      margin-bottom: 24px;
+
     }
+
 
     .hero h1 span {
       color: #e4c78f;
     }
 
+
     .hero p {
-      max-width: 620px;
+
+      max-width: 640px;
+
       font-size: clamp(17px, 2vw, 21px);
+
       line-height: 1.7;
-      color: rgba(255,255,255,.92);
-      margin-bottom: 28px;
+
+      color: rgba(255,255,255,.93);
+
+      margin-bottom: 22px;
+
     }
+
+
+    /* FRASE CURSIVA */
+
+    .script {
+
+      font-family: "Allura", cursive;
+
+      font-weight: 400;
+
+      font-size: 34px;
+
+      line-height: 1.1;
+
+      color: var(--dourado);
+
+    }
+
+
+    .hero-script {
+
+      color: #f2d7a7;
+
+      margin-bottom: 25px;
+
+    }
+
 
     .hero-services {
-      display: inline-flex;
+
+      display: flex;
+
       flex-wrap: wrap;
+
       gap: 8px;
+
       margin-bottom: 32px;
+
     }
+
 
     .hero-services span {
+
       border: 1px solid rgba(255,255,255,.30);
+
       background: rgba(255,255,255,.09);
+
       backdrop-filter: blur(8px);
+
       padding: 9px 14px;
+
       border-radius: 999px;
-      font-size: 11px;
-      letter-spacing: .08em;
+
+      font-size: 10px;
+
+      letter-spacing: .10em;
+
       font-weight: 700;
+
     }
+
 
     .hero-buttons {
+
       display: flex;
+
       flex-wrap: wrap;
+
       gap: 12px;
+
     }
+
 
     .btn {
+
       display: inline-flex;
+
       justify-content: center;
+
       align-items: center;
+
       min-height: 50px;
+
       padding: 0 23px;
+
       border-radius: 999px;
-      font-size: 12px;
+
+      font-size: 11px;
+
       font-weight: 700;
+
       letter-spacing: .08em;
+
       transition: .25s ease;
+
       cursor: pointer;
+
     }
+
 
     .btn-primary {
+
       background: var(--dourado);
+
       color: white;
+
     }
+
 
     .btn-primary:hover {
+
       transform: translateY(-2px);
+
       background: #a77d43;
+
     }
+
 
     .btn-outline {
+
       border: 1px solid rgba(255,255,255,.55);
+
       color: white;
+
       background: rgba(255,255,255,.05);
+
     }
+
 
     .btn-outline:hover {
+
       background: rgba(255,255,255,.12);
+
     }
 
-    /* =========================
+
+    /* =====================================================
        SEÇÕES
-    ========================= */
+    ===================================================== */
 
     section {
+
       position: relative;
+
       z-index: 1;
+
       padding: 105px 0;
+
     }
+
 
     .section-header {
+
       text-align: center;
-      max-width: 820px;
+
+      max-width: 850px;
+
       margin: 0 auto 55px;
+
     }
 
-    .section-name {
-      font-family: "Playfair Display", serif;
-      font-size: clamp(38px, 5vw, 64px);
-      line-height: 1.05;
-      font-weight: 600;
-      color: var(--marrom);
-      margin-bottom: 12px;
-    }
-
-    .section-phrase {
-      font-size: 16px;
-      color: var(--marrom-3);
-      max-width: 680px;
-      margin: 0 auto;
-    }
 
     .eyebrow {
+
       color: var(--dourado);
-      font-size: 11px;
+
+      font-size: 10px;
+
       font-weight: 700;
-      letter-spacing: .24em;
-      margin-bottom: 15px;
+
+      letter-spacing: .25em;
+
+      margin-bottom: 14px;
+
     }
 
-    /* =========================
+
+    .section-name {
+
+      font-family: "Playfair Display", serif;
+
+      font-size: clamp(40px, 5vw, 65px);
+
+      line-height: 1.04;
+
+      font-weight: 600;
+
+      color: var(--marrom);
+
+      margin-bottom: 8px;
+
+    }
+
+
+    .section-phrase {
+
+      font-size: 16px;
+
+      color: var(--marrom-3);
+
+      max-width: 700px;
+
+      margin: 0 auto;
+
+    }
+
+
+    .section-script {
+
+      margin-top: 5px;
+
+      margin-bottom: 13px;
+
+    }
+
+
+    /* =====================================================
        COLEÇÕES
-    ========================= */
+    ===================================================== */
 
     .collections {
+
       background:
-        radial-gradient(circle at 15% 20%, rgba(255,255,255,.40), transparent 26%),
-        linear-gradient(180deg, var(--fendi-claro), var(--fendi));
+
+        radial-gradient(
+          circle at 15% 20%,
+          rgba(255,255,255,.40),
+          transparent 28%
+        ),
+
+        linear-gradient(
+          180deg,
+          rgba(232,221,208,.92),
+          rgba(222,208,191,.94)
+        );
+
     }
+
 
     .collection-grid {
+
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+
+      grid-template-columns: repeat(2,1fr);
+
       gap: 28px;
+
     }
+
 
     .collection-card {
-      position: relative;
+
       overflow: hidden;
-      background: rgba(255,255,255,.45);
+
+      background: rgba(255,255,255,.52);
+
       border: 1px solid rgba(181,138,78,.25);
+
       box-shadow: 0 18px 45px rgba(53,35,28,.08);
+
       border-radius: 32px 12px 32px 12px;
+
       transition: .3s ease;
+
     }
+
 
     .collection-card:hover {
+
       transform: translateY(-5px);
+
       box-shadow: 0 24px 55px rgba(53,35,28,.13);
+
     }
+
+
+    /* IMPORTANTE:
+       IMAGEM SEM CORTE */
 
     .collection-image {
-      aspect-ratio: 4 / 3;
+
+      width: 100%;
+
       overflow: hidden;
+
+      background: var(--fendi-suave);
+
     }
+
 
     .collection-image img {
+
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+
+      height: auto;
+
+      display: block;
+
+      object-fit: contain;
+
       transition: .45s ease;
+
     }
+
 
     .collection-card:hover .collection-image img {
-      transform: scale(1.025);
+
+      transform: scale(1.01);
+
     }
+
 
     .collection-body {
+
       padding: 28px 28px 31px;
+
     }
+
 
     .collection-body h3 {
+
       font-family: "Playfair Display", serif;
+
       font-size: 31px;
+
       line-height: 1.1;
-      margin-bottom: 12px;
+
+      margin-bottom: 8px;
+
     }
+
 
     .collection-body p {
+
       color: var(--marrom-3);
+
       margin-bottom: 20px;
+
     }
+
+
+    .collection-script {
+
+      margin-bottom: 8px;
+
+    }
+
 
     .collection-link {
+
       display: inline-flex;
+
       align-items: center;
+
       gap: 8px;
+
       color: var(--dourado);
+
       font-weight: 700;
-      font-size: 12px;
+
+      font-size: 11px;
+
       letter-spacing: .10em;
+
     }
 
-    /* =========================
+
+    /* =====================================================
        GALERIAS
-    ========================= */
+    ===================================================== */
 
     .gallery-section {
-      background: var(--creme);
+
+      background:
+
+        linear-gradient(
+          180deg,
+          rgba(247,240,231,.94),
+          rgba(238,229,218,.94)
+        );
+
     }
+
 
     .gallery-grid {
+
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+
+      grid-template-columns: repeat(3,1fr);
+
       gap: 20px;
+
     }
+
 
     .gallery-card {
+
       overflow: hidden;
+
       cursor: pointer;
+
       background: #fff;
+
       border: 1px solid rgba(181,138,78,.18);
+
       box-shadow: 0 12px 32px rgba(53,35,28,.08);
+
       border-radius: 30px 12px 30px 12px;
+
       transition: .3s ease;
+
     }
+
 
     .gallery-card:hover {
+
       transform: translateY(-4px);
+
       box-shadow: 0 18px 40px rgba(53,35,28,.12);
+
     }
+
 
     .gallery-card img {
+
       width: 100%;
+
       height: auto;
+
       object-fit: contain;
+
       background: var(--fendi-suave);
+
       transition: .4s ease;
+
     }
+
 
     .gallery-card:hover img {
+
       transform: scale(1.015);
+
     }
 
-    /* =========================
+
+    /* =====================================================
        AVALIAÇÕES
-    ========================= */
+    ===================================================== */
 
     .reviews {
+
       background:
-        radial-gradient(circle at 20% 15%, rgba(255,255,255,.38), transparent 28%),
-        linear-gradient(180deg, var(--fendi-claro), var(--fendi));
+
+        radial-gradient(
+          circle at 20% 15%,
+          rgba(255,255,255,.38),
+          transparent 28%
+        ),
+
+        linear-gradient(
+          180deg,
+          rgba(232,221,208,.94),
+          rgba(222,208,191,.94)
+        );
+
     }
+
 
     .review-top {
+
       text-align: center;
+
       margin-bottom: 38px;
+
     }
+
 
     .stars {
+
       color: var(--dourado);
+
       letter-spacing: .18em;
+
       font-size: 19px;
+
       margin-bottom: 7px;
+
     }
+
 
     .review-score {
+
       font-family: "Playfair Display", serif;
+
       font-size: 58px;
+
       line-height: 1;
+
       margin-bottom: 4px;
+
     }
+
 
     .review-source {
+
       color: var(--marrom-3);
+
       font-size: 14px;
+
     }
+
 
     .review-grid {
+
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+
+      grid-template-columns: repeat(3,1fr);
+
       gap: 20px;
+
     }
+
 
     .review-card {
-      background: rgba(255,255,255,.48);
+
+      background: rgba(255,255,255,.50);
+
       border: 1px solid rgba(181,138,78,.20);
+
       padding: 28px;
+
       border-radius: 26px 10px 26px 10px;
+
       box-shadow: 0 12px 35px rgba(53,35,28,.06);
+
     }
+
 
     .review-card .stars {
+
       font-size: 15px;
+
       margin-bottom: 16px;
+
     }
+
 
     .review-card p {
+
       font-family: "Playfair Display", serif;
+
       font-size: 18px;
+
       line-height: 1.55;
+
       margin-bottom: 18px;
+
     }
+
 
     .review-author {
+
       font-size: 12px;
+
       font-weight: 700;
+
       color: var(--marrom-3);
+
     }
+
 
     .reviews-button {
+
       display: flex;
+
       justify-content: center;
+
       margin-top: 38px;
+
     }
 
-    /* =========================
+
+    /* =====================================================
        CONTATO
-    ========================= */
+    ===================================================== */
 
     .contact {
-      background: var(--creme);
+
+      background:
+
+        linear-gradient(
+          180deg,
+          rgba(247,240,231,.95),
+          rgba(238,229,218,.95)
+        );
+
     }
+
 
     .contact-box {
-      position: relative;
-      overflow: hidden;
+
       background:
+
         linear-gradient(
           135deg,
-          rgba(255,255,255,.68),
+          rgba(255,255,255,.72),
           rgba(232,221,208,.88)
         );
+
       border: 1px solid rgba(181,138,78,.23);
+
       border-radius: 36px 12px 36px 12px;
+
       padding: 60px;
+
       box-shadow: 0 20px 55px rgba(53,35,28,.09);
+
     }
 
-    .contact-box::after {
-      content: "";
-      position: absolute;
-      width: 260px;
-      height: 260px;
-      right: -100px;
-      top: -100px;
-      border: 1px solid rgba(181,138,78,.16);
-      border-radius: 50%;
-    }
 
     .contact-grid {
+
       display: grid;
+
       grid-template-columns: 1.2fr .8fr;
+
       gap: 50px;
+
       align-items: center;
+
     }
+
 
     .contact h2 {
+
       font-family: "Playfair Display", serif;
-      font-size: clamp(38px, 5vw, 58px);
+
+      font-size: clamp(38px,5vw,58px);
+
       line-height: 1.05;
-      margin-bottom: 18px;
+
+      margin-bottom: 8px;
+
     }
+
 
     .contact-text {
+
       color: var(--marrom-3);
+
       max-width: 650px;
+
       font-size: 17px;
+
     }
+
 
     .contact-items {
+
       display: grid;
+
       gap: 12px;
+
       margin-top: 26px;
+
     }
+
 
     .contact-item {
+
       display: flex;
+
       flex-direction: column;
+
       gap: 3px;
+
     }
 
+
     .contact-item strong {
-      font-size: 11px;
+
+      font-size: 10px;
+
       text-transform: uppercase;
+
       letter-spacing: .15em;
+
       color: var(--dourado);
+
     }
+
 
     .contact-item span,
     .contact-item a {
+
       font-size: 16px;
+
       font-weight: 600;
+
     }
+
 
     .contact-cta {
+
       display: flex;
+
       flex-direction: column;
+
       align-items: flex-start;
+
       gap: 13px;
+
     }
+
 
     .contact-cta small {
+
       color: var(--marrom-3);
+
       font-size: 13px;
+
     }
 
-    /* =========================
+
+    /* =====================================================
        FOOTER
-    ========================= */
+    ===================================================== */
 
     footer {
+
       background: var(--marrom);
+
       color: rgba(255,255,255,.84);
+
       padding: 45px 0 28px;
+
     }
+
 
     .footer-content {
+
       display: flex;
+
       align-items: center;
+
       justify-content: space-between;
+
       gap: 30px;
+
       padding-bottom: 30px;
+
       border-bottom: 1px solid rgba(255,255,255,.10);
+
     }
+
 
     .footer-brand {
+
       font-family: "Playfair Display", serif;
+
       color: white;
+
       font-size: 28px;
+
     }
+
 
     .footer-brand span {
+
       color: var(--dourado-claro);
+
     }
+
 
     .footer-tagline {
+
       margin-top: 5px;
+
       color: rgba(255,255,255,.58);
-      font-size: 12px;
+
+      font-size: 11px;
+
       letter-spacing: .08em;
+
     }
+
 
     .footer-links {
+
       display: flex;
+
       gap: 22px;
+
       flex-wrap: wrap;
+
     }
+
 
     .footer-links a {
-      font-size: 12px;
+
+      font-size: 11px;
+
       font-weight: 700;
+
       letter-spacing: .08em;
+
     }
+
 
     .footer-bottom {
+
       text-align: center;
+
       padding-top: 22px;
+
       font-size: 11px;
+
       color: rgba(255,255,255,.45);
+
     }
 
-    /* =========================
+
+    /* =====================================================
        LIGHTBOX
-    ========================= */
+    ===================================================== */
 
     .lightbox {
+
       position: fixed;
+
       inset: 0;
+
       z-index: 999;
+
       background: rgba(20,14,11,.92);
+
       display: none;
+
       align-items: center;
+
       justify-content: center;
+
       padding: 25px;
+
     }
+
 
     .lightbox.active {
       display: flex;
     }
 
+
     .lightbox img {
+
       max-width: 94vw;
+
       max-height: 90vh;
+
       width: auto;
+
       height: auto;
+
       object-fit: contain;
+
       border-radius: 12px;
+
       box-shadow: 0 25px 80px rgba(0,0,0,.35);
+
     }
+
 
     .lightbox-close {
+
       position: absolute;
+
       top: 18px;
+
       right: 22px;
+
       width: 45px;
+
       height: 45px;
+
       border: 1px solid rgba(255,255,255,.25);
+
       border-radius: 50%;
+
       background: rgba(255,255,255,.08);
+
       color: white;
+
       font-size: 27px;
+
       cursor: pointer;
+
     }
 
-    /* =========================
+
+    /* =====================================================
        RESPONSIVO
-    ========================= */
+    ===================================================== */
+
+    @media (max-width: 1100px) {
+
+      .lateral-relevo {
+
+        width: 20vw;
+
+        opacity: .45;
+
+      }
+
+    }
+
 
     @media (max-width: 900px) {
 
       .collection-grid,
       .contact-grid {
+
         grid-template-columns: 1fr;
+
       }
+
 
       .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-columns: repeat(2,1fr);
+
       }
+
 
       .review-grid {
+
         grid-template-columns: 1fr;
+
       }
+
 
       .contact-box {
+
         padding: 42px 30px;
+
       }
 
-      .contact-cta {
-        align-items: flex-start;
-      }
     }
+
 
     @media (max-width: 680px) {
 
-      .container {
-        width: min(100% - 28px, 1180px);
+      .lateral-relevo {
+
+        display: none;
+
       }
+
+
+      .container {
+
+        width: min(100% - 28px,1180px);
+
+      }
+
 
       header {
+
         position: absolute;
+
       }
+
 
       .nav {
+
         min-height: 68px;
+
       }
+
 
       .brand-mini {
+
         font-size: 19px;
+
       }
+
 
       .menu {
+
         gap: 14px;
+
       }
+
 
       .menu a {
+
         font-size: 9px;
+
         letter-spacing: .08em;
+
       }
+
 
       .hero {
+
         min-height: 92vh;
+
         padding: 105px 0 55px;
+
         background-position: 62% center;
+
       }
+
 
       .hero h1 {
-        font-size: clamp(44px, 15vw, 65px);
+
+        font-size: clamp(44px,15vw,65px);
+
       }
+
 
       .hero p {
+
         font-size: 16px;
+
       }
+
 
       .hero-services span {
+
         font-size: 9px;
+
         padding: 8px 11px;
+
       }
+
 
       .hero-buttons {
+
         flex-direction: column;
+
         align-items: stretch;
+
       }
+
 
       .btn {
+
         width: 100%;
+
       }
+
 
       section {
+
         padding: 75px 0;
+
       }
+
 
       .section-name {
+
         font-size: 40px;
+
       }
 
+
       .section-phrase {
+
         font-size: 15px;
+
       }
+
+
+      .script {
+
+        font-size: 30px;
+
+      }
+
 
       .collection-grid,
       .gallery-grid {
+
         grid-template-columns: 1fr;
+
       }
+
 
       .collection-body {
+
         padding: 24px;
+
       }
+
 
       .collection-body h3 {
+
         font-size: 28px;
+
       }
+
 
       .review-card {
+
         padding: 24px;
+
       }
+
 
       .contact-box {
+
         padding: 35px 23px;
+
         border-radius: 28px 10px 28px 10px;
+
       }
+
 
       .contact h2 {
+
         font-size: 40px;
+
       }
+
 
       .footer-content {
+
         flex-direction: column;
+
         align-items: flex-start;
+
       }
 
-      .side-decoration {
-        display: none;
-      }
     }
+
   </style>
+
 </head>
+
 
 <body>
 
-  <div class="side-decoration" aria-hidden="true">
-    <span class="gold-dot dot-1"></span>
-    <span class="gold-dot dot-2"></span>
-    <span class="gold-dot dot-3"></span>
-    <span class="gold-dot dot-4"></span>
 
-    <span class="leaf leaf-1"></span>
-    <span class="leaf leaf-2"></span>
-  </div>
+  <!-- RELEVO LATERAL -->
 
-  <!-- HEADER -->
+  <div class="lateral-relevo left"></div>
+
+  <div class="lateral-relevo right"></div>
+
+
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
+
   <header>
+
     <div class="container nav">
 
       <a href="#inicio" class="brand-mini">
+
         ZÊ <span>DECOR</span>
+
       </a>
 
+
       <nav class="menu">
+
         <a href="#colecoes">COLEÇÕES</a>
+
         <a href="#avaliacoes">AVALIAÇÕES</a>
+
         <a href="#contato">CONTATO</a>
+
       </nav>
 
     </div>
+
   </header>
 
-  <!-- HERO -->
+
+  <!-- =====================================================
+       HERO
+  ====================================================== -->
+
   <main id="inicio">
 
     <section class="hero">
@@ -931,22 +1567,44 @@
             FESTA • POCKET • CELEBRATION
           </div>
 
+
           <h1>
+
             Decorações que
+
             <span>transformam</span>
+
             momentos.
+
           </h1>
 
+
+          <div class="script hero-script">
+
+            para celebrar do seu jeito.
+
+          </div>
+
+
           <p>
-            Pegue e Monte, montagem e decoração de festas pensadas
-            para transformar cada celebração em uma experiência especial.
+
+            Pegue e Monte, montagem e decoração de festas
+            pensadas para transformar cada celebração em
+            uma experiência especial.
+
           </p>
 
+
           <div class="hero-services">
+
             <span>PEGUE E MONTE</span>
+
             <span>MONTAGEM</span>
+
             <span>DECORAÇÃO COMPLETA</span>
+
           </div>
+
 
           <div class="hero-buttons">
 
@@ -956,11 +1614,19 @@
               target="_blank"
               rel="noopener"
             >
+
               FALAR NO WHATSAPP
+
             </a>
 
-            <a class="btn btn-outline" href="#colecoes">
+
+            <a
+              class="btn btn-outline"
+              href="#colecoes"
+            >
+
               CONHECER COLEÇÕES
+
             </a>
 
           </div>
@@ -972,7 +1638,10 @@
     </section>
 
 
-    <!-- COLEÇÕES -->
+    <!-- =====================================================
+         COLEÇÕES
+    ====================================================== -->
+
     <section class="collections" id="colecoes">
 
       <div class="container">
@@ -983,13 +1652,22 @@
             ZÊ DECOR
           </div>
 
+
           <h2 class="section-name">
             NOSSAS COLEÇÕES
           </h2>
 
+
+          <div class="script section-script">
+            cada celebração merece seu momento.
+          </div>
+
+
           <p class="section-phrase">
-            Do Pegue e Monte à decoração completa, escolha a forma
-            que combina com o seu momento.
+
+            Do Pegue e Monte à decoração completa,
+            escolha a forma que combina com o seu momento.
+
           </p>
 
         </div>
@@ -997,31 +1675,50 @@
 
         <div class="collection-grid">
 
+
           <!-- POCKET -->
+
           <article class="collection-card">
 
             <div class="collection-image">
+
               <img
                 src="pocket-01.webp"
                 alt="Decoração de festa Pocket ZÊ DECOR com opção de Pegue e Monte e montagem"
                 loading="lazy"
               >
+
             </div>
 
+
             <div class="collection-body">
+
+              <div class="script collection-script">
+                prática e encantadora.
+              </div>
+
 
               <h3>
                 FESTA NA MESA — POCKET
               </h3>
 
+
               <p>
+
                 Uma opção prática, charmosa e cheia de personalidade.
                 Você pode escolher o <strong>Pegue e Monte</strong>
                 ou deixar a <strong>montagem com a nossa equipe</strong>.
+
               </p>
 
-              <a class="collection-link" href="#pocket">
+
+              <a
+                class="collection-link"
+                href="#pocket"
+              >
+
                 VER DECORAÇÕES →
+
               </a>
 
             </div>
@@ -1029,35 +1726,54 @@
           </article>
 
 
-          <!-- MAIORES -->
+          <!-- DECORAÇÕES MAIORES -->
+
           <article class="collection-card">
 
             <div class="collection-image">
+
               <img
                 src="padrao-03.webp"
                 alt="Decoração completa de festa ZÊ DECOR com montagem"
                 loading="lazy"
               >
+
             </div>
 
+
             <div class="collection-body">
+
+              <div class="script collection-script">
+                para momentos inesquecíveis.
+              </div>
+
 
               <h3>
                 DECORAÇÕES MAIORES
               </h3>
 
+
               <p>
+
                 Produções completas para celebrar em grande estilo,
                 com <strong>montagem realizada pela equipe ZÊ DECOR</strong>.
+
               </p>
 
-              <a class="collection-link" href="#maiores">
+
+              <a
+                class="collection-link"
+                href="#maiores"
+              >
+
                 VER DECORAÇÕES →
+
               </a>
 
             </div>
 
           </article>
+
 
         </div>
 
@@ -1066,7 +1782,10 @@
     </section>
 
 
-    <!-- POCKET -->
+    <!-- =====================================================
+         POCKET
+    ====================================================== -->
+
     <section class="gallery-section" id="pocket">
 
       <div class="container">
@@ -1077,13 +1796,22 @@
             PEGUE E MONTE • MONTAGEM
           </div>
 
+
           <h2 class="section-name">
             FESTA NA MESA — POCKET
           </h2>
 
+
+          <div class="script section-script">
+            pequenos detalhes, grandes momentos.
+          </div>
+
+
           <p class="section-phrase">
+
             Escolha entre o Pegue e Monte ou deixe a montagem
             com a ZÊ DECOR. Você escolhe como quer celebrar.
+
           </p>
 
         </div>
@@ -1091,41 +1819,72 @@
 
         <div class="gallery-grid">
 
-          <div class="gallery-card">
-            <img src="pocket-01.webp"
-                 alt="Festa Pocket ZÊ DECOR - Pegue e Monte"
-                 loading="lazy">
-          </div>
 
           <div class="gallery-card">
-            <img src="pocket-02.webp"
-                 alt="Decoração Pocket ZÊ DECOR - montagem de festa"
-                 loading="lazy">
+
+            <img
+              src="pocket-01.webp"
+              alt="Festa Pocket ZÊ DECOR - Pegue e Monte"
+              loading="lazy"
+            >
+
           </div>
 
-          <div class="gallery-card">
-            <img src="pocket-03.webp"
-                 alt="Decoração de casamento Pocket ZÊ DECOR"
-                 loading="lazy">
-          </div>
 
           <div class="gallery-card">
-            <img src="pocket-04.webp"
-                 alt="Decoração de aniversário Pocket ZÊ DECOR"
-                 loading="lazy">
+
+            <img
+              src="pocket-02.webp"
+              alt="Decoração Pocket ZÊ DECOR - montagem de festa"
+              loading="lazy"
+            >
+
           </div>
 
-          <div class="gallery-card">
-            <img src="pocket-05.webp"
-                 alt="Decoração de aniversário rosa ZÊ DECOR"
-                 loading="lazy">
-          </div>
 
           <div class="gallery-card">
-            <img src="pocket-06.webp"
-                 alt="Decoração preta e prata ZÊ DECOR"
-                 loading="lazy">
+
+            <img
+              src="pocket-03.webp"
+              alt="Decoração de casamento Pocket ZÊ DECOR"
+              loading="lazy"
+            >
+
           </div>
+
+
+          <div class="gallery-card">
+
+            <img
+              src="pocket-04.webp"
+              alt="Decoração de aniversário Pocket ZÊ DECOR"
+              loading="lazy"
+            >
+
+          </div>
+
+
+          <div class="gallery-card">
+
+            <img
+              src="pocket-05.webp"
+              alt="Decoração de aniversário rosa ZÊ DECOR"
+              loading="lazy"
+            >
+
+          </div>
+
+
+          <div class="gallery-card">
+
+            <img
+              src="pocket-06.webp"
+              alt="Decoração preta e prata ZÊ DECOR"
+              loading="lazy"
+            >
+
+          </div>
+
 
         </div>
 
@@ -1134,7 +1893,10 @@
     </section>
 
 
-    <!-- DECORAÇÕES MAIORES -->
+    <!-- =====================================================
+         DECORAÇÕES MAIORES
+    ====================================================== -->
+
     <section class="gallery-section" id="maiores">
 
       <div class="container">
@@ -1145,13 +1907,22 @@
             MONTAGEM • CELEBRATION
           </div>
 
+
           <h2 class="section-name">
             DECORAÇÕES MAIORES
           </h2>
 
+
+          <div class="script section-script">
+            celebrações que merecem ser lembradas.
+          </div>
+
+
           <p class="section-phrase">
+
             Decorações completas com montagem da nossa equipe,
             pensadas para criar uma celebração marcante.
+
           </p>
 
         </div>
@@ -1159,41 +1930,72 @@
 
         <div class="gallery-grid">
 
-          <div class="gallery-card">
-            <img src="padrao-01.webp"
-                 alt="Decoração de festa de aniversário ZÊ DECOR com montagem"
-                 loading="lazy">
-          </div>
 
           <div class="gallery-card">
-            <img src="padrao-02.webp"
-                 alt="Decoração de festa colorida ZÊ DECOR com montagem"
-                 loading="lazy">
+
+            <img
+              src="padrao-01.webp"
+              alt="Decoração de festa de aniversário ZÊ DECOR com montagem"
+              loading="lazy"
+            >
+
           </div>
 
-          <div class="gallery-card">
-            <img src="padrao-03.webp"
-                 alt="Decoração de festa elegante ZÊ DECOR com montagem"
-                 loading="lazy">
-          </div>
 
           <div class="gallery-card">
-            <img src="padrao-04.webp"
-                 alt="Decoração My Baby ZÊ DECOR"
-                 loading="lazy">
+
+            <img
+              src="padrao-02.webp"
+              alt="Decoração de festa colorida ZÊ DECOR com montagem"
+              loading="lazy"
+            >
+
           </div>
 
-          <div class="gallery-card">
-            <img src="padrao-05.webp"
-                 alt="Decoração infantil My Baby ZÊ DECOR"
-                 loading="lazy">
-          </div>
 
           <div class="gallery-card">
-            <img src="padrao-06.webp"
-                 alt="Decoração infantil com ursinhos ZÊ DECOR"
-                 loading="lazy">
+
+            <img
+              src="padrao-03.webp"
+              alt="Decoração de festa elegante ZÊ DECOR com montagem"
+              loading="lazy"
+            >
+
           </div>
+
+
+          <div class="gallery-card">
+
+            <img
+              src="padrao-04.webp"
+              alt="Decoração My Baby ZÊ DECOR"
+              loading="lazy"
+            >
+
+          </div>
+
+
+          <div class="gallery-card">
+
+            <img
+              src="padrao-05.webp"
+              alt="Decoração infantil My Baby ZÊ DECOR"
+              loading="lazy"
+            >
+
+          </div>
+
+
+          <div class="gallery-card">
+
+            <img
+              src="padrao-06.webp"
+              alt="Decoração infantil com ursinhos ZÊ DECOR"
+              loading="lazy"
+            >
+
+          </div>
+
 
         </div>
 
@@ -1202,7 +2004,10 @@
     </section>
 
 
-    <!-- AVALIAÇÕES -->
+    <!-- =====================================================
+         AVALIAÇÕES
+    ====================================================== -->
+
     <section class="reviews" id="avaliacoes">
 
       <div class="container">
@@ -1213,13 +2018,15 @@
             EXPERIÊNCIAS REAIS
           </div>
 
+
           <h2 class="section-name">
             O QUE NOSSOS CLIENTES DIZEM
           </h2>
 
-          <p class="section-phrase">
-            Experiências que ficam na memória.
-          </p>
+
+          <div class="script section-script">
+            experiências que ficam na memória.
+          </div>
 
         </div>
 
@@ -1230,9 +2037,11 @@
             ★★★★★
           </div>
 
+
           <div class="review-score">
             5,0
           </div>
+
 
           <div class="review-source">
             Avaliação no Google
@@ -1243,15 +2052,18 @@
 
         <div class="review-grid">
 
+
           <article class="review-card">
 
             <div class="stars">
               ★★★★★
             </div>
 
+
             <p>
               “Tudo perfeito! Foram super solícitos do início ao fim.”
             </p>
+
 
             <div class="review-author">
               — Elen C.
@@ -1266,9 +2078,12 @@
               ★★★★★
             </div>
 
+
             <p>
-              “Muito capricho, pontualidade... a ornamentação da mesa ficou linda demais.”
+              “Muito capricho, pontualidade... a ornamentação
+              da mesa ficou linda demais.”
             </p>
+
 
             <div class="review-author">
               — Karina R.
@@ -1283,15 +2098,19 @@
               ★★★★★
             </div>
 
+
             <p>
-              “Trabalho de qualidade... comunicação efetiva e ótimo resultado.”
+              “Trabalho de qualidade... comunicação efetiva
+              e ótimo resultado.”
             </p>
+
 
             <div class="review-author">
               — Debora
             </div>
 
           </article>
+
 
         </div>
 
@@ -1304,7 +2123,9 @@
             target="_blank"
             rel="noopener"
           >
+
             VER TODAS AS AVALIAÇÕES NO GOOGLE
+
           </a>
 
         </div>
@@ -1314,7 +2135,10 @@
     </section>
 
 
-    <!-- CONTATO -->
+    <!-- =====================================================
+         CONTATO
+    ====================================================== -->
+
     <section class="contact" id="contato">
 
       <div class="container">
@@ -1323,24 +2147,35 @@
 
           <div class="contact-grid">
 
+
             <div>
 
               <div class="eyebrow">
                 VAMOS CELEBRAR?
               </div>
 
+
               <h2>
                 Sua festa começa aqui.
               </h2>
 
+
+              <div class="script section-script">
+                e o seu momento merece ser especial.
+              </div>
+
+
               <p class="contact-text">
+
                 Pegue e Monte, montagem ou decoração completa?
                 Fale com a ZÊ DECOR e encontre a opção ideal
                 para o seu momento.
+
               </p>
 
 
               <div class="contact-items">
+
 
                 <div class="contact-item">
 
@@ -1348,12 +2183,15 @@
                     WhatsApp
                   </strong>
 
+
                   <a
                     href="https://wa.me/5521981545015"
                     target="_blank"
                     rel="noopener"
                   >
+
                     (21) 98154-5015
+
                   </a>
 
                 </div>
@@ -1365,12 +2203,15 @@
                     Instagram
                   </strong>
 
+
                   <a
                     href="https://instagram.com/zedecorofc"
                     target="_blank"
                     rel="noopener"
                   >
+
                     @zedecorofc
+
                   </a>
 
                 </div>
@@ -1382,11 +2223,13 @@
                     Atendimento
                   </strong>
 
+
                   <span>
                     Barra • Recreio • Jacarepaguá • Vargens
                   </span>
 
                 </div>
+
 
               </div>
 
@@ -1395,20 +2238,28 @@
 
             <div class="contact-cta">
 
+
               <a
                 class="btn btn-primary"
                 href="https://wa.me/5521981545015?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20para%20minha%20festa."
                 target="_blank"
                 rel="noopener"
               >
+
                 PEDIR ORÇAMENTO
+
               </a>
 
+
               <small>
+
                 Pegue e Monte • Montagem • Festa Pocket • Celebration
+
               </small>
 
+
             </div>
+
 
           </div>
 
@@ -1421,21 +2272,30 @@
   </main>
 
 
-  <!-- FOOTER -->
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
   <footer>
 
     <div class="container">
 
       <div class="footer-content">
 
+
         <div>
 
           <div class="footer-brand">
+
             ZÊ <span>DECOR</span>
+
           </div>
 
+
           <div class="footer-tagline">
+
             PEGUE E MONTE • MONTAGEM • FESTA POCKET • CELEBRATION
+
           </div>
 
         </div>
@@ -1447,29 +2307,37 @@
             COLEÇÕES
           </a>
 
+
           <a href="#avaliacoes">
             AVALIAÇÕES
           </a>
 
+
           <a href="#contato">
             CONTATO
           </a>
+
 
           <a
             href="https://instagram.com/zedecorofc"
             target="_blank"
             rel="noopener"
           >
+
             INSTAGRAM
+
           </a>
 
         </div>
+
 
       </div>
 
 
       <div class="footer-bottom">
+
         © 2026 ZÊ DECOR — Decorações que transformam momentos.
+
       </div>
 
     </div>
@@ -1477,7 +2345,10 @@
   </footer>
 
 
-  <!-- LIGHTBOX -->
+  <!-- =====================================================
+       LIGHTBOX
+  ====================================================== -->
+
   <div class="lightbox" id="lightbox">
 
     <button
@@ -1485,8 +2356,11 @@
       id="lightboxClose"
       aria-label="Fechar imagem"
     >
+
       ×
+
     </button>
+
 
     <img
       id="lightboxImage"
@@ -1497,18 +2371,31 @@
   </div>
 
 
-  <!-- JSON-LD / SEO -->
+  <!-- =====================================================
+       JSON-LD
+  ====================================================== -->
+
   <script type="application/ld+json">
+
   {
     "@context": "https://schema.org",
+
     "@type": "LocalBusiness",
+
     "name": "ZÊ DECOR",
+
     "alternateName": "Zê Decor - Pegue e Monte",
+
     "url": "https://zedecor.com.br/",
+
     "telephone": "+55 21 98154-5015",
+
     "image": "https://zedecor.com.br/logo-ze-decor.png",
+
     "description": "Pegue e Monte, montagem de decoração e decoração de festas no Rio de Janeiro. Festa Pocket e Celebration em Barra, Recreio, Jacarepaguá e Vargens.",
+
     "priceRange": "$$",
+
     "serviceType": [
       "Pegue e Monte",
       "Montagem de decoração",
@@ -1516,6 +2403,7 @@
       "Decoração Pocket",
       "Decoração completa"
     ],
+
     "areaServed": [
       {
         "@type": "Place",
@@ -1534,35 +2422,50 @@
         "name": "Vargens, Rio de Janeiro"
       }
     ],
+
     "sameAs": [
       "https://instagram.com/zedecorofc",
       "https://maps.app.goo.gl/9QeNwJrUB7NkjPqy6"
     ]
+
   }
+
   </script>
 
 
-  <!-- JAVASCRIPT -->
+  <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
+
   <script>
 
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImage = document.getElementById("lightboxImage");
-    const lightboxClose = document.getElementById("lightboxClose");
+    const lightbox =
+      document.getElementById("lightbox");
 
-    document.querySelectorAll(".gallery-card img").forEach(function(img) {
+    const lightboxImage =
+      document.getElementById("lightboxImage");
 
-      img.addEventListener("click", function() {
+    const lightboxClose =
+      document.getElementById("lightboxClose");
 
-        lightboxImage.src = img.src;
-        lightboxImage.alt = img.alt;
 
-        lightbox.classList.add("active");
+    document
+      .querySelectorAll(".gallery-card img")
+      .forEach(function(img) {
 
-        document.body.style.overflow = "hidden";
+        img.addEventListener("click", function() {
+
+          lightboxImage.src = img.src;
+
+          lightboxImage.alt = img.alt;
+
+          lightbox.classList.add("active");
+
+          document.body.style.overflow = "hidden";
+
+        });
 
       });
-
-    });
 
 
     function closeLightbox() {
@@ -1576,27 +2479,42 @@
     }
 
 
-    lightboxClose.addEventListener("click", closeLightbox);
+    lightboxClose.addEventListener(
+      "click",
+      closeLightbox
+    );
 
 
-    lightbox.addEventListener("click", function(event) {
+    lightbox.addEventListener(
+      "click",
+      function(event) {
 
-      if (event.target === lightbox) {
-        closeLightbox();
+        if (event.target === lightbox) {
+
+          closeLightbox();
+
+        }
+
       }
+    );
 
-    });
 
+    document.addEventListener(
+      "keydown",
+      function(event) {
 
-    document.addEventListener("keydown", function(event) {
+        if (event.key === "Escape") {
 
-      if (event.key === "Escape") {
-        closeLightbox();
+          closeLightbox();
+
+        }
+
       }
-
-    });
+    );
 
   </script>
 
+
 </body>
+
 </html>
