@@ -3,1196 +3,1539 @@
 
 <head>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>ZÊ DECOR | Festa • Pocket • Celebration</title>
+<title>ZÊ DECOR | Festa • Pocket • Celebration</title>
 
-  <meta
-    name="description"
-    content="ZÊ DECOR — Decorações que transformam momentos. Festa na Mesa, Pocket e Decorações Maiores em Barra, Recreio, Jacarepaguá e Vargens."
-  >
+<meta
+  name="description"
+  content="ZÊ DECOR — Decorações que transformam momentos."
+>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  >
+<link
+  href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+  rel="stylesheet"
+>
 
-  <style>
 
-    /* =====================================================
-       CORES
-    ===================================================== */
+<style>
 
-    :root {
-      --fundo: #f8f3eb;
-      --fundo-suave: #f4ece1;
-      --marrom: #39271f;
-      --marrom-claro: #725e52;
-      --dourado: #b98c4e;
-      --dourado-claro: #d4b57f;
-      --linha: rgba(57, 39, 31, 0.13);
-      --branco: #ffffff;
-      --escuro: #281c17;
+/* =========================================================
+   CORES
+========================================================= */
 
-      --sombra:
-        0 25px 70px rgba(57, 39, 31, 0.10);
-    }
+:root {
 
+  --fundo: #f8f3eb;
+  --fundo-suave: #f3eadf;
 
-    /* =====================================================
-       RESET
-    ===================================================== */
+  --marrom: #39271f;
+  --marrom-claro: #725e52;
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  --dourado: #b98c4e;
+  --dourado-claro: #d4b57f;
 
-    html {
-      scroll-behavior: smooth;
-    }
+  --branco: #ffffff;
 
-    body {
-      background: var(--fundo);
-      color: var(--marrom);
-      font-family: "DM Sans", Arial, sans-serif;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
+  --escuro: #281c17;
 
-    img {
-      display: block;
-      max-width: 100%;
-    }
+  --linha: rgba(57,39,31,.13);
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+  --sombra:
+    0 25px 70px rgba(57,39,31,.10);
 
-    button {
-      font-family: inherit;
-    }
+}
 
 
-    /* =====================================================
-       HEADER
-    ===================================================== */
+/* =========================================================
+   RESET
+========================================================= */
 
-    header {
-      position: fixed;
-      z-index: 1000;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-      top: 0;
-      left: 0;
+html {
+  scroll-behavior: smooth;
+}
 
-      width: 100%;
+body {
 
-      background: rgba(248, 243, 235, 0.95);
+  position: relative;
 
-      backdrop-filter: blur(16px);
+  background: var(--fundo);
 
-      border-bottom: 1px solid var(--linha);
-    }
+  color: var(--marrom);
 
-    .header-inner {
-      width: 100%;
-      max-width: 1380px;
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
 
-      min-height: 86px;
+  overflow-x: hidden;
 
-      margin: 0 auto;
-      padding: 0 40px;
+}
 
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+img {
+  display: block;
+  max-width: 100%;
+}
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-    .brand img {
-      width: 64px;
-      height: 64px;
+button {
+  font-family: inherit;
+}
 
-      object-fit: contain;
-    }
 
-    .brand-name {
-      font-family: "Playfair Display", Georgia, serif;
+/* =========================================================
+   DECORAÇÃO LATERAL GLOBAL
+========================================================= */
 
-      font-size: 24px;
-      font-weight: 600;
+/*
+   IMPORTANTE:
 
-      letter-spacing: 0.08em;
+   Essa decoração NÃO pertence a nenhuma seção.
 
-      line-height: 1;
-    }
+   Ela acompanha TODA a landing page.
+*/
 
-    .brand-sub {
-      margin-top: 5px;
+.global-decoration {
 
-      color: var(--marrom-claro);
+  position: absolute;
 
-      font-size: 8px;
+  top: 0;
+  bottom: 0;
 
-      letter-spacing: 0.20em;
-    }
+  width: 250px;
 
-    nav {
-      display: flex;
-      align-items: center;
+  z-index: 4;
 
-      gap: 38px;
-    }
+  pointer-events: none;
 
-    nav a {
-      position: relative;
+}
 
-      font-size: 10px;
-      font-weight: 700;
+.global-decoration.left {
+  left: 0;
+}
 
-      letter-spacing: 0.16em;
+.global-decoration.right {
+  right: 0;
+}
 
-      transition: 0.3s ease;
-    }
+.global-decoration svg {
 
-    nav a::after {
-      content: "";
+  width: 100%;
+  height: 100%;
 
-      position: absolute;
+  overflow: visible;
 
-      left: 0;
-      bottom: -9px;
+}
 
-      width: 0;
-      height: 1px;
 
-      background: var(--dourado);
+/* =========================================================
+   ELEMENTOS DA ARTE
+========================================================= */
 
-      transition: 0.3s ease;
-    }
+.decoration-line {
 
-    nav a:hover {
-      color: var(--dourado);
-    }
+  fill: none;
 
-    nav a:hover::after {
-      width: 100%;
-    }
+  stroke: var(--dourado);
 
-    .menu-toggle {
-      display: none;
+  stroke-width: 2.2;
 
-      border: 0;
+  stroke-linecap: round;
 
-      background: transparent;
+  opacity: .68;
 
-      color: var(--marrom);
+}
 
-      font-size: 28px;
+.decoration-line-light {
 
-      cursor: pointer;
-    }
+  fill: none;
 
+  stroke: #d7bd96;
 
-    /* =====================================================
-       HERO
-    ===================================================== */
+  stroke-width: 1.3;
 
-    .hero {
-      min-height: 100vh;
+  stroke-linecap: round;
 
-      position: relative;
+  opacity: .65;
 
-      display: flex;
-      align-items: center;
+}
 
-      padding-top: 86px;
 
-      background:
-        linear-gradient(
-          90deg,
-          rgba(38, 26, 21, 0.86) 0%,
-          rgba(38, 26, 21, 0.60) 43%,
-          rgba(38, 26, 21, 0.15) 100%
-        ),
-        url("padrao-03.webp") center / cover no-repeat;
-    }
+.decoration-balloon {
 
-    .hero-inner {
-      width: 100%;
-      max-width: 1380px;
+  fill: rgba(185,140,78,.11);
 
-      margin: 0 auto;
+  stroke: var(--dourado);
 
-      padding: 100px 40px;
+  stroke-width: 1.7;
 
-      color: var(--branco);
-    }
+  opacity: .72;
 
-    .hero-kicker {
-      margin-bottom: 25px;
+}
 
-      color: #e3c493;
 
-      font-size: 10px;
+.decoration-balloon-light {
 
-      font-weight: 700;
+  fill: rgba(255,255,255,.08);
 
-      letter-spacing: 0.32em;
+  stroke: #d6bb91;
 
-      text-transform: uppercase;
-    }
+  stroke-width: 1.3;
 
-    .hero h1 {
-      max-width: 900px;
+  opacity: .65;
 
-      font-family: "Playfair Display", Georgia, serif;
+}
 
-      font-size: clamp(60px, 7.5vw, 110px);
 
-      font-weight: 500;
+.decoration-highlight {
 
-      line-height: 0.94;
+  fill: none;
 
-      letter-spacing: -0.045em;
-    }
+  stroke: rgba(255,255,255,.75);
 
-    .hero-description {
-      max-width: 580px;
+  stroke-width: 1.2;
 
-      margin-top: 35px;
+}
 
-      color: rgba(255, 255, 255, 0.88);
 
-      font-size: 16px;
+.decoration-leaf {
 
-      line-height: 1.85;
-    }
+  fill: rgba(185,140,78,.10);
 
-    .hero-buttons {
-      margin-top: 42px;
+  stroke: var(--dourado);
 
-      display: flex;
+  stroke-width: 1.2;
 
-      flex-wrap: wrap;
+  opacity: .70;
 
-      gap: 14px;
-    }
+}
 
-    .btn {
-      min-height: 51px;
 
-      padding: 0 28px;
+.decoration-stem {
 
-      display: inline-flex;
+  fill: none;
 
-      align-items: center;
-      justify-content: center;
+  stroke: var(--dourado);
 
-      border: 1px solid transparent;
+  stroke-width: 1.4;
 
-      font-size: 10px;
+  opacity: .68;
 
-      font-weight: 700;
+}
 
-      letter-spacing: 0.14em;
 
-      text-transform: uppercase;
+.decoration-dot {
 
-      transition: 0.3s ease;
-    }
+  fill: var(--dourado);
 
-    .btn-light {
-      background: var(--branco);
+  opacity: .75;
 
-      color: var(--marrom);
-    }
+}
 
-    .btn-light:hover {
-      background: var(--dourado);
 
-      color: var(--branco);
-    }
+.decoration-dot-light {
 
-    .btn-border {
-      border-color: rgba(255, 255, 255, 0.55);
+  fill: #d9c29e;
 
-      color: var(--branco);
+  opacity: .70;
 
-      background: rgba(255, 255, 255, 0.03);
-    }
+}
 
-    .btn-border:hover {
-      background: var(--branco);
 
-      color: var(--marrom);
-    }
+/* =========================================================
+   HEADER
+========================================================= */
 
+header {
 
-    /* =====================================================
-       COLEÇÕES
-    ===================================================== */
+  position: fixed;
 
-    .colecoes {
-      position: relative;
+  z-index: 1000;
 
-      overflow: hidden;
+  top: 0;
+  left: 0;
 
-      padding: 125px 40px 150px;
+  width: 100%;
 
-      background: var(--fundo);
-    }
+  background:
+    rgba(248,243,235,.95);
 
-    .container {
-      position: relative;
+  backdrop-filter: blur(16px);
 
-      z-index: 10;
+  border-bottom:
+    1px solid var(--linha);
 
-      width: 100%;
-      max-width: 1200px;
+}
 
-      margin: 0 auto;
-    }
+.header-inner {
 
+  max-width: 1380px;
 
-    /* =====================================================
-       HIERARQUIA DOS TÍTULOS
+  min-height: 86px;
 
-       TÍTULO = GRANDE
-       FRASE = MENOR
-    ===================================================== */
+  margin: auto;
 
-    .collections-header {
-      max-width: 900px;
+  padding: 0 40px;
 
-      margin-bottom: 80px;
-    }
+  display: flex;
 
-    .section-name {
-      color: var(--marrom);
+  align-items: center;
 
-      font-family: "Playfair Display", Georgia, serif;
+  justify-content: space-between;
 
-      font-size: clamp(58px, 6.5vw, 92px);
+}
 
-      font-weight: 500;
+.brand {
 
-      line-height: 0.93;
+  display: flex;
 
-      letter-spacing: -0.045em;
-    }
+  align-items: center;
 
-    .section-phrase {
-      max-width: 680px;
+  gap: 14px;
 
-      margin-top: 24px;
+}
 
-      color: var(--marrom-claro);
+.brand img {
 
-      font-family: "Playfair Display", Georgia, serif;
+  width: 64px;
+  height: 64px;
 
-      font-size: clamp(23px, 2.5vw, 35px);
+  object-fit: contain;
 
-      font-weight: 400;
+}
 
-      line-height: 1.18;
-    }
+.brand-name {
 
-    .section-text {
-      max-width: 640px;
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
 
-      margin-top: 22px;
+  font-size: 24px;
 
-      color: var(--marrom-claro);
+  font-weight: 600;
 
-      font-size: 14px;
+  letter-spacing: .08em;
 
-      line-height: 1.85;
-    }
+  line-height: 1;
 
+}
 
-    /* =====================================================
-       ARTE LATERAL ORGÂNICA
+.brand-sub {
 
-       A composição ocupa a altura da área de coleções.
-    ===================================================== */
+  margin-top: 5px;
 
-    .organic-art {
-      position: absolute;
+  color: var(--marrom-claro);
 
-      z-index: 2;
+  font-size: 8px;
 
-      pointer-events: none;
+  letter-spacing: .20em;
 
-      opacity: 0.55;
-    }
+}
 
-    .organic-left {
-      width: 340px;
-      height: 1450px;
+nav {
 
-      left: -75px;
-      top: 0;
-    }
+  display: flex;
 
-    .organic-right {
-      width: 360px;
-      height: 1500px;
+  gap: 38px;
 
-      right: -80px;
-      top: 0;
-    }
+}
 
-    .organic-art svg {
-      width: 100%;
-      height: 100%;
+nav a {
 
-      overflow: visible;
-    }
+  position: relative;
 
-    .balloon {
-      fill: rgba(218, 201, 178, 0.16);
+  font-size: 10px;
 
-      stroke: #d0b995;
+  font-weight: 700;
 
-      stroke-width: 1.15;
-    }
+  letter-spacing: .16em;
 
-    .balloon-soft {
-      fill: rgba(232, 220, 204, 0.22);
+}
 
-      stroke: #ddcdb7;
+nav a::after {
 
-      stroke-width: 0.9;
-    }
+  content: "";
 
-    .balloon-highlight {
-      fill: none;
+  position: absolute;
 
-      stroke: rgba(255, 255, 255, 0.65);
+  left: 0;
+  bottom: -9px;
 
-      stroke-width: 1;
-    }
+  width: 0;
+  height: 1px;
 
-    .ribbon {
-      fill: none;
+  background: var(--dourado);
 
-      stroke: #c7a774;
+  transition: .3s;
 
-      stroke-width: 1.45;
+}
 
-      stroke-linecap: round;
-    }
+nav a:hover::after {
+  width: 100%;
+}
 
-    .ribbon-soft {
-      fill: none;
+nav a:hover {
+  color: var(--dourado);
+}
 
-      stroke: #ddcbb0;
+.menu-toggle {
 
-      stroke-width: 0.9;
+  display: none;
 
-      stroke-linecap: round;
-    }
+  border: 0;
 
-    .leaf {
-      fill: rgba(198, 169, 126, 0.10);
+  background: transparent;
 
-      stroke: #c8aa7d;
+  color: var(--marrom);
 
-      stroke-width: 0.9;
-    }
+  font-size: 28px;
 
-    .stem {
-      fill: none;
+  cursor: pointer;
 
-      stroke: #c7a77a;
+}
 
-      stroke-width: 1;
-    }
 
-    .dot {
-      fill: #bd9255;
+/* =========================================================
+   HERO
+========================================================= */
 
-      opacity: 0.58;
-    }
+.hero {
 
-    .dot-light {
-      fill: #d7c19e;
+  min-height: 100vh;
 
-      opacity: 0.55;
-    }
+  position: relative;
 
+  z-index: 1;
 
-    /* =====================================================
-       CARDS
-    ===================================================== */
+  display: flex;
 
-    .collection-grid {
-      display: grid;
+  align-items: center;
 
-      grid-template-columns: repeat(2, 1fr);
+  padding-top: 86px;
 
-      gap: 30px;
-    }
+  background:
 
-    .collection-card {
-      overflow: hidden;
+    linear-gradient(
+      90deg,
+      rgba(38,26,21,.88),
+      rgba(38,26,21,.60) 45%,
+      rgba(38,26,21,.12)
+    ),
 
-      background: rgba(255, 255, 255, 0.78);
+    url("padrao-03.webp")
+    center / cover
+    no-repeat;
 
-      box-shadow: var(--sombra);
-    }
+}
 
-    .collection-image {
-      overflow: hidden;
+.hero-inner {
 
-      background: #eee6da;
-    }
+  width: 100%;
 
-    .collection-image img {
-      width: 100%;
-      height: auto;
+  max-width: 1380px;
 
-      object-fit: contain;
+  margin: auto;
 
-      transition: transform 0.65s ease;
-    }
+  padding: 100px 40px;
 
-    .collection-card:hover .collection-image img {
-      transform: scale(1.025);
-    }
+  color: white;
 
-    .collection-info {
-      padding: 36px;
-    }
+}
 
-    .collection-label {
-      margin-bottom: 14px;
+.hero-kicker {
 
-      color: var(--dourado);
+  margin-bottom: 25px;
 
-      font-size: 10px;
+  color: #e3c493;
 
-      font-weight: 700;
+  font-size: 10px;
 
-      letter-spacing: 0.23em;
+  font-weight: 700;
 
-      text-transform: uppercase;
-    }
+  letter-spacing: .32em;
 
-    .collection-info h3 {
-      margin-bottom: 18px;
+}
 
-      color: var(--marrom);
+.hero h1 {
 
-      font-family: "Playfair Display", Georgia, serif;
+  max-width: 900px;
 
-      font-size: 42px;
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
 
-      font-weight: 500;
+  font-size:
+    clamp(60px,7.5vw,110px);
 
-      line-height: 0.98;
+  font-weight: 500;
 
-      letter-spacing: -0.025em;
-    }
+  line-height: .94;
 
-    .collection-info p {
-      color: var(--marrom-claro);
+  letter-spacing: -.045em;
 
-      font-size: 14px;
+}
 
-      line-height: 1.8;
-    }
+.hero-description {
 
+  max-width: 580px;
 
-    /* =====================================================
-       GALERIAS
-    ===================================================== */
+  margin-top: 35px;
 
-    .gallery-section {
-      margin-top: 150px;
-    }
+  color: rgba(255,255,255,.88);
 
-    .gallery-header {
-      max-width: 920px;
+  font-size: 16px;
 
-      margin-bottom: 48px;
-    }
+  line-height: 1.85;
 
-    .gallery-name {
-      color: var(--marrom);
+}
 
-      font-family: "Playfair Display", Georgia, serif;
+.hero-buttons {
 
-      font-size: clamp(52px, 5.8vw, 82px);
+  margin-top: 42px;
 
-      font-weight: 500;
+  display: flex;
 
-      line-height: 0.94;
+  flex-wrap: wrap;
 
-      letter-spacing: -0.04em;
-    }
+  gap: 14px;
 
-    .gallery-phrase {
-      max-width: 650px;
+}
 
-      margin-top: 22px;
+.btn {
 
-      color: var(--marrom-claro);
+  min-height: 51px;
 
-      font-family: "Playfair Display", Georgia, serif;
+  padding: 0 28px;
 
-      font-size: clamp(23px, 2.5vw, 35px);
+  display: inline-flex;
 
-      line-height: 1.18;
-    }
+  align-items: center;
 
-    .gallery-description {
-      max-width: 620px;
+  justify-content: center;
 
-      margin-top: 18px;
+  border: 1px solid transparent;
 
-      color: var(--marrom-claro);
+  font-size: 10px;
 
-      font-size: 14px;
+  font-weight: 700;
 
-      line-height: 1.8;
-    }
+  letter-spacing: .14em;
 
-    .photo-grid {
-      display: grid;
+  transition: .3s;
 
-      grid-template-columns: repeat(3, 1fr);
+}
 
-      gap: 18px;
-    }
+.btn-light {
 
-    .photo-card {
-      overflow: hidden;
+  background: white;
 
-      background: #eee6da;
+  color: var(--marrom);
 
-      cursor: pointer;
-    }
+}
 
-    .photo-card img {
-      width: 100%;
-      height: auto;
+.btn-light:hover {
 
-      object-fit: contain;
+  background: var(--dourado);
 
-      transition: transform 0.55s ease;
-    }
+  color: white;
 
-    .photo-card:hover img {
-      transform: scale(1.02);
-    }
+}
 
+.btn-border {
 
-    /* =====================================================
-       AVALIAÇÕES
-    ===================================================== */
+  border-color:
+    rgba(255,255,255,.55);
 
-    .reviews {
-      padding: 125px 40px;
+  color: white;
 
-      background: var(--fundo-suave);
+}
 
-      text-align: center;
-    }
+.btn-border:hover {
 
-    .reviews .section-name {
-      max-width: 1000px;
+  background: white;
 
-      margin: 0 auto;
-    }
+  color: var(--marrom);
 
-    .reviews .section-phrase {
-      margin-left: auto;
-      margin-right: auto;
-    }
+}
 
-    .rating-box {
-      max-width: 650px;
 
-      margin: 60px auto 0;
+/* =========================================================
+   SEÇÕES
+========================================================= */
 
-      padding: 50px 30px;
+.colecoes {
 
-      background: var(--branco);
+  position: relative;
 
-      border: 1px solid var(--linha);
+  z-index: 1;
 
-      box-shadow: var(--sombra);
-    }
+  padding: 135px 40px 160px;
 
-    .stars {
-      color: var(--dourado);
+  background: var(--fundo);
 
-      font-size: 27px;
+}
 
-      letter-spacing: 5px;
-    }
+.container {
 
-    .rating {
-      margin-top: 12px;
+  position: relative;
 
-      color: var(--marrom);
+  z-index: 10;
 
-      font-family: "Playfair Display", Georgia, serif;
+  width: 100%;
 
-      font-size: 62px;
+  max-width: 1200px;
 
-      line-height: 1;
-    }
+  margin: auto;
 
-    .rating-box p {
-      margin: 12px 0 28px;
+}
 
-      color: var(--marrom-claro);
 
-      font-size: 14px;
-    }
+/* =========================================================
+   TÍTULOS
+========================================================= */
 
-    .google-btn {
-      min-height: 50px;
+.collections-header {
 
-      padding: 0 26px;
+  max-width: 900px;
 
-      display: inline-flex;
+  margin-bottom: 80px;
 
-      align-items: center;
+}
 
-      background: var(--marrom);
+.section-name {
 
-      color: var(--branco);
+  color: var(--marrom);
 
-      font-size: 10px;
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
 
-      font-weight: 700;
+  font-size:
+    clamp(58px,6.5vw,92px);
 
-      letter-spacing: 0.14em;
+  font-weight: 500;
 
-      text-transform: uppercase;
+  line-height: .93;
 
-      transition: 0.3s ease;
-    }
+  letter-spacing: -.045em;
 
-    .google-btn:hover {
-      background: var(--dourado);
-    }
+}
 
+.section-phrase {
 
-    /* =====================================================
-       CONTATO
-    ===================================================== */
+  max-width: 680px;
 
-    .contact {
-      padding: 125px 40px;
+  margin-top: 24px;
 
-      background: var(--marrom);
+  color: var(--marrom-claro);
 
-      color: var(--branco);
-    }
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
 
-    .contact .section-name {
-      color: var(--branco);
-    }
+  font-size:
+    clamp(23px,2.5vw,35px);
 
-    .contact .section-phrase {
-      color: #d8c4aa;
-    }
+  line-height: 1.18;
 
-    .contact-grid {
-      margin-top: 65px;
+}
 
-      display: grid;
+.section-text {
 
-      grid-template-columns: 1fr 1fr;
+  max-width: 640px;
 
-      gap: 80px;
-    }
+  margin-top: 22px;
 
-    .contact-item {
-      margin-bottom: 34px;
-    }
+  color: var(--marrom-claro);
 
-    .contact-item small {
-      display: block;
+  font-size: 14px;
 
-      margin-bottom: 7px;
+  line-height: 1.85;
 
-      color: var(--dourado-claro);
+}
 
-      font-size: 9px;
 
-      font-weight: 700;
+/* =========================================================
+   CARDS
+========================================================= */
 
-      letter-spacing: 0.20em;
+.collection-grid {
 
-      text-transform: uppercase;
-    }
+  display: grid;
 
-    .contact-item a,
-    .contact-item strong {
-      font-size: 18px;
+  grid-template-columns:
+    repeat(2,1fr);
 
-      font-weight: 400;
-    }
+  gap: 30px;
 
-    .contact-item a:hover {
-      color: var(--dourado-claro);
-    }
+}
 
-    .contact-box {
-      padding: 45px;
+.collection-card {
 
-      border: 1px solid rgba(255,255,255,0.16);
+  overflow: hidden;
 
-      background: rgba(255,255,255,0.025);
-    }
+  background:
+    rgba(255,255,255,.80);
 
-    .contact-box h3 {
-      color: var(--branco);
+  box-shadow:
+    var(--sombra);
 
-      font-family: "Playfair Display", Georgia, serif;
+}
 
-      font-size: 40px;
+.collection-image {
 
-      font-weight: 500;
+  overflow: hidden;
 
-      line-height: 1.05;
-    }
+  background: #eee6da;
 
-    .contact-box p {
-      margin: 20px 0 28px;
+}
 
-      color: rgba(255,255,255,0.72);
+.collection-image img {
 
-      font-size: 14px;
+  width: 100%;
 
-      line-height: 1.8;
-    }
+  height: auto;
 
+  object-fit: contain;
 
-    /* =====================================================
-       FOOTER
-    ===================================================== */
+  transition:
+    transform .6s ease;
 
-    footer {
-      padding: 40px;
+}
 
-      background: var(--escuro);
+.collection-card:hover
+.collection-image img {
 
-      color: rgba(255,255,255,0.65);
-    }
+  transform: scale(1.025);
 
-    .footer-inner {
-      max-width: 1380px;
+}
 
-      margin: 0 auto;
+.collection-info {
 
-      display: flex;
+  padding: 36px;
 
-      align-items: center;
+}
 
-      justify-content: space-between;
+.collection-label {
 
-      gap: 25px;
-    }
+  margin-bottom: 14px;
 
-    .footer-logo {
-      color: var(--branco);
+  color: var(--dourado);
 
-      font-family: "Playfair Display", Georgia, serif;
+  font-size: 10px;
 
-      font-size: 22px;
+  font-weight: 700;
 
-      letter-spacing: 0.08em;
-    }
+  letter-spacing: .23em;
 
-    .footer-small {
-      font-size: 9px;
+}
 
-      letter-spacing: 0.14em;
+.collection-info h3 {
 
-      text-transform: uppercase;
-    }
+  margin-bottom: 18px;
 
+  color: var(--marrom);
 
-    /* =====================================================
-       LIGHTBOX
-    ===================================================== */
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
 
-    .modal {
-      position: fixed;
+  font-size: 42px;
 
-      inset: 0;
+  font-weight: 500;
 
-      z-index: 3000;
+  line-height: .98;
 
-      display: none;
+}
 
-      align-items: center;
+.collection-info p {
 
-      justify-content: center;
+  color: var(--marrom-claro);
 
-      padding: 30px;
+  font-size: 14px;
 
-      background: rgba(25,18,15,0.94);
-    }
+  line-height: 1.8;
 
-    .modal.active {
-      display: flex;
-    }
+}
 
-    .modal img {
-      max-width: 95vw;
-      max-height: 90vh;
 
-      width: auto;
-      height: auto;
+/* =========================================================
+   GALERIA
+========================================================= */
 
-      object-fit: contain;
-    }
+.gallery-section {
 
-    .modal-close {
-      position: fixed;
+  margin-top: 150px;
 
-      top: 20px;
-      right: 28px;
+}
 
-      border: 0;
+.gallery-header {
 
-      background: transparent;
+  max-width: 920px;
 
-      color: var(--branco);
+  margin-bottom: 48px;
 
-      font-size: 38px;
+}
 
-      line-height: 1;
+.gallery-name {
 
-      cursor: pointer;
-    }
+  color: var(--marrom);
 
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
 
-    /* =====================================================
-       ANIMAÇÃO
-    ===================================================== */
+  font-size:
+    clamp(52px,5.8vw,82px);
 
-    .reveal {
-      opacity: 0;
+  font-weight: 500;
 
-      transform: translateY(22px);
+  line-height: .94;
 
-      transition:
-        opacity 0.75s ease,
-        transform 0.75s ease;
-    }
+  letter-spacing: -.04em;
 
-    .reveal.visible {
-      opacity: 1;
+}
 
-      transform: translateY(0);
-    }
+.gallery-phrase {
 
+  max-width: 650px;
 
-    /* =====================================================
-       TABLET
-    ===================================================== */
+  margin-top: 22px;
 
-    @media (max-width: 900px) {
+  color: var(--marrom-claro);
 
-      .header-inner {
-        min-height: 74px;
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
 
-        padding: 0 20px;
-      }
+  font-size:
+    clamp(23px,2.5vw,35px);
 
-      .brand img {
-        width: 54px;
-        height: 54px;
-      }
+  line-height: 1.18;
 
-      .brand-name {
-        font-size: 21px;
-      }
+}
 
-      .brand-sub {
-        font-size: 7px;
-      }
+.gallery-description {
 
-      .menu-toggle {
-        display: block;
-      }
+  max-width: 620px;
 
-      nav {
-        position: absolute;
+  margin-top: 18px;
 
-        top: 74px;
-        left: 0;
+  color: var(--marrom-claro);
 
-        width: 100%;
+  font-size: 14px;
 
-        display: none;
+  line-height: 1.8;
 
-        flex-direction: column;
+}
 
-        gap: 0;
+.photo-grid {
 
-        background: rgba(248,243,235,0.98);
+  display: grid;
 
-        border-bottom: 1px solid var(--linha);
-      }
+  grid-template-columns:
+    repeat(3,1fr);
 
-      nav.active {
-        display: flex;
-      }
+  gap: 18px;
 
-      nav a {
-        width: 100%;
+}
 
-        padding: 18px 22px;
+.photo-card {
 
-        border-bottom: 1px solid var(--linha);
-      }
+  overflow: hidden;
 
-      nav a::after {
-        display: none;
-      }
+  background: #eee6da;
 
-      .hero {
-        padding-top: 74px;
-      }
+  cursor: pointer;
 
-      .hero-inner {
-        padding: 75px 20px;
-      }
+}
 
-      .colecoes,
-      .reviews,
-      .contact {
-        padding-left: 20px;
-        padding-right: 20px;
-      }
+.photo-card img {
 
-      .collection-grid {
-        grid-template-columns: 1fr;
-      }
+  width: 100%;
 
-      .photo-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+  height: auto;
 
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
+  object-fit: contain;
 
-      .organic-left {
-        width: 280px;
-        left: -115px;
-        opacity: 0.30;
-      }
+  transition:
+    transform .55s ease;
 
-      .organic-right {
-        width: 290px;
-        right: -120px;
-        opacity: 0.30;
-      }
+}
 
-    }
+.photo-card:hover img {
 
+  transform: scale(1.02);
 
-    /* =====================================================
-       CELULAR
-    ===================================================== */
+}
 
-    @media (max-width: 600px) {
 
-      .hero h1 {
-        font-size: 52px;
-      }
+/* =========================================================
+   AVALIAÇÕES
+========================================================= */
 
-      .hero-buttons {
-        flex-direction: column;
-      }
+.reviews {
 
-      .btn {
-        width: 100%;
-      }
+  position: relative;
 
-      .section-name {
-        font-size: 47px;
-      }
+  z-index: 1;
 
-      .section-phrase {
-        font-size: 25px;
-      }
+  padding: 135px 40px;
 
-      .gallery-name {
-        font-size: 43px;
-      }
+  background:
+    var(--fundo-suave);
 
-      .gallery-phrase {
-        font-size: 25px;
-      }
+  text-align: center;
 
-      .photo-grid {
-        grid-template-columns: 1fr;
-      }
+}
 
-      .organic-left {
-        width: 230px;
+.reviews .section-name {
 
-        left: -135px;
+  max-width: 1050px;
 
-        opacity: 0.20;
-      }
+  margin: auto;
 
-      .organic-right {
-        width: 240px;
+}
 
-        right: -140px;
+.reviews .section-phrase {
 
-        opacity: 0.20;
-      }
+  margin-left: auto;
 
-      .collection-info {
-        padding: 28px;
-      }
+  margin-right: auto;
 
-      .collection-info h3 {
-        font-size: 38px;
-      }
+}
 
-      .contact-box {
-        padding: 32px 25px;
-      }
+.rating-box {
 
-      .contact-box h3 {
-        font-size: 34px;
-      }
+  max-width: 650px;
 
-      .footer-inner {
-        flex-direction: column;
+  margin: 60px auto 0;
 
-        align-items: flex-start;
-      }
+  padding: 50px 30px;
 
-    }
+  background: white;
 
-  </style>
+  border: 1px solid var(--linha);
+
+  box-shadow: var(--sombra);
+
+}
+
+.stars {
+
+  color: var(--dourado);
+
+  font-size: 27px;
+
+  letter-spacing: 5px;
+
+}
+
+.rating {
+
+  margin-top: 12px;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 62px;
+
+  line-height: 1;
+
+}
+
+.rating-box p {
+
+  margin:
+    12px 0 28px;
+
+  color: var(--marrom-claro);
+
+  font-size: 14px;
+
+}
+
+.google-btn {
+
+  min-height: 50px;
+
+  padding: 0 26px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  background: var(--marrom);
+
+  color: white;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: .14em;
+
+}
+
+.google-btn:hover {
+
+  background: var(--dourado);
+
+}
+
+
+/* =========================================================
+   CONTATO
+========================================================= */
+
+.contact {
+
+  position: relative;
+
+  z-index: 1;
+
+  padding: 135px 40px;
+
+  background: var(--marrom);
+
+  color: white;
+
+}
+
+.contact .section-name {
+
+  color: white;
+
+}
+
+.contact .section-phrase {
+
+  color: #d8c4aa;
+
+}
+
+.contact-grid {
+
+  margin-top: 65px;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 80px;
+
+}
+
+.contact-item {
+
+  margin-bottom: 34px;
+
+}
+
+.contact-item small {
+
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: var(--dourado-claro);
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: .20em;
+
+}
+
+.contact-item a,
+.contact-item strong {
+
+  font-size: 18px;
+
+  font-weight: 400;
+
+}
+
+.contact-item a:hover {
+
+  color: var(--dourado-claro);
+
+}
+
+.contact-box {
+
+  padding: 45px;
+
+  border:
+    1px solid rgba(255,255,255,.16);
+
+  background:
+    rgba(255,255,255,.025);
+
+}
+
+.contact-box h3 {
+
+  color: white;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 40px;
+
+  font-weight: 500;
+
+  line-height: 1.05;
+
+}
+
+.contact-box p {
+
+  margin: 20px 0 28px;
+
+  color:
+    rgba(255,255,255,.72);
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+  position: relative;
+
+  z-index: 1;
+
+  padding: 40px;
+
+  background: var(--escuro);
+
+  color:
+    rgba(255,255,255,.65);
+
+}
+
+.footer-inner {
+
+  max-width: 1380px;
+
+  margin: auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 25px;
+
+}
+
+.footer-logo {
+
+  color: white;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 22px;
+
+}
+
+.footer-small {
+
+  font-size: 9px;
+
+  letter-spacing: .14em;
+
+}
+
+
+/* =========================================================
+   LIGHTBOX
+========================================================= */
+
+.modal {
+
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 3000;
+
+  display: none;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 30px;
+
+  background:
+    rgba(25,18,15,.94);
+
+}
+
+.modal.active {
+
+  display: flex;
+
+}
+
+.modal img {
+
+  max-width: 95vw;
+
+  max-height: 90vh;
+
+  width: auto;
+
+  height: auto;
+
+  object-fit: contain;
+
+}
+
+.modal-close {
+
+  position: fixed;
+
+  top: 20px;
+
+  right: 28px;
+
+  border: 0;
+
+  background: transparent;
+
+  color: white;
+
+  font-size: 38px;
+
+  cursor: pointer;
+
+}
+
+
+/* =========================================================
+   ANIMAÇÃO
+========================================================= */
+
+.reveal {
+
+  opacity: 0;
+
+  transform:
+    translateY(22px);
+
+  transition:
+    opacity .75s ease,
+    transform .75s ease;
+
+}
+
+.reveal.visible {
+
+  opacity: 1;
+
+  transform:
+    translateY(0);
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:900px) {
+
+  .header-inner {
+
+    min-height: 74px;
+
+    padding:
+      0 20px;
+
+  }
+
+  .brand img {
+
+    width: 54px;
+    height: 54px;
+
+  }
+
+  .brand-name {
+
+    font-size: 21px;
+
+  }
+
+  .brand-sub {
+
+    font-size: 7px;
+
+  }
+
+  .menu-toggle {
+
+    display: block;
+
+  }
+
+  nav {
+
+    position: absolute;
+
+    top: 74px;
+
+    left: 0;
+
+    width: 100%;
+
+    display: none;
+
+    flex-direction: column;
+
+    gap: 0;
+
+    background:
+      rgba(248,243,235,.98);
+
+  }
+
+  nav.active {
+
+    display: flex;
+
+  }
+
+  nav a {
+
+    padding:
+      18px 22px;
+
+    border-bottom:
+      1px solid var(--linha);
+
+  }
+
+  nav a::after {
+
+    display: none;
+
+  }
+
+  .hero {
+
+    padding-top: 74px;
+
+  }
+
+  .hero-inner {
+
+    padding:
+      75px 20px;
+
+  }
+
+  .colecoes,
+  .reviews,
+  .contact {
+
+    padding-left: 20px;
+    padding-right: 20px;
+
+  }
+
+  .collection-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .photo-grid {
+
+    grid-template-columns:
+      repeat(2,1fr);
+
+  }
+
+  .contact-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+  /*
+     Laterais continuam visíveis,
+     mas diminuem de tamanho.
+  */
+
+  .global-decoration {
+
+    width: 170px;
+
+    opacity: .72;
+
+  }
+
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media(max-width:600px) {
+
+  .hero h1 {
+
+    font-size: 52px;
+
+  }
+
+  .hero-buttons {
+
+    flex-direction: column;
+
+  }
+
+  .btn {
+
+    width: 100%;
+
+  }
+
+  .section-name {
+
+    font-size: 47px;
+
+  }
+
+  .section-phrase {
+
+    font-size: 25px;
+
+  }
+
+  .gallery-name {
+
+    font-size: 43px;
+
+  }
+
+  .gallery-phrase {
+
+    font-size: 25px;
+
+  }
+
+  .photo-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+  /*
+     No celular a arte fica
+     mais próxima da borda.
+  */
+
+  .global-decoration {
+
+    width: 95px;
+
+    opacity: .48;
+
+  }
+
+  .global-decoration.left {
+
+    left: -25px;
+
+  }
+
+  .global-decoration.right {
+
+    right: -25px;
+
+  }
+
+  .collection-info {
+
+    padding: 28px;
+
+  }
+
+  .collection-info h3 {
+
+    font-size: 38px;
+
+  }
+
+  .contact-box {
+
+    padding: 32px 25px;
+
+  }
+
+  .contact-box h3 {
+
+    font-size: 34px;
+
+  }
+
+  .footer-inner {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+  }
+
+}
+
+</style>
 
 </head>
 
@@ -1200,1222 +1543,1563 @@
 <body>
 
 
-  <!-- =====================================================
-       HEADER
-  ===================================================== -->
+<!-- =======================================================
+     DECORAÇÃO GLOBAL — ESQUERDA
+     
+     Fica FORA das seções e acompanha toda a landing page.
+======================================================= -->
+
+<div class="global-decoration left">
+
+<svg
+  viewBox="0 0 250 3000"
+  preserveAspectRatio="none"
+>
+
+
+<!-- BALÕES DO TOPO -->
+
+<ellipse
+  class="decoration-balloon"
+  cx="65"
+  cy="120"
+  rx="48"
+  ry="70"
+/>
+
+<ellipse
+  class="decoration-balloon-light"
+  cx="115"
+  cy="205"
+  rx="55"
+  ry="78"
+/>
+
+<ellipse
+  class="decoration-balloon"
+  cx="42"
+  cy="300"
+  rx="43"
+  ry="63"
+/>
+
 
-  <header>
+<!-- FITA LONGA -->
+
+<path
+  class="decoration-line"
+  d="
+    M130 0
+
+    C210 110
+    100 200
+    155 310
+
+    C205 410
+    75 500
+    130 620
+
+    C190 750
+    70 850
+    130 970
+
+    C195 1090
+    65 1190
+    125 1310
+
+    C185 1430
+    70 1530
+    130 1650
+
+    C190 1770
+    70 1870
+    125 1990
+
+    C180 2110
+    70 2220
+    130 2340
+
+    C190 2460
+    70 2570
+    125 2700
+
+    C170 2790
+    105 2900
+    90 3000
+  "
+/>
+
+
+<!-- SEGUNDA FITA -->
+
+<path
+  class="decoration-line-light"
+  d="
+    M40 0
+
+    C105 130
+    20 240
+    65 350
+
+    C110 460
+    20 570
+    60 690
+
+    C105 810
+    20 920
+    60 1040
+
+    C105 1160
+    20 1280
+    65 1400
+
+    C110 1520
+    20 1640
+    60 1760
+
+    C105 1880
+    20 2000
+    65 2120
+
+    C110 2240
+    20 2360
+    60 2480
+
+    C105 2600
+    20 2720
+    55 2850
+
+    C75 2910
+    65 2960
+    60 3000
+  "
+/>
+
+
+<!-- RAMO 1 -->
+
+<path
+  class="decoration-stem"
+  d="
+    M185 470
+
+    C150 560
+    150 650
+    180 735
+
+    C205 810
+    185 900
+    150 975
+  "
+/>
+
+<ellipse
+  class="decoration-leaf"
+  cx="166"
+  cy="545"
+  rx="12"
+  ry="32"
+  transform="rotate(-30 166 545)"
+/>
+
+<ellipse
+  class="decoration-leaf"
+  cx="158"
+  cy="610"
+  rx="12"
+  ry="32"
+  transform="rotate(30 158 610)"
+/>
+
+<ellipse
+  class="decoration-leaf"
+  cx="174"
+  cy="680"
+  rx="11"
+  ry="29"
+  transform="rotate(-30 174 680)"
+/>
+
+<ellipse
+  class="decoration-leaf"
+  cx="170"
+  cy="745"
+  rx="11"
+  ry="29"
+  transform="rotate(30 170 745)"
+/>
+
+
+<!-- BALÕES DO MEIO -->
+
+<ellipse
+  class="decoration-balloon-light"
+  cx="65"
+  cy="1040"
+  rx="48"
+  ry="70"
+/>
+
+<ellipse
+  class="decoration-balloon"
+  cx="115"
+  cy="1130"
+  rx="58"
+  ry="82"
+/>
+
+<ellipse
+  class="decoration-balloon-light"
+  cx="42"
+  cy="1230"
+  rx="43"
+  ry="63"
+/>
+
+
+<!-- RAMO 2 -->
+
+<path
+  class="decoration-stem"
+  d="
+    M195 1380
+
+    C160 1470
+    160 1560
+    190 1640
+
+    C215 1715
+    190 1810
+    155 1880
+  "
+/>
+
+<ellipse
+  class="decoration-leaf"
+  cx="176"
+  cy="1450"
+  rx="12"
+  ry="32"
+  transform="rotate(-30 176 1450)"
+/>
+
+<ellipse
+  class="decoration-leaf"
+  cx="164"
+  cy="1520"
+  rx="12"
+  ry="32"
+  transform="rotate(30 164 1520)"
+/>
+
+<ellipse
+  class="decoration-leaf"
+  cx="180"
+  cy="1590"
+  rx="11"
+  ry="29"
+  transform="rotate(-30 180 1590)"
+/>
+
+
+<!-- BALÕES INFERIORES -->
+
+<ellipse
+  class="decoration-balloon"
+  cx="55"
+  cy="2050"
+  rx="48"
+  ry="70"
+/>
+
+<ellipse
+  class="decoration-balloon-light"
+  cx="115"
+  cy="2140"
+  rx="58"
+  ry="82"
+/>
+
+<ellipse
+  class="decoration-balloon"
+  cx="42"
+  cy="2250"
+  rx="43"
+  ry="63"
+/>
+
+
+<!-- RAMO 3 -->
+
+<path
+  class="decoration-stem"
+  d="
+    M190 2350
+
+    C155 2440
+    155 2530
+    185 2610
+
+    C210 2690
+    185 2780
+    150 2870
+  "
+/>
+
+<ellipse
+  class="decoration-leaf"
+  cx="170"
+  cy="2420"
+  rx="12"
+  ry="32"
+  transform="rotate(-30 170 2420)"
+/>
+
+<ellipse
+  class="decoration-leaf"
+  cx="160"
+  cy="2490"
+  rx="12"
+  ry="32"
+  transform="rotate(30 160 2490)"
+/>
+
+<ellipse
+  class="decoration-leaf"
+  cx="177"
+  cy="2560"
+  rx="11"
+  ry="29"
+  transform="rotate(-30 177 2560)"
+/>
+
+
+<!-- PONTOS -->
+
+<circle
+  class="decoration-dot"
+  cx="200"
+  cy="90"
+  r="4"
+/>
+
+<circle
+  class="decoration-dot-light"
+  cx="220"
+  cy="170"
+  r="2.5"
+/>
+
+<circle
+  class="decoration-dot"
+  cx="205"
+  cy="420"
+  r="3"
+/>
+
+<circle
+  class="decoration-dot-light"
+  cx="220"
+  cy="1030"
+  r="3"
+/>
+
+<circle
+  class="decoration-dot"
+  cx="205"
+  cy="1330"
+  r="4"
+/>
+
+<circle
+  class="decoration-dot-light"
+  cx="220"
+  cy="1740"
+  r="2.5"
+/>
+
+<circle
+  class="decoration-dot"
+  cx="205"
+  cy="2030"
+  r="3"
+/>
+
+<circle
+  class="decoration-dot-light"
+  cx="220"
+  cy="2380"
+  r="2.5"
+/>
+
+<circle
+  class="decoration-dot"
+  cx="205"
+  cy="2700"
+  r="3"
+/>
+
+
+</svg>
+
+</div>
+
+
+
+<!-- =======================================================
+     DECORAÇÃO GLOBAL — DIREITA
+======================================================= -->
+
+<div class="global-decoration right">
+
+<svg
+  viewBox="0 0 250 3000"
+  preserveAspectRatio="none"
+>
+
+
+<!-- BALÕES -->
+
+<ellipse
+  class="decoration-balloon-light"
+  cx="185"
+  cy="110"
+  rx="50"
+  ry="72"
+/>
+
+<ellipse
+  class="decoration-balloon"
+  cx="135"
+  cy="205"
+  rx="58"
+  ry="82"
+/>
+
+<ellipse
+  class="decoration-balloon-light"
+  cx="205"
+  cy="305"
+  rx="43"
+  ry="63"
+/>
+
+
+<!-- FITA PRINCIPAL -->
+
+<path
+  class="decoration-line"
+  d="
+    M120 0
+
+    C40 110
+    150 200
+    95 310
+
+    C45 410
+    175 500
+    120 620
+
+    C60 750
+    180 850
+    120 970
+
+    C55 1090
+    185 1190
+    125 1310
+
+    C65 1430
+    180 1530
+    120 1650
+
+    C60 1770
+    180 1870
+    125 1990
+
+    C70 2110
+    180 2220
+    120 2340
+
+    C60 2460
+    180 2570
+    125 2700
+
+    C80 2790
+    145 2900
+    160 3000
+  "
+/>
+
+
+<!-- SEGUNDA FITA -->
+
+<path
+  class="decoration-line-light"
+  d="
+    M210 0
+
+    C145 130
+    230 240
+    185 350
+
+    C140 460
+    230 570
+    190 690
+
+    C145 810
+    230 920
+    190 1040
+
+    C145 1160
+    230 1280
+    185 1400
+
+    C140 1520
+    230 1640
+    190 1760
+
+    C145 1880
+    230 2000
+    185 2120
+
+    C140 2240
+    230 2360
+    190 2480
+
+    C145 2600
+    230 2720
+    195 2850
+
+    C175 2910
+    185 2960
+    190 3000
+  "
+/>
+
+
+<!-- RAMO 1 -->
+
+<path
+  class="decoration-stem"
+  d="
+    M65 470
+
+    C100 560
+    100 650
+    70 735
+
+    C45 810
+    65 900
+    100 975
+  "
+/>
+
+<ellipse
+  class="decoration-leaf"
+  cx="84"
+  cy="545"
+  rx="12"
+  ry="32"
+  transform="rotate(30 84 545)"
+/>
+
+<ellipse
+  class="decoration-leaf"
+  cx="92"
+  cy="610"
+  rx="12"
+  ry="32"
+  transform="rotate(-30 92 610)"
+/>
+
+<ellipse
+  class="decoration-leaf"
+  cx="76"
+  cy="680"
+  rx="11"
+  ry="29"
+  transform="rotate(30 76 680)"
+/>
+
+<ellipse
+  class="decoration-leaf"
+  cx="80"
+  cy="745"
+  rx="11"
+  ry="29"
+  transform="rotate(-30 80 745)"
+/>
+
+
+<!-- BALÕES -->
+
+<ellipse
+  class="decoration-balloon"
+  cx="185"
+  cy="1040"
+  rx="48"
+  ry="70"
+/>
+
+<ellipse
+  class="decoration-balloon-light"
+  cx="135"
+  cy="1130"
+  rx="58"
+  ry="82"
+/>
+
+<ellipse
+  class="decoration-balloon"
+  cx="205"
+  cy="1230"
+  rx="43"
+  ry="63"
+/>
+
+
+<!-- RAMO 2 -->
+
+<path
+  class="decoration-stem"
+  d="
+    M55 1380
+
+    C90 1470
+    90 1560
+    60 1640
+
+    C35 1715
+    60 1810
+    95 1880
+  "
+/>
+
+<ellipse
+  class="decoration-leaf"
+  cx="74"
+  cy="1450"
+  rx="12"
+  ry="32"
+  transform="rotate(30 74 1450)"
+/>
+
+<ellipse
+  class="decoration-leaf"
+  cx="86"
+  cy="1520"
+  rx="12"
+  ry="32"
+  transform="rotate(-30 86 1520)"
+/>
+
+<ellipse
+  class="decoration-leaf"
+  cx="70"
+  cy="1590"
+  rx="11"
+  ry="29"
+  transform="rotate(30 70 1590)"
+/>
+
+
+<!-- BALÕES INFERIORES -->
+
+<ellipse
+  class="decoration-balloon-light"
+  cx="195"
+  cy="2050"
+  rx="48"
+  ry="70"
+/>
+
+<ellipse
+  class="decoration-balloon"
+  cx="135"
+  cy="2140"
+  rx="58"
+  ry="82"
+/>
+
+<ellipse
+  class="decoration-balloon-light"
+  cx="205"
+  cy="2250"
+  rx="43"
+  ry="63"
+/>
+
+
+<!-- RAMO 3 -->
+
+<path
+  class="decoration-stem"
+  d="
+    M60 2350
+
+    C95 2440
+    95 2530
+    65 2610
+
+    C40 2690
+    65 2780
+    100 2870
+  "
+/>
+
+<ellipse
+  class="decoration-leaf"
+  cx="80"
+  cy="2420"
+  rx="12"
+  ry="32"
+  transform="rotate(30 80 2420)"
+/>
+
+<ellipse
+  class="decoration-leaf"
+  cx="90"
+  cy="2490"
+  rx="12"
+  ry="32"
+  transform="rotate(-30 90 2490)"
+/>
+
+<ellipse
+  class="decoration-leaf"
+  cx="73"
+  cy="2560"
+  rx="11"
+  ry="29"
+  transform="rotate(30 73 2560)"
+/>
+
+
+<!-- PONTOS -->
+
+<circle
+  class="decoration-dot"
+  cx="50"
+  cy="90"
+  r="4"
+/>
+
+<circle
+  class="decoration-dot-light"
+  cx="30"
+  cy="170"
+  r="2.5"
+/>
+
+<circle
+  class="decoration-dot"
+  cx="45"
+  cy="420"
+  r="3"
+/>
+
+<circle
+  class="decoration-dot-light"
+  cx="30"
+  cy="1030"
+  r="3"
+/>
+
+<circle
+  class="decoration-dot"
+  cx="45"
+  cy="1330"
+  r="4"
+/>
+
+<circle
+  class="decoration-dot-light"
+  cx="30"
+  cy="1740"
+  r="2.5"
+/>
+
+<circle
+  class="decoration-dot"
+  cx="45"
+  cy="2030"
+  r="3"
+/>
+
+<circle
+  class="decoration-dot-light"
+  cx="30"
+  cy="2380"
+  r="2.5"
+/>
+
+<circle
+  class="decoration-dot"
+  cx="45"
+  cy="2700"
+  r="3"
+/>
+
+
+</svg>
+
+</div>
+
+
+
+<!-- =======================================================
+     HEADER
+======================================================= -->
+
+<header>
+
+<div class="header-inner">
+
+<a
+  href="#inicio"
+  class="brand"
+>
+
+<img
+  src="logo-ze-decor.png"
+  alt="ZÊ DECOR"
+>
+
+<div>
+
+<div class="brand-name">
+ZÊ DECOR
+</div>
+
+<div class="brand-sub">
+FESTA • POCKET • CELEBRATION
+</div>
+
+</div>
+
+</a>
+
+
+<button
+  class="menu-toggle"
+  id="menuToggle"
+>
+☰
+</button>
+
+
+<nav id="navLinks">
+
+<a href="#colecoes">
+COLEÇÕES
+</a>
+
+<a href="#avaliacoes">
+AVALIAÇÕES
+</a>
+
+<a href="#contato">
+CONTATO
+</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+
+<!-- =======================================================
+     HERO
+======================================================= -->
+
+<section
+  class="hero"
+  id="inicio"
+>
+
+<div class="hero-inner reveal">
+
+<div class="hero-kicker">
+FESTA • POCKET • CELEBRATION
+</div>
+
+<h1>
+Decorações que
+transformam momentos.
+</h1>
+
+<p class="hero-description">
+
+Criamos experiências que unem beleza,
+personalidade e cuidado para tornar
+cada celebração ainda mais especial.
+
+</p>
+
+
+<div class="hero-buttons">
+
+<a
+  href="https://wa.me/5521999999999"
+  target="_blank"
+  class="btn btn-light"
+>
+RESERVE PELO WHATSAPP
+</a>
+
+<a
+  href="#colecoes"
+  class="btn btn-border"
+>
+CONHEÇA NOSSAS COLEÇÕES
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =======================================================
+     COLEÇÕES
+======================================================= -->
+
+<section
+  class="colecoes"
+  id="colecoes"
+>
+
+<div class="container">
+
+
+<div class="collections-header reveal">
+
+<h2 class="section-name">
+NOSSAS COLEÇÕES
+</h2>
+
+<div class="section-phrase">
+Escolha o cenário para o seu momento.
+</div>
+
+<p class="section-text">
+
+Diferentes formatos para diferentes celebrações,
+sempre com o cuidado e a identidade da ZÊ DECOR.
+
+</p>
+
+</div>
+
+
+
+<!-- =====================================================
+     CARDS
+===================================================== -->
+
+<div class="collection-grid">
+
+
+<article class="collection-card reveal">
+
+<div class="collection-image">
+
+<img
+  src="pocket-01.webp"
+  alt="Festa na Mesa Pocket"
+  loading="lazy"
+>
+
+</div>
+
+<div class="collection-info">
+
+<div class="collection-label">
+FESTA NA MESA
+</div>
+
+<h3>
+POCKET
+</h3>
+
+<p>
+
+Decorações compactas e encantadoras,
+perfeitas para celebrar em casa,
+apartamentos e pequenos espaços.
+
+</p>
+
+</div>
+
+</article>
+
+
+
+<article class="collection-card reveal">
 
-    <div class="header-inner">
+<div class="collection-image">
 
-      <a
-        href="#inicio"
-        class="brand"
-      >
+<img
+  src="padrao-03.webp"
+  alt="Decorações Maiores"
+  loading="lazy"
+>
 
-        <img
-          src="logo-ze-decor.png"
-          alt="ZÊ DECOR"
-        >
+</div>
 
-        <div>
+<div class="collection-info">
 
-          <div class="brand-name">
-            ZÊ DECOR
-          </div>
+<div class="collection-label">
+CELEBRATION
+</div>
 
-          <div class="brand-sub">
-            FESTA • POCKET • CELEBRATION
-          </div>
+<h3>
+DECORAÇÕES
+<br>
+MAIORES
+</h3>
 
-        </div>
+<p>
 
-      </a>
+Composições maiores e personalizadas
+para aniversários, celebrações e momentos
+que merecem uma produção especial.
 
+</p>
 
-      <button
-        class="menu-toggle"
-        id="menuToggle"
-        aria-label="Abrir menu"
-      >
-        ☰
-      </button>
+</div>
 
+</article>
 
-      <nav id="navLinks">
 
-        <a href="#colecoes">
-          COLEÇÕES
-        </a>
+</div>
 
-        <a href="#avaliacoes">
-          AVALIAÇÕES
-        </a>
 
-        <a href="#contato">
-          CONTATO
-        </a>
 
-      </nav>
+<!-- =====================================================
+     POCKET
+===================================================== -->
 
-    </div>
+<div class="gallery-section">
 
-  </header>
+<div class="gallery-header reveal">
 
+<h2 class="gallery-name">
+FESTA NA MESA — POCKET
+</h2>
 
+<div class="gallery-phrase">
+Detalhes que fazem celebrar.
+</div>
 
-  <!-- =====================================================
-       HERO
-  ===================================================== -->
+<p class="gallery-description">
 
-  <section
-    class="hero"
-    id="inicio"
-  >
+Composições compactas, elegantes
+e cheias de personalidade.
 
-    <div class="hero-inner reveal">
+</p>
 
-      <div class="hero-kicker">
-        FESTA • POCKET • CELEBRATION
-      </div>
+</div>
 
-      <h1>
-        Decorações que
-        transformam momentos.
-      </h1>
 
-      <p class="hero-description">
-        Criamos experiências que unem beleza,
-        personalidade e cuidado para tornar
-        cada celebração ainda mais especial.
-      </p>
+<div class="photo-grid">
 
 
-      <div class="hero-buttons">
+<div class="photo-card reveal">
+<img src="pocket-01.webp" alt="" loading="lazy">
+</div>
 
-        <a
-          href="https://wa.me/5521999999999"
-          target="_blank"
-          class="btn btn-light"
-        >
-          RESERVE PELO WHATSAPP
-        </a>
+<div class="photo-card reveal">
+<img src="pocket-02.webp" alt="" loading="lazy">
+</div>
 
-        <a
-          href="#colecoes"
-          class="btn btn-border"
-        >
-          CONHEÇA NOSSAS COLEÇÕES
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
+<div class="photo-card reveal">
+<img src="pocket-03.webp" alt="" loading="lazy">
+</div>
 
+<div class="photo-card reveal">
+<img src="pocket-04.webp" alt="" loading="lazy">
+</div>
 
-  <!-- =====================================================
-       COLEÇÕES
-  ===================================================== -->
-
-  <section
-    class="colecoes"
-    id="colecoes"
-  >
-
-
-    <!-- ===================================================
-         ARTE ORGÂNICA ESQUERDA
-    =================================================== -->
-
-    <div class="organic-art organic-left">
-
-      <svg
-        viewBox="0 0 340 1450"
-        preserveAspectRatio="none"
-      >
-
-
-        <!-- BALÕES SUPERIORES -->
-
-        <ellipse
-          class="balloon-soft"
-          cx="65"
-          cy="110"
-          rx="53"
-          ry="76"
-        />
-
-        <ellipse
-          class="balloon"
-          cx="120"
-          cy="175"
-          rx="58"
-          ry="82"
-        />
-
-        <ellipse
-          class="balloon-soft"
-          cx="45"
-          cy="265"
-          rx="48"
-          ry="68"
-        />
-
-
-        <!-- BRILHOS DOS BALÕES -->
-
-        <path
-          class="balloon-highlight"
-          d="M38 80 C25 105 27 128 35 145"
-        />
-
-        <path
-          class="balloon-highlight"
-          d="M92 140 C80 165 82 188 90 207"
-        />
-
-        <path
-          class="balloon-highlight"
-          d="M22 240 C15 260 18 280 25 292"
-        />
-
-
-        <!-- FITA PRINCIPAL -->
-
-        <path
-          class="ribbon"
-          d="
-            M150 0
-            C230 75 145 145 175 220
-            C215 310 105 365 150 455
-            C195 545 90 620 145 705
-            C200 790 100 875 145 955
-            C195 1040 95 1125 150 1210
-            C185 1265 140 1360 115 1450
-          "
-        />
-
-        <path
-          class="ribbon-soft"
-          d="
-            M170 0
-            C250 85 165 150 195 230
-            C230 320 125 380 170 465
-            C215 550 115 635 165 720
-            C215 805 120 900 165 985
-            C210 1070 115 1155 170 1240
-            C205 1300 165 1380 145 1450
-          "
-        />
-
-
-        <!-- FITA SECUNDÁRIA -->
-
-        <path
-          class="ribbon-soft"
-          d="
-            M40 330
-            C105 390 45 460 80 525
-            C120 600 35 675 75 745
-            C115 820 35 900 70 975
-            C105 1050 25 1135 65 1210
-            C95 1270 55 1360 70 1450
-          "
-        />
-
-
-        <!-- RAMO -->
-
-        <path
-          class="stem"
-          d="
-            M220 620
-            C185 690 185 770 210 850
-            C230 920 205 1000 175 1060
-          "
-        />
-
-        <ellipse
-          class="leaf"
-          cx="203"
-          cy="690"
-          rx="12"
-          ry="31"
-          transform="rotate(-30 203 690)"
-        />
-
-        <ellipse
-          class="leaf"
-          cx="188"
-          cy="745"
-          rx="12"
-          ry="31"
-          transform="rotate(32 188 745)"
-        />
-
-        <ellipse
-          class="leaf"
-          cx="204"
-          cy="805"
-          rx="11"
-          ry="29"
-          transform="rotate(-28 204 805)"
-        />
-
-        <ellipse
-          class="leaf"
-          cx="193"
-          cy="860"
-          rx="11"
-          ry="29"
-          transform="rotate(30 193 860)"
-        />
-
-
-        <!-- BALÕES INFERIORES -->
-
-        <ellipse
-          class="balloon-soft"
-          cx="75"
-          cy="1080"
-          rx="54"
-          ry="76"
-        />
-
-        <ellipse
-          class="balloon"
-          cx="125"
-          cy="1170"
-          rx="60"
-          ry="85"
-        />
-
-        <ellipse
-          class="balloon-soft"
-          cx="48"
-          cy="1280"
-          rx="47"
-          ry="68"
-        />
-
-
-        <!-- PEQUENOS PONTOS -->
-
-        <circle
-          class="dot"
-          cx="230"
-          cy="80"
-          r="4"
-        />
-
-        <circle
-          class="dot-light"
-          cx="255"
-          cy="135"
-          r="2.5"
-        />
-
-        <circle
-          class="dot"
-          cx="215"
-          cy="510"
-          r="3.5"
-        />
-
-        <circle
-          class="dot-light"
-          cx="245"
-          cy="555"
-          r="2"
-        />
-
-        <circle
-          class="dot"
-          cx="235"
-          cy="1020"
-          r="3.5"
-        />
-
-        <circle
-          class="dot-light"
-          cx="260"
-          cy="1100"
-          r="2.5"
-        />
-
-      </svg>
-
-    </div>
-
-
-
-    <!-- ===================================================
-         ARTE ORGÂNICA DIREITA
-    =================================================== -->
-
-    <div class="organic-art organic-right">
-
-      <svg
-        viewBox="0 0 360 1500"
-        preserveAspectRatio="none"
-      >
-
-
-        <!-- BALÕES SUPERIORES -->
-
-        <ellipse
-          class="balloon-soft"
-          cx="285"
-          cy="95"
-          rx="58"
-          ry="82"
-        />
-
-        <ellipse
-          class="balloon"
-          cx="235"
-          cy="180"
-          rx="62"
-          ry="87"
-        />
-
-        <ellipse
-          class="balloon-soft"
-          cx="305"
-          cy="280"
-          rx="50"
-          ry="72"
-        />
-
-
-        <!-- FITA PRINCIPAL -->
-
-        <path
-          class="ribbon"
-          d="
-            M210 0
-            C115 85 230 155 190 235
-            C145 325 265 390 205 475
-            C150 555 265 635 200 715
-            C145 790 260 875 205 960
-            C150 1040 270 1120 210 1210
-            C170 1270 225 1370 250 1500
-          "
-        />
-
-        <path
-          class="ribbon-soft"
-          d="
-            M230 0
-            C140 90 250 160 215 245
-            C175 330 285 400 225 485
-            C175 570 285 650 220 735
-            C170 820 285 900 225 985
-            C175 1070 290 1150 230 1240
-            C195 1300 245 1390 270 1500
-          "
-        />
-
-
-        <!-- FITA SECUNDÁRIA -->
-
-        <path
-          class="ribbon-soft"
-          d="
-            M315 340
-            C255 405 310 480 275 550
-            C235 625 315 700 280 775
-            C245 850 325 930 285 1005
-            C250 1080 325 1160 290 1240
-            C260 1310 305 1400 290 1500
-          "
-        />
-
-
-        <!-- RAMO -->
-
-        <path
-          class="stem"
-          d="
-            M145 560
-            C180 635 180 720 150 795
-            C125 865 150 945 180 1020
-          "
-        />
-
-        <ellipse
-          class="leaf"
-          cx="164"
-          cy="625"
-          rx="12"
-          ry="31"
-          transform="rotate(30 164 625)"
-        />
-
-        <ellipse
-          class="leaf"
-          cx="178"
-          cy="680"
-          rx="12"
-          ry="31"
-          transform="rotate(-32 178 680)"
-        />
-
-        <ellipse
-          class="leaf"
-          cx="160"
-          cy="740"
-          rx="11"
-          ry="29"
-          transform="rotate(28 160 740)"
-        />
-
-        <ellipse
-          class="leaf"
-          cx="173"
-          cy="795"
-          rx="11"
-          ry="29"
-          transform="rotate(-30 173 795)"
-        />
-
-
-        <!-- BALÕES INFERIORES -->
-
-        <ellipse
-          class="balloon-soft"
-          cx="290"
-          cy="1090"
-          rx="55"
-          ry="78"
-        />
-
-        <ellipse
-          class="balloon"
-          cx="235"
-          cy="1180"
-          rx="61"
-          ry="86"
-        />
-
-        <ellipse
-          class="balloon-soft"
-          cx="310"
-          cy="1290"
-          rx="48"
-          ry="69"
-        />
-
-
-        <!-- PONTOS -->
-
-        <circle
-          class="dot"
-          cx="115"
-          cy="100"
-          r="4"
-        />
-
-        <circle
-          class="dot-light"
-          cx="90"
-          cy="150"
-          r="2.5"
-        />
-
-        <circle
-          class="dot"
-          cx="125"
-          cy="480"
-          r="3.5"
-        />
-
-        <circle
-          class="dot-light"
-          cx="105"
-          cy="530"
-          r="2"
-        />
-
-        <circle
-          class="dot"
-          cx="115"
-          cy="1030"
-          r="3.5"
-        />
-
-        <circle
-          class="dot-light"
-          cx="90"
-          cy="1110"
-          r="2.5"
-        />
-
-      </svg>
-
-    </div>
-
-
-
-    <!-- ===================================================
-         CONTEÚDO
-    =================================================== -->
-
-    <div class="container">
-
-
-      <!-- =================================================
-           NOSSAS COLEÇÕES
-      ================================================= -->
-
-      <div class="collections-header reveal">
-
-        <h2 class="section-name">
-          NOSSAS COLEÇÕES
-        </h2>
-
-        <div class="section-phrase">
-          Escolha o cenário para o seu momento.
-        </div>
-
-        <p class="section-text">
-          Diferentes formatos para diferentes celebrações,
-          sempre com o cuidado e a identidade da ZÊ DECOR.
-        </p>
-
-      </div>
-
-
-
-      <!-- =================================================
-           CARDS
-      ================================================= -->
-
-      <div class="collection-grid">
-
-
-        <!-- POCKET -->
-
-        <article class="collection-card reveal">
-
-          <div class="collection-image">
-
-            <img
-              src="pocket-01.webp"
-              alt="Festa na Mesa Pocket"
-              loading="lazy"
-            >
-
-          </div>
-
-          <div class="collection-info">
-
-            <div class="collection-label">
-              FESTA NA MESA
-            </div>
-
-            <h3>
-              POCKET
-            </h3>
-
-            <p>
-              Decorações compactas e encantadoras,
-              perfeitas para celebrar em casa,
-              apartamentos e pequenos espaços.
-            </p>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- DECORAÇÕES MAIORES -->
-
-        <article class="collection-card reveal">
-
-          <div class="collection-image">
-
-            <img
-              src="padrao-03.webp"
-              alt="Decorações Maiores"
-              loading="lazy"
-            >
-
-          </div>
-
-          <div class="collection-info">
-
-            <div class="collection-label">
-              CELEBRATION
-            </div>
-
-            <h3>
-              DECORAÇÕES
-              <br>
-              MAIORES
-            </h3>
-
-            <p>
-              Composições maiores e personalizadas
-              para aniversários, celebrações e momentos
-              que merecem uma produção especial.
-            </p>
-
-          </div>
-
-        </article>
-
-      </div>
-
-
-
-      <!-- =================================================
-           GALERIA POCKET
-      ================================================= -->
-
-      <div class="gallery-section">
-
-
-        <div class="gallery-header reveal">
-
-          <h2 class="gallery-name">
-            FESTA NA MESA — POCKET
-          </h2>
-
-          <div class="gallery-phrase">
-            Detalhes que fazem celebrar.
-          </div>
-
-          <p class="gallery-description">
-            Composições compactas, elegantes
-            e cheias de personalidade.
-          </p>
-
-        </div>
-
-
-        <div class="photo-grid">
-
-
-          <div class="photo-card reveal">
-            <img
-              src="pocket-01.webp"
-              alt=""
-              loading="lazy"
-            >
-          </div>
-
-
-          <div class="photo-card reveal">
-            <img
-              src="pocket-02.webp"
-              alt=""
-              loading="lazy"
-            >
-          </div>
-
-
-          <div class="photo-card reveal">
-            <img
-              src="pocket-03.webp"
-              alt=""
-              loading="lazy"
-            >
-          </div>
-
-
-          <div class="photo-card reveal">
-            <img
-              src="pocket-04.webp"
-              alt=""
-              loading="lazy"
-            >
-          </div>
-
-
-          <div class="photo-card reveal">
-            <img
-              src="pocket-05.webp"
-              alt=""
-              loading="lazy"
-            >
-          </div>
-
-
-          <div class="photo-card reveal">
-            <img
-              src="pocket-06.webp"
-              alt=""
-              loading="lazy"
-            >
-          </div>
-
-        </div>
+<div class="photo-card reveal">
+<img src="pocket-05.webp" alt="" loading="lazy">
+</div>
 
-      </div>
-
-
-
-      <!-- =================================================
-           GALERIA DECORAÇÕES MAIORES
-      ================================================= -->
+<div class="photo-card reveal">
+<img src="pocket-06.webp" alt="" loading="lazy">
+</div>
 
-      <div class="gallery-section">
-
 
-        <div class="gallery-header reveal">
+</div>
 
-          <h2 class="gallery-name">
-            DECORAÇÕES MAIORES
-          </h2>
+</div>
 
-          <div class="gallery-phrase">
-            Momentos que merecem ser celebrados.
-          </div>
 
-          <p class="gallery-description">
-            Produções maiores para transformar ambientes
-            e criar cenários marcantes para celebrar.
-          </p>
 
-        </div>
+<!-- =====================================================
+     DECORAÇÕES MAIORES
+===================================================== -->
 
+<div class="gallery-section">
 
-        <div class="photo-grid">
+<div class="gallery-header reveal">
 
+<h2 class="gallery-name">
+DECORAÇÕES MAIORES
+</h2>
 
-          <div class="photo-card reveal">
-            <img
-              src="padrao-01.webp"
-              alt=""
-              loading="lazy"
-            >
-          </div>
+<div class="gallery-phrase">
+Momentos que merecem ser celebrados.
+</div>
 
+<p class="gallery-description">
 
-          <div class="photo-card reveal">
-            <img
-              src="padrao-02.webp"
-              alt=""
-              loading="lazy"
-            >
-          </div>
+Produções maiores para transformar ambientes
+e criar cenários marcantes para celebrar.
 
+</p>
 
-          <div class="photo-card reveal">
-            <img
-              src="padrao-03.webp"
-              alt=""
-              loading="lazy"
-            >
-          </div>
+</div>
 
 
-          <div class="photo-card reveal">
-            <img
-              src="padrao-04.webp"
-              alt=""
-              loading="lazy"
-            >
-          </div>
+<div class="photo-grid">
 
 
-          <div class="photo-card reveal">
-            <img
-              src="padrao-05.webp"
-              alt=""
-              loading="lazy"
-            >
-          </div>
+<div class="photo-card reveal">
+<img src="padrao-01.webp" alt="" loading="lazy">
+</div>
 
+<div class="photo-card reveal">
+<img src="padrao-02.webp" alt="" loading="lazy">
+</div>
 
-          <div class="photo-card reveal">
-            <img
-              src="padrao-06.webp"
-              alt=""
-              loading="lazy"
-            >
-          </div>
+<div class="photo-card reveal">
+<img src="padrao-03.webp" alt="" loading="lazy">
+</div>
 
-        </div>
+<div class="photo-card reveal">
+<img src="padrao-04.webp" alt="" loading="lazy">
+</div>
 
-      </div>
+<div class="photo-card reveal">
+<img src="padrao-05.webp" alt="" loading="lazy">
+</div>
 
-    </div>
+<div class="photo-card reveal">
+<img src="padrao-06.webp" alt="" loading="lazy">
+</div>
 
-  </section>
 
+</div>
 
+</div>
 
-  <!-- =====================================================
-       AVALIAÇÕES
-  ===================================================== -->
 
-  <section
-    class="reviews"
-    id="avaliacoes"
-  >
+</div>
 
-    <div class="container">
+</section>
 
-      <h2 class="section-name reveal">
-        O QUE NOSSOS CLIENTES DIZEM
-      </h2>
 
-      <div class="section-phrase reveal">
-        Experiências que ficam na memória.
-      </div>
 
+<!-- =======================================================
+     AVALIAÇÕES
+======================================================= -->
 
-      <div class="rating-box reveal">
+<section
+  class="reviews"
+  id="avaliacoes"
+>
 
-        <div class="stars">
-          ★★★★★
-        </div>
+<div class="container">
 
-        <div class="rating">
-          5,0
-        </div>
+<h2 class="section-name reveal">
+O QUE NOSSOS CLIENTES DIZEM
+</h2>
 
-        <p>
-          Avaliação no Google
-        </p>
+<div class="section-phrase reveal">
+Experiências que ficam na memória.
+</div>
 
-        <a
-          class="google-btn"
-          target="_blank"
-          href="https://www.google.com/maps/search/?api=1&query=Z%C3%A9+Pegue+e+Monte+Rio+de+Janeiro"
-        >
-          VER AVALIAÇÕES NO GOOGLE
-        </a>
 
-      </div>
+<div class="rating-box reveal">
 
-    </div>
+<div class="stars">
+★★★★★
+</div>
 
-  </section>
+<div class="rating">
+5,0
+</div>
 
+<p>
+Avaliação no Google
+</p>
 
+<a
+  class="google-btn"
+  target="_blank"
+  href="https://www.google.com/maps/search/?api=1&query=Z%C3%A9+Pegue+e+Monte+Rio+de+Janeiro"
+>
+VER AVALIAÇÕES NO GOOGLE
+</a>
 
-  <!-- =====================================================
-       CONTATO
-  ===================================================== -->
+</div>
 
-  <section
-    class="contact"
-    id="contato"
-  >
+</div>
 
-    <div class="container">
+</section>
 
-      <h2 class="section-name reveal">
-        CONTATO
-      </h2>
 
-      <div class="section-phrase reveal">
-        Vamos transformar seu próximo momento?
-      </div>
 
+<!-- =======================================================
+     CONTATO
+======================================================= -->
 
-      <div class="contact-grid">
+<section
+  class="contact"
+  id="contato"
+>
 
+<div class="container">
 
-        <div>
+<h2 class="section-name reveal">
+CONTATO
+</h2>
 
-          <div class="contact-item reveal">
+<div class="section-phrase reveal">
+Vamos transformar seu próximo momento?
+</div>
 
-            <small>
-              WHATSAPP
-            </small>
 
-            <a
-              href="https://wa.me/5521999999999"
-              target="_blank"
-            >
-              Fale com a ZÊ DECOR
-            </a>
+<div class="contact-grid">
 
-          </div>
 
+<div>
 
-          <div class="contact-item reveal">
 
-            <small>
-              INSTAGRAM
-            </small>
+<div class="contact-item reveal">
 
-            <a
-              href="https://www.instagram.com/zedecorofc/"
-              target="_blank"
-            >
-              @zedecorofc
-            </a>
+<small>
+WHATSAPP
+</small>
 
-          </div>
+<a
+  href="https://wa.me/5521999999999"
+  target="_blank"
+>
+Fale com a ZÊ DECOR
+</a>
 
+</div>
 
-          <div class="contact-item reveal">
 
-            <small>
-              ATENDIMENTO
-            </small>
+<div class="contact-item reveal">
 
-            <strong>
-              Barra • Recreio • Jacarepaguá • Vargens
-            </strong>
+<small>
+INSTAGRAM
+</small>
 
-          </div>
+<a
+  href="https://www.instagram.com/zedecorofc/"
+  target="_blank"
+>
+@zedecorofc
+</a>
 
-        </div>
+</div>
 
 
+<div class="contact-item reveal">
 
-        <div class="contact-box reveal">
+<small>
+ATENDIMENTO
+</small>
 
-          <h3>
-            Seu momento.
-            Nossa decoração.
-          </h3>
+<strong>
+Barra • Recreio • Jacarepaguá • Vargens
+</strong>
 
-          <p>
-            Conte um pouco sobre sua celebração
-            e vamos encontrar a composição ideal
-            para o seu momento.
-          </p>
+</div>
 
-          <a
-            href="https://wa.me/5521999999999"
-            target="_blank"
-            class="btn btn-light"
-          >
-            SOLICITAR ORÇAMENTO
-          </a>
 
-        </div>
+</div>
 
-      </div>
 
-    </div>
 
-  </section>
+<div class="contact-box reveal">
 
+<h3>
+Seu momento.
+<br>
+Nossa decoração.
+</h3>
 
+<p>
 
-  <!-- =====================================================
-       FOOTER
-  ===================================================== -->
+Conte um pouco sobre sua celebração
+e vamos encontrar a composição ideal
+para o seu momento.
 
-  <footer>
+</p>
 
-    <div class="footer-inner">
+<a
+  href="https://wa.me/5521999999999"
+  target="_blank"
+  class="btn btn-light"
+>
+SOLICITAR ORÇAMENTO
+</a>
 
-      <div class="footer-logo">
-        ZÊ DECOR
-      </div>
+</div>
 
-      <div class="footer-small">
-        FESTA • POCKET • CELEBRATION
-      </div>
 
-      <div class="footer-small">
-        © 2026 ZÊ DECOR
-      </div>
+</div>
 
-    </div>
+</div>
 
-  </footer>
+</section>
 
 
 
-  <!-- =====================================================
-       LIGHTBOX
-  ===================================================== -->
+<!-- =======================================================
+     FOOTER
+======================================================= -->
 
-  <div
-    class="modal"
-    id="modal"
-  >
+<footer>
 
-    <button
-      class="modal-close"
-      id="modalClose"
-      aria-label="Fechar imagem"
-    >
-      ×
-    </button>
+<div class="footer-inner">
 
-    <img
-      id="modalImage"
-      src=""
-      alt=""
-    >
+<div class="footer-logo">
+ZÊ DECOR
+</div>
 
-  </div>
+<div class="footer-small">
+FESTA • POCKET • CELEBRATION
+</div>
 
+<div class="footer-small">
+© 2026 ZÊ DECOR
+</div>
 
+</div>
 
-  <!-- =====================================================
-       JAVASCRIPT
-  ===================================================== -->
+</footer>
 
-  <script>
 
 
-    /* =====================================================
-       MENU MOBILE
-    ===================================================== */
+<!-- =======================================================
+     LIGHTBOX
+======================================================= -->
 
-    const menuToggle =
-      document.getElementById("menuToggle");
+<div
+  class="modal"
+  id="modal"
+>
 
-    const navLinks =
-      document.getElementById("navLinks");
+<button
+  class="modal-close"
+  id="modalClose"
+>
+×
+</button>
 
+<img
+  id="modalImage"
+  src=""
+  alt=""
+>
 
-    menuToggle.addEventListener("click", () => {
+</div>
 
-      navLinks.classList.toggle("active");
 
-    });
 
+<script>
 
-    document
-      .querySelectorAll("nav a")
-      .forEach(link => {
+/* =========================================================
+   MENU MOBILE
+========================================================= */
 
-        link.addEventListener("click", () => {
+const menuToggle =
+  document.getElementById("menuToggle");
 
-          navLinks.classList.remove("active");
+const navLinks =
+  document.getElementById("navLinks");
 
-        });
 
-      });
+menuToggle.addEventListener(
+  "click",
+  () => {
 
+    navLinks.classList.toggle("active");
 
+  }
+);
 
-    /* =====================================================
-       ANIMAÇÃO DE ENTRADA
-    ===================================================== */
 
-    const revealElements =
-      document.querySelectorAll(".reveal");
+document
+  .querySelectorAll("nav a")
+  .forEach(link => {
 
+    link.addEventListener(
+      "click",
+      () => {
 
-    const revealObserver =
-      new IntersectionObserver(
+        navLinks.classList.remove("active");
 
-        entries => {
+      }
+    );
 
-          entries.forEach(entry => {
+  });
 
-            if (entry.isIntersecting) {
 
-              entry.target.classList.add("visible");
 
-              revealObserver.unobserve(entry.target);
+/* =========================================================
+   ANIMAÇÃO
+========================================================= */
 
-            }
+const revealElements =
+  document.querySelectorAll(".reveal");
 
-          });
 
-        },
+const revealObserver =
+  new IntersectionObserver(
 
-        {
-          threshold: 0.10
+    entries => {
+
+      entries.forEach(entry => {
+
+        if (
+          entry.isIntersecting
+        ) {
+
+          entry.target.classList.add(
+            "visible"
+          );
+
+          revealObserver.unobserve(
+            entry.target
+          );
+
         }
 
-      );
-
-
-    revealElements.forEach(element => {
-
-      revealObserver.observe(element);
-
-    });
-
-
-
-    /* =====================================================
-       LIGHTBOX DAS FOTOS
-    ===================================================== */
-
-    const modal =
-      document.getElementById("modal");
-
-    const modalImage =
-      document.getElementById("modalImage");
-
-    const modalClose =
-      document.getElementById("modalClose");
-
-
-    document
-      .querySelectorAll(".photo-card img")
-      .forEach(image => {
-
-        image.addEventListener("click", () => {
-
-          modalImage.src = image.src;
-
-          modal.classList.add("active");
-
-          document.body.style.overflow = "hidden";
-
-        });
-
       });
 
+    },
 
-    function closeModal() {
+    {
+      threshold: .10
+    }
 
-      modal.classList.remove("active");
+  );
 
-      modalImage.src = "";
 
-      document.body.style.overflow = "";
+revealElements.forEach(
+  element => {
+
+    revealObserver.observe(
+      element
+    );
+
+  }
+);
+
+
+
+/* =========================================================
+   LIGHTBOX
+========================================================= */
+
+const modal =
+  document.getElementById("modal");
+
+const modalImage =
+  document.getElementById("modalImage");
+
+const modalClose =
+  document.getElementById("modalClose");
+
+
+document
+  .querySelectorAll(".photo-card img")
+  .forEach(image => {
+
+    image.addEventListener(
+      "click",
+      () => {
+
+        modalImage.src =
+          image.src;
+
+        modal.classList.add(
+          "active"
+        );
+
+        document.body.style.overflow =
+          "hidden";
+
+      }
+    );
+
+  });
+
+
+function closeModal() {
+
+  modal.classList.remove(
+    "active"
+  );
+
+  modalImage.src = "";
+
+  document.body.style.overflow =
+    "";
+
+}
+
+
+modalClose.addEventListener(
+  "click",
+  closeModal
+);
+
+
+modal.addEventListener(
+  "click",
+  event => {
+
+    if (
+      event.target === modal
+    ) {
+
+      closeModal();
 
     }
 
-
-    modalClose.addEventListener(
-      "click",
-      closeModal
-    );
+  }
+);
 
 
-    modal.addEventListener(
-      "click",
-      event => {
+document.addEventListener(
+  "keydown",
+  event => {
 
-        if (event.target === modal) {
+    if (
+      event.key === "Escape"
+    ) {
 
-          closeModal();
+      closeModal();
 
-        }
+    }
 
-      }
-    );
+  }
+);
 
-
-    document.addEventListener(
-      "keydown",
-      event => {
-
-        if (event.key === "Escape") {
-
-          closeModal();
-
-        }
-
-      }
-    );
-
-
-  </script>
+</script>
 
 
 </body>
