@@ -2,7 +2,6 @@
 <html lang="pt-BR">
 
 <head>
-
   <meta charset="UTF-8">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,11 +35,8 @@
 
   <meta name="theme-color" content="#ded0bf">
 
-
   <!-- FONTES -->
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
-
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
@@ -48,11 +44,13 @@
     rel="stylesheet"
   >
 
-
   <style>
 
-    :root {
+    /* =====================================================
+       CORES
+    ===================================================== */
 
+    :root {
       --fendi: #ded0bf;
       --fendi-claro: #e8ddd0;
       --fendi-suave: #eee5da;
@@ -68,9 +66,12 @@
       --branco: #fffdf9;
 
       --sombra: rgba(53,35,28,.12);
-
     }
 
+
+    /* =====================================================
+       RESET
+    ===================================================== */
 
     * {
       margin: 0;
@@ -78,14 +79,11 @@
       box-sizing: border-box;
     }
 
-
     html {
       scroll-behavior: smooth;
     }
 
-
     body {
-
       font-family: "DM Sans", sans-serif;
 
       color: var(--marrom);
@@ -102,15 +100,12 @@
           #f7f0e7 72%,
           #eee5da 100%
         );
-
     }
-
 
     a {
       color: inherit;
       text-decoration: none;
     }
-
 
     img {
       max-width: 100%;
@@ -119,21 +114,21 @@
 
 
     /* =====================================================
-       LATERAIS COM RELEVO
+       LATERAIS
+       ESTA É A ÚNICA PARTE NOVA/ALTERADA
     ===================================================== */
 
     .lateral {
-
       position: fixed;
 
       top: 0;
       bottom: 0;
 
-      width: 31vw;
+      width: 29vw;
+      max-width: 450px;
+      min-width: 230px;
 
-      max-width: 460px;
-
-      z-index: 0;
+      z-index: 20;
 
       pointer-events: none;
 
@@ -143,37 +138,34 @@
       background-repeat: no-repeat;
 
       background-size: auto 100%;
-
     }
 
 
     .lateral-esquerda {
-
       left: 0;
 
       background-position: left center;
-
     }
 
 
     .lateral-direita {
-
       right: 0;
 
       transform: scaleX(-1);
 
       background-position: left center;
 
-      opacity: .55;
-
+      opacity: .58;
     }
 
 
-    /* camada suave para deixar o centro limpo */
+    /*
+      Suaviza a transição entre o relevo
+      e o conteúdo central.
+    */
 
     .lateral-esquerda::after,
     .lateral-direita::after {
-
       content: "";
 
       position: absolute;
@@ -183,15 +175,15 @@
 
       width: 180px;
 
-      opacity: .35;
+      pointer-events: none;
 
       background:
         linear-gradient(
           90deg,
-          transparent,
-          rgba(247,240,231,.8)
+          transparent 0%,
+          rgba(247,240,231,.08) 45%,
+          rgba(247,240,231,.72) 100%
         );
-
     }
 
 
@@ -201,11 +193,9 @@
 
 
     .lateral-direita::after {
-
       left: 0;
 
       transform: scaleX(-1);
-
     }
 
 
@@ -214,15 +204,13 @@
     ===================================================== */
 
     .container {
-
       width: min(1180px, calc(100% - 40px));
 
       margin: 0 auto;
 
       position: relative;
 
-      z-index: 2;
-
+      z-index: 30;
     }
 
 
@@ -231,7 +219,6 @@
     ===================================================== */
 
     header {
-
       position: fixed;
 
       top: 0;
@@ -241,18 +228,17 @@
 
       z-index: 100;
 
-      background: rgba(247,240,231,.91);
+      background:
+        rgba(247,240,231,.91);
 
       backdrop-filter: blur(16px);
 
       border-bottom:
         1px solid rgba(181,138,78,.16);
-
     }
 
 
     .nav {
-
       min-height: 78px;
 
       display: flex;
@@ -262,13 +248,12 @@
       justify-content: space-between;
 
       gap: 30px;
-
     }
 
 
     .brand {
-
-      font-family: "Playfair Display", serif;
+      font-family:
+        "Playfair Display", serif;
 
       font-size: 23px;
 
@@ -277,7 +262,6 @@
       letter-spacing: .06em;
 
       color: var(--marrom);
-
     }
 
 
@@ -287,18 +271,15 @@
 
 
     .menu {
-
       display: flex;
 
       align-items: center;
 
       gap: 34px;
-
     }
 
 
     .menu a {
-
       font-size: 10px;
 
       font-weight: 700;
@@ -306,7 +287,6 @@
       letter-spacing: .15em;
 
       transition: .25s ease;
-
     }
 
 
@@ -320,7 +300,6 @@
     ===================================================== */
 
     .hero {
-
       position: relative;
 
       min-height: 100vh;
@@ -344,19 +323,15 @@
         ),
         url("padrao-03.webp")
         center / cover no-repeat;
-
     }
 
 
     .hero-content {
-
       max-width: 690px;
-
     }
 
 
     .hero-kicker {
-
       font-size: 10px;
 
       letter-spacing: .30em;
@@ -366,49 +341,44 @@
       color: #f2d9ad;
 
       margin-bottom: 22px;
-
     }
 
 
     .hero h1 {
+      font-family:
+        "Playfair Display", serif;
 
-      font-family: "Playfair Display", serif;
-
-      font-size: clamp(48px, 7vw, 88px);
+      font-size:
+        clamp(48px, 7vw, 88px);
 
       line-height: .98;
 
       font-weight: 500;
 
       margin-bottom: 22px;
-
     }
 
 
     .hero h1 span {
-
       color: #e4c78f;
-
     }
 
 
     .hero p {
-
       max-width: 620px;
 
-      font-size: clamp(16px, 2vw, 20px);
+      font-size:
+        clamp(16px, 2vw, 20px);
 
       line-height: 1.7;
 
       color: rgba(255,255,255,.92);
 
       margin-bottom: 30px;
-
     }
 
 
     .hero-services {
-
       display: flex;
 
       flex-wrap: wrap;
@@ -416,22 +386,18 @@
       gap: 8px;
 
       margin-bottom: 30px;
-
     }
 
 
     .hero-services span {
-
       padding: 8px 13px;
 
       border:
-
         1px solid rgba(255,255,255,.30);
 
       border-radius: 999px;
 
       background:
-
         rgba(255,255,255,.08);
 
       backdrop-filter: blur(8px);
@@ -441,23 +407,19 @@
       font-weight: 700;
 
       letter-spacing: .10em;
-
     }
 
 
     .hero-buttons {
-
       display: flex;
 
       flex-wrap: wrap;
 
       gap: 12px;
-
     }
 
 
     .btn {
-
       min-height: 50px;
 
       padding: 0 23px;
@@ -477,48 +439,40 @@
       letter-spacing: .10em;
 
       transition: .25s ease;
-
     }
 
 
     .btn-primary {
-
       color: white;
 
-      background: var(--dourado);
-
+      background:
+        var(--dourado);
     }
 
 
     .btn-primary:hover {
+      transform:
+        translateY(-2px);
 
-      transform: translateY(-2px);
-
-      background: #a77d43;
-
+      background:
+        #a77d43;
     }
 
 
     .btn-outline {
-
       color: white;
 
       border:
-
         1px solid rgba(255,255,255,.55);
 
       background:
-
         rgba(255,255,255,.05);
-
     }
 
 
     .btn-outline:hover {
-
       background:
         rgba(255,255,255,.12);
-
     }
 
 
@@ -527,29 +481,24 @@
     ===================================================== */
 
     section {
-
       position: relative;
 
       z-index: 1;
 
       padding: 100px 0;
-
     }
 
 
     .section-header {
-
       text-align: center;
 
       max-width: 850px;
 
       margin: 0 auto 50px;
-
     }
 
 
     .eyebrow {
-
       color: var(--dourado);
 
       font-size: 9px;
@@ -559,15 +508,15 @@
       letter-spacing: .28em;
 
       margin-bottom: 12px;
-
     }
 
 
     .section-name {
+      font-family:
+        "Playfair Display", serif;
 
-      font-family: "Playfair Display", serif;
-
-      font-size: clamp(40px, 5vw, 63px);
+      font-size:
+        clamp(40px, 5vw, 63px);
 
       line-height: 1.05;
 
@@ -576,12 +525,10 @@
       color: var(--marrom);
 
       margin-bottom: 12px;
-
     }
 
 
     .section-phrase {
-
       font-size: 15px;
 
       color: var(--marrom-3);
@@ -589,7 +536,6 @@
       max-width: 650px;
 
       margin: 0 auto;
-
     }
 
 
@@ -598,31 +544,26 @@
     ===================================================== */
 
     .collections {
-
       background:
         linear-gradient(
           180deg,
           rgba(232,221,208,.94),
           rgba(222,208,191,.94)
         );
-
     }
 
 
     .collection-grid {
-
       display: grid;
 
       grid-template-columns:
         repeat(2,1fr);
 
       gap: 28px;
-
     }
 
 
     .collection-card {
-
       overflow: hidden;
 
       background:
@@ -639,38 +580,32 @@
         rgba(53,35,28,.08);
 
       transition: .3s ease;
-
     }
 
 
     .collection-card:hover {
-
       transform:
         translateY(-5px);
 
       box-shadow:
         0 24px 55px
         rgba(53,35,28,.13);
-
     }
 
 
-    /* FOTO SEM CORTE */
+    /* FOTOS DAS COLEÇÕES SEM CORTE */
 
     .collection-image {
-
       width: 100%;
 
       overflow: hidden;
 
       background:
         var(--fendi-suave);
-
     }
 
 
     .collection-image img {
-
       width: 100%;
 
       height: auto;
@@ -680,29 +615,23 @@
       object-fit: contain;
 
       transition: .4s ease;
-
     }
 
 
     .collection-card:hover
     .collection-image img {
-
       transform:
         scale(1.01);
-
     }
 
 
     .collection-body {
-
       padding:
         27px 28px 30px;
-
     }
 
 
     .collection-body h3 {
-
       font-family:
         "Playfair Display", serif;
 
@@ -713,24 +642,20 @@
       font-weight: 500;
 
       margin-bottom: 12px;
-
     }
 
 
     .collection-body p {
-
       color:
         var(--marrom-3);
 
       font-size: 15px;
 
       margin-bottom: 20px;
-
     }
 
 
     .collection-link {
-
       color:
         var(--dourado);
 
@@ -739,7 +664,6 @@
       font-weight: 700;
 
       letter-spacing: .12em;
-
     }
 
 
@@ -748,31 +672,26 @@
     ===================================================== */
 
     .gallery-section {
-
       background:
         linear-gradient(
           180deg,
           rgba(247,240,231,.95),
           rgba(238,229,218,.95)
         );
-
     }
 
 
     .gallery-grid {
-
       display: grid;
 
       grid-template-columns:
         repeat(3,1fr);
 
       gap: 20px;
-
     }
 
 
     .gallery-card {
-
       overflow: hidden;
 
       cursor: pointer;
@@ -790,24 +709,20 @@
         rgba(53,35,28,.08);
 
       transition: .3s ease;
-
     }
 
 
     .gallery-card:hover {
-
       transform:
         translateY(-4px);
 
       box-shadow:
         0 18px 40px
         rgba(53,35,28,.12);
-
     }
 
 
     .gallery-card img {
-
       width: 100%;
 
       height: auto;
@@ -818,7 +733,6 @@
 
       background:
         var(--fendi-suave);
-
     }
 
 
@@ -827,28 +741,23 @@
     ===================================================== */
 
     .reviews {
-
       background:
         linear-gradient(
           180deg,
           rgba(232,221,208,.95),
           rgba(222,208,191,.95)
         );
-
     }
 
 
     .review-top {
-
       text-align: center;
 
       margin-bottom: 38px;
-
     }
 
 
     .stars {
-
       color:
         var(--dourado);
 
@@ -857,46 +766,38 @@
       letter-spacing: .16em;
 
       margin-bottom: 7px;
-
     }
 
 
     .review-score {
-
       font-family:
         "Playfair Display", serif;
 
       font-size: 56px;
 
       line-height: 1;
-
     }
 
 
     .review-source {
-
       color:
         var(--marrom-3);
 
       font-size: 13px;
-
     }
 
 
     .review-grid {
-
       display: grid;
 
       grid-template-columns:
         repeat(3,1fr);
 
       gap: 20px;
-
     }
 
 
     .review-card {
-
       background:
         rgba(255,255,255,.53);
 
@@ -911,21 +812,17 @@
       box-shadow:
         0 12px 35px
         rgba(53,35,28,.06);
-
     }
 
 
     .review-card .stars {
-
       font-size: 14px;
 
       margin-bottom: 15px;
-
     }
 
 
     .review-card p {
-
       font-family:
         "Playfair Display", serif;
 
@@ -934,30 +831,25 @@
       line-height: 1.5;
 
       margin-bottom: 18px;
-
     }
 
 
     .review-author {
-
       color:
         var(--marrom-3);
 
       font-size: 11px;
 
       font-weight: 700;
-
     }
 
 
     .reviews-button {
-
       display: flex;
 
       justify-content: center;
 
       margin-top: 38px;
-
     }
 
 
@@ -966,19 +858,16 @@
     ===================================================== */
 
     .contact {
-
       background:
         linear-gradient(
           180deg,
           rgba(247,240,231,.96),
           rgba(238,229,218,.96)
         );
-
     }
 
 
     .contact-box {
-
       background:
         linear-gradient(
           135deg,
@@ -997,12 +886,10 @@
       box-shadow:
         0 20px 55px
         rgba(53,35,28,.09);
-
     }
 
 
     .contact-grid {
-
       display: grid;
 
       grid-template-columns:
@@ -1011,12 +898,10 @@
       gap: 50px;
 
       align-items: center;
-
     }
 
 
     .contact h2 {
-
       font-family:
         "Playfair Display", serif;
 
@@ -1028,44 +913,36 @@
       font-weight: 500;
 
       margin-bottom: 15px;
-
     }
 
 
     .contact-text {
-
       color:
         var(--marrom-3);
 
       font-size: 16px;
 
       max-width: 620px;
-
     }
 
 
     .contact-items {
-
       display: grid;
 
       gap: 13px;
 
       margin-top: 25px;
-
     }
 
 
     .contact-item {
-
       display: flex;
 
       flex-direction: column;
-
     }
 
 
     .contact-item strong {
-
       color:
         var(--dourado);
 
@@ -1074,22 +951,18 @@
       letter-spacing: .16em;
 
       text-transform: uppercase;
-
     }
 
 
     .contact-item span,
     .contact-item a {
-
       font-size: 15px;
 
       font-weight: 600;
-
     }
 
 
     .contact-cta {
-
       display: flex;
 
       flex-direction: column;
@@ -1097,17 +970,14 @@
       align-items: flex-start;
 
       gap: 12px;
-
     }
 
 
     .contact-cta small {
-
       color:
         var(--marrom-3);
 
       font-size: 12px;
-
     }
 
 
@@ -1116,10 +986,9 @@
     ===================================================== */
 
     footer {
-
       position: relative;
 
-      z-index: 2;
+      z-index: 30;
 
       background:
         var(--marrom);
@@ -1129,12 +998,10 @@
 
       padding:
         43px 0 27px;
-
     }
 
 
     .footer-content {
-
       display: flex;
 
       align-items: center;
@@ -1147,32 +1014,26 @@
 
       border-bottom:
         1px solid rgba(255,255,255,.10);
-
     }
 
 
     .footer-brand {
-
       font-family:
         "Playfair Display", serif;
 
       font-size: 27px;
 
       color: white;
-
     }
 
 
     .footer-brand span {
-
       color:
         var(--dourado-claro);
-
     }
 
 
     .footer-tagline {
-
       margin-top: 5px;
 
       color:
@@ -1181,34 +1042,28 @@
       font-size: 9px;
 
       letter-spacing: .12em;
-
     }
 
 
     .footer-links {
-
       display: flex;
 
       flex-wrap: wrap;
 
       gap: 22px;
-
     }
 
 
     .footer-links a {
-
       font-size: 10px;
 
       font-weight: 700;
 
       letter-spacing: .08em;
-
     }
 
 
     .footer-bottom {
-
       padding-top: 21px;
 
       text-align: center;
@@ -1217,7 +1072,6 @@
 
       color:
         rgba(255,255,255,.40);
-
     }
 
 
@@ -1226,7 +1080,6 @@
     ===================================================== */
 
     .lightbox {
-
       position: fixed;
 
       inset: 0;
@@ -1243,7 +1096,6 @@
 
       background:
         rgba(20,14,11,.92);
-
     }
 
 
@@ -1253,7 +1105,6 @@
 
 
     .lightbox img {
-
       max-width: 94vw;
 
       max-height: 90vh;
@@ -1269,12 +1120,10 @@
       box-shadow:
         0 25px 80px
         rgba(0,0,0,.35);
-
     }
 
 
     .lightbox-close {
-
       position: absolute;
 
       top: 18px;
@@ -1298,7 +1147,6 @@
       font-size: 27px;
 
       cursor: pointer;
-
     }
 
 
@@ -1306,14 +1154,14 @@
        TABLET
     ===================================================== */
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1100px) {
 
       .lateral {
+        width: 21vw;
 
-        width: 22vw;
+        min-width: 150px;
 
         opacity: .55;
-
       }
 
     }
@@ -1323,31 +1171,23 @@
 
       .collection-grid,
       .contact-grid {
-
         grid-template-columns: 1fr;
-
       }
 
 
       .gallery-grid {
-
         grid-template-columns:
           repeat(2,1fr);
-
       }
 
 
       .review-grid {
-
         grid-template-columns: 1fr;
-
       }
 
 
       .contact-box {
-
         padding: 42px 30px;
-
       }
 
     }
@@ -1360,59 +1200,44 @@
     @media (max-width: 680px) {
 
       .lateral {
-
         display: none;
-
       }
 
 
       .container {
-
         width:
           min(100% - 28px,1180px);
-
       }
 
 
       header {
-
         position: absolute;
-
       }
 
 
       .nav {
-
         min-height: 68px;
-
       }
 
 
       .brand {
-
         font-size: 19px;
-
       }
 
 
       .menu {
-
         gap: 13px;
-
       }
 
 
       .menu a {
-
         font-size: 8px;
 
         letter-spacing: .07em;
-
       }
 
 
       .hero {
-
         min-height: 92vh;
 
         padding:
@@ -1420,123 +1245,92 @@
 
         background-position:
           62% center;
-
       }
 
 
       .hero h1 {
-
         font-size:
           clamp(44px,15vw,65px);
-
       }
 
 
       .hero p {
-
         font-size: 16px;
-
       }
 
 
       .hero-services span {
-
         font-size: 8px;
 
         padding:
           8px 10px;
-
       }
 
 
       .hero-buttons {
-
         flex-direction: column;
-
       }
 
 
       .btn {
-
         width: 100%;
-
       }
 
 
       section {
-
         padding:
           75px 0;
-
       }
 
 
       .section-name {
-
         font-size: 40px;
-
       }
 
 
       .section-phrase {
-
         font-size: 14px;
-
       }
 
 
       .collection-grid,
       .gallery-grid {
-
         grid-template-columns: 1fr;
-
       }
 
 
       .collection-body {
-
         padding:
           24px;
-
       }
 
 
       .collection-body h3 {
-
         font-size: 27px;
-
       }
 
 
       .review-card {
-
         padding:
           24px;
-
       }
 
 
       .contact-box {
-
         padding:
           35px 23px;
-
       }
 
 
       .contact h2 {
-
         font-size: 40px;
-
       }
 
 
       .footer-content {
-
         flex-direction: column;
 
         align-items: flex-start;
-
       }
 
     }
@@ -1550,7 +1344,7 @@
 
 
   <!-- =====================================================
-       RELEVO DAS LATERAIS
+       LATERAIS
   ====================================================== -->
 
   <div class="lateral lateral-esquerda"></div>
@@ -1566,11 +1360,8 @@
 
     <div class="container nav">
 
-
       <a href="#inicio" class="brand">
-
         ZÊ <span>DECOR</span>
-
       </a>
 
 
@@ -1590,7 +1381,6 @@
 
       </nav>
 
-
     </div>
 
   </header>
@@ -1605,17 +1395,13 @@
 
     <section class="hero">
 
-
       <div class="container">
-
 
         <div class="hero-content">
 
 
           <div class="hero-kicker">
-
             FESTA • POCKET • CELEBRATION
-
           </div>
 
 
@@ -1641,17 +1427,11 @@
 
           <div class="hero-services">
 
-            <span>
-              PEGUE E MONTE
-            </span>
+            <span>PEGUE E MONTE</span>
 
-            <span>
-              MONTAGEM
-            </span>
+            <span>MONTAGEM</span>
 
-            <span>
-              DECORAÇÃO COMPLETA
-            </span>
+            <span>DECORAÇÃO COMPLETA</span>
 
           </div>
 
@@ -1665,9 +1445,7 @@
               target="_blank"
               rel="noopener"
             >
-
               FALAR NO WHATSAPP
-
             </a>
 
 
@@ -1675,26 +1453,21 @@
               class="btn btn-outline"
               href="#colecoes"
             >
-
               CONHECER COLEÇÕES
-
             </a>
 
 
           </div>
 
-
         </div>
 
-
       </div>
-
 
     </section>
 
 
     <!-- =====================================================
-         NOSSAS COLEÇÕES
+         COLEÇÕES
     ====================================================== -->
 
     <section
@@ -1702,12 +1475,10 @@
       id="colecoes"
     >
 
-
       <div class="container">
 
 
         <div class="section-header">
-
 
           <div class="eyebrow">
             ZÊ DECOR
@@ -1720,11 +1491,8 @@
 
 
           <p class="section-phrase">
-
             Do Pegue e Monte à decoração completa.
-
           </p>
-
 
         </div>
 
@@ -1768,19 +1536,16 @@
                 class="collection-link"
                 href="#pocket"
               >
-
                 VER DECORAÇÕES →
-
               </a>
 
 
             </div>
 
-
           </article>
 
 
-          <!-- MAIORES -->
+          <!-- DECORAÇÕES MAIORES -->
 
           <article class="collection-card">
 
@@ -1816,23 +1581,18 @@
                 class="collection-link"
                 href="#maiores"
               >
-
                 VER DECORAÇÕES →
-
               </a>
 
 
             </div>
-
 
           </article>
 
 
         </div>
 
-
       </div>
-
 
     </section>
 
@@ -1846,12 +1606,10 @@
       id="pocket"
     >
 
-
       <div class="container">
 
 
         <div class="section-header">
-
 
           <div class="eyebrow">
             PEGUE E MONTE • MONTAGEM
@@ -1864,11 +1622,8 @@
 
 
           <p class="section-phrase">
-
             Escolha entre Pegue e Monte ou montagem com a ZÊ DECOR.
-
           </p>
-
 
         </div>
 
@@ -1877,76 +1632,62 @@
 
 
           <div class="gallery-card">
-
             <img
               src="pocket-01.webp"
               alt="Decoração Pocket ZÊ DECOR"
               loading="lazy"
             >
-
           </div>
 
 
           <div class="gallery-card">
-
             <img
               src="pocket-02.webp"
               alt="Decoração Pocket ZÊ DECOR"
               loading="lazy"
             >
-
           </div>
 
 
           <div class="gallery-card">
-
             <img
               src="pocket-03.webp"
               alt="Decoração Pocket ZÊ DECOR"
               loading="lazy"
             >
-
           </div>
 
 
           <div class="gallery-card">
-
             <img
               src="pocket-04.webp"
               alt="Decoração Pocket ZÊ DECOR"
               loading="lazy"
             >
-
           </div>
 
 
           <div class="gallery-card">
-
             <img
               src="pocket-05.webp"
               alt="Decoração Pocket ZÊ DECOR"
               loading="lazy"
             >
-
           </div>
 
 
           <div class="gallery-card">
-
             <img
               src="pocket-06.webp"
               alt="Decoração Pocket ZÊ DECOR"
               loading="lazy"
             >
-
           </div>
 
 
         </div>
 
-
       </div>
-
 
     </section>
 
@@ -1960,12 +1701,10 @@
       id="maiores"
     >
 
-
       <div class="container">
 
 
         <div class="section-header">
-
 
           <div class="eyebrow">
             MONTAGEM • CELEBRATION
@@ -1978,11 +1717,8 @@
 
 
           <p class="section-phrase">
-
             Decorações completas com montagem da nossa equipe.
-
           </p>
-
 
         </div>
 
@@ -1991,76 +1727,62 @@
 
 
           <div class="gallery-card">
-
             <img
               src="padrao-01.webp"
               alt="Decoração maior ZÊ DECOR"
               loading="lazy"
             >
-
           </div>
 
 
           <div class="gallery-card">
-
             <img
               src="padrao-02.webp"
               alt="Decoração maior ZÊ DECOR"
               loading="lazy"
             >
-
           </div>
 
 
           <div class="gallery-card">
-
             <img
               src="padrao-03.webp"
               alt="Decoração maior ZÊ DECOR"
               loading="lazy"
             >
-
           </div>
 
 
           <div class="gallery-card">
-
             <img
               src="padrao-04.webp"
               alt="Decoração maior ZÊ DECOR"
               loading="lazy"
             >
-
           </div>
 
 
           <div class="gallery-card">
-
             <img
               src="padrao-05.webp"
               alt="Decoração maior ZÊ DECOR"
               loading="lazy"
             >
-
           </div>
 
 
           <div class="gallery-card">
-
             <img
               src="padrao-06.webp"
               alt="Decoração maior ZÊ DECOR"
               loading="lazy"
             >
-
           </div>
 
 
         </div>
 
-
       </div>
-
 
     </section>
 
@@ -2074,12 +1796,10 @@
       id="avaliacoes"
     >
 
-
       <div class="container">
 
 
         <div class="section-header">
-
 
           <div class="eyebrow">
             EXPERIÊNCIAS REAIS
@@ -2092,17 +1812,13 @@
 
 
           <p class="section-phrase">
-
             Experiências reais de quem celebrou com a ZÊ DECOR.
-
           </p>
-
 
         </div>
 
 
         <div class="review-top">
-
 
           <div class="stars">
             ★★★★★
@@ -2118,7 +1834,6 @@
             Avaliação no Google
           </div>
 
-
         </div>
 
 
@@ -2127,16 +1842,13 @@
 
           <article class="review-card">
 
-
             <div class="stars">
               ★★★★★
             </div>
 
 
             <p>
-
               “Tudo perfeito! Foram super solícitos do início ao fim.”
-
             </p>
 
 
@@ -2144,12 +1856,10 @@
               — Elen C.
             </div>
 
-
           </article>
 
 
           <article class="review-card">
-
 
             <div class="stars">
               ★★★★★
@@ -2157,10 +1867,8 @@
 
 
             <p>
-
               “Muito capricho, pontualidade...
               a ornamentação da mesa ficou linda demais.”
-
             </p>
 
 
@@ -2168,12 +1876,10 @@
               — Karina R.
             </div>
 
-
           </article>
 
 
           <article class="review-card">
-
 
             <div class="stars">
               ★★★★★
@@ -2181,17 +1887,14 @@
 
 
             <p>
-
               “Trabalho de qualidade...
               comunicação efetiva e ótimo resultado.”
-
             </p>
 
 
             <div class="review-author">
               — Debora
             </div>
-
 
           </article>
 
@@ -2201,24 +1904,18 @@
 
         <div class="reviews-button">
 
-
           <a
             class="btn btn-primary"
             href="https://maps.app.goo.gl/9QeNwJrUB7NkjPqy6"
             target="_blank"
             rel="noopener"
           >
-
             VER TODAS AS AVALIAÇÕES NO GOOGLE
-
           </a>
-
 
         </div>
 
-
       </div>
-
 
     </section>
 
@@ -2232,7 +1929,6 @@
       id="contato"
     >
 
-
       <div class="container">
 
 
@@ -2243,7 +1939,6 @@
 
 
             <div>
-
 
               <div class="eyebrow">
                 CONTATO
@@ -2278,9 +1973,7 @@
                     target="_blank"
                     rel="noopener"
                   >
-
                     (21) 98154-5015
-
                   </a>
 
                 </div>
@@ -2298,9 +1991,7 @@
                     target="_blank"
                     rel="noopener"
                   >
-
                     @zedecorofc
-
                   </a>
 
                 </div>
@@ -2314,16 +2005,13 @@
 
 
                   <span>
-
                     Barra • Recreio • Jacarepaguá • Vargens
-
                   </span>
 
                 </div>
 
 
               </div>
-
 
             </div>
 
@@ -2337,16 +2025,12 @@
                 target="_blank"
                 rel="noopener"
               >
-
                 PEDIR ORÇAMENTO
-
               </a>
 
 
               <small>
-
                 Pegue e Monte • Montagem • Decoração completa
-
               </small>
 
 
@@ -2355,25 +2039,20 @@
 
           </div>
 
-
         </div>
-
 
       </div>
 
-
     </section>
-
 
   </main>
 
 
   <!-- =====================================================
        FOOTER
-  ====================================================== -->
+    ====================================================== -->
 
   <footer>
-
 
     <div class="container">
 
@@ -2383,52 +2062,39 @@
 
         <div>
 
-
           <div class="footer-brand">
-
             ZÊ <span>DECOR</span>
-
           </div>
 
 
           <div class="footer-tagline">
-
             DECORAÇÕES QUE TRANSFORMAM MOMENTOS.
-
           </div>
-
 
         </div>
 
 
         <div class="footer-links">
 
-
           <a href="#colecoes">
             COLEÇÕES
           </a>
-
 
           <a href="#avaliacoes">
             AVALIAÇÕES
           </a>
 
-
           <a href="#contato">
             CONTATO
           </a>
-
 
           <a
             href="https://instagram.com/zedecorofc"
             target="_blank"
             rel="noopener"
           >
-
             INSTAGRAM
-
           </a>
-
 
         </div>
 
@@ -2445,28 +2111,24 @@
 
     </div>
 
-
   </footer>
 
 
   <!-- =====================================================
        LIGHTBOX
-  ====================================================== -->
+    ====================================================== -->
 
   <div
     class="lightbox"
     id="lightbox"
   >
 
-
     <button
       class="lightbox-close"
       id="lightboxClose"
       aria-label="Fechar imagem"
     >
-
       ×
-
     </button>
 
 
@@ -2476,13 +2138,12 @@
       alt="Imagem ampliada da decoração"
     >
 
-
   </div>
 
 
   <!-- =====================================================
-       SEO STRUCTURED DATA
-  ====================================================== -->
+       SEO
+    ====================================================== -->
 
   <script type="application/ld+json">
 
@@ -2536,15 +2197,14 @@
       "https://instagram.com/zedecorofc",
       "https://maps.app.goo.gl/9QeNwJrUB7NkjPqy6"
     ]
-
   }
 
   </script>
 
 
   <!-- =====================================================
-       LIGHTBOX JAVASCRIPT
-  ====================================================== -->
+       JAVASCRIPT
+    ====================================================== -->
 
   <script>
 
@@ -2625,7 +2285,6 @@
     );
 
   </script>
-
 
 </body>
 
