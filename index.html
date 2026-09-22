@@ -25,28 +25,35 @@
 <style>
 
 /* =========================================================
-   CORES
+   PALETA ZÊ DECOR
 ========================================================= */
 
 :root {
 
-  --fundo: #f8f3eb;
-  --fundo-suave: #f3eadf;
+  --fendi: #ded0bf;
+  --fendi-claro: #e8ddd0;
+  --fendi-suave: #eee5da;
 
-  --marrom: #39271f;
-  --marrom-claro: #725e52;
+  --creme: #f5eee5;
 
-  --dourado: #b98c4e;
-  --dourado-claro: #d4b57f;
+  --marrom: #35231c;
+  --marrom-2: #563f34;
+  --marrom-3: #765f51;
+
+  --dourado: #b58a4e;
+  --dourado-claro: #d0b27d;
+
+  --escuro: #241713;
 
   --branco: #ffffff;
 
-  --escuro: #281c17;
-
-  --linha: rgba(57,39,31,.13);
+  --linha: rgba(53,35,28,.16);
 
   --sombra:
-    0 25px 70px rgba(57,39,31,.10);
+    0 25px 65px rgba(53,35,28,.14);
+
+  --sombra-forte:
+    0 35px 85px rgba(53,35,28,.20);
 
 }
 
@@ -69,7 +76,7 @@ body {
 
   position: relative;
 
-  background: var(--fundo);
+  background: var(--fendi);
 
   color: var(--marrom);
 
@@ -98,16 +105,43 @@ button {
 
 
 /* =========================================================
-   DECORAÇÃO LATERAL GLOBAL
+   TEXTURA SUTIL DO FUNDO
 ========================================================= */
 
-/*
-   IMPORTANTE:
+body::before {
 
-   Essa decoração NÃO pertence a nenhuma seção.
+  content: "";
 
-   Ela acompanha TODA a landing page.
-*/
+  position: fixed;
+
+  inset: 0;
+
+  z-index: -10;
+
+  pointer-events: none;
+
+  opacity: .20;
+
+  background-image:
+
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(255,255,255,.8) 0,
+      transparent 28%
+    ),
+
+    radial-gradient(
+      circle at 80% 75%,
+      rgba(181,138,78,.10) 0,
+      transparent 30%
+    );
+
+}
+
+
+/* =========================================================
+   ARTE LATERAL GLOBAL
+========================================================= */
 
 .global-decoration {
 
@@ -116,9 +150,9 @@ button {
   top: 0;
   bottom: 0;
 
-  width: 250px;
+  width: 240px;
 
-  z-index: 4;
+  z-index: 3;
 
   pointer-events: none;
 
@@ -152,11 +186,11 @@ button {
 
   stroke: var(--dourado);
 
-  stroke-width: 2.2;
+  stroke-width: 2;
 
   stroke-linecap: round;
 
-  opacity: .68;
+  opacity: .72;
 
 }
 
@@ -164,9 +198,9 @@ button {
 
   fill: none;
 
-  stroke: #d7bd96;
+  stroke: var(--dourado-claro);
 
-  stroke-width: 1.3;
+  stroke-width: 1.2;
 
   stroke-linecap: round;
 
@@ -174,32 +208,29 @@ button {
 
 }
 
-
 .decoration-balloon {
 
-  fill: rgba(185,140,78,.11);
+  fill: rgba(181,138,78,.10);
 
   stroke: var(--dourado);
 
-  stroke-width: 1.7;
+  stroke-width: 1.6;
 
   opacity: .72;
 
 }
 
-
 .decoration-balloon-light {
 
-  fill: rgba(255,255,255,.08);
+  fill: rgba(255,255,255,.10);
 
-  stroke: #d6bb91;
+  stroke: #c7aa7d;
 
-  stroke-width: 1.3;
+  stroke-width: 1.2;
 
   opacity: .65;
 
 }
-
 
 .decoration-highlight {
 
@@ -211,19 +242,17 @@ button {
 
 }
 
-
 .decoration-leaf {
 
-  fill: rgba(185,140,78,.10);
+  fill: rgba(181,138,78,.09);
 
   stroke: var(--dourado);
 
-  stroke-width: 1.2;
+  stroke-width: 1.1;
 
-  opacity: .70;
+  opacity: .68;
 
 }
-
 
 .decoration-stem {
 
@@ -231,12 +260,11 @@ button {
 
   stroke: var(--dourado);
 
-  stroke-width: 1.4;
+  stroke-width: 1.3;
 
-  opacity: .68;
+  opacity: .65;
 
 }
-
 
 .decoration-dot {
 
@@ -246,10 +274,9 @@ button {
 
 }
 
-
 .decoration-dot-light {
 
-  fill: #d9c29e;
+  fill: var(--dourado-claro);
 
   opacity: .70;
 
@@ -272,12 +299,13 @@ header {
   width: 100%;
 
   background:
-    rgba(248,243,235,.95);
+    rgba(222,208,191,.94);
 
-  backdrop-filter: blur(16px);
+  backdrop-filter:
+    blur(18px);
 
   border-bottom:
-    1px solid var(--linha);
+    1px solid rgba(53,35,28,.14);
 
 }
 
@@ -339,7 +367,7 @@ header {
 
   margin-top: 5px;
 
-  color: var(--marrom-claro);
+  color: var(--marrom-3);
 
   font-size: 8px;
 
@@ -365,6 +393,8 @@ nav a {
 
   letter-spacing: .16em;
 
+  transition: .3s;
+
 }
 
 nav a::after {
@@ -385,12 +415,16 @@ nav a::after {
 
 }
 
-nav a:hover::after {
-  width: 100%;
+nav a:hover {
+
+  color: var(--dourado);
+
 }
 
-nav a:hover {
-  color: var(--dourado);
+nav a:hover::after {
+
+  width: 100%;
+
 }
 
 .menu-toggle {
@@ -432,9 +466,9 @@ nav a:hover {
 
     linear-gradient(
       90deg,
-      rgba(38,26,21,.88),
-      rgba(38,26,21,.60) 45%,
-      rgba(38,26,21,.12)
+      rgba(38,26,21,.90) 0%,
+      rgba(38,26,21,.66) 43%,
+      rgba(38,26,21,.18) 100%
     ),
 
     url("padrao-03.webp")
@@ -461,7 +495,7 @@ nav a:hover {
 
   margin-bottom: 25px;
 
-  color: #e3c493;
+  color: #e4c793;
 
   font-size: 10px;
 
@@ -497,7 +531,8 @@ nav a:hover {
 
   margin-top: 35px;
 
-  color: rgba(255,255,255,.88);
+  color:
+    rgba(255,255,255,.88);
 
   font-size: 16px;
 
@@ -564,6 +599,9 @@ nav a:hover {
 
   color: white;
 
+  background:
+    rgba(255,255,255,.03);
+
 }
 
 .btn-border:hover {
@@ -576,7 +614,7 @@ nav a:hover {
 
 
 /* =========================================================
-   SEÇÕES
+   COLEÇÕES
 ========================================================= */
 
 .colecoes {
@@ -585,9 +623,16 @@ nav a:hover {
 
   z-index: 1;
 
-  padding: 135px 40px 160px;
+  padding: 145px 40px 175px;
 
-  background: var(--fundo);
+  background:
+
+    linear-gradient(
+      135deg,
+      #ded0bf 0%,
+      #e5d8c9 48%,
+      #d9c9b7 100%
+    );
 
 }
 
@@ -614,7 +659,7 @@ nav a:hover {
 
   max-width: 900px;
 
-  margin-bottom: 80px;
+  margin-bottom: 85px;
 
 }
 
@@ -644,7 +689,7 @@ nav a:hover {
 
   margin-top: 24px;
 
-  color: var(--marrom-claro);
+  color: var(--marrom-2);
 
   font-family:
     "Playfair Display",
@@ -664,7 +709,7 @@ nav a:hover {
 
   margin-top: 22px;
 
-  color: var(--marrom-claro);
+  color: var(--marrom-3);
 
   font-size: 14px;
 
@@ -674,7 +719,7 @@ nav a:hover {
 
 
 /* =========================================================
-   CARDS
+   CARDS DAS COLEÇÕES
 ========================================================= */
 
 .collection-grid {
@@ -684,7 +729,7 @@ nav a:hover {
   grid-template-columns:
     repeat(2,1fr);
 
-  gap: 30px;
+  gap: 34px;
 
 }
 
@@ -693,18 +738,76 @@ nav a:hover {
   overflow: hidden;
 
   background:
-    rgba(255,255,255,.80);
+    rgba(246,237,227,.88);
+
+  border:
+    1px solid rgba(181,138,78,.30);
+
+  border-radius:
+    34px 12px 34px 12px;
 
   box-shadow:
     var(--sombra);
+
+  transition:
+    transform .45s ease,
+    box-shadow .45s ease;
+
+}
+
+.collection-card:nth-child(2) {
+
+  border-radius:
+    12px 34px 12px 34px;
+
+}
+
+.collection-card:hover {
+
+  transform:
+    translateY(-9px);
+
+  box-shadow:
+    var(--sombra-forte);
 
 }
 
 .collection-image {
 
+  position: relative;
+
   overflow: hidden;
 
-  background: #eee6da;
+  background:
+    #e6d9ca;
+
+  padding: 12px;
+
+}
+
+.collection-image::after {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 12px;
+
+  border:
+    1px solid rgba(181,138,78,.28);
+
+  border-radius:
+    25px 7px 25px 7px;
+
+  pointer-events: none;
+
+}
+
+.collection-card:nth-child(2)
+.collection-image::after {
+
+  border-radius:
+    7px 25px 7px 25px;
 
 }
 
@@ -716,21 +819,33 @@ nav a:hover {
 
   object-fit: contain;
 
+  border-radius:
+    23px 7px 23px 7px;
+
   transition:
     transform .6s ease;
+
+}
+
+.collection-card:nth-child(2)
+.collection-image img {
+
+  border-radius:
+    7px 23px 7px 23px;
 
 }
 
 .collection-card:hover
 .collection-image img {
 
-  transform: scale(1.025);
+  transform:
+    scale(1.025);
 
 }
 
 .collection-info {
 
-  padding: 36px;
+  padding: 38px;
 
 }
 
@@ -759,7 +874,7 @@ nav a:hover {
     Georgia,
     serif;
 
-  font-size: 42px;
+  font-size: 44px;
 
   font-weight: 500;
 
@@ -769,7 +884,7 @@ nav a:hover {
 
 .collection-info p {
 
-  color: var(--marrom-claro);
+  color: var(--marrom-3);
 
   font-size: 14px;
 
@@ -779,12 +894,12 @@ nav a:hover {
 
 
 /* =========================================================
-   GALERIA
+   GALERIAS
 ========================================================= */
 
 .gallery-section {
 
-  margin-top: 150px;
+  margin-top: 165px;
 
 }
 
@@ -792,7 +907,7 @@ nav a:hover {
 
   max-width: 920px;
 
-  margin-bottom: 48px;
+  margin-bottom: 52px;
 
 }
 
@@ -822,7 +937,7 @@ nav a:hover {
 
   margin-top: 22px;
 
-  color: var(--marrom-claro);
+  color: var(--marrom-2);
 
   font-family:
     "Playfair Display",
@@ -842,13 +957,18 @@ nav a:hover {
 
   margin-top: 18px;
 
-  color: var(--marrom-claro);
+  color: var(--marrom-3);
 
   font-size: 14px;
 
   line-height: 1.8;
 
 }
+
+
+/* =========================================================
+   FOTOS — RELEVO
+========================================================= */
 
 .photo-grid {
 
@@ -857,19 +977,139 @@ nav a:hover {
   grid-template-columns:
     repeat(3,1fr);
 
-  gap: 18px;
+  gap: 24px;
 
 }
+
 
 .photo-card {
 
+  position: relative;
+
   overflow: hidden;
 
-  background: #eee6da;
+  background:
+    var(--creme);
+
+  border:
+    1px solid rgba(181,138,78,.32);
+
+  box-shadow:
+
+    0 22px 45px
+    rgba(53,35,28,.13),
+
+    0 5px 12px
+    rgba(53,35,28,.08);
 
   cursor: pointer;
 
+  transition:
+
+    transform .45s ease,
+
+    box-shadow .45s ease;
+
 }
+
+
+/* formatos orgânicos */
+
+.photo-card:nth-child(1) {
+
+  border-radius:
+    30px 8px 30px 8px;
+
+}
+
+.photo-card:nth-child(2) {
+
+  border-radius:
+    8px 30px 8px 30px;
+
+}
+
+.photo-card:nth-child(3) {
+
+  border-radius:
+    30px 8px 8px 30px;
+
+}
+
+.photo-card:nth-child(4) {
+
+  border-radius:
+    8px 30px 30px 8px;
+
+}
+
+.photo-card:nth-child(5) {
+
+  border-radius:
+    30px 8px 30px 8px;
+
+}
+
+.photo-card:nth-child(6) {
+
+  border-radius:
+    8px 30px 8px 30px;
+
+}
+
+
+/* camada interna */
+
+.photo-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 7px;
+
+  z-index: 2;
+
+  border:
+    1px solid rgba(255,255,255,.48);
+
+  border-radius:
+    inherit;
+
+  pointer-events: none;
+
+}
+
+
+/* brilho */
+
+.photo-card::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 10%;
+
+  top: 7%;
+
+  width: 40%;
+
+  height: 20%;
+
+  background:
+    linear-gradient(
+      120deg,
+      rgba(255,255,255,.25),
+      transparent
+    );
+
+  opacity: .35;
+
+  pointer-events: none;
+
+}
+
 
 .photo-card img {
 
@@ -880,13 +1120,38 @@ nav a:hover {
   object-fit: contain;
 
   transition:
-    transform .55s ease;
+    transform .65s ease;
+
+}
+
+.photo-card:hover {
+
+  transform:
+    translateY(-10px)
+    rotate(-.35deg);
+
+  box-shadow:
+
+    0 32px 65px
+    rgba(53,35,28,.20),
+
+    0 8px 18px
+    rgba(53,35,28,.10);
+
+}
+
+.photo-card:nth-child(even):hover {
+
+  transform:
+    translateY(-10px)
+    rotate(.35deg);
 
 }
 
 .photo-card:hover img {
 
-  transform: scale(1.02);
+  transform:
+    scale(1.025);
 
 }
 
@@ -901,10 +1166,15 @@ nav a:hover {
 
   z-index: 1;
 
-  padding: 135px 40px;
+  padding: 145px 40px;
 
   background:
-    var(--fundo-suave);
+
+    linear-gradient(
+      135deg,
+      #eee5da,
+      #e1d3c3
+    );
 
   text-align: center;
 
@@ -921,7 +1191,6 @@ nav a:hover {
 .reviews .section-phrase {
 
   margin-left: auto;
-
   margin-right: auto;
 
 }
@@ -930,15 +1199,21 @@ nav a:hover {
 
   max-width: 650px;
 
-  margin: 60px auto 0;
+  margin: 65px auto 0;
 
-  padding: 50px 30px;
+  padding: 55px 30px;
 
-  background: white;
+  background:
+    rgba(250,245,238,.88);
 
-  border: 1px solid var(--linha);
+  border:
+    1px solid rgba(181,138,78,.30);
 
-  box-shadow: var(--sombra);
+  border-radius:
+    32px 10px 32px 10px;
+
+  box-shadow:
+    var(--sombra);
 
 }
 
@@ -956,6 +1231,8 @@ nav a:hover {
 
   margin-top: 12px;
 
+  color: var(--marrom);
+
   font-family:
     "Playfair Display",
     Georgia,
@@ -972,7 +1249,7 @@ nav a:hover {
   margin:
     12px 0 28px;
 
-  color: var(--marrom-claro);
+  color: var(--marrom-3);
 
   font-size: 14px;
 
@@ -988,7 +1265,8 @@ nav a:hover {
 
   align-items: center;
 
-  background: var(--marrom);
+  background:
+    var(--marrom);
 
   color: white;
 
@@ -998,11 +1276,14 @@ nav a:hover {
 
   letter-spacing: .14em;
 
+  transition: .3s;
+
 }
 
 .google-btn:hover {
 
-  background: var(--dourado);
+  background:
+    var(--dourado);
 
 }
 
@@ -1017,9 +1298,15 @@ nav a:hover {
 
   z-index: 1;
 
-  padding: 135px 40px;
+  padding: 145px 40px;
 
-  background: var(--marrom);
+  background:
+
+    linear-gradient(
+      135deg,
+      #493329,
+      #2b1c17
+    );
 
   color: white;
 
@@ -1033,7 +1320,8 @@ nav a:hover {
 
 .contact .section-phrase {
 
-  color: #d8c4aa;
+  color:
+    #d9c3a4;
 
 }
 
@@ -1062,7 +1350,8 @@ nav a:hover {
 
   margin-bottom: 7px;
 
-  color: var(--dourado-claro);
+  color:
+    var(--dourado-claro);
 
   font-size: 9px;
 
@@ -1083,19 +1372,27 @@ nav a:hover {
 
 .contact-item a:hover {
 
-  color: var(--dourado-claro);
+  color:
+    var(--dourado-claro);
 
 }
 
 .contact-box {
 
-  padding: 45px;
+  padding: 48px;
 
   border:
-    1px solid rgba(255,255,255,.16);
+    1px solid
+    rgba(255,255,255,.17);
+
+  border-radius:
+    30px 10px 30px 10px;
 
   background:
-    rgba(255,255,255,.025);
+    rgba(255,255,255,.035);
+
+  box-shadow:
+    0 25px 60px rgba(0,0,0,.16);
 
 }
 
@@ -1108,7 +1405,7 @@ nav a:hover {
     Georgia,
     serif;
 
-  font-size: 40px;
+  font-size: 42px;
 
   font-weight: 500;
 
@@ -1118,7 +1415,8 @@ nav a:hover {
 
 .contact-box p {
 
-  margin: 20px 0 28px;
+  margin:
+    20px 0 28px;
 
   color:
     rgba(255,255,255,.72);
@@ -1142,7 +1440,8 @@ footer {
 
   padding: 40px;
 
-  background: var(--escuro);
+  background:
+    #211511;
 
   color:
     rgba(255,255,255,.65);
@@ -1175,6 +1474,8 @@ footer {
     serif;
 
   font-size: 22px;
+
+  letter-spacing: .08em;
 
 }
 
@@ -1230,6 +1531,12 @@ footer {
 
   object-fit: contain;
 
+  border-radius:
+    18px;
+
+  box-shadow:
+    0 30px 90px rgba(0,0,0,.45);
+
 }
 
 .modal-close {
@@ -1262,10 +1569,12 @@ footer {
   opacity: 0;
 
   transform:
-    translateY(22px);
+    translateY(25px);
 
   transition:
+
     opacity .75s ease,
+
     transform .75s ease;
 
 }
@@ -1337,7 +1646,7 @@ footer {
     gap: 0;
 
     background:
-      rgba(248,243,235,.98);
+      rgba(222,208,191,.98);
 
   }
 
@@ -1381,6 +1690,7 @@ footer {
   .contact {
 
     padding-left: 20px;
+
     padding-right: 20px;
 
   }
@@ -1404,17 +1714,11 @@ footer {
 
   }
 
-
-  /*
-     Laterais continuam visíveis,
-     mas diminuem de tamanho.
-  */
-
   .global-decoration {
 
-    width: 170px;
+    width: 145px;
 
-    opacity: .72;
+    opacity: .65;
 
   }
 
@@ -1475,29 +1779,23 @@ footer {
 
   }
 
-
-  /*
-     No celular a arte fica
-     mais próxima da borda.
-  */
-
   .global-decoration {
 
-    width: 95px;
+    width: 80px;
 
-    opacity: .48;
+    opacity: .40;
 
   }
 
   .global-decoration.left {
 
-    left: -25px;
+    left: -20px;
 
   }
 
   .global-decoration.right {
 
-    right: -25px;
+    right: -20px;
 
   }
 
@@ -1544,444 +1842,40 @@ footer {
 
 
 <!-- =======================================================
-     DECORAÇÃO GLOBAL — ESQUERDA
-     
-     Fica FORA das seções e acompanha toda a landing page.
+     ARTE LATERAL ESQUERDA
 ======================================================= -->
 
 <div class="global-decoration left">
 
 <svg
-  viewBox="0 0 250 3000"
+  viewBox="0 0 240 3000"
   preserveAspectRatio="none"
 >
 
-
-<!-- BALÕES DO TOPO -->
+<!-- BALÕES SUPERIORES -->
 
 <ellipse
   class="decoration-balloon"
-  cx="65"
+  cx="55"
   cy="120"
-  rx="48"
-  ry="70"
+  rx="45"
+  ry="67"
 />
 
 <ellipse
   class="decoration-balloon-light"
-  cx="115"
-  cy="205"
-  rx="55"
-  ry="78"
+  cx="110"
+  cy="210"
+  rx="52"
+  ry="75"
 />
 
 <ellipse
   class="decoration-balloon"
   cx="42"
   cy="300"
-  rx="43"
-  ry="63"
-/>
-
-
-<!-- FITA LONGA -->
-
-<path
-  class="decoration-line"
-  d="
-    M130 0
-
-    C210 110
-    100 200
-    155 310
-
-    C205 410
-    75 500
-    130 620
-
-    C190 750
-    70 850
-    130 970
-
-    C195 1090
-    65 1190
-    125 1310
-
-    C185 1430
-    70 1530
-    130 1650
-
-    C190 1770
-    70 1870
-    125 1990
-
-    C180 2110
-    70 2220
-    130 2340
-
-    C190 2460
-    70 2570
-    125 2700
-
-    C170 2790
-    105 2900
-    90 3000
-  "
-/>
-
-
-<!-- SEGUNDA FITA -->
-
-<path
-  class="decoration-line-light"
-  d="
-    M40 0
-
-    C105 130
-    20 240
-    65 350
-
-    C110 460
-    20 570
-    60 690
-
-    C105 810
-    20 920
-    60 1040
-
-    C105 1160
-    20 1280
-    65 1400
-
-    C110 1520
-    20 1640
-    60 1760
-
-    C105 1880
-    20 2000
-    65 2120
-
-    C110 2240
-    20 2360
-    60 2480
-
-    C105 2600
-    20 2720
-    55 2850
-
-    C75 2910
-    65 2960
-    60 3000
-  "
-/>
-
-
-<!-- RAMO 1 -->
-
-<path
-  class="decoration-stem"
-  d="
-    M185 470
-
-    C150 560
-    150 650
-    180 735
-
-    C205 810
-    185 900
-    150 975
-  "
-/>
-
-<ellipse
-  class="decoration-leaf"
-  cx="166"
-  cy="545"
-  rx="12"
-  ry="32"
-  transform="rotate(-30 166 545)"
-/>
-
-<ellipse
-  class="decoration-leaf"
-  cx="158"
-  cy="610"
-  rx="12"
-  ry="32"
-  transform="rotate(30 158 610)"
-/>
-
-<ellipse
-  class="decoration-leaf"
-  cx="174"
-  cy="680"
-  rx="11"
-  ry="29"
-  transform="rotate(-30 174 680)"
-/>
-
-<ellipse
-  class="decoration-leaf"
-  cx="170"
-  cy="745"
-  rx="11"
-  ry="29"
-  transform="rotate(30 170 745)"
-/>
-
-
-<!-- BALÕES DO MEIO -->
-
-<ellipse
-  class="decoration-balloon-light"
-  cx="65"
-  cy="1040"
-  rx="48"
-  ry="70"
-/>
-
-<ellipse
-  class="decoration-balloon"
-  cx="115"
-  cy="1130"
-  rx="58"
-  ry="82"
-/>
-
-<ellipse
-  class="decoration-balloon-light"
-  cx="42"
-  cy="1230"
-  rx="43"
-  ry="63"
-/>
-
-
-<!-- RAMO 2 -->
-
-<path
-  class="decoration-stem"
-  d="
-    M195 1380
-
-    C160 1470
-    160 1560
-    190 1640
-
-    C215 1715
-    190 1810
-    155 1880
-  "
-/>
-
-<ellipse
-  class="decoration-leaf"
-  cx="176"
-  cy="1450"
-  rx="12"
-  ry="32"
-  transform="rotate(-30 176 1450)"
-/>
-
-<ellipse
-  class="decoration-leaf"
-  cx="164"
-  cy="1520"
-  rx="12"
-  ry="32"
-  transform="rotate(30 164 1520)"
-/>
-
-<ellipse
-  class="decoration-leaf"
-  cx="180"
-  cy="1590"
-  rx="11"
-  ry="29"
-  transform="rotate(-30 180 1590)"
-/>
-
-
-<!-- BALÕES INFERIORES -->
-
-<ellipse
-  class="decoration-balloon"
-  cx="55"
-  cy="2050"
-  rx="48"
-  ry="70"
-/>
-
-<ellipse
-  class="decoration-balloon-light"
-  cx="115"
-  cy="2140"
-  rx="58"
-  ry="82"
-/>
-
-<ellipse
-  class="decoration-balloon"
-  cx="42"
-  cy="2250"
-  rx="43"
-  ry="63"
-/>
-
-
-<!-- RAMO 3 -->
-
-<path
-  class="decoration-stem"
-  d="
-    M190 2350
-
-    C155 2440
-    155 2530
-    185 2610
-
-    C210 2690
-    185 2780
-    150 2870
-  "
-/>
-
-<ellipse
-  class="decoration-leaf"
-  cx="170"
-  cy="2420"
-  rx="12"
-  ry="32"
-  transform="rotate(-30 170 2420)"
-/>
-
-<ellipse
-  class="decoration-leaf"
-  cx="160"
-  cy="2490"
-  rx="12"
-  ry="32"
-  transform="rotate(30 160 2490)"
-/>
-
-<ellipse
-  class="decoration-leaf"
-  cx="177"
-  cy="2560"
-  rx="11"
-  ry="29"
-  transform="rotate(-30 177 2560)"
-/>
-
-
-<!-- PONTOS -->
-
-<circle
-  class="decoration-dot"
-  cx="200"
-  cy="90"
-  r="4"
-/>
-
-<circle
-  class="decoration-dot-light"
-  cx="220"
-  cy="170"
-  r="2.5"
-/>
-
-<circle
-  class="decoration-dot"
-  cx="205"
-  cy="420"
-  r="3"
-/>
-
-<circle
-  class="decoration-dot-light"
-  cx="220"
-  cy="1030"
-  r="3"
-/>
-
-<circle
-  class="decoration-dot"
-  cx="205"
-  cy="1330"
-  r="4"
-/>
-
-<circle
-  class="decoration-dot-light"
-  cx="220"
-  cy="1740"
-  r="2.5"
-/>
-
-<circle
-  class="decoration-dot"
-  cx="205"
-  cy="2030"
-  r="3"
-/>
-
-<circle
-  class="decoration-dot-light"
-  cx="220"
-  cy="2380"
-  r="2.5"
-/>
-
-<circle
-  class="decoration-dot"
-  cx="205"
-  cy="2700"
-  r="3"
-/>
-
-
-</svg>
-
-</div>
-
-
-
-<!-- =======================================================
-     DECORAÇÃO GLOBAL — DIREITA
-======================================================= -->
-
-<div class="global-decoration right">
-
-<svg
-  viewBox="0 0 250 3000"
-  preserveAspectRatio="none"
->
-
-
-<!-- BALÕES -->
-
-<ellipse
-  class="decoration-balloon-light"
-  cx="185"
-  cy="110"
-  rx="50"
-  ry="72"
-/>
-
-<ellipse
-  class="decoration-balloon"
-  cx="135"
-  cy="205"
-  rx="58"
-  ry="82"
-/>
-
-<ellipse
-  class="decoration-balloon-light"
-  cx="205"
-  cy="305"
-  rx="43"
-  ry="63"
+  rx="40"
+  ry="60"
 />
 
 
@@ -1990,356 +1884,468 @@ footer {
 <path
   class="decoration-line"
   d="
-    M120 0
-
-    C40 110
-    150 200
-    95 310
-
-    C45 410
-    175 500
-    120 620
-
-    C60 750
-    180 850
-    120 970
-
-    C55 1090
-    185 1190
-    125 1310
-
-    C65 1430
-    180 1530
-    120 1650
-
-    C60 1770
-    180 1870
-    125 1990
-
-    C70 2110
-    180 2220
-    120 2340
-
-    C60 2460
-    180 2570
-    125 2700
-
-    C80 2790
-    145 2900
-    160 3000
+    M130 0
+    C205 120 100 210 155 320
+    C205 420 75 510 130 630
+    C190 750 70 860 130 980
+    C190 1100 70 1210 130 1330
+    C190 1450 70 1570 130 1690
+    C190 1810 70 1930 130 2050
+    C190 2170 70 2290 130 2410
+    C190 2530 70 2650 130 2770
+    C170 2850 115 2930 95 3000
   "
 />
 
 
-<!-- SEGUNDA FITA -->
+<!-- FITA SECUNDÁRIA -->
 
 <path
   class="decoration-line-light"
   d="
-    M210 0
-
-    C145 130
-    230 240
-    185 350
-
-    C140 460
-    230 570
-    190 690
-
-    C145 810
-    230 920
-    190 1040
-
-    C145 1160
-    230 1280
-    185 1400
-
-    C140 1520
-    230 1640
-    190 1760
-
-    C145 1880
-    230 2000
-    185 2120
-
-    C140 2240
-    230 2360
-    190 2480
-
-    C145 2600
-    230 2720
-    195 2850
-
-    C175 2910
-    185 2960
-    190 3000
+    M35 0
+    C100 130 20 240 65 360
+    C110 480 20 600 65 720
+    C110 840 20 960 65 1080
+    C110 1200 20 1320 65 1440
+    C110 1560 20 1680 65 1800
+    C110 1920 20 2040 65 2160
+    C110 2280 20 2400 65 2520
+    C110 2640 20 2760 55 2880
+    C70 2940 65 2970 60 3000
   "
 />
 
 
-<!-- RAMO 1 -->
+<!-- FOLHAGEM -->
 
 <path
   class="decoration-stem"
   d="
-    M65 470
-
-    C100 560
-    100 650
-    70 735
-
-    C45 810
-    65 900
-    100 975
+    M180 460
+    C145 550 145 650 175 740
+    C200 820 180 910 145 990
   "
 />
 
 <ellipse
   class="decoration-leaf"
-  cx="84"
-  cy="545"
+  cx="160"
+  cy="535"
   rx="12"
-  ry="32"
-  transform="rotate(30 84 545)"
+  ry="31"
+  transform="rotate(-30 160 535)"
 />
 
 <ellipse
   class="decoration-leaf"
-  cx="92"
-  cy="610"
+  cx="153"
+  cy="605"
   rx="12"
-  ry="32"
-  transform="rotate(-30 92 610)"
+  ry="31"
+  transform="rotate(30 153 605)"
 />
 
 <ellipse
   class="decoration-leaf"
-  cx="76"
-  cy="680"
+  cx="170"
+  cy="675"
   rx="11"
   ry="29"
-  transform="rotate(30 76 680)"
+  transform="rotate(-30 170 675)"
 />
 
 <ellipse
   class="decoration-leaf"
-  cx="80"
+  cx="165"
   cy="745"
   rx="11"
   ry="29"
-  transform="rotate(-30 80 745)"
+  transform="rotate(30 165 745)"
 />
 
 
-<!-- BALÕES -->
+<!-- BALÕES DO MEIO -->
+
+<ellipse
+  class="decoration-balloon-light"
+  cx="55"
+  cy="1060"
+  rx="45"
+  ry="67"
+/>
 
 <ellipse
   class="decoration-balloon"
-  cx="185"
-  cy="1040"
-  rx="48"
-  ry="70"
+  cx="110"
+  cy="1150"
+  rx="52"
+  ry="75"
 />
 
 <ellipse
   class="decoration-balloon-light"
-  cx="135"
-  cy="1130"
-  rx="58"
-  ry="82"
-/>
-
-<ellipse
-  class="decoration-balloon"
-  cx="205"
-  cy="1230"
-  rx="43"
-  ry="63"
+  cx="42"
+  cy="1250"
+  rx="40"
+  ry="60"
 />
 
 
-<!-- RAMO 2 -->
+<!-- FOLHAGEM 2 -->
 
 <path
   class="decoration-stem"
   d="
-    M55 1380
-
-    C90 1470
-    90 1560
-    60 1640
-
-    C35 1715
-    60 1810
-    95 1880
+    M185 1370
+    C150 1460 150 1560 180 1650
+    C205 1730 180 1820 145 1900
   "
 />
 
 <ellipse
   class="decoration-leaf"
-  cx="74"
-  cy="1450"
+  cx="165"
+  cy="1440"
   rx="12"
-  ry="32"
-  transform="rotate(30 74 1450)"
+  ry="31"
+  transform="rotate(-30 165 1440)"
 />
 
 <ellipse
   class="decoration-leaf"
-  cx="86"
-  cy="1520"
+  cx="158"
+  cy="1510"
   rx="12"
-  ry="32"
-  transform="rotate(-30 86 1520)"
+  ry="31"
+  transform="rotate(30 158 1510)"
 />
 
 <ellipse
   class="decoration-leaf"
-  cx="70"
-  cy="1590"
+  cx="174"
+  cy="1580"
   rx="11"
   ry="29"
-  transform="rotate(30 70 1590)"
+  transform="rotate(-30 174 1580)"
 />
 
 
 <!-- BALÕES INFERIORES -->
 
 <ellipse
-  class="decoration-balloon-light"
-  cx="195"
+  class="decoration-balloon"
+  cx="50"
   cy="2050"
-  rx="48"
-  ry="70"
+  rx="45"
+  ry="67"
+/>
+
+<ellipse
+  class="decoration-balloon-light"
+  cx="108"
+  cy="2140"
+  rx="52"
+  ry="75"
 />
 
 <ellipse
   class="decoration-balloon"
-  cx="135"
-  cy="2140"
-  rx="58"
-  ry="82"
-/>
-
-<ellipse
-  class="decoration-balloon-light"
-  cx="205"
-  cy="2250"
-  rx="43"
-  ry="63"
+  cx="40"
+  cy="2240"
+  rx="40"
+  ry="60"
 />
 
 
-<!-- RAMO 3 -->
+<!-- FOLHAGEM 3 -->
 
 <path
   class="decoration-stem"
   d="
-    M60 2350
+    M180 2340
+    C150 2430 150 2520 180 2610
+    C205 2690 180 2780 145 2870
+  "
+/>
 
-    C95 2440
-    95 2530
-    65 2610
+<ellipse
+  class="decoration-leaf"
+  cx="162"
+  cy="2410"
+  rx="12"
+  ry="31"
+  transform="rotate(-30 162 2410)"
+/>
 
-    C40 2690
-    65 2780
-    100 2870
+<ellipse
+  class="decoration-leaf"
+  cx="155"
+  cy="2480"
+  rx="12"
+  ry="31"
+  transform="rotate(30 155 2480)"
+/>
+
+<ellipse
+  class="decoration-leaf"
+  cx="172"
+  cy="2550"
+  rx="11"
+  ry="29"
+  transform="rotate(-30 172 2550)"
+/>
+
+
+<!-- PONTOS -->
+
+<circle class="decoration-dot" cx="205" cy="100" r="4"/>
+<circle class="decoration-dot-light" cx="220" cy="170" r="2.5"/>
+<circle class="decoration-dot" cx="205" cy="420" r="3"/>
+<circle class="decoration-dot-light" cx="215" cy="1020" r="3"/>
+<circle class="decoration-dot" cx="205" cy="1330" r="4"/>
+<circle class="decoration-dot-light" cx="220" cy="1730" r="2.5"/>
+<circle class="decoration-dot" cx="205" cy="2030" r="3"/>
+<circle class="decoration-dot-light" cx="220" cy="2380" r="2.5"/>
+<circle class="decoration-dot" cx="205" cy="2700" r="3"/>
+
+</svg>
+
+</div>
+
+
+
+<!-- =======================================================
+     ARTE LATERAL DIREITA
+======================================================= -->
+
+<div class="global-decoration right">
+
+<svg
+  viewBox="0 0 240 3000"
+  preserveAspectRatio="none"
+>
+
+<ellipse
+  class="decoration-balloon-light"
+  cx="185"
+  cy="120"
+  rx="45"
+  ry="67"
+/>
+
+<ellipse
+  class="decoration-balloon"
+  cx="130"
+  cy="210"
+  rx="52"
+  ry="75"
+/>
+
+<ellipse
+  class="decoration-balloon-light"
+  cx="198"
+  cy="300"
+  rx="40"
+  ry="60"
+/>
+
+
+<path
+  class="decoration-line"
+  d="
+    M110 0
+    C35 120 140 210 85 320
+    C35 420 165 510 110 630
+    C50 750 170 860 110 980
+    C50 1100 170 1210 110 1330
+    C50 1450 170 1570 110 1690
+    C50 1810 170 1930 110 2050
+    C50 2170 170 2290 110 2410
+    C50 2530 170 2650 110 2770
+    C70 2850 125 2930 145 3000
+  "
+/>
+
+
+<path
+  class="decoration-line-light"
+  d="
+    M205 0
+    C140 130 220 240 175 360
+    C130 480 220 600 175 720
+    C130 840 220 960 175 1080
+    C130 1200 220 1320 175 1440
+    C130 1560 220 1680 175 1800
+    C130 1920 220 2040 175 2160
+    C130 2280 220 2400 175 2520
+    C130 2640 220 2760 185 2880
+    C170 2940 175 2970 180 3000
+  "
+/>
+
+
+<path
+  class="decoration-stem"
+  d="
+    M60 460
+    C95 550 95 650 65 740
+    C40 820 60 910 95 990
   "
 />
 
 <ellipse
   class="decoration-leaf"
   cx="80"
-  cy="2420"
+  cy="535"
   rx="12"
-  ry="32"
-  transform="rotate(30 80 2420)"
+  ry="31"
+  transform="rotate(30 80 535)"
 />
 
 <ellipse
   class="decoration-leaf"
-  cx="90"
-  cy="2490"
+  cx="87"
+  cy="605"
   rx="12"
-  ry="32"
-  transform="rotate(-30 90 2490)"
+  ry="31"
+  transform="rotate(-30 87 605)"
 />
 
 <ellipse
   class="decoration-leaf"
-  cx="73"
-  cy="2560"
+  cx="70"
+  cy="675"
   rx="11"
   ry="29"
-  transform="rotate(30 73 2560)"
+  transform="rotate(30 70 675)"
 />
 
 
-<!-- PONTOS -->
-
-<circle
-  class="decoration-dot"
-  cx="50"
-  cy="90"
-  r="4"
+<ellipse
+  class="decoration-balloon"
+  cx="185"
+  cy="1060"
+  rx="45"
+  ry="67"
 />
 
-<circle
-  class="decoration-dot-light"
-  cx="30"
-  cy="170"
-  r="2.5"
+<ellipse
+  class="decoration-balloon-light"
+  cx="130"
+  cy="1150"
+  rx="52"
+  ry="75"
 />
 
-<circle
-  class="decoration-dot"
-  cx="45"
-  cy="420"
-  r="3"
+<ellipse
+  class="decoration-balloon"
+  cx="198"
+  cy="1250"
+  rx="40"
+  ry="60"
 />
 
-<circle
-  class="decoration-dot-light"
-  cx="30"
-  cy="1030"
-  r="3"
+
+<path
+  class="decoration-stem"
+  d="
+    M55 1370
+    C90 1460 90 1560 60 1650
+    C35 1730 60 1820 95 1900
+  "
 />
 
-<circle
-  class="decoration-dot"
-  cx="45"
-  cy="1330"
-  r="4"
+<ellipse
+  class="decoration-leaf"
+  cx="75"
+  cy="1440"
+  rx="12"
+  ry="31"
+  transform="rotate(30 75 1440)"
 />
 
-<circle
-  class="decoration-dot-light"
-  cx="30"
-  cy="1740"
-  r="2.5"
+<ellipse
+  class="decoration-leaf"
+  cx="82"
+  cy="1510"
+  rx="12"
+  ry="31"
+  transform="rotate(-30 82 1510)"
 />
 
-<circle
-  class="decoration-dot"
-  cx="45"
-  cy="2030"
-  r="3"
+
+<ellipse
+  class="decoration-balloon-light"
+  cx="190"
+  cy="2050"
+  rx="45"
+  ry="67"
 />
 
-<circle
-  class="decoration-dot-light"
-  cx="30"
-  cy="2380"
-  r="2.5"
+<ellipse
+  class="decoration-balloon"
+  cx="132"
+  cy="2140"
+  rx="52"
+  ry="75"
 />
 
-<circle
-  class="decoration-dot"
-  cx="45"
-  cy="2700"
-  r="3"
+<ellipse
+  class="decoration-balloon-light"
+  cx="200"
+  cy="2240"
+  rx="40"
+  ry="60"
 />
 
+
+<path
+  class="decoration-stem"
+  d="
+    M60 2340
+    C90 2430 90 2520 60 2610
+    C35 2690 60 2780 95 2870
+  "
+/>
+
+<ellipse
+  class="decoration-leaf"
+  cx="78"
+  cy="2410"
+  rx="12"
+  ry="31"
+  transform="rotate(30 78 2410)"
+/>
+
+<ellipse
+  class="decoration-leaf"
+  cx="85"
+  cy="2480"
+  rx="12"
+  ry="31"
+  transform="rotate(-30 85 2480)"
+/>
+
+<ellipse
+  class="decoration-leaf"
+  cx="68"
+  cy="2550"
+  rx="11"
+  ry="29"
+  transform="rotate(30 68 2550)"
+/>
+
+
+<circle class="decoration-dot" cx="35" cy="100" r="4"/>
+<circle class="decoration-dot-light" cx="20" cy="170" r="2.5"/>
+<circle class="decoration-dot" cx="35" cy="420" r="3"/>
+<circle class="decoration-dot-light" cx="25" cy="1020" r="3"/>
+<circle class="decoration-dot" cx="35" cy="1330" r="4"/>
+<circle class="decoration-dot-light" cx="20" cy="1730" r="2.5"/>
+<circle class="decoration-dot" cx="35" cy="2030" r="3"/>
+<circle class="decoration-dot-light" cx="20" cy="2380" r="2.5"/>
+<circle class="decoration-dot" cx="35" cy="2700" r="3"/>
 
 </svg>
 
@@ -2383,6 +2389,7 @@ FESTA • POCKET • CELEBRATION
 <button
   class="menu-toggle"
   id="menuToggle"
+  aria-label="Abrir menu"
 >
 ☰
 </button>
@@ -2497,9 +2504,7 @@ sempre com o cuidado e a identidade da ZÊ DECOR.
 
 
 
-<!-- =====================================================
-     CARDS
-===================================================== -->
+<!-- CARDS -->
 
 <div class="collection-grid">
 
@@ -2781,7 +2786,6 @@ Vamos transformar seu próximo momento?
 
 <div>
 
-
 <div class="contact-item reveal">
 
 <small>
@@ -2825,7 +2829,6 @@ Barra • Recreio • Jacarepaguá • Vargens
 </strong>
 
 </div>
-
 
 </div>
 
@@ -2904,6 +2907,7 @@ FESTA • POCKET • CELEBRATION
 <button
   class="modal-close"
   id="modalClose"
+  aria-label="Fechar"
 >
 ×
 </button>
@@ -2957,7 +2961,6 @@ document
   });
 
 
-
 /* =========================================================
    ANIMAÇÃO
 ========================================================= */
@@ -3007,7 +3010,6 @@ revealElements.forEach(
 
   }
 );
-
 
 
 /* =========================================================
