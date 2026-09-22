@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,7 +10,7 @@
 
   <meta
     name="description"
-    content="ZÊ DECOR — Decorações que transformam momentos. Festa Pocket e decorações maiores em Barra, Recreio, Jacarepaguá e Vargens."
+    content="ZÊ DECOR — Decorações que transformam momentos. Festa na Mesa, Pocket e Decorações Maiores no Rio de Janeiro."
   >
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,17 +28,16 @@
     ===================================================== */
 
     :root {
-      --creme: #f4ede3;
-      --creme-claro: #faf6ef;
-      --marrom: #38261f;
-      --marrom-claro: #756158;
-      --dourado: #b8894c;
-      --dourado-claro: #d6b57b;
-      --linha-organica: rgba(184, 137, 76, 0.18);
-      --balao: rgba(214, 195, 168, 0.13);
+      --fundo: #f8f3eb;
+      --fundo2: #f3eadf;
+      --marrom: #39271f;
+      --marrom2: #725e52;
+      --dourado: #b98c4e;
+      --dourado2: #d4b57f;
+      --linha: rgba(57,39,31,.13);
       --branco: #ffffff;
-      --linha: rgba(56, 38, 31, 0.12);
-      --sombra: 0 24px 65px rgba(56, 38, 31, 0.09);
+      --escuro: #281c17;
+      --sombra: 0 24px 70px rgba(57,39,31,.10);
     }
 
 
@@ -56,10 +56,9 @@
     }
 
     body {
-      background: var(--creme-claro);
+      background: var(--fundo);
       color: var(--marrom);
-      font-family: "DM Sans", Arial, sans-serif;
-      line-height: 1.6;
+      font-family: "DM Sans", sans-serif;
       overflow-x: hidden;
     }
 
@@ -69,8 +68,8 @@
     }
 
     a {
-      color: inherit;
       text-decoration: none;
+      color: inherit;
     }
 
     button {
@@ -84,14 +83,14 @@
 
     header {
       position: fixed;
+      z-index: 1000;
       top: 0;
       left: 0;
-      z-index: 1000;
 
       width: 100%;
 
-      background: rgba(250, 246, 239, 0.94);
-      backdrop-filter: blur(18px);
+      background: rgba(248,243,235,.94);
+      backdrop-filter: blur(16px);
 
       border-bottom: 1px solid var(--linha);
     }
@@ -100,7 +99,7 @@
       max-width: 1380px;
       min-height: 86px;
 
-      margin: 0 auto;
+      margin: auto;
       padding: 0 40px;
 
       display: flex;
@@ -121,29 +120,27 @@
     }
 
     .brand-name {
-      font-family: "Playfair Display", Georgia, serif;
+      font-family: "Playfair Display", serif;
       font-size: 24px;
       font-weight: 600;
       letter-spacing: .08em;
-      line-height: 1;
     }
 
     .brand-sub {
-      margin-top: 6px;
+      margin-top: 3px;
 
-      color: var(--marrom-claro);
+      color: var(--marrom2);
 
       font-size: 8px;
       letter-spacing: .20em;
     }
 
-    .nav-links {
+    nav {
       display: flex;
       gap: 38px;
-      align-items: center;
     }
 
-    .nav-links a {
+    nav a {
       position: relative;
 
       font-size: 10px;
@@ -151,22 +148,22 @@
       letter-spacing: .16em;
     }
 
-    .nav-links a::after {
+    nav a::after {
       content: "";
 
       position: absolute;
       left: 0;
-      bottom: -8px;
+      bottom: -9px;
 
       width: 0;
       height: 1px;
 
       background: var(--dourado);
 
-      transition: width .3s ease;
+      transition: .3s;
     }
 
-    .nav-links a:hover::after {
+    nav a:hover::after {
       width: 100%;
     }
 
@@ -177,7 +174,7 @@
       background: transparent;
 
       color: var(--marrom);
-      font-size: 27px;
+      font-size: 28px;
 
       cursor: pointer;
     }
@@ -188,9 +185,9 @@
     ===================================================== */
 
     .hero {
-      position: relative;
-
       min-height: 100vh;
+
+      position: relative;
 
       padding-top: 86px;
 
@@ -200,28 +197,27 @@
       background:
         linear-gradient(
           90deg,
-          rgba(38, 26, 21, .84) 0%,
-          rgba(38, 26, 21, .60) 40%,
-          rgba(38, 26, 21, .18) 76%,
-          rgba(38, 26, 21, .06) 100%
+          rgba(38,26,21,.86),
+          rgba(38,26,21,.58) 45%,
+          rgba(38,26,21,.12)
         ),
         url("padrao-03.webp") center / cover no-repeat;
     }
 
-    .hero-content {
+    .hero-inner {
       width: 100%;
       max-width: 1380px;
 
-      margin: 0 auto;
-      padding: 100px 40px;
+      margin: auto;
+      padding: 90px 40px;
 
       color: white;
     }
 
-    .hero-kicker {
-      margin-bottom: 24px;
+    .hero-small {
+      margin-bottom: 25px;
 
-      color: #e6ca9e;
+      color: #e4c595;
 
       font-size: 10px;
       font-weight: 700;
@@ -231,10 +227,14 @@
     .hero h1 {
       max-width: 850px;
 
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: clamp(58px, 7.5vw, 110px);
+      font-family: "Playfair Display", serif;
+
+      font-size: clamp(60px,7.5vw,108px);
+
       font-weight: 500;
-      line-height: .95;
+
+      line-height: .94;
+
       letter-spacing: -.045em;
     }
 
@@ -243,13 +243,13 @@
 
       margin-top: 34px;
 
-      color: rgba(255,255,255,.86);
+      color: rgba(255,255,255,.88);
 
       font-size: 16px;
-      line-height: 1.85;
+      line-height: 1.8;
     }
 
-    .hero-actions {
+    .hero-buttons {
       margin-top: 40px;
 
       display: flex;
@@ -259,6 +259,7 @@
 
     .btn {
       min-height: 51px;
+
       padding: 0 28px;
 
       display: inline-flex;
@@ -271,385 +272,206 @@
       font-weight: 700;
       letter-spacing: .14em;
 
-      transition: .3s ease;
+      transition: .3s;
     }
 
-    .btn-primary {
+    .btn-light {
       background: white;
       color: var(--marrom);
     }
 
-    .btn-primary:hover {
+    .btn-light:hover {
       background: var(--dourado);
       color: white;
     }
 
-    .btn-outline {
-      color: white;
+    .btn-border {
       border-color: rgba(255,255,255,.55);
+      color: white;
     }
 
-    .btn-outline:hover {
+    .btn-border:hover {
       background: white;
       color: var(--marrom);
     }
 
 
     /* =====================================================
-       ÁREA EDITORIAL
-       ARTE ORGÂNICA NAS LATERAIS
+       SEÇÃO COLEÇÕES
     ===================================================== */
 
-    .editorial-area {
+    .colecoes {
       position: relative;
+
       overflow: hidden;
 
-      background:
-        radial-gradient(
-          circle at 4% 25%,
-          rgba(219, 203, 180, .14),
-          transparent 19%
-        ),
-        radial-gradient(
-          circle at 96% 62%,
-          rgba(219, 203, 180, .13),
-          transparent 20%
-        ),
-        var(--creme-claro);
-    }
+      padding: 125px 40px;
 
-
-    /* BALÕES ESQUERDA */
-
-    .organic-left {
-      position: absolute;
-
-      left: -115px;
-      top: 120px;
-
-      width: 270px;
-      height: 600px;
-
-      pointer-events: none;
-
-      opacity: .75;
-    }
-
-    .organic-left::before {
-      content: "";
-
-      position: absolute;
-
-      top: 0;
-      left: 30px;
-
-      width: 155px;
-      height: 205px;
-
-      border-radius: 50% 50% 47% 53%;
-
-      border: 1px solid var(--linha-organica);
-
-      background:
-        radial-gradient(
-          circle at 38% 30%,
-          rgba(255,255,255,.65),
-          var(--balao) 55%,
-          transparent 75%
-        );
-
-      transform: rotate(-12deg);
-    }
-
-    .organic-left::after {
-      content: "";
-
-      position: absolute;
-
-      top: 175px;
-      left: 85px;
-
-      width: 130px;
-      height: 180px;
-
-      border-radius: 48% 52% 50% 50%;
-
-      border: 1px solid var(--linha-organica);
-
-      background: var(--balao);
-
-      transform: rotate(10deg);
-    }
-
-
-    /* BALÕES DIREITA */
-
-    .organic-right {
-      position: absolute;
-
-      right: -110px;
-      top: 70px;
-
-      width: 285px;
-      height: 650px;
-
-      pointer-events: none;
-
-      opacity: .78;
-    }
-
-    .organic-right::before {
-      content: "";
-
-      position: absolute;
-
-      top: 20px;
-      right: 30px;
-
-      width: 165px;
-      height: 220px;
-
-      border-radius: 51% 49% 48% 52%;
-
-      border: 1px solid var(--linha-organica);
-
-      background:
-        radial-gradient(
-          circle at 35% 30%,
-          rgba(255,255,255,.65),
-          var(--balao) 58%,
-          transparent 78%
-        );
-
-      transform: rotate(12deg);
-    }
-
-    .organic-right::after {
-      content: "";
-
-      position: absolute;
-
-      top: 210px;
-      right: 85px;
-
-      width: 125px;
-      height: 170px;
-
-      border-radius: 50%;
-
-      border: 1px solid var(--linha-organica);
-
-      background: var(--balao);
-
-      transform: rotate(-10deg);
-    }
-
-
-    /* FITAS */
-
-    .ribbon {
-      position: absolute;
-
-      width: 250px;
-      height: 500px;
-
-      pointer-events: none;
-
-      opacity: .42;
-    }
-
-    .ribbon-left {
-      left: -50px;
-      top: 280px;
-
-      border-right: 2px solid var(--dourado-claro);
-      border-radius: 50%;
-
-      transform: rotate(8deg);
-    }
-
-    .ribbon-right {
-      right: -30px;
-      top: 270px;
-
-      border-left: 2px solid var(--dourado-claro);
-      border-radius: 50%;
-
-      transform: rotate(-9deg);
-    }
-
-
-    /* PEQUENOS PONTOS DOURADOS */
-
-    .dots-left,
-    .dots-right {
-      position: absolute;
-
-      width: 8px;
-      height: 8px;
-
-      border-radius: 50%;
-
-      background: rgba(184,137,76,.55);
-
-      pointer-events: none;
-    }
-
-    .dots-left {
-      left: 6%;
-      top: 31%;
-
-      box-shadow:
-        20px 90px 0 -2px rgba(184,137,76,.45),
-        -8px 180px 0 -1px rgba(184,137,76,.38),
-        35px 270px 0 -2px rgba(184,137,76,.40);
-    }
-
-    .dots-right {
-      right: 7%;
-      top: 18%;
-
-      box-shadow:
-        -24px 105px 0 -2px rgba(184,137,76,.42),
-        5px 210px 0 -1px rgba(184,137,76,.38),
-        -30px 330px 0 -2px rgba(184,137,76,.40);
-    }
-
-
-    /* =====================================================
-       SEÇÕES
-    ===================================================== */
-
-    section.content-section {
-      position: relative;
-      z-index: 2;
-
-      padding: 120px 40px;
+      background: var(--fundo);
     }
 
     .container {
-      width: 100%;
+      position: relative;
+      z-index: 5;
+
       max-width: 1200px;
 
-      margin: 0 auto;
+      margin: auto;
     }
 
 
     /* =====================================================
-       HIERARQUIA CORRIGIDA
+       HIERARQUIA CORRETA
 
-       TÍTULO = GRANDE
+       NOME DA SEÇÃO = GRANDE
        FRASE = MENOR
     ===================================================== */
 
-    .main-section-title {
+    .collections-header {
+      max-width: 900px;
+
+      margin-bottom: 80px;
+    }
+
+    .section-name {
+      color: var(--marrom);
+
       font-family: "Playfair Display", Georgia, serif;
 
-      font-size: clamp(58px, 6.5vw, 94px);
+      font-size: clamp(58px, 6.5vw, 92px);
 
       font-weight: 500;
 
-      line-height: .95;
+      line-height: .94;
 
       letter-spacing: -.045em;
-
-      color: var(--marrom);
     }
 
     .section-phrase {
-      margin-top: 25px;
+      max-width: 650px;
 
-      color: var(--dourado);
+      margin-top: 24px;
+
+      color: var(--marrom2);
 
       font-family: "Playfair Display", Georgia, serif;
 
-      font-size: clamp(25px, 2.5vw, 37px);
+      font-size: clamp(24px, 2.5vw, 36px);
 
-      font-weight: 500;
+      font-weight: 400;
 
       line-height: 1.2;
     }
 
     .section-text {
-      max-width: 590px;
+      max-width: 620px;
 
-      margin-top: 20px;
+      margin-top: 22px;
 
-      color: var(--marrom-claro);
+      color: var(--marrom2);
 
-      font-size: 15px;
+      font-size: 14px;
 
-      line-height: 1.9;
+      line-height: 1.85;
     }
 
 
     /* =====================================================
-       NOSSA ESSÊNCIA
+       ARTE ORGÂNICA LATERAL
     ===================================================== */
 
-    .essencia-layout {
-      display: grid;
+    .organic-art {
+      position: absolute;
 
-      grid-template-columns: 1fr .85fr;
+      z-index: 1;
 
-      gap: 110px;
+      pointer-events: none;
 
-      align-items: center;
+      opacity: .48;
     }
 
-    .essencia-copy {
-      max-width: 520px;
+    .organic-left {
+      width: 260px;
+      height: 720px;
+
+      left: -65px;
+      top: 20px;
     }
 
-    .essencia-copy p {
-      color: var(--marrom-claro);
+    .organic-right {
+      width: 280px;
+      height: 760px;
 
-      font-size: 16px;
-
-      line-height: 1.95;
+      right: -70px;
+      top: 10px;
     }
 
-    .essencia-copy strong {
-      color: var(--marrom);
+    .organic-art svg {
+      width: 100%;
+      height: 100%;
+    }
 
-      font-weight: 600;
+    .organic-line {
+      fill: none;
+
+      stroke: #c9ad84;
+
+      stroke-width: 1.35;
+    }
+
+    .organic-line-light {
+      fill: none;
+
+      stroke: #dbc9ad;
+
+      stroke-width: 1;
+    }
+
+    .organic-fill {
+      fill: rgba(201,173,132,.08);
+
+      stroke: #d2bb99;
+
+      stroke-width: 1;
+    }
+
+    .organic-dot {
+      fill: #bc9156;
+
+      opacity: .65;
+    }
+
+    .organic-leaf {
+      fill: rgba(193,157,105,.12);
+
+      stroke: #c9aa7d;
+
+      stroke-width: .8;
     }
 
 
     /* =====================================================
-       COLEÇÕES
+       CARDS
     ===================================================== */
-
-    .colecoes {
-      padding-top: 80px !important;
-    }
-
-    .collections-header {
-      max-width: 900px;
-
-      margin-bottom: 70px;
-    }
 
     .collection-grid {
       display: grid;
 
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2,1fr);
 
-      gap: 28px;
+      gap: 30px;
     }
 
     .collection-card {
       overflow: hidden;
 
-      background: rgba(255,255,255,.70);
-
-      border: 1px solid rgba(56,38,31,.07);
+      background: rgba(255,255,255,.76);
 
       box-shadow: var(--sombra);
     }
 
     .collection-image {
-      background: #eee7dc;
+      background: #eee6da;
 
       overflow: hidden;
     }
@@ -664,38 +486,42 @@
     }
 
     .collection-card:hover img {
-      transform: scale(1.02);
+      transform: scale(1.025);
     }
 
-    .collection-content {
-      padding: 34px;
+    .collection-info {
+      padding: 36px;
     }
 
     .collection-label {
-      margin-bottom: 12px;
+      margin-bottom: 13px;
 
       color: var(--dourado);
 
-      font-size: 9px;
+      font-size: 10px;
       font-weight: 700;
 
-      letter-spacing: .22em;
+      letter-spacing: .23em;
     }
 
-    .collection-content h3 {
-      margin-bottom: 15px;
+    .collection-info h3 {
+      margin-bottom: 18px;
+
+      color: var(--marrom);
 
       font-family: "Playfair Display", Georgia, serif;
 
-      font-size: clamp(32px, 3.5vw, 47px);
+      font-size: 42px;
 
       font-weight: 500;
 
-      line-height: 1;
+      line-height: .98;
+
+      letter-spacing: -.025em;
     }
 
-    .collection-content p {
-      color: var(--marrom-claro);
+    .collection-info p {
+      color: var(--marrom2);
 
       font-size: 14px;
 
@@ -708,28 +534,21 @@
     ===================================================== */
 
     .gallery-section {
-      position: relative;
-      z-index: 2;
-
-      padding: 115px 40px;
-
-      background: var(--creme);
-    }
-
-    .gallery-section.alt {
-      background: var(--creme-claro);
+      margin-top: 145px;
     }
 
     .gallery-header {
-      max-width: 950px;
+      max-width: 900px;
 
-      margin-bottom: 50px;
+      margin-bottom: 48px;
     }
 
-    .gallery-main-title {
+    .gallery-name {
+      color: var(--marrom);
+
       font-family: "Playfair Display", Georgia, serif;
 
-      font-size: clamp(52px, 6vw, 85px);
+      font-size: clamp(52px, 5.8vw, 82px);
 
       font-weight: 500;
 
@@ -739,41 +558,43 @@
     }
 
     .gallery-phrase {
+      max-width: 650px;
+
       margin-top: 22px;
 
-      color: var(--dourado);
+      color: var(--marrom2);
 
       font-family: "Playfair Display", Georgia, serif;
 
-      font-size: clamp(22px, 2.3vw, 34px);
+      font-size: clamp(24px, 2.5vw, 36px);
 
-      line-height: 1.2;
+      line-height: 1.18;
     }
 
     .gallery-description {
-      max-width: 620px;
+      max-width: 600px;
 
       margin-top: 18px;
 
-      color: var(--marrom-claro);
+      color: var(--marrom2);
 
       font-size: 14px;
 
-      line-height: 1.85;
+      line-height: 1.8;
     }
 
     .photo-grid {
       display: grid;
 
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3,1fr);
 
       gap: 18px;
     }
 
     .photo-card {
-      background: #eee7dc;
-
       overflow: hidden;
+
+      background: #eee6da;
 
       cursor: pointer;
     }
@@ -784,7 +605,7 @@
 
       object-fit: contain;
 
-      transition: transform .5s ease;
+      transition: .5s;
     }
 
     .photo-card:hover img {
@@ -796,21 +617,21 @@
        AVALIAÇÕES
     ===================================================== */
 
-    .avaliacoes {
-      padding: 120px 40px;
+    .reviews {
+      padding: 125px 40px;
 
-      background: var(--creme-claro);
+      background: #f3eadf;
 
       text-align: center;
     }
 
-    .avaliacoes .main-section-title {
-      max-width: 1050px;
+    .reviews .section-name {
+      max-width: 1000px;
 
       margin: auto;
     }
 
-    .avaliacoes .section-phrase {
+    .reviews .section-phrase {
       margin-left: auto;
       margin-right: auto;
     }
@@ -820,7 +641,7 @@
 
       margin: 60px auto 0;
 
-      padding: 50px 35px;
+      padding: 50px 30px;
 
       background: white;
 
@@ -837,20 +658,20 @@
       letter-spacing: 5px;
     }
 
-    .rating-number {
-      margin: 15px 0 8px;
+    .rating {
+      margin-top: 12px;
 
-      font-family: "Playfair Display", Georgia, serif;
+      color: var(--marrom);
+
+      font-family: "Playfair Display", serif;
 
       font-size: 62px;
-
-      line-height: 1;
     }
 
-    .rating-text {
-      margin-bottom: 30px;
+    .rating-box p {
+      margin: 8px 0 28px;
 
-      color: var(--marrom-claro);
+      color: var(--marrom2);
 
       font-size: 14px;
     }
@@ -858,25 +679,20 @@
     .google-btn {
       min-height: 50px;
 
-      padding: 0 28px;
+      padding: 0 26px;
 
       display: inline-flex;
       align-items: center;
-      justify-content: center;
 
       background: var(--marrom);
 
       color: white;
 
       font-size: 10px;
+
       font-weight: 700;
+
       letter-spacing: .14em;
-
-      transition: .3s ease;
-    }
-
-    .google-btn:hover {
-      background: var(--dourado);
     }
 
 
@@ -884,24 +700,24 @@
        CONTATO
     ===================================================== */
 
-    .contato {
-      padding: 120px 40px;
+    .contact {
+      padding: 125px 40px;
 
       background: var(--marrom);
 
       color: white;
     }
 
-    .contato .main-section-title {
+    .contact .section-name {
       color: white;
     }
 
-    .contato .section-phrase {
-      color: var(--dourado-claro);
+    .contact .section-phrase {
+      color: #d7c3aa;
     }
 
     .contact-grid {
-      margin-top: 70px;
+      margin-top: 65px;
 
       display: grid;
 
@@ -910,12 +726,8 @@
       gap: 80px;
     }
 
-    .contact-info {
-      display: flex;
-
-      flex-direction: column;
-
-      gap: 35px;
+    .contact-item {
+      margin-bottom: 32px;
     }
 
     .contact-item small {
@@ -923,11 +735,13 @@
 
       margin-bottom: 7px;
 
-      color: var(--dourado-claro);
+      color: var(--dourado2);
 
       font-size: 9px;
+
       font-weight: 700;
-      letter-spacing: .20em;
+
+      letter-spacing: .2em;
     }
 
     .contact-item a,
@@ -940,15 +754,13 @@
     .contact-box {
       padding: 45px;
 
-      border: 1px solid rgba(255,255,255,.15);
-
-      background: rgba(255,255,255,.035);
+      border: 1px solid rgba(255,255,255,.16);
     }
 
     .contact-box h3 {
-      margin-bottom: 18px;
+      color: white;
 
-      font-family: "Playfair Display", Georgia, serif;
+      font-family: "Playfair Display", serif;
 
       font-size: 38px;
 
@@ -958,9 +770,9 @@
     }
 
     .contact-box p {
-      margin-bottom: 28px;
+      margin: 20px 0 28px;
 
-      color: rgba(255,255,255,.70);
+      color: rgba(255,255,255,.72);
 
       font-size: 14px;
 
@@ -973,9 +785,9 @@
     ===================================================== */
 
     footer {
-      padding: 38px 40px;
+      padding: 40px;
 
-      background: #261a16;
+      background: var(--escuro);
 
       color: rgba(255,255,255,.65);
     }
@@ -986,23 +798,21 @@
       margin: auto;
 
       display: flex;
-      justify-content: space-between;
-      align-items: center;
 
-      gap: 30px;
+      justify-content: space-between;
+
+      gap: 25px;
     }
 
     .footer-logo {
       color: white;
 
-      font-family: "Playfair Display", Georgia, serif;
+      font-family: "Playfair Display", serif;
 
       font-size: 22px;
-
-      letter-spacing: .08em;
     }
 
-    .footer-text {
+    .footer-small {
       font-size: 9px;
 
       letter-spacing: .14em;
@@ -1021,12 +831,13 @@
       z-index: 3000;
 
       display: none;
+
       align-items: center;
       justify-content: center;
 
       padding: 30px;
 
-      background: rgba(27,19,15,.94);
+      background: rgba(25,18,15,.94);
     }
 
     .modal.active {
@@ -1068,17 +879,15 @@
     .reveal {
       opacity: 0;
 
-      transform: translateY(22px);
+      transform: translateY(20px);
 
-      transition:
-        opacity .8s ease,
-        transform .8s ease;
+      transition: .75s ease;
     }
 
     .reveal.visible {
       opacity: 1;
 
-      transform: translateY(0);
+      transform: none;
     }
 
 
@@ -1086,27 +895,27 @@
        TABLET
     ===================================================== */
 
-    @media (max-width: 900px) {
+    @media(max-width:900px) {
 
       .header-inner {
-        min-height: 75px;
+        min-height: 74px;
 
         padding: 0 20px;
       }
 
       .brand img {
-        width: 55px;
-        height: 55px;
+        width: 54px;
+        height: 54px;
       }
 
       .menu-toggle {
         display: block;
       }
 
-      .nav-links {
+      nav {
         position: absolute;
 
-        top: 75px;
+        top: 74px;
         left: 0;
 
         width: 100%;
@@ -1115,79 +924,50 @@
 
         flex-direction: column;
 
-        align-items: flex-start;
-
         gap: 0;
 
-        background: var(--creme-claro);
+        background: var(--fundo);
       }
 
-      .nav-links.active {
+      nav.active {
         display: flex;
       }
 
-      .nav-links a {
-        width: 100%;
-
-        padding: 18px 24px;
+      nav a {
+        padding: 18px 22px;
 
         border-bottom: 1px solid var(--linha);
       }
 
-      .nav-links a::after {
-        display: none;
-      }
-
       .hero {
-        min-height: 90vh;
-
-        padding-top: 75px;
+        padding-top: 74px;
       }
 
-      .hero-content {
-        padding: 80px 20px;
+      .hero-inner {
+        padding: 70px 20px;
       }
 
-      section.content-section,
-      .gallery-section,
-      .avaliacoes,
-      .contato {
-        padding-left: 20px;
-        padding-right: 20px;
+      .colecoes,
+      .reviews,
+      .contact {
+        padding: 85px 20px;
       }
 
-      .essencia-layout {
-        grid-template-columns: 1fr;
-
-        gap: 40px;
-      }
-
-      .collection-grid,
-      .contact-grid {
+      .collection-grid {
         grid-template-columns: 1fr;
       }
 
       .photo-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2,1fr);
       }
 
-      .organic-left {
-        left: -190px;
+      .contact-grid {
+        grid-template-columns: 1fr;
       }
 
+      .organic-left,
       .organic-right {
-        right: -195px;
-      }
-
-      .ribbon-left,
-      .ribbon-right {
-        opacity: .20;
-      }
-
-      .footer-inner {
-        flex-direction: column;
-
-        align-items: flex-start;
+        opacity: .27;
       }
 
     }
@@ -1197,9 +977,13 @@
        CELULAR
     ===================================================== */
 
-    @media (max-width: 600px) {
+    @media(max-width:600px) {
 
-      .hero-actions {
+      .hero h1 {
+        font-size: 52px;
+      }
+
+      .hero-buttons {
         flex-direction: column;
       }
 
@@ -1207,871 +991,966 @@
         width: 100%;
       }
 
-      .main-section-title {
-        font-size: clamp(48px, 14vw, 67px);
+      .section-name {
+        font-size: 47px;
       }
 
       .section-phrase {
-        font-size: 24px;
+        font-size: 25px;
       }
 
-      .gallery-main-title {
-        font-size: clamp(45px, 13vw, 62px);
+      .gallery-name {
+        font-size: 44px;
       }
 
       .gallery-phrase {
-        font-size: 22px;
+        font-size: 25px;
       }
 
       .photo-grid {
         grid-template-columns: 1fr;
       }
 
-      .organic-left,
+      .organic-art {
+        opacity: .18;
+      }
+
+      .organic-left {
+        left: -155px;
+      }
+
       .organic-right {
-        opacity: .30;
+        right: -165px;
       }
 
-      .dots-left,
-      .dots-right {
-        display: none;
-      }
-
-      .contact-box {
-        padding: 30px 24px;
-      }
-
-      footer {
-        padding: 35px 20px;
+      .footer-inner {
+        flex-direction: column;
       }
 
     }
 
   </style>
+
 </head>
 
 
 <body>
 
 
-  <!-- HEADER -->
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
-  <header>
+<header>
 
-    <div class="header-inner">
+  <div class="header-inner">
 
-      <a href="#inicio" class="brand">
+    <a href="#inicio" class="brand">
 
-        <img
-          src="logo-ze-decor.png"
-          alt="ZÊ DECOR"
-        >
+      <img
+        src="logo-ze-decor.png"
+        alt="ZÊ DECOR"
+      >
 
-        <div>
+      <div>
 
-          <div class="brand-name">
-            ZÊ DECOR
-          </div>
-
-          <div class="brand-sub">
-            FESTA • POCKET • CELEBRATION
-          </div>
-
+        <div class="brand-name">
+          ZÊ DECOR
         </div>
 
-      </a>
-
-
-      <button
-        class="menu-toggle"
-        id="menuToggle"
-        aria-label="Abrir menu"
-      >
-        ☰
-      </button>
-
-
-      <nav
-        class="nav-links"
-        id="navLinks"
-      >
-
-        <a href="#colecoes">
-          COLEÇÕES
-        </a>
-
-        <a href="#avaliacoes">
-          AVALIAÇÕES
-        </a>
-
-        <a href="#contato">
-          CONTATO
-        </a>
-
-      </nav>
-
-    </div>
-
-  </header>
-
-
-
-  <main>
-
-
-    <!-- HERO -->
-
-    <section
-      class="hero"
-      id="inicio"
-    >
-
-      <div class="hero-content reveal">
-
-        <div class="hero-kicker">
+        <div class="brand-sub">
           FESTA • POCKET • CELEBRATION
         </div>
 
-        <h1>
-          Decorações que transformam momentos.
-        </h1>
-
-        <p>
-          Criamos experiências que unem beleza,
-          personalidade e cuidado para tornar
-          cada celebração ainda mais especial.
-        </p>
-
-
-        <div class="hero-actions">
-
-          <a
-            href="https://wa.me/5521999999999"
-            target="_blank"
-            class="btn btn-primary"
-          >
-            RESERVE PELO WHATSAPP
-          </a>
-
-          <a
-            href="#colecoes"
-            class="btn btn-outline"
-          >
-            CONHEÇA NOSSAS COLEÇÕES
-          </a>
-
-        </div>
-
       </div>
 
-    </section>
+    </a>
 
-
-
-    <!-- ===================================================
-         ÁREA COM ARTE ORGÂNICA
-    ==================================================== -->
-
-    <div class="editorial-area">
-
-
-      <!-- DECORAÇÃO DE FUNDO -->
-
-      <div class="organic-left"></div>
-      <div class="organic-right"></div>
-
-      <div class="ribbon ribbon-left"></div>
-      <div class="ribbon ribbon-right"></div>
-
-      <div class="dots-left"></div>
-      <div class="dots-right"></div>
-
-
-
-      <!-- =================================================
-           A NOSSA ESSÊNCIA
-      ================================================== -->
-
-      <section class="content-section">
-
-        <div class="container">
-
-          <div class="essencia-layout">
-
-
-            <div class="reveal">
-
-              <!-- TÍTULO GRANDE -->
-
-              <h2 class="main-section-title">
-                A NOSSA
-                <br>
-                ESSÊNCIA
-              </h2>
-
-              <!-- FRASE MENOR -->
-
-              <div class="section-phrase">
-                Celebrar é transformar.
-              </div>
-
-            </div>
-
-
-
-            <div class="essencia-copy reveal">
-
-              <p>
-                Criamos
-                <strong>
-                  decorações que transformam momentos
-                  especiais em memórias que permanecem.
-                </strong>
-
-                Cada composição é pensada para unir
-                estética, cuidado e personalidade.
-              </p>
-
-            </div>
-
-
-          </div>
-
-        </div>
-
-      </section>
-
-
-
-      <!-- =================================================
-           NOSSAS COLEÇÕES
-      ================================================== -->
-
-      <section
-        class="content-section colecoes"
-        id="colecoes"
-      >
-
-        <div class="container">
-
-
-          <div class="collections-header reveal">
-
-
-            <!-- TÍTULO GRANDE -->
-
-            <h2 class="main-section-title">
-              NOSSAS COLEÇÕES
-            </h2>
-
-
-            <!-- FRASE MENOR -->
-
-            <div class="section-phrase">
-              Encontre a decoração para o seu momento.
-            </div>
-
-
-            <p class="section-text">
-              Diferentes formatos para diferentes celebrações,
-              sempre com o cuidado e a identidade da ZÊ DECOR.
-            </p>
-
-
-          </div>
-
-
-
-          <div class="collection-grid">
-
-
-            <!-- POCKET -->
-
-            <article class="collection-card reveal">
-
-              <div class="collection-image">
-
-                <img
-                  src="pocket-01.webp"
-                  alt="Festa na Mesa Pocket"
-                  loading="lazy"
-                >
-
-              </div>
-
-
-              <div class="collection-content">
-
-                <div class="collection-label">
-                  FESTA NA MESA
-                </div>
-
-                <h3>
-                  POCKET
-                </h3>
-
-                <p>
-                  Decorações compactas e encantadoras,
-                  perfeitas para celebrar em casa,
-                  apartamentos e pequenos espaços.
-                </p>
-
-              </div>
-
-            </article>
-
-
-
-            <!-- MAIORES -->
-
-            <article class="collection-card reveal">
-
-              <div class="collection-image">
-
-                <img
-                  src="padrao-03.webp"
-                  alt="Decorações Maiores"
-                  loading="lazy"
-                >
-
-              </div>
-
-
-              <div class="collection-content">
-
-                <div class="collection-label">
-                  CELEBRATION
-                </div>
-
-                <h3>
-                  DECORAÇÕES
-                  <br>
-                  MAIORES
-                </h3>
-
-                <p>
-                  Composições maiores e personalizadas
-                  para aniversários, celebrações e momentos
-                  que merecem uma produção especial.
-                </p>
-
-              </div>
-
-            </article>
-
-
-          </div>
-
-        </div>
-
-      </section>
-
-    </div>
-
-
-
-    <!-- ===================================================
-         FESTA NA MESA
-    ==================================================== -->
-
-    <section class="gallery-section">
-
-      <div class="container">
-
-        <div class="gallery-header reveal">
-
-
-          <!-- TÍTULO GRANDE -->
-
-          <h2 class="gallery-main-title">
-            FESTA NA MESA — POCKET
-          </h2>
-
-
-          <!-- FRASE MENOR -->
-
-          <div class="gallery-phrase">
-            Detalhes que fazem celebrar.
-          </div>
-
-
-          <p class="gallery-description">
-            Composições compactas, elegantes e
-            cheias de personalidade.
-          </p>
-
-        </div>
-
-
-
-        <div class="photo-grid">
-
-          <div class="photo-card reveal">
-            <img src="pocket-01.webp" alt="" loading="lazy">
-          </div>
-
-          <div class="photo-card reveal">
-            <img src="pocket-02.webp" alt="" loading="lazy">
-          </div>
-
-          <div class="photo-card reveal">
-            <img src="pocket-03.webp" alt="" loading="lazy">
-          </div>
-
-          <div class="photo-card reveal">
-            <img src="pocket-04.webp" alt="" loading="lazy">
-          </div>
-
-          <div class="photo-card reveal">
-            <img src="pocket-05.webp" alt="" loading="lazy">
-          </div>
-
-          <div class="photo-card reveal">
-            <img src="pocket-06.webp" alt="" loading="lazy">
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- ===================================================
-         DECORAÇÕES MAIORES
-    ==================================================== -->
-
-    <section class="gallery-section alt">
-
-      <div class="container">
-
-        <div class="gallery-header reveal">
-
-
-          <!-- TÍTULO GRANDE -->
-
-          <h2 class="gallery-main-title">
-            DECORAÇÕES MAIORES
-          </h2>
-
-
-          <!-- FRASE MENOR -->
-
-          <div class="gallery-phrase">
-            Momentos que merecem ser celebrados.
-          </div>
-
-
-          <p class="gallery-description">
-            Produções maiores para transformar ambientes
-            e criar cenários marcantes para celebrar.
-          </p>
-
-        </div>
-
-
-
-        <div class="photo-grid">
-
-          <div class="photo-card reveal">
-            <img src="padrao-01.webp" alt="" loading="lazy">
-          </div>
-
-          <div class="photo-card reveal">
-            <img src="padrao-02.webp" alt="" loading="lazy">
-          </div>
-
-          <div class="photo-card reveal">
-            <img src="padrao-03.webp" alt="" loading="lazy">
-          </div>
-
-          <div class="photo-card reveal">
-            <img src="padrao-04.webp" alt="" loading="lazy">
-          </div>
-
-          <div class="photo-card reveal">
-            <img src="padrao-05.webp" alt="" loading="lazy">
-          </div>
-
-          <div class="photo-card reveal">
-            <img src="padrao-06.webp" alt="" loading="lazy">
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- ===================================================
-         AVALIAÇÕES
-    ==================================================== -->
-
-    <section
-      class="avaliacoes"
-      id="avaliacoes"
-    >
-
-      <div class="container">
-
-
-        <!-- TÍTULO GRANDE -->
-
-        <h2 class="main-section-title reveal">
-          O QUE NOSSOS
-          <br>
-          CLIENTES DIZEM
-        </h2>
-
-
-        <!-- FRASE MENOR -->
-
-        <div class="section-phrase reveal">
-          Experiências que ficam na memória.
-        </div>
-
-
-
-        <div class="rating-box reveal">
-
-          <div class="stars">
-            ★★★★★
-          </div>
-
-          <div class="rating-number">
-            5,0
-          </div>
-
-          <div class="rating-text">
-            Avaliação no Google
-            <br>
-            Confira as avaliações reais dos nossos clientes.
-          </div>
-
-          <a
-            href="https://www.google.com/maps/search/?api=1&query=Z%C3%A9+Pegue+e+Monte+Rio+de+Janeiro"
-            target="_blank"
-            class="google-btn"
-          >
-            VER AVALIAÇÕES NO GOOGLE
-          </a>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- ===================================================
-         CONTATO
-    ==================================================== -->
-
-    <section
-      class="contato"
-      id="contato"
-    >
-
-      <div class="container">
-
-
-        <!-- TÍTULO GRANDE -->
-
-        <h2 class="main-section-title reveal">
-          CONTATO
-        </h2>
-
-
-        <!-- FRASE MENOR -->
-
-        <div class="section-phrase reveal">
-          Vamos transformar seu próximo momento?
-        </div>
-
-
-
-        <div class="contact-grid">
-
-
-          <div class="contact-info">
-
-
-            <div class="contact-item reveal">
-
-              <small>
-                WHATSAPP
-              </small>
-
-              <a
-                href="https://wa.me/5521999999999"
-                target="_blank"
-              >
-                Fale com a ZÊ DECOR
-              </a>
-
-            </div>
-
-
-
-            <div class="contact-item reveal">
-
-              <small>
-                INSTAGRAM
-              </small>
-
-              <a
-                href="https://www.instagram.com/zedecorofc/"
-                target="_blank"
-              >
-                @zedecorofc
-              </a>
-
-            </div>
-
-
-
-            <div class="contact-item reveal">
-
-              <small>
-                ATENDIMENTO
-              </small>
-
-              <strong>
-                Barra • Recreio • Jacarepaguá • Vargens
-              </strong>
-
-            </div>
-
-
-          </div>
-
-
-
-          <div class="contact-box reveal">
-
-            <h3>
-              Seu momento.
-              <br>
-              Nossa decoração.
-            </h3>
-
-            <p>
-              Conte um pouco sobre sua celebração
-              e vamos encontrar a composição ideal
-              para o seu momento.
-            </p>
-
-            <a
-              href="https://wa.me/5521999999999"
-              target="_blank"
-              class="btn btn-primary"
-            >
-              SOLICITAR ORÇAMENTO
-            </a>
-
-          </div>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-  </main>
-
-
-
-  <!-- FOOTER -->
-
-  <footer>
-
-    <div class="footer-inner">
-
-      <div class="footer-logo">
-        ZÊ DECOR
-      </div>
-
-      <div class="footer-text">
-        FESTA • POCKET • CELEBRATION
-      </div>
-
-      <div class="footer-text">
-        © 2026 ZÊ DECOR
-      </div>
-
-    </div>
-
-  </footer>
-
-
-
-  <!-- MODAL -->
-
-  <div
-    class="modal"
-    id="imageModal"
-  >
 
     <button
-      class="modal-close"
-      id="modalClose"
-      aria-label="Fechar"
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Abrir menu"
     >
-      ×
+      ☰
     </button>
 
-    <img
-      id="modalImage"
-      src=""
-      alt=""
-    >
+
+    <nav id="navLinks">
+
+      <a href="#colecoes">
+        COLEÇÕES
+      </a>
+
+      <a href="#avaliacoes">
+        AVALIAÇÕES
+      </a>
+
+      <a href="#contato">
+        CONTATO
+      </a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section
+  class="hero"
+  id="inicio"
+>
+
+  <div class="hero-inner reveal">
+
+    <div class="hero-small">
+      FESTA • POCKET • CELEBRATION
+    </div>
+
+    <h1>
+      Decorações que
+      transformam momentos.
+    </h1>
+
+    <p>
+      Criamos experiências que unem beleza,
+      personalidade e cuidado para tornar
+      cada celebração ainda mais especial.
+    </p>
+
+    <div class="hero-buttons">
+
+      <a
+        href="https://wa.me/5521999999999"
+        target="_blank"
+        class="btn btn-light"
+      >
+        RESERVE PELO WHATSAPP
+      </a>
+
+      <a
+        href="#colecoes"
+        class="btn btn-border"
+      >
+        CONHEÇA NOSSAS COLEÇÕES
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     COLEÇÕES
+===================================================== -->
+
+<section
+  class="colecoes"
+  id="colecoes"
+>
+
+
+  <!-- =================================================
+       ARTE ORGÂNICA ESQUERDA
+  ================================================= -->
+
+  <div class="organic-art organic-left">
+
+    <svg viewBox="0 0 300 800">
+
+      <ellipse
+        class="organic-fill"
+        cx="55"
+        cy="135"
+        rx="90"
+        ry="125"
+      />
+
+      <ellipse
+        class="organic-line"
+        cx="85"
+        cy="210"
+        rx="115"
+        ry="160"
+      />
+
+      <path
+        class="organic-line"
+        d="M105 355
+           C185 420 55 470 115 535
+           C175 600 55 645 95 755"
+      />
+
+      <path
+        class="organic-line-light"
+        d="M40 320
+           C125 370 20 460 70 525
+           C120 590 10 665 45 780"
+      />
+
+      <circle
+        class="organic-dot"
+        cx="175"
+        cy="110"
+        r="4"
+      />
+
+      <circle
+        class="organic-dot"
+        cx="205"
+        cy="170"
+        r="2.5"
+      />
+
+    </svg>
 
   </div>
 
 
 
-  <!-- JAVASCRIPT -->
+  <!-- =================================================
+       ARTE ORGÂNICA DIREITA
+  ================================================= -->
 
-  <script>
+  <div class="organic-art organic-right">
 
-    const menuToggle =
-      document.getElementById("menuToggle");
+    <svg viewBox="0 0 320 800">
 
-    const navLinks =
-      document.getElementById("navLinks");
+      <ellipse
+        class="organic-fill"
+        cx="270"
+        cy="125"
+        rx="90"
+        ry="125"
+      />
+
+      <ellipse
+        class="organic-line"
+        cx="235"
+        cy="190"
+        rx="115"
+        ry="160"
+      />
+
+      <path
+        class="organic-line"
+        d="M220 340
+           C130 420 280 470 205 555
+           C145 620 280 665 230 780"
+      />
+
+      <path
+        class="organic-line-light"
+        d="M275 310
+           C180 390 305 465 250 535
+           C195 610 310 680 270 790"
+      />
+
+      <path
+        class="organic-line"
+        d="M200 390
+           C175 430 165 485 175 545"
+      />
+
+      <ellipse
+        class="organic-leaf"
+        cx="183"
+        cy="425"
+        rx="10"
+        ry="25"
+        transform="rotate(-30 183 425)"
+      />
+
+      <ellipse
+        class="organic-leaf"
+        cx="170"
+        cy="465"
+        rx="10"
+        ry="25"
+        transform="rotate(30 170 465)"
+      />
+
+      <ellipse
+        class="organic-leaf"
+        cx="174"
+        cy="505"
+        rx="9"
+        ry="23"
+        transform="rotate(-30 174 505)"
+      />
+
+      <circle
+        class="organic-dot"
+        cx="115"
+        cy="100"
+        r="4"
+      />
+
+      <circle
+        class="organic-dot"
+        cx="95"
+        cy="145"
+        r="2.5"
+      />
+
+    </svg>
+
+  </div>
 
 
-    menuToggle.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-    });
+
+  <div class="container">
 
 
-    document
-      .querySelectorAll(".nav-links a")
-      .forEach(link => {
+    <!-- =================================================
+         TÍTULO PRINCIPAL
+    ================================================= -->
 
-        link.addEventListener("click", () => {
-          navLinks.classList.remove("active");
-        });
+    <div class="collections-header reveal">
+
+      <h2 class="section-name">
+        NOSSAS COLEÇÕES
+      </h2>
+
+      <div class="section-phrase">
+        Escolha o cenário para o seu momento.
+      </div>
+
+      <p class="section-text">
+        Diferentes formatos para diferentes celebrações,
+        sempre com o cuidado e a identidade da ZÊ DECOR.
+      </p>
+
+    </div>
+
+
+
+    <!-- =================================================
+         CARDS
+    ================================================= -->
+
+    <div class="collection-grid">
+
+
+      <!-- POCKET -->
+
+      <article class="collection-card reveal">
+
+        <div class="collection-image">
+
+          <img
+            src="pocket-01.webp"
+            alt="Festa na Mesa Pocket"
+            loading="lazy"
+          >
+
+        </div>
+
+        <div class="collection-info">
+
+          <div class="collection-label">
+            FESTA NA MESA
+          </div>
+
+          <h3>
+            POCKET
+          </h3>
+
+          <p>
+            Decorações compactas e encantadoras,
+            perfeitas para celebrar em casa,
+            apartamentos e pequenos espaços.
+          </p>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- DECORAÇÕES MAIORES -->
+
+      <article class="collection-card reveal">
+
+        <div class="collection-image">
+
+          <img
+            src="padrao-03.webp"
+            alt="Decorações Maiores"
+            loading="lazy"
+          >
+
+        </div>
+
+        <div class="collection-info">
+
+          <div class="collection-label">
+            CELEBRATION
+          </div>
+
+          <h3>
+            DECORAÇÕES
+            <br>
+            MAIORES
+          </h3>
+
+          <p>
+            Composições maiores e personalizadas
+            para aniversários, celebrações e momentos
+            que merecem uma produção especial.
+          </p>
+
+        </div>
+
+      </article>
+
+    </div>
+
+
+
+    <!-- =================================================
+         FESTA NA MESA — POCKET
+    ================================================= -->
+
+    <div class="gallery-section">
+
+
+      <div class="gallery-header reveal">
+
+        <h2 class="gallery-name">
+          FESTA NA MESA — POCKET
+        </h2>
+
+        <div class="gallery-phrase">
+          Detalhes que fazem celebrar.
+        </div>
+
+        <p class="gallery-description">
+          Composições compactas, elegantes
+          e cheias de personalidade.
+        </p>
+
+      </div>
+
+
+      <div class="photo-grid">
+
+
+        <div class="photo-card reveal">
+          <img
+            src="pocket-01.webp"
+            alt=""
+            loading="lazy"
+          >
+        </div>
+
+
+        <div class="photo-card reveal">
+          <img
+            src="pocket-02.webp"
+            alt=""
+            loading="lazy"
+          >
+        </div>
+
+
+        <div class="photo-card reveal">
+          <img
+            src="pocket-03.webp"
+            alt=""
+            loading="lazy"
+          >
+        </div>
+
+
+        <div class="photo-card reveal">
+          <img
+            src="pocket-04.webp"
+            alt=""
+            loading="lazy"
+          >
+        </div>
+
+
+        <div class="photo-card reveal">
+          <img
+            src="pocket-05.webp"
+            alt=""
+            loading="lazy"
+          >
+        </div>
+
+
+        <div class="photo-card reveal">
+          <img
+            src="pocket-06.webp"
+            alt=""
+            loading="lazy"
+          >
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         DECORAÇÕES MAIORES
+    ================================================= -->
+
+    <div class="gallery-section">
+
+
+      <div class="gallery-header reveal">
+
+        <h2 class="gallery-name">
+          DECORAÇÕES MAIORES
+        </h2>
+
+        <div class="gallery-phrase">
+          Momentos que merecem ser celebrados.
+        </div>
+
+        <p class="gallery-description">
+          Produções maiores para transformar ambientes
+          e criar cenários marcantes para celebrar.
+        </p>
+
+      </div>
+
+
+      <div class="photo-grid">
+
+
+        <div class="photo-card reveal">
+          <img
+            src="padrao-01.webp"
+            alt=""
+            loading="lazy"
+          >
+        </div>
+
+
+        <div class="photo-card reveal">
+          <img
+            src="padrao-02.webp"
+            alt=""
+            loading="lazy"
+          >
+        </div>
+
+
+        <div class="photo-card reveal">
+          <img
+            src="padrao-03.webp"
+            alt=""
+            loading="lazy"
+          >
+        </div>
+
+
+        <div class="photo-card reveal">
+          <img
+            src="padrao-04.webp"
+            alt=""
+            loading="lazy"
+          >
+        </div>
+
+
+        <div class="photo-card reveal">
+          <img
+            src="padrao-05.webp"
+            alt=""
+            loading="lazy"
+          >
+        </div>
+
+
+        <div class="photo-card reveal">
+          <img
+            src="padrao-06.webp"
+            alt=""
+            loading="lazy"
+          >
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     AVALIAÇÕES
+===================================================== -->
+
+<section
+  class="reviews"
+  id="avaliacoes"
+>
+
+  <div class="container">
+
+    <h2 class="section-name reveal">
+      O QUE NOSSOS CLIENTES DIZEM
+    </h2>
+
+    <div class="section-phrase reveal">
+      Experiências que ficam na memória.
+    </div>
+
+
+    <div class="rating-box reveal">
+
+      <div class="stars">
+        ★★★★★
+      </div>
+
+      <div class="rating">
+        5,0
+      </div>
+
+      <p>
+        Avaliação no Google
+      </p>
+
+      <a
+        class="google-btn"
+        target="_blank"
+        href="https://www.google.com/maps/search/?api=1&query=Z%C3%A9+Pegue+e+Monte+Rio+de+Janeiro"
+      >
+        VER AVALIAÇÕES NO GOOGLE
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTATO
+===================================================== -->
+
+<section
+  class="contact"
+  id="contato"
+>
+
+  <div class="container">
+
+    <h2 class="section-name reveal">
+      CONTATO
+    </h2>
+
+    <div class="section-phrase reveal">
+      Vamos transformar seu próximo momento?
+    </div>
+
+
+    <div class="contact-grid">
+
+
+      <div>
+
+        <div class="contact-item reveal">
+
+          <small>
+            WHATSAPP
+          </small>
+
+          <a
+            href="https://wa.me/5521999999999"
+            target="_blank"
+          >
+            Fale com a ZÊ DECOR
+          </a>
+
+        </div>
+
+
+        <div class="contact-item reveal">
+
+          <small>
+            INSTAGRAM
+          </small>
+
+          <a
+            href="https://www.instagram.com/zedecorofc/"
+            target="_blank"
+          >
+            @zedecorofc
+          </a>
+
+        </div>
+
+
+        <div class="contact-item reveal">
+
+          <small>
+            ATENDIMENTO
+          </small>
+
+          <strong>
+            Barra • Recreio • Jacarepaguá • Vargens
+          </strong>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="contact-box reveal">
+
+        <h3>
+          Seu momento.
+          Nossa decoração.
+        </h3>
+
+        <p>
+          Conte um pouco sobre sua celebração
+          e vamos encontrar a composição ideal
+          para o seu momento.
+        </p>
+
+        <a
+          href="https://wa.me/5521999999999"
+          target="_blank"
+          class="btn btn-light"
+        >
+          SOLICITAR ORÇAMENTO
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+  <div class="footer-inner">
+
+    <div class="footer-logo">
+      ZÊ DECOR
+    </div>
+
+    <div class="footer-small">
+      FESTA • POCKET • CELEBRATION
+    </div>
+
+    <div class="footer-small">
+      © 2026 ZÊ DECOR
+    </div>
+
+  </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     MODAL
+===================================================== -->
+
+<div
+  class="modal"
+  id="modal"
+>
+
+  <button
+    class="modal-close"
+    id="modalClose"
+  >
+    ×
+  </button>
+
+  <img
+    id="modalImage"
+    src=""
+    alt=""
+  >
+
+</div>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+  /* MENU MOBILE */
+
+  const menuToggle =
+    document.getElementById("menuToggle");
+
+  const navLinks =
+    document.getElementById("navLinks");
+
+
+  menuToggle.addEventListener("click", () => {
+
+    navLinks.classList.toggle("active");
+
+  });
+
+
+  document
+    .querySelectorAll("nav a")
+    .forEach(link => {
+
+      link.addEventListener("click", () => {
+
+        navLinks.classList.remove("active");
 
       });
 
-
-
-    /* ANIMAÇÃO */
-
-    const elements =
-      document.querySelectorAll(".reveal");
-
-
-    const observer =
-      new IntersectionObserver(
-
-        entries => {
-
-          entries.forEach(entry => {
-
-            if (entry.isIntersecting) {
-
-              entry.target.classList.add("visible");
-
-              observer.unobserve(entry.target);
-
-            }
-
-          });
-
-        },
-
-        {
-          threshold: 0.10
-        }
-
-      );
-
-
-    elements.forEach(element => {
-      observer.observe(element);
     });
 
 
 
-    /* GALERIA */
+  /* ANIMAÇÃO */
 
-    const modal =
-      document.getElementById("imageModal");
-
-    const modalImage =
-      document.getElementById("modalImage");
-
-    const modalClose =
-      document.getElementById("modalClose");
+  const elements =
+    document.querySelectorAll(".reveal");
 
 
-    document
-      .querySelectorAll(".photo-card img")
-      .forEach(image => {
+  const observer =
+    new IntersectionObserver(
 
-        image.addEventListener("click", () => {
+      entries => {
 
-          modalImage.src = image.src;
+        entries.forEach(entry => {
 
-          modal.classList.add("active");
+          if (entry.isIntersecting) {
 
-          document.body.style.overflow = "hidden";
+            entry.target.classList.add("visible");
+
+            observer.unobserve(entry.target);
+
+          }
 
         });
 
+      },
+
+      {
+        threshold: .10
+      }
+
+    );
+
+
+  elements.forEach(element => {
+
+    observer.observe(element);
+
+  });
+
+
+
+  /* LIGHTBOX */
+
+  const modal =
+    document.getElementById("modal");
+
+  const modalImage =
+    document.getElementById("modalImage");
+
+  const modalClose =
+    document.getElementById("modalClose");
+
+
+  document
+    .querySelectorAll(".photo-card img")
+    .forEach(image => {
+
+      image.addEventListener("click", () => {
+
+        modalImage.src = image.src;
+
+        modal.classList.add("active");
+
+        document.body.style.overflow = "hidden";
+
       });
 
+    });
 
-    function closeModal() {
 
-      modal.classList.remove("active");
+  function closeModal() {
 
-      modalImage.src = "";
+    modal.classList.remove("active");
 
-      document.body.style.overflow = "";
+    modalImage.src = "";
+
+    document.body.style.overflow = "";
+
+  }
+
+
+  modalClose.addEventListener(
+    "click",
+    closeModal
+  );
+
+
+  modal.addEventListener(
+    "click",
+    event => {
+
+      if (event.target === modal) {
+
+        closeModal();
+
+      }
 
     }
+  );
 
 
-    modalClose.addEventListener(
-      "click",
-      closeModal
-    );
+  document.addEventListener(
+    "keydown",
+    event => {
 
+      if (event.key === "Escape") {
 
-    modal.addEventListener(
-      "click",
-      event => {
-
-        if (event.target === modal) {
-          closeModal();
-        }
+        closeModal();
 
       }
-    );
 
+    }
+  );
 
-    document.addEventListener(
-      "keydown",
-      event => {
-
-        if (event.key === "Escape") {
-          closeModal();
-        }
-
-      }
-    );
-
-  </script>
+</script>
 
 
 </body>
