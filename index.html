@@ -1,2088 +1,1671 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>ZÊ DECOR | Decorações que transformam momentos</title>
-
-<meta
-name="description"
-content="ZÊ DECOR — Decorações de festas, Festa na Mesa, Decoração Pocket e grandes celebrações no Rio de Janeiro."
->
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link
-rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin
->
-
-<link
-href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-rel="stylesheet"
->
-
-<style>
-
-/* =====================================================
-   CORES
-===================================================== */
-
-:root {
-
-  --creme: #f6f0e6;
-  --creme-claro: #fbf8f2;
-  --bege: #e9ddcc;
-
-  --marrom: #34241c;
-  --marrom-claro: #654f41;
-
-  --dourado: #b28a4f;
-
-  --branco: #ffffff;
-
-  --preto: #171310;
-
-}
-
-
-/* =====================================================
-   RESET
-===================================================== */
-
-* {
-
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-
-}
-
-html {
-
-  scroll-behavior: smooth;
-
-}
-
-body {
-
-  background: var(--creme);
-
-  color: var(--marrom);
-
-  font-family: "DM Sans", sans-serif;
-
-  overflow-x: hidden;
-
-}
-
-img {
-
-  max-width: 100%;
-  display: block;
-
-}
-
-a {
-
-  color: inherit;
-  text-decoration: none;
-
-}
-
-
-/* =====================================================
-   HEADER
-===================================================== */
-
-header {
-
-  position: fixed;
-
-  top: 0;
-  left: 0;
-
-  width: 100%;
-
-  z-index: 1000;
-
-  padding: 18px 5%;
-
-  transition: .35s ease;
-
-}
-
-header.scrolled {
-
-  background: rgba(246,240,230,.94);
-
-  backdrop-filter: blur(14px);
-
-  box-shadow:
-  0 8px 30px rgba(50,35,25,.08);
-
-}
-
-.navbar {
-
-  max-width: 1400px;
-
-  margin: auto;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: space-between;
-
-}
-
-.logo {
-
-  width: 105px;
-
-}
-
-.nav-links {
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 35px;
-
-  font-size: 11px;
-
-  font-weight: 700;
-
-  letter-spacing: 1.5px;
-
-}
-
-.nav-links a {
-
-  transition: .25s ease;
-
-}
-
-.nav-links a:hover {
-
-  color: var(--dourado);
-
-}
-
-.whatsapp-btn {
-
-  background: var(--marrom);
-
-  color: white;
-
-  padding: 13px 22px;
-
-  border-radius: 50px;
-
-  font-size: 10px;
-
-  font-weight: 700;
-
-  letter-spacing: 1px;
-
-  transition: .3s ease;
-
-}
-
-.whatsapp-btn:hover {
-
-  background: var(--dourado);
-
-  transform: translateY(-2px);
-
-}
-
-.menu-btn {
-
-  display: none;
-
-  border: none;
-
-  background: none;
-
-  color: var(--marrom);
-
-  font-size: 28px;
-
-  cursor: pointer;
-
-}
-
-
-/* =====================================================
-   HERO
-===================================================== */
-
-.hero {
-
-  min-height: 100vh;
-
-  position: relative;
-
-  display: flex;
-
-  align-items: flex-end;
-
-  overflow: hidden;
-
-  background:
-
-    linear-gradient(
-      180deg,
-      rgba(20,12,8,.05),
-      rgba(20,12,8,.78)
-    ),
-
-    url("padrao-03.webp")
-    center center / cover
-    no-repeat;
-
-}
-
-.hero-content {
-
-  width: 100%;
-
-  max-width: 1400px;
-
-  margin: auto;
-
-  padding: 160px 5% 80px;
-
-  color: white;
-
-}
-
-.hero-small {
-
-  font-size: 11px;
-
-  font-weight: 700;
-
-  letter-spacing: 4px;
-
-  margin-bottom: 25px;
-
-}
-
-.hero h1 {
-
-  font-family:
-  "Playfair Display",
-  Georgia,
-  serif;
-
-  font-size:
-  clamp(55px, 9vw, 130px);
-
-  font-weight: 500;
-
-  line-height: .92;
-
-  letter-spacing: -4px;
-
-  max-width: 1000px;
-
-}
-
-.hero-subtitle {
-
-  margin-top: 28px;
-
-  font-size: 18px;
-
-  letter-spacing: 3px;
-
-}
-
-.hero-buttons {
-
-  margin-top: 35px;
-
-  display: flex;
-
-  flex-wrap: wrap;
-
-  gap: 12px;
-
-}
-
-.hero-button {
-
-  display: inline-flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  padding: 16px 26px;
-
-  border-radius: 50px;
-
-  background: white;
-
-  color: var(--marrom);
-
-  font-size: 11px;
-
-  font-weight: 700;
-
-  letter-spacing: 1px;
-
-  transition: .3s ease;
-
-}
-
-.hero-button:hover {
-
-  transform: translateY(-3px);
-
-}
-
-.hero-button.outline {
-
-  background: transparent;
-
-  color: white;
-
-  border: 1px solid rgba(255,255,255,.7);
-
-}
-
-
-/* =====================================================
-   SEÇÕES
-===================================================== */
-
-.section {
-
-  max-width: 1400px;
-
-  margin: auto;
-
-  padding: 125px 5%;
-
-}
-
-.section-number {
-
-  color: var(--dourado);
-
-  font-size: 10px;
-
-  font-weight: 700;
-
-  letter-spacing: 3px;
-
-  margin-bottom: 25px;
-
-}
-
-.section-title {
-
-  font-family:
-  "Playfair Display",
-  Georgia,
-  serif;
-
-  font-size:
-  clamp(42px, 6vw, 82px);
-
-  font-weight: 500;
-
-  line-height: .98;
-
-  letter-spacing: -2px;
-
-}
-
-
-/* =====================================================
-   ESSÊNCIA
-===================================================== */
-
-.intro {
-
-  display: grid;
-
-  grid-template-columns:
-  .9fr 1.1fr;
-
-  gap: 90px;
-
-  align-items: center;
-
-}
-
-.intro-text {
-
-  max-width: 520px;
-
-  font-size: 18px;
-
-  line-height: 1.8;
-
-  color: var(--marrom-claro);
-
-}
-
-
-/* =====================================================
-   COLEÇÕES
-===================================================== */
-
-.collections {
-
-  margin-top: 60px;
-
-  display: grid;
-
-  grid-template-columns:
-  repeat(2, 1fr);
-
-  gap: 24px;
-
-}
-
-.collection {
-
-  position: relative;
-
-  height: 650px;
-
-  overflow: hidden;
-
-  background: var(--bege);
-
-  cursor: pointer;
-
-}
-
-.collection img {
-
-  width: 100%;
-
-  height: 100%;
-
-  object-fit: contain;
-
-  background: var(--bege);
-
-  transition:
-  transform .7s ease;
-
-}
-
-.collection:hover img {
-
-  transform: scale(1.025);
-
-}
-
-.collection-overlay {
-
-  position: absolute;
-
-  inset: 0;
-
-  background:
-
-    linear-gradient(
-      to top,
-      rgba(25,15,10,.72),
-      rgba(25,15,10,0)
-      65%
-    );
-
-}
-
-.collection-info {
-
-  position: absolute;
-
-  left: 38px;
-
-  right: 38px;
-
-  bottom: 38px;
-
-  color: white;
-
-}
-
-.collection-number {
-
-  font-size: 10px;
-
-  letter-spacing: 3px;
-
-  margin-bottom: 12px;
-
-}
-
-.collection-info h3 {
-
-  font-family:
-  "Playfair Display",
-  Georgia,
-  serif;
-
-  font-size:
-  clamp(32px, 4vw, 58px);
-
-  font-weight: 500;
-
-  line-height: .98;
-
-}
-
-.collection-info p {
-
-  margin-top: 15px;
-
-  font-size: 13px;
-
-}
-
-
-/* =====================================================
-   GALERIAS DAS COLEÇÕES
-===================================================== */
-
-.gallery-section {
-
-  background: var(--creme-claro);
-
-}
-
-.gallery {
-
-  margin-top: 60px;
-
-  display: grid;
-
-  grid-template-columns:
-  repeat(2, 1fr);
-
-  gap: 18px;
-
-}
-
-.gallery-item {
-
-  background: var(--bege);
-
-  overflow: hidden;
-
-  cursor: pointer;
-
-}
-
-.gallery-item img {
-
-  width: 100%;
-
-  height: auto;
-
-  object-fit: contain;
-
-  background: var(--bege);
-
-  transition:
-  transform .6s ease;
-
-}
-
-.gallery-item:hover img {
-
-  transform: scale(1.02);
-
-}
-
-
-/* =====================================================
-   AVALIAÇÕES
-===================================================== */
-
-.reviews {
-
-  max-width: 850px;
-
-  margin: auto;
-
-  text-align: center;
-
-}
-
-.reviews .section-title {
-
-  font-size:
-  clamp(38px, 5vw, 65px);
-
-}
-
-.stars {
-
-  margin-top: 35px;
-
-  color: var(--dourado);
-
-  font-size: 28px;
-
-  letter-spacing: 5px;
-
-}
-
-.rating {
-
-  margin-top: 10px;
-
-  font-family:
-  "Playfair Display",
-  Georgia,
-  serif;
-
-  font-size: 65px;
-
-}
-
-.rating-text {
-
-  color: var(--marrom-claro);
-
-  font-size: 17px;
-
-}
-
-.review-button {
-
-  display: inline-block;
-
-  margin-top: 35px;
-
-  padding: 16px 27px;
-
-  border-radius: 50px;
-
-  background: var(--marrom);
-
-  color: white;
-
-  font-size: 11px;
-
-  font-weight: 700;
-
-  letter-spacing: 1px;
-
-  transition: .3s ease;
-
-}
-
-.review-button:hover {
-
-  background: var(--dourado);
-
-}
-
-
-/* =====================================================
-   CONTATO
-===================================================== */
-
-.contact {
-
-  text-align: center;
-
-}
-
-.contact-inner {
-
-  max-width: 900px;
-
-  margin: auto;
-
-}
-
-.contact-text {
-
-  margin-top: 30px;
-
-  color: var(--marrom-claro);
-
-  font-size: 18px;
-
-  line-height: 1.7;
-
-}
-
-.contact-button {
-
-  display: inline-block;
-
-  margin-top: 38px;
-
-  padding: 18px 32px;
-
-  background: var(--marrom);
-
-  color: white;
-
-  border-radius: 50px;
-
-  font-size: 11px;
-
-  font-weight: 700;
-
-  letter-spacing: 1.5px;
-
-  transition: .3s ease;
-
-}
-
-.contact-button:hover {
-
-  background: var(--dourado);
-
-  transform: translateY(-3px);
-
-}
-
-.contact-info {
-
-  margin-top: 35px;
-
-  color: var(--marrom-claro);
-
-  font-size: 14px;
-
-  line-height: 2;
-
-}
-
-
-/* =====================================================
-   FOOTER
-===================================================== */
-
-footer {
-
-  background: #211712;
-
-  color: white;
-
-  padding: 55px 5%;
-
-}
-
-.footer {
-
-  max-width: 1400px;
-
-  margin: auto;
-
-  display: flex;
-
-  justify-content: space-between;
-
-  align-items: flex-end;
-
-  gap: 30px;
-
-}
-
-.footer-logo {
-
-  font-family:
-  "Playfair Display",
-  Georgia,
-  serif;
-
-  font-size: 42px;
-
-}
-
-.footer-tagline {
-
-  margin-top: 10px;
-
-  font-size: 10px;
-
-  letter-spacing: 2px;
-
-  opacity: .7;
-
-}
-
-.footer-right {
-
-  text-align: right;
-
-  font-size: 13px;
-
-  line-height: 1.8;
-
-}
-
-
-/* =====================================================
-   MODAL
-===================================================== */
-
-.modal {
-
-  position: fixed;
-
-  inset: 0;
-
-  z-index: 5000;
-
-  background:
-  rgba(15,9,6,.96);
-
-  display: none;
-
-  align-items: center;
-
-  justify-content: center;
-
-  padding: 25px;
-
-}
-
-.modal.active {
-
-  display: flex;
-
-}
-
-.modal img {
-
-  max-width: 96%;
-
-  max-height: 92vh;
-
-  width: auto;
-
-  height: auto;
-
-  object-fit: contain;
-
-}
-
-.close {
-
-  position: absolute;
-
-  top: 20px;
-
-  right: 30px;
-
-  color: white;
-
-  font-size: 42px;
-
-  cursor: pointer;
-
-}
-
-
-/* =====================================================
-   ANIMAÇÕES
-===================================================== */
-
-.reveal {
-
-  opacity: 0;
-
-  transform:
-  translateY(30px);
-
-  transition:
-  opacity .9s ease,
-  transform .9s ease;
-
-}
-
-.reveal.visible {
-
-  opacity: 1;
-
-  transform:
-  translateY(0);
-
-}
-
-
-/* =====================================================
-   TABLET
-===================================================== */
-
-@media(max-width: 900px) {
-
-  .intro {
-
-    grid-template-columns: 1fr;
-
-    gap: 35px;
-
-  }
-
-  .collections {
-
-    grid-template-columns: 1fr;
-
-  }
-
-  .collection {
-
-    height: 550px;
-
-  }
-
-}
-
-
-/* =====================================================
-   CELULAR
-===================================================== */
-
-@media(max-width: 700px) {
-
-  header {
-
-    padding:
-    15px 6%;
-
-  }
-
-  .logo {
-
-    width: 85px;
-
-  }
-
-  .nav-links {
-
-    display: none;
-
-    position: absolute;
-
-    top: 70px;
-
-    left: 5%;
-
-    right: 5%;
-
-    padding: 25px;
-
-    background: var(--creme);
-
-    flex-direction: column;
-
-    align-items: flex-start;
-
-    gap: 22px;
-
-    box-shadow:
-    0 15px 40px rgba(0,0,0,.12);
-
-  }
-
-  .nav-links.active {
-
-    display: flex;
-
-  }
-
-  .navbar > .whatsapp-btn {
-
-    display: none;
-
-  }
-
-  .menu-btn {
-
-    display: block;
-
-  }
-
-  .hero {
-
-    min-height: 90vh;
-
-  }
-
-  .hero-content {
-
-    padding:
-    130px 7% 55px;
-
-  }
-
-  .hero h1 {
-
-    font-size: 56px;
-
-    letter-spacing: -2.5px;
-
-  }
-
-  .hero-subtitle {
-
-    font-size: 14px;
-
-    letter-spacing: 2px;
-
-  }
-
-  .hero-buttons {
-
-    flex-direction: column;
-
-  }
-
-  .hero-button {
-
-    text-align: center;
-
-    width: 100%;
-
-  }
-
-  .section {
-
-    padding:
-    85px 6%;
-
-  }
-
-  .section-title {
-
-    font-size: 48px;
-
-  }
-
-  .collection {
-
-    height: auto;
-
-    min-height: 430px;
-
-  }
-
-  .collection img {
-
-    height: auto;
-
-    min-height: 430px;
-
-  }
-
-  .gallery {
-
-    grid-template-columns: 1fr;
-
-  }
-
-  .gallery-item img {
-
-    width: 100%;
-
-    height: auto;
-
-  }
-
-  .footer {
-
-    flex-direction: column;
-
-    align-items: flex-start;
-
-  }
-
-  .footer-right {
-
-    text-align: left;
-
-  }
-
-}
-
-
-/* =====================================================
-   CELULAR PEQUENO
-===================================================== */
-
-@media(max-width:430px) {
-
-  .hero h1 {
-
-    font-size: 49px;
-
-  }
-
-  .section-title {
-
-    font-size: 42px;
-
-  }
-
-  .collection-info {
-
-    left: 25px;
-
-    right: 25px;
-
-    bottom: 25px;
-
-  }
-
-  .collection-info h3 {
-
-    font-size: 38px;
-
-  }
-
-  .gallery-item img {
-
-    width: 100%;
-
-    height: auto;
-
-  }
-
-}
-
-</style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ZÊ DECOR | Festa • Pocket • Celebration</title>
+
+  <meta
+    name="description"
+    content="ZÊ DECOR — Decorações que transformam momentos. Festa Pocket, Kit na Mesa e Decorações Maiores em Barra, Recreio, Jacarepaguá e Vargens."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root {
+      --creme: #f6f0e7;
+      --creme-claro: #fbf8f2;
+      --marrom: #3a2a23;
+      --marrom-claro: #6e5a4e;
+      --dourado: #b8945d;
+      --dourado-claro: #d5b77e;
+      --branco: #ffffff;
+      --linha: rgba(58, 42, 35, 0.14);
+      --sombra: 0 20px 60px rgba(58, 42, 35, 0.10);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--creme-claro);
+      color: var(--marrom);
+      font-family: "DM Sans", Arial, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(251, 248, 242, 0.94);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid var(--linha);
+    }
+
+    .header-inner {
+      max-width: 1380px;
+      margin: 0 auto;
+      min-height: 86px;
+      padding: 0 40px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .brand img {
+      width: 68px;
+      height: 68px;
+      object-fit: contain;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 25px;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    .brand-sub {
+      margin-top: 5px;
+      font-size: 9px;
+      letter-spacing: 0.18em;
+      color: var(--marrom-claro);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+    }
+
+    .nav-links a {
+      position: relative;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      transition: 0.3s ease;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      width: 0;
+      height: 1px;
+      background: var(--dourado);
+      transition: 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--dourado);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .menu-toggle {
+      display: none;
+      border: none;
+      background: transparent;
+      font-size: 27px;
+      color: var(--marrom);
+      cursor: pointer;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding-top: 86px;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(40, 28, 22, 0.82) 0%,
+          rgba(40, 28, 22, 0.57) 42%,
+          rgba(40, 28, 22, 0.16) 75%,
+          rgba(40, 28, 22, 0.08) 100%
+        ),
+        url("padrao-03.webp") center center / cover no-repeat;
+    }
+
+    .hero-content {
+      width: 100%;
+      max-width: 1380px;
+      margin: 0 auto;
+      padding: 100px 40px;
+      color: var(--branco);
+    }
+
+    .hero-kicker {
+      font-size: 11px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+      color: #ead8b8;
+      font-weight: 600;
+    }
+
+    .hero h1 {
+      max-width: 750px;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(55px, 7vw, 105px);
+      font-weight: 500;
+      line-height: 0.96;
+      letter-spacing: -0.035em;
+    }
+
+    .hero-description {
+      max-width: 580px;
+      margin-top: 35px;
+      font-size: 17px;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.88);
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 42px;
+    }
+
+    .btn {
+      min-height: 50px;
+      padding: 0 28px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      border: 1px solid transparent;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+
+      transition: 0.3s ease;
+    }
+
+    .btn-primary {
+      background: var(--branco);
+      color: var(--marrom);
+    }
+
+    .btn-primary:hover {
+      background: var(--dourado);
+      color: var(--branco);
+    }
+
+    .btn-outline {
+      border-color: rgba(255,255,255,0.55);
+      color: var(--branco);
+      background: rgba(255,255,255,0.05);
+    }
+
+    .btn-outline:hover {
+      background: var(--branco);
+      color: var(--marrom);
+    }
+
+    .hero-bottom {
+      position: absolute;
+      bottom: 30px;
+      left: 0;
+      width: 100%;
+      padding: 0 40px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      color: rgba(255,255,255,0.75);
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    /* =========================
+       GENERAL
+    ========================= */
+
+    section {
+      padding: 120px 40px;
+    }
+
+    .container {
+      max-width: 1380px;
+      margin: 0 auto;
+    }
+
+    .section-number {
+      color: var(--marrom);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(28px, 3.2vw, 46px);
+      font-weight: 500;
+      letter-spacing: 0;
+      line-height: 1.1;
+      margin-bottom: 25px;
+    }
+
+    .section-title {
+      max-width: 850px;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(38px, 5vw, 70px);
+      font-weight: 500;
+      line-height: 1.05;
+      letter-spacing: -0.025em;
+    }
+
+    .section-description {
+      max-width: 680px;
+      margin-top: 28px;
+      color: var(--marrom-claro);
+      font-size: 16px;
+      line-height: 1.85;
+    }
+
+    /* =========================
+       ESSÊNCIA
+    ========================= */
+
+    .essencia {
+      background: var(--creme-claro);
+    }
+
+    .essencia-grid {
+      margin-top: 80px;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .essencia-image {
+      overflow: hidden;
+      background: var(--creme);
+    }
+
+    .essencia-image img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .essencia-text {
+      max-width: 590px;
+    }
+
+    .essencia-text h3 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 38px;
+      font-weight: 500;
+      line-height: 1.15;
+      margin-bottom: 25px;
+    }
+
+    .essencia-text p {
+      color: var(--marrom-claro);
+      font-size: 16px;
+      line-height: 1.9;
+      margin-bottom: 18px;
+    }
+
+    .signature {
+      margin-top: 30px;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 24px;
+      font-style: italic;
+      color: var(--dourado);
+    }
+
+    /* =========================
+       COLEÇÕES
+    ========================= */
+
+    .colecoes {
+      background: var(--creme);
+    }
+
+    .collection-intro {
+      max-width: 800px;
+      margin-bottom: 70px;
+    }
+
+    .collection-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .collection-card {
+      position: relative;
+      overflow: hidden;
+      background: var(--branco);
+      box-shadow: var(--sombra);
+    }
+
+    .collection-image {
+      position: relative;
+      overflow: hidden;
+      background: #eee7dc;
+    }
+
+    .collection-image img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      transition: transform 0.7s ease;
+    }
+
+    .collection-card:hover .collection-image img {
+      transform: scale(1.025);
+    }
+
+    .collection-content {
+      padding: 35px;
+    }
+
+    .collection-content small {
+      display: block;
+      color: var(--dourado);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 13px;
+    }
+
+    .collection-content h3 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 36px;
+      line-height: 1.05;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+
+    .collection-content p {
+      color: var(--marrom-claro);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    /* =========================
+       GALERIAS DAS COLEÇÕES
+    ========================= */
+
+    .collection-gallery {
+      margin-top: 90px;
+    }
+
+    .collection-gallery + .collection-gallery {
+      margin-top: 130px;
+    }
+
+    .gallery-heading {
+      margin-bottom: 40px;
+    }
+
+    .gallery-heading .section-number {
+      margin-bottom: 14px;
+      font-size: clamp(25px, 2.7vw, 40px);
+    }
+
+    .gallery-heading p {
+      max-width: 650px;
+      color: var(--marrom-claro);
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .photo-card {
+      overflow: hidden;
+      background: #eee7dc;
+      cursor: pointer;
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      transition: transform 0.6s ease;
+    }
+
+    .photo-card:hover img {
+      transform: scale(1.025);
+    }
+
+    /* =========================
+       AVALIAÇÕES
+    ========================= */
+
+    .avaliacoes {
+      background: var(--creme-claro);
+      text-align: center;
+    }
+
+    .avaliacoes .section-title {
+      margin: 0 auto;
+    }
+
+    .rating-box {
+      margin: 65px auto 0;
+      max-width: 650px;
+      padding: 50px 35px;
+      background: var(--branco);
+      border: 1px solid var(--linha);
+      box-shadow: var(--sombra);
+    }
+
+    .stars {
+      color: var(--dourado);
+      font-size: 28px;
+      letter-spacing: 5px;
+      margin-bottom: 18px;
+    }
+
+    .rating-number {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 55px;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .rating-text {
+      color: var(--marrom-claro);
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+
+    .google-btn {
+      display: inline-flex;
+      min-height: 50px;
+      align-items: center;
+      justify-content: center;
+      padding: 0 28px;
+      background: var(--marrom);
+      color: var(--branco);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      transition: 0.3s ease;
+    }
+
+    .google-btn:hover {
+      background: var(--dourado);
+    }
+
+    /* =========================
+       CONTATO
+    ========================= */
+
+    .contato {
+      background: var(--marrom);
+      color: var(--branco);
+    }
+
+    .contato .section-number {
+      color: var(--branco);
+    }
+
+    .contato .section-title {
+      color: var(--branco);
+      max-width: 850px;
+    }
+
+    .contato-grid {
+      margin-top: 70px;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+    }
+
+    .contact-item small {
+      display: block;
+      color: var(--dourado-claro);
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    .contact-item strong,
+    .contact-item a {
+      font-size: 19px;
+      font-weight: 400;
+    }
+
+    .contact-item a:hover {
+      color: var(--dourado-claro);
+    }
+
+    .contact-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-cta-box {
+      width: 100%;
+      max-width: 520px;
+      padding: 50px;
+      border: 1px solid rgba(255,255,255,0.16);
+      background: rgba(255,255,255,0.035);
+    }
+
+    .contact-cta-box h3 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 38px;
+      line-height: 1.15;
+      font-weight: 500;
+      margin-bottom: 18px;
+    }
+
+    .contact-cta-box p {
+      color: rgba(255,255,255,0.72);
+      font-size: 14px;
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+
+    .contact-cta-box .btn-primary {
+      background: var(--branco);
+      color: var(--marrom);
+    }
+
+    .contact-cta-box .btn-primary:hover {
+      background: var(--dourado);
+      color: var(--branco);
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #2b1f1a;
+      color: rgba(255,255,255,0.7);
+      padding: 40px;
+    }
+
+    .footer-inner {
+      max-width: 1380px;
+      margin: 0 auto;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .footer-brand {
+      color: var(--branco);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 22px;
+      letter-spacing: 0.08em;
+    }
+
+    .footer-copy {
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    /* =========================
+       MODAL / LIGHTBOX
+    ========================= */
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      z-index: 3000;
+
+      display: none;
+      align-items: center;
+      justify-content: center;
+
+      padding: 30px;
+      background: rgba(30, 22, 18, 0.93);
+    }
+
+    .modal.active {
+      display: flex;
+    }
+
+    .modal img {
+      max-width: 95vw;
+      max-height: 90vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .modal-close {
+      position: fixed;
+      top: 22px;
+      right: 28px;
+
+      border: none;
+      background: transparent;
+      color: var(--branco);
+
+      font-size: 35px;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    /* =========================
+       ANIMAÇÃO
+    ========================= */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================
+       RESPONSIVO
+    ========================= */
+
+    @media (max-width: 900px) {
+
+      .header-inner {
+        min-height: 75px;
+        padding: 0 20px;
+      }
+
+      .brand img {
+        width: 57px;
+        height: 57px;
+      }
+
+      .brand-name {
+        font-size: 21px;
+      }
+
+      .brand-sub {
+        font-size: 8px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 0;
+
+        background: rgba(251,248,242,0.98);
+        border-bottom: 1px solid var(--linha);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links a {
+        width: 100%;
+        padding: 18px 25px;
+        border-bottom: 1px solid var(--linha);
+      }
+
+      .nav-links a::after {
+        display: none;
+      }
+
+      section {
+        padding: 85px 20px;
+      }
+
+      .hero {
+        min-height: 90vh;
+        padding-top: 75px;
+
+        background:
+          linear-gradient(
+            90deg,
+            rgba(40, 28, 22, 0.82),
+            rgba(40, 28, 22, 0.4)
+          ),
+          url("padrao-03.webp") center center / cover no-repeat;
+      }
+
+      .hero-content {
+        padding: 80px 20px;
+      }
+
+      .hero h1 {
+        font-size: clamp(48px, 14vw, 75px);
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      .hero-bottom {
+        padding: 0 20px;
+      }
+
+      .essencia-grid,
+      .collection-grid,
+      .contato-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .photo-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .collection-gallery {
+        margin-top: 70px;
+      }
+
+      .collection-gallery + .collection-gallery {
+        margin-top: 90px;
+      }
+
+      .contact-cta {
+        justify-content: flex-start;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .photo-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .collection-content {
+        padding: 27px;
+      }
+
+      .collection-content h3 {
+        font-size: 31px;
+      }
+
+      .contact-cta-box {
+        padding: 32px 25px;
+      }
+
+      .contact-cta-box h3 {
+        font-size: 31px;
+      }
+
+      .rating-box {
+        padding: 40px 25px;
+      }
+
+      .hero-bottom {
+        display: none;
+      }
+    }
+  </style>
 </head>
-
 
 <body>
 
+  <!-- =========================
+       HEADER
+  ========================= -->
 
-<!-- =====================================================
-     HEADER
-===================================================== -->
+  <header>
+    <div class="header-inner">
 
-<header id="header">
+      <a href="#inicio" class="brand">
 
-  <div class="navbar">
+        <img
+          src="logo-ze-decor.png"
+          alt="ZÊ DECOR"
+        >
 
+        <div class="brand-text">
+          <div class="brand-name">ZÊ DECOR</div>
+          <div class="brand-sub">
+            FESTA • POCKET • CELEBRATION
+          </div>
+        </div>
 
-    <a href="#inicio">
+      </a>
 
-      <img
-      src="logo-ze-decor.png"
-      class="logo"
-      alt="Zê Decor"
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Abrir menu"
       >
+        ☰
+      </button>
 
-    </a>
+      <nav class="nav-links" id="navLinks">
+
+        <a href="#colecoes">
+          COLEÇÕES
+        </a>
+
+        <a href="#avaliacoes">
+          AVALIAÇÕES
+        </a>
+
+        <a href="#contato">
+          CONTATO
+        </a>
+
+      </nav>
+
+    </div>
+  </header>
 
 
-    <nav
-    class="nav-links"
-    id="navLinks"
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <main>
+
+    <section class="hero" id="inicio">
+
+      <div class="hero-content reveal">
+
+        <div class="hero-kicker">
+          FESTA • POCKET • CELEBRATION
+        </div>
+
+        <h1>
+          Decorações que transformam momentos.
+        </h1>
+
+        <p class="hero-description">
+          Criamos experiências que unem beleza, personalidade
+          e praticidade para tornar cada celebração ainda mais especial.
+        </p>
+
+        <div class="hero-actions">
+
+          <a
+            href="https://wa.me/5521999999999"
+            target="_blank"
+            class="btn btn-primary"
+          >
+            RESERVE PELO WHATSAPP
+          </a>
+
+          <a
+            href="#colecoes"
+            class="btn btn-outline"
+          >
+            CONHEÇA NOSSAS DECORAÇÕES
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="hero-bottom">
+
+        <span>
+          Barra • Recreio • Jacarepaguá • Vargens
+        </span>
+
+        <span>
+          RIO DE JANEIRO
+        </span>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ESSÊNCIA
+    ========================= -->
+
+    <section class="essencia">
+
+      <div class="container">
+
+        <div class="section-number reveal">
+          A NOSSA ESSÊNCIA
+        </div>
+
+        <h2 class="section-title reveal">
+          Pequenos detalhes.
+          Grandes momentos.
+        </h2>
+
+        <p class="section-description reveal">
+          Na ZÊ DECOR, acreditamos que uma decoração não precisa
+          ser exagerada para ser inesquecível. Cada composição é
+          pensada para transformar espaços e criar memórias.
+        </p>
+
+
+        <div class="essencia-grid">
+
+          <div class="essencia-image reveal">
+
+            <img
+              src="padrao-01.webp"
+              alt="Decoração ZÊ DECOR"
+              loading="lazy"
+            >
+
+          </div>
+
+
+          <div class="essencia-text reveal">
+
+            <h3>
+              Beleza, cuidado
+              e personalidade.
+            </h3>
+
+            <p>
+              Cada festa possui uma história, uma pessoa e um momento
+              especial. Por isso, nossas decorações são criadas para
+              conversar com cada celebração.
+            </p>
+
+            <p>
+              Do pequeno encontro em casa às grandes comemorações,
+              buscamos equilíbrio entre estética, praticidade e
+              experiência.
+            </p>
+
+            <div class="signature">
+              ZÊ DECOR
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         COLEÇÕES
+    ========================= -->
+
+    <section class="colecoes" id="colecoes">
+
+      <div class="container">
+
+        <div class="collection-intro">
+
+          <div class="section-number reveal">
+            NOSSAS COLEÇÕES
+          </div>
+
+          <h2 class="section-title reveal">
+            Encontre a decoração
+            para o seu momento.
+          </h2>
+
+          <p class="section-description reveal">
+            Diferentes formatos para diferentes celebrações,
+            sempre com o cuidado e a identidade da ZÊ DECOR.
+          </p>
+
+        </div>
+
+
+        <div class="collection-grid">
+
+          <!-- POCKET -->
+
+          <article class="collection-card reveal">
+
+            <div class="collection-image">
+
+              <img
+                src="pocket-01.webp"
+                alt="Festa na Mesa Pocket ZÊ DECOR"
+                loading="lazy"
+              >
+
+            </div>
+
+            <div class="collection-content">
+
+              <small>
+                FESTA NA MESA
+              </small>
+
+              <h3>
+                POCKET
+              </h3>
+
+              <p>
+                Decorações compactas e encantadoras,
+                perfeitas para celebrar em casa, apartamentos
+                e pequenos espaços.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <!-- DECORAÇÕES MAIORES -->
+
+          <article class="collection-card reveal">
+
+            <div class="collection-image">
+
+              <img
+                src="padrao-03.webp"
+                alt="Decorações Maiores ZÊ DECOR"
+                loading="lazy"
+              >
+
+            </div>
+
+            <div class="collection-content">
+
+              <small>
+                CELEBRATION
+              </small>
+
+              <h3>
+                DECORAÇÕES
+                <br>
+                MAIORES
+              </h3>
+
+              <p>
+                Composições maiores e personalizadas para
+                aniversários, celebrações e momentos que
+                merecem uma produção especial.
+              </p>
+
+            </div>
+
+          </article>
+
+        </div>
+
+
+        <!-- =========================
+             POCKET
+        ========================= -->
+
+        <div class="collection-gallery">
+
+          <div class="gallery-heading reveal">
+
+            <div class="section-number">
+              FESTA NA MESA — POCKET
+            </div>
+
+            <p>
+              Uma seleção de composições compactas,
+              elegantes e cheias de personalidade.
+            </p>
+
+          </div>
+
+
+          <div class="photo-grid">
+
+            <div class="photo-card reveal">
+              <img
+                src="pocket-01.webp"
+                alt="Festa na Mesa Pocket 01"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="photo-card reveal">
+              <img
+                src="pocket-02.webp"
+                alt="Festa na Mesa Pocket 02"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="photo-card reveal">
+              <img
+                src="pocket-03.webp"
+                alt="Festa na Mesa Pocket 03"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="photo-card reveal">
+              <img
+                src="pocket-04.webp"
+                alt="Festa na Mesa Pocket 04"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="photo-card reveal">
+              <img
+                src="pocket-05.webp"
+                alt="Festa na Mesa Pocket 05"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="photo-card reveal">
+              <img
+                src="pocket-06.webp"
+                alt="Festa na Mesa Pocket 06"
+                loading="lazy"
+              >
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- =========================
+             DECORAÇÕES MAIORES
+        ========================= -->
+
+        <div class="collection-gallery">
+
+          <div class="gallery-heading reveal">
+
+            <div class="section-number">
+              DECORAÇÕES MAIORES
+            </div>
+
+            <p>
+              Produções maiores para transformar ambientes
+              e criar cenários marcantes para celebrar.
+            </p>
+
+          </div>
+
+
+          <div class="photo-grid">
+
+            <div class="photo-card reveal">
+              <img
+                src="padrao-01.webp"
+                alt="Decoração Maior 01"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="photo-card reveal">
+              <img
+                src="padrao-02.webp"
+                alt="Decoração Maior 02"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="photo-card reveal">
+              <img
+                src="padrao-03.webp"
+                alt="Decoração Maior 03"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="photo-card reveal">
+              <img
+                src="padrao-04.webp"
+                alt="Decoração Maior 04"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="photo-card reveal">
+              <img
+                src="padrao-05.webp"
+                alt="Decoração Maior 05"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="photo-card reveal">
+              <img
+                src="padrao-06.webp"
+                alt="Decoração Maior 06"
+                loading="lazy"
+              >
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         AVALIAÇÕES
+    ========================= -->
+
+    <section
+      class="avaliacoes"
+      id="avaliacoes"
     >
 
-      <a href="#colecoes">
-        COLEÇÕES
-      </a>
+      <div class="container">
 
-      <a href="#avaliacoes">
-        AVALIAÇÕES
-      </a>
+        <div class="section-number reveal">
+          O QUE NOSSOS CLIENTES DIZEM
+        </div>
 
-      <a href="#contato">
-        CONTATO
-      </a>
-
-    </nav>
+        <h2 class="section-title reveal">
+          Experiências que ficam
+          na memória.
+        </h2>
 
 
-    <a
-    href="https://wa.me/5521981545015"
-    target="_blank"
-    class="whatsapp-btn"
+        <div class="rating-box reveal">
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <div class="rating-number">
+            5,0
+          </div>
+
+          <div class="rating-text">
+            Avaliação no Google
+            <br>
+            Avaliações reais de clientes da ZÊ DECOR.
+          </div>
+
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Z%C3%A9+Pegue+e+Monte+Rio+de+Janeiro"
+            target="_blank"
+            class="google-btn"
+          >
+            VER TODAS AS AVALIAÇÕES NO GOOGLE
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTATO
+    ========================= -->
+
+    <section
+      class="contato"
+      id="contato"
     >
 
-      RESERVE PELO WHATSAPP
+      <div class="container">
 
-    </a>
+        <div class="section-number reveal">
+          CONTATO
+        </div>
 
-
-    <button
-    class="menu-btn"
-    onclick="toggleMenu()"
-    >
-
-      ☰
-
-    </button>
+        <h2 class="section-title reveal">
+          Vamos transformar
+          seu próximo momento?
+        </h2>
 
 
-  </div>
+        <div class="contato-grid">
 
-</header>
+          <div class="contact-info">
+
+            <div class="contact-item reveal">
+
+              <small>
+                WhatsApp
+              </small>
+
+              <a
+                href="https://wa.me/5521999999999"
+                target="_blank"
+              >
+                Fale com a ZÊ DECOR
+              </a>
+
+            </div>
 
 
-<!-- =====================================================
-     HERO
-===================================================== -->
+            <div class="contact-item reveal">
 
-<section
-class="hero"
-id="inicio"
->
+              <small>
+                Instagram
+              </small>
+
+              <a
+                href="https://www.instagram.com/zedecorofc/"
+                target="_blank"
+              >
+                @zedecorofc
+              </a>
+
+            </div>
+
+
+            <div class="contact-item reveal">
+
+              <small>
+                Atendimento
+              </small>
+
+              <strong>
+                Barra • Recreio • Jacarepaguá • Vargens
+              </strong>
+
+            </div>
+
+          </div>
+
+
+          <div class="contact-cta">
+
+            <div class="contact-cta-box reveal">
+
+              <h3>
+                Seu momento.
+                Nossa decoração.
+              </h3>
+
+              <p>
+                Entre em contato com a nossa equipe,
+                conte um pouco sobre sua celebração e
+                vamos encontrar a composição ideal para você.
+              </p>
+
+              <a
+                href="https://wa.me/5521999999999"
+                target="_blank"
+                class="btn btn-primary"
+              >
+                SOLICITAR ORÇAMENTO
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        ZÊ DECOR
+      </div>
+
+      <div class="footer-copy">
+        FESTA • POCKET • CELEBRATION
+      </div>
+
+      <div class="footer-copy">
+        © 2026 ZÊ DECOR
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       MODAL
+  ========================= -->
 
   <div
-  class="hero-content reveal"
+    class="modal"
+    id="imageModal"
   >
 
-    <div class="hero-small">
+    <button
+      class="modal-close"
+      id="modalClose"
+      aria-label="Fechar imagem"
+    >
+      ×
+    </button>
 
-      ZÊ DECOR
-
-    </div>
-
-
-    <h1>
-
-      Decorações que
-      transformam momentos.
-
-    </h1>
-
-
-    <p class="hero-subtitle">
-
-      FESTA • POCKET • CELEBRATION
-
-    </p>
-
-
-    <div class="hero-buttons">
-
-
-      <a
-      href="#colecoes"
-      class="hero-button"
-      >
-
-        CONHEÇA NOSSAS COLEÇÕES
-
-      </a>
-
-
-      <a
-      href="#contato"
-      class="hero-button outline"
-      >
-
-        FALAR COM A ZÊ DECOR
-
-      </a>
-
-
-    </div>
-
-
-  </div>
-
-</section>
-
-
-<!-- =====================================================
-     ESSÊNCIA
-===================================================== -->
-
-<section class="section">
-
-
-  <div class="intro reveal">
-
-
-    <div>
-
-      <div class="section-number">
-
-        01 — A NOSSA ESSÊNCIA
-
-      </div>
-
-
-      <h2 class="section-title">
-
-        Celebrar é
-        transformar.
-
-      </h2>
-
-    </div>
-
-
-    <div>
-
-      <p class="intro-text">
-
-        Criamos
-        <strong>
-        decorações que transformam momentos especiais
-        em memórias que permanecem.
-        </strong>
-
-        Cada composição é pensada para unir estética,
-        cuidado e personalidade.
-
-      </p>
-
-    </div>
-
+    <img
+      id="modalImage"
+      src=""
+      alt="Imagem ampliada"
+    >
 
   </div>
 
 
-</section>
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
 
+  <script>
 
-<!-- =====================================================
-     COLEÇÕES
-===================================================== -->
+    /* MENU MOBILE */
 
-<section
-class="section"
-id="colecoes"
->
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
 
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
 
-  <div class="reveal">
 
+    /* FECHAR MENU AO CLICAR */
 
-    <div class="section-number">
+    document.querySelectorAll(".nav-links a").forEach(link => {
 
-      02 — NOSSAS COLEÇÕES
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+      });
 
-    </div>
+    });
 
 
-    <h2 class="section-title">
+    /* REVEAL */
 
-      Escolha o cenário
-      para o seu momento.
+    const revealElements = document.querySelectorAll(".reveal");
 
-    </h2>
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
 
+        entries.forEach(entry => {
 
-  </div>
+          if (entry.isIntersecting) {
 
+            entry.target.classList.add("visible");
 
-  <div class="collections">
+            revealObserver.unobserve(entry.target);
 
+          }
 
-    <!-- POCKET -->
+        });
 
-    <a
-    href="#pocket"
-    class="collection reveal"
-    >
+      },
+      {
+        threshold: 0.12
+      }
+    );
 
-      <img
-      src="pocket-01.webp"
-      alt=""
-      >
 
-      <div class="collection-overlay"></div>
+    revealElements.forEach(element => {
+      revealObserver.observe(element);
+    });
 
 
-      <div class="collection-info">
+    /* MODAL DAS FOTOS */
 
+    const modal = document.getElementById("imageModal");
+    const modalImage = document.getElementById("modalImage");
+    const modalClose = document.getElementById("modalClose");
 
-        <div class="collection-number">
+    document.querySelectorAll(".photo-card img").forEach(image => {
 
-          01
+      image.addEventListener("click", () => {
 
-        </div>
+        modalImage.src = image.src;
+        modalImage.alt = image.alt;
 
+        modal.classList.add("active");
 
-        <h3>
+        document.body.style.overflow = "hidden";
 
-          Festa na Mesa
-          <br>
-          <em>POCKET</em>
+      });
 
-        </h3>
+    });
 
 
-        <p>
+    function closeModal() {
 
-          Pequenos formatos,
-          grandes momentos.
+      modal.classList.remove("active");
 
-        </p>
+      modalImage.src = "";
 
-
-      </div>
-
-
-    </a>
-
-
-    <!-- DECORAÇÕES MAIORES -->
-
-    <a
-    href="#padrao"
-    class="collection reveal"
-    >
-
-      <img
-      src="padrao-01.webp"
-      alt=""
-      >
-
-      <div class="collection-overlay"></div>
-
-
-      <div class="collection-info">
-
-
-        <div class="collection-number">
-
-          02
-
-        </div>
-
-
-        <h3>
-
-          Decorações
-          <br>
-          Maiores
-
-        </h3>
-
-
-        <p>
-
-          Composições completas
-          para celebrar.
-
-        </p>
-
-
-      </div>
-
-
-    </a>
-
-
-  </div>
-
-
-</section>
-
-
-<!-- =====================================================
-     FESTA NA MESA — POCKET
-===================================================== -->
-
-<section
-class="section gallery-section"
-id="pocket"
->
-
-
-  <div class="reveal">
-
-
-    <div class="section-number">
-
-      FESTA NA MESA — POCKET
-
-    </div>
-
-
-    <h2 class="section-title">
-
-      Detalhes que
-      fazem celebrar.
-
-    </h2>
-
-
-  </div>
-
-
-  <div class="gallery">
-
-
-    <div
-    class="gallery-item reveal"
-    onclick="openModal('pocket-01.webp')"
-    >
-
-      <img
-      src="pocket-01.webp"
-      alt=""
-      >
-
-    </div>
-
-
-    <div
-    class="gallery-item reveal"
-    onclick="openModal('pocket-02.webp')"
-    >
-
-      <img
-      src="pocket-02.webp"
-      alt=""
-      >
-
-    </div>
-
-
-    <div
-    class="gallery-item reveal"
-    onclick="openModal('pocket-03.webp')"
-    >
-
-      <img
-      src="pocket-03.webp"
-      alt=""
-      >
-
-    </div>
-
-
-    <div
-    class="gallery-item reveal"
-    onclick="openModal('pocket-04.webp')"
-    >
-
-      <img
-      src="pocket-04.webp"
-      alt=""
-      >
-
-    </div>
-
-
-    <div
-    class="gallery-item reveal"
-    onclick="openModal('pocket-05.webp')"
-    >
-
-      <img
-      src="pocket-05.webp"
-      alt=""
-      >
-
-    </div>
-
-
-    <div
-    class="gallery-item reveal"
-    onclick="openModal('pocket-06.webp')"
-    >
-
-      <img
-      src="pocket-06.webp"
-      alt=""
-      >
-
-    </div>
-
-
-  </div>
-
-
-</section>
-
-
-<!-- =====================================================
-     DECORAÇÕES MAIORES
-===================================================== -->
-
-<section
-class="section"
-id="padrao"
->
-
-
-  <div class="reveal">
-
-
-    <div class="section-number">
-
-      DECORAÇÕES MAIORES
-
-    </div>
-
-
-    <h2 class="section-title">
-
-      Para celebrar
-      sem limites.
-
-    </h2>
-
-
-  </div>
-
-
-  <div class="gallery">
-
-
-    <div
-    class="gallery-item reveal"
-    onclick="openModal('padrao-01.webp')"
-    >
-
-      <img
-      src="padrao-01.webp"
-      alt=""
-      >
-
-    </div>
-
-
-    <div
-    class="gallery-item reveal"
-    onclick="openModal('padrao-02.webp')"
-    >
-
-      <img
-      src="padrao-02.webp"
-      alt=""
-      >
-
-    </div>
-
-
-    <div
-    class="gallery-item reveal"
-    onclick="openModal('padrao-03.webp')"
-    >
-
-      <img
-      src="padrao-03.webp"
-      alt=""
-      >
-
-    </div>
-
-
-    <div
-    class="gallery-item reveal"
-    onclick="openModal('padrao-04.webp')"
-    >
-
-      <img
-      src="padrao-04.webp"
-      alt=""
-      >
-
-    </div>
-
-
-    <div
-    class="gallery-item reveal"
-    onclick="openModal('padrao-05.webp')"
-    >
-
-      <img
-      src="padrao-05.webp"
-      alt=""
-      >
-
-    </div>
-
-
-    <div
-    class="gallery-item reveal"
-    onclick="openModal('padrao-06.webp')"
-    >
-
-      <img
-      src="padrao-06.webp"
-      alt=""
-      >
-
-    </div>
-
-
-  </div>
-
-
-</section>
-
-
-<!-- =====================================================
-     AVALIAÇÕES
-===================================================== -->
-
-<section
-class="section"
-id="avaliacoes"
->
-
-
-  <div class="reviews reveal">
-
-
-    <div class="section-number">
-
-      03 — O QUE NOSSOS CLIENTES DIZEM
-
-    </div>
-
-
-    <h2 class="section-title">
-
-      A experiência de cada cliente
-      faz parte da nossa história.
-
-    </h2>
-
-
-    <div class="stars">
-
-      ★★★★★
-
-    </div>
-
-
-    <div class="rating">
-
-      5,0
-
-    </div>
-
-
-    <div class="rating-text">
-
-      no Google
-
-    </div>
-
-
-    <a
-    href="https://www.google.com/maps/search/?api=1&query=Z%C3%A9+Pegue+e+Monte+Rio+de+Janeiro"
-    target="_blank"
-    class="review-button"
-    >
-
-      VER AVALIAÇÕES NO GOOGLE
-
-    </a>
-
-
-  </div>
-
-
-</section>
-
-
-<!-- =====================================================
-     CONTATO
-===================================================== -->
-
-<section
-class="section contact"
-id="contato"
->
-
-
-  <div class="contact-inner reveal">
-
-
-    <div class="section-number">
-
-      04 — CONTATO
-
-    </div>
-
-
-    <h2 class="section-title">
-
-      Vamos celebrar?
-
-    </h2>
-
-
-    <p class="contact-text">
-
-      Conte para a gente
-      o que você está planejando.
-
-    </p>
-
-
-    <a
-    href="https://wa.me/5521981545015"
-    target="_blank"
-    class="contact-button"
-    >
-
-      FALAR PELO WHATSAPP
-
-    </a>
-
-
-    <div class="contact-info">
-
-      Instagram:
-      <strong>@zedecorofc</strong>
-
-      <br>
-
-      Site:
-      <strong>zedecor.com.br</strong>
-
-      <br><br>
-
-      Barra • Recreio • Jacarepaguá • Vargens
-
-    </div>
-
-
-  </div>
-
-
-</section>
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
-<footer>
-
-
-  <div class="footer">
-
-
-    <div>
-
-      <div class="footer-logo">
-
-        ZÊ DECOR
-
-      </div>
-
-
-      <div class="footer-tagline">
-
-        FESTA • POCKET • CELEBRATION
-
-      </div>
-
-
-      <div class="footer-tagline">
-
-        Decorações que transformam momentos.
-
-      </div>
-
-
-    </div>
-
-
-    <div class="footer-right">
-
-      @zedecorofc
-
-      <br>
-
-      Barra • Recreio • Jacarepaguá • Vargens
-
-    </div>
-
-
-  </div>
-
-
-</footer>
-
-
-<!-- =====================================================
-     MODAL
-===================================================== -->
-
-<div
-class="modal"
-id="modal"
-onclick="closeModal()"
->
-
-
-  <span
-  class="close"
-  >
-
-    &times;
-
-  </span>
-
-
-  <img
-  id="modalImage"
-  src=""
-  alt=""
-  >
-
-
-</div>
-
-
-<script>
-
-
-/* =====================================================
-   HEADER
-===================================================== */
-
-window.addEventListener(
-"scroll",
-function() {
-
-  const header =
-  document.getElementById("header");
-
-  if (window.scrollY > 50) {
-
-    header.classList.add("scrolled");
-
-  } else {
-
-    header.classList.remove("scrolled");
-
-  }
-
-});
-
-
-/* =====================================================
-   MENU MOBILE
-===================================================== */
-
-function toggleMenu() {
-
-  document
-  .getElementById("navLinks")
-  .classList.toggle("active");
-
-}
-
-
-document
-.querySelectorAll(".nav-links a")
-.forEach(function(link) {
-
-  link.addEventListener(
-  "click",
-  function() {
-
-    document
-    .getElementById("navLinks")
-    .classList.remove("active");
-
-  });
-
-});
-
-
-/* =====================================================
-   MODAL DAS FOTOS
-===================================================== */
-
-function openModal(src) {
-
-  const modal =
-  document.getElementById("modal");
-
-  const image =
-  document.getElementById("modalImage");
-
-  image.src = src;
-
-  modal.classList.add("active");
-
-}
-
-
-function closeModal() {
-
-  document
-  .getElementById("modal")
-  .classList.remove("active");
-
-}
-
-
-document.addEventListener(
-"keydown",
-function(event) {
-
-  if (event.key === "Escape") {
-
-    closeModal();
-
-  }
-
-});
-
-
-/* =====================================================
-   ANIMAÇÕES
-===================================================== */
-
-const observer =
-new IntersectionObserver(
-function(entries) {
-
-  entries.forEach(function(entry) {
-
-    if (entry.isIntersecting) {
-
-      entry.target
-      .classList
-      .add("visible");
+      document.body.style.overflow = "";
 
     }
 
-  });
 
-},
-{
-  threshold: 0.12
-});
+    modalClose.addEventListener("click", closeModal);
 
 
-document
-.querySelectorAll(".reveal")
-.forEach(function(element) {
+    modal.addEventListener("click", (event) => {
 
-  observer.observe(element);
+      if (event.target === modal) {
+        closeModal();
+      }
 
-});
+    });
 
-</script>
 
+    document.addEventListener("keydown", (event) => {
+
+      if (event.key === "Escape") {
+        closeModal();
+      }
+
+    });
+
+  </script>
 
 </body>
-
 </html>
