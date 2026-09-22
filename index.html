@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,17 +21,28 @@
   >
 
   <style>
+
+    /* =====================================================
+       VARIÁVEIS
+    ===================================================== */
+
     :root {
-      --creme: #f6f0e7;
-      --creme-claro: #fbf8f2;
-      --marrom: #3a2a23;
-      --marrom-claro: #6e5a4e;
-      --dourado: #b8945d;
-      --dourado-claro: #d5b77e;
+      --creme: #f5eee4;
+      --creme-claro: #fbf8f3;
+      --marrom: #3a2922;
+      --marrom-claro: #75645a;
+      --dourado: #b58d54;
+      --dourado-claro: #d4b47b;
       --branco: #ffffff;
-      --linha: rgba(58, 42, 35, 0.14);
-      --sombra: 0 20px 60px rgba(58, 42, 35, 0.10);
+      --preto-suave: #251b17;
+      --linha: rgba(58, 41, 34, 0.14);
+      --sombra: 0 25px 70px rgba(58, 41, 34, 0.10);
     }
+
+
+    /* =====================================================
+       RESET
+    ===================================================== */
 
     * {
       margin: 0;
@@ -64,9 +76,10 @@
       font-family: inherit;
     }
 
-    /* =========================
+
+    /* =====================================================
        HEADER
-    ========================= */
+    ===================================================== */
 
     header {
       position: fixed;
@@ -74,32 +87,37 @@
       left: 0;
       width: 100%;
       z-index: 1000;
-      background: rgba(251, 248, 242, 0.94);
-      backdrop-filter: blur(15px);
+
+      background: rgba(251, 248, 243, 0.94);
+      backdrop-filter: blur(18px);
+
       border-bottom: 1px solid var(--linha);
     }
 
     .header-inner {
+      width: 100%;
       max-width: 1380px;
+      min-height: 88px;
+
       margin: 0 auto;
-      min-height: 86px;
       padding: 0 40px;
 
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       gap: 30px;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 15px;
+      gap: 14px;
     }
 
     .brand img {
-      width: 68px;
-      height: 68px;
+      width: 65px;
+      height: 65px;
       object-fit: contain;
     }
 
@@ -111,40 +129,46 @@
     .brand-name {
       font-family: "Playfair Display", Georgia, serif;
       font-size: 25px;
-      letter-spacing: 0.08em;
       font-weight: 600;
+      letter-spacing: 0.08em;
       line-height: 1;
     }
 
     .brand-sub {
       margin-top: 5px;
-      font-size: 9px;
-      letter-spacing: 0.18em;
+      font-size: 8px;
+      letter-spacing: 0.20em;
       color: var(--marrom-claro);
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 36px;
+      gap: 38px;
     }
 
     .nav-links a {
       position: relative;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.14em;
+
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+
       transition: 0.3s ease;
     }
 
     .nav-links a::after {
       content: "";
+
       position: absolute;
       left: 0;
-      bottom: -8px;
+      bottom: -9px;
+
       width: 0;
       height: 1px;
+
       background: var(--dourado);
+
       transition: 0.3s ease;
     }
 
@@ -158,32 +182,40 @@
 
     .menu-toggle {
       display: none;
+
       border: none;
       background: transparent;
-      font-size: 27px;
+
       color: var(--marrom);
+
+      font-size: 28px;
       cursor: pointer;
     }
 
-    /* =========================
+
+    /* =====================================================
        HERO
-    ========================= */
+    ===================================================== */
 
     .hero {
       min-height: 100vh;
+
       position: relative;
+
       display: flex;
       align-items: center;
+
+      padding-top: 88px;
+
       overflow: hidden;
-      padding-top: 86px;
 
       background:
         linear-gradient(
           90deg,
-          rgba(40, 28, 22, 0.82) 0%,
-          rgba(40, 28, 22, 0.57) 42%,
-          rgba(40, 28, 22, 0.16) 75%,
-          rgba(40, 28, 22, 0.08) 100%
+          rgba(39, 27, 21, 0.84) 0%,
+          rgba(39, 27, 21, 0.62) 38%,
+          rgba(39, 27, 21, 0.25) 70%,
+          rgba(39, 27, 21, 0.08) 100%
         ),
         url("padrao-03.webp") center center / cover no-repeat;
     }
@@ -191,55 +223,74 @@
     .hero-content {
       width: 100%;
       max-width: 1380px;
+
       margin: 0 auto;
+
       padding: 100px 40px;
+
       color: var(--branco);
     }
 
     .hero-kicker {
-      font-size: 11px;
-      letter-spacing: 0.32em;
-      text-transform: uppercase;
       margin-bottom: 25px;
-      color: #ead8b8;
-      font-weight: 600;
+
+      color: #e5c99b;
+
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.32em;
+
+      text-transform: uppercase;
     }
 
     .hero h1 {
-      max-width: 750px;
+      max-width: 850px;
+
       font-family: "Playfair Display", Georgia, serif;
-      font-size: clamp(55px, 7vw, 105px);
+
+      font-size: clamp(58px, 7.5vw, 110px);
+
       font-weight: 500;
-      line-height: 0.96;
-      letter-spacing: -0.035em;
+
+      line-height: 0.95;
+
+      letter-spacing: -0.045em;
     }
 
     .hero-description {
       max-width: 580px;
+
       margin-top: 35px;
-      font-size: 17px;
-      line-height: 1.8;
-      color: rgba(255,255,255,0.88);
+
+      color: rgba(255, 255, 255, 0.88);
+
+      font-size: 16px;
+      line-height: 1.85;
     }
 
     .hero-actions {
       display: flex;
-      gap: 15px;
       flex-wrap: wrap;
+      gap: 14px;
+
       margin-top: 42px;
     }
 
     .btn {
-      min-height: 50px;
+      min-height: 51px;
+
       padding: 0 28px;
+
       display: inline-flex;
       align-items: center;
       justify-content: center;
 
       border: 1px solid transparent;
-      font-size: 11px;
+
+      font-size: 10px;
       font-weight: 700;
-      letter-spacing: 0.13em;
+      letter-spacing: 0.15em;
+
       text-transform: uppercase;
 
       transition: 0.3s ease;
@@ -256,9 +307,11 @@
     }
 
     .btn-outline {
-      border-color: rgba(255,255,255,0.55);
+      border-color: rgba(255, 255, 255, 0.55);
+
+      background: rgba(255, 255, 255, 0.04);
+
       color: var(--branco);
-      background: rgba(255,255,255,0.05);
     }
 
     .btn-outline:hover {
@@ -268,152 +321,197 @@
 
     .hero-bottom {
       position: absolute;
-      bottom: 30px;
+
       left: 0;
+      bottom: 30px;
+
       width: 100%;
+
       padding: 0 40px;
 
       display: flex;
       justify-content: space-between;
-      align-items: center;
 
-      color: rgba(255,255,255,0.75);
+      color: rgba(255, 255, 255, 0.72);
+
       font-size: 9px;
       letter-spacing: 0.2em;
+
       text-transform: uppercase;
     }
 
-    /* =========================
-       GENERAL
-    ========================= */
+
+    /* =====================================================
+       SEÇÕES
+    ===================================================== */
 
     section {
-      padding: 120px 40px;
+      padding: 125px 40px;
     }
 
     .container {
+      width: 100%;
       max-width: 1380px;
+
       margin: 0 auto;
     }
 
-    .section-number {
-      color: var(--marrom);
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: clamp(28px, 3.2vw, 46px);
-      font-weight: 500;
-      letter-spacing: 0;
-      line-height: 1.1;
+    .section-kicker {
       margin-bottom: 25px;
+
+      color: var(--dourado);
+
+      font-size: 10px;
+      font-weight: 700;
+
+      letter-spacing: 0.25em;
+
+      text-transform: uppercase;
     }
 
     .section-title {
-      max-width: 850px;
+      max-width: 1050px;
+
       font-family: "Playfair Display", Georgia, serif;
-      font-size: clamp(38px, 5vw, 70px);
+
+      font-size: clamp(50px, 6vw, 88px);
+
       font-weight: 500;
-      line-height: 1.05;
-      letter-spacing: -0.025em;
+
+      line-height: 0.96;
+
+      letter-spacing: -0.04em;
     }
 
     .section-description {
-      max-width: 680px;
-      margin-top: 28px;
+      max-width: 650px;
+
+      margin-top: 32px;
+
       color: var(--marrom-claro);
-      font-size: 16px;
-      line-height: 1.85;
+
+      font-size: 15px;
+
+      line-height: 1.9;
     }
 
-    /* =========================
-       ESSÊNCIA
-    ========================= */
+
+    /* =====================================================
+       A NOSSA ESSÊNCIA
+    ===================================================== */
 
     .essencia {
       background: var(--creme-claro);
     }
 
     .essencia-grid {
-      margin-top: 80px;
+      margin-top: 85px;
 
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 70px;
+
+      grid-template-columns: 1.05fr 0.95fr;
+
+      gap: 80px;
+
       align-items: center;
     }
 
     .essencia-image {
       overflow: hidden;
+
       background: var(--creme);
     }
 
     .essencia-image img {
       width: 100%;
       height: auto;
+
       object-fit: contain;
     }
 
     .essencia-text {
-      max-width: 590px;
+      max-width: 580px;
     }
 
     .essencia-text h3 {
+      margin-bottom: 28px;
+
       font-family: "Playfair Display", Georgia, serif;
-      font-size: 38px;
+
+      font-size: clamp(35px, 4vw, 52px);
+
       font-weight: 500;
-      line-height: 1.15;
-      margin-bottom: 25px;
+
+      line-height: 1.08;
+
+      letter-spacing: -0.025em;
     }
 
     .essencia-text p {
+      margin-bottom: 20px;
+
       color: var(--marrom-claro);
-      font-size: 16px;
+
+      font-size: 15px;
+
       line-height: 1.9;
-      margin-bottom: 18px;
     }
 
     .signature {
-      margin-top: 30px;
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: 24px;
-      font-style: italic;
+      margin-top: 35px;
+
       color: var(--dourado);
+
+      font-family: "Playfair Display", Georgia, serif;
+
+      font-size: 25px;
+
+      font-style: italic;
     }
 
-    /* =========================
-       COLEÇÕES
-    ========================= */
+
+    /* =====================================================
+       NOSSAS COLEÇÕES
+    ===================================================== */
 
     .colecoes {
       background: var(--creme);
     }
 
-    .collection-intro {
-      max-width: 800px;
-      margin-bottom: 70px;
+    .collections-header {
+      max-width: 1000px;
+
+      margin-bottom: 80px;
     }
 
     .collection-grid {
       display: grid;
+
       grid-template-columns: 1fr 1fr;
+
       gap: 30px;
     }
 
     .collection-card {
-      position: relative;
       overflow: hidden;
+
       background: var(--branco);
+
       box-shadow: var(--sombra);
     }
 
     .collection-image {
-      position: relative;
       overflow: hidden;
+
       background: #eee7dc;
     }
 
     .collection-image img {
       width: 100%;
       height: auto;
+
       object-fit: contain;
+
       transition: transform 0.7s ease;
     }
 
@@ -422,77 +520,126 @@
     }
 
     .collection-content {
-      padding: 35px;
+      padding: 38px;
     }
 
-    .collection-content small {
-      display: block;
+    .collection-kicker {
+      margin-bottom: 15px;
+
       color: var(--dourado);
+
       font-size: 10px;
       font-weight: 700;
-      letter-spacing: 0.2em;
+
+      letter-spacing: 0.22em;
+
       text-transform: uppercase;
-      margin-bottom: 13px;
     }
 
     .collection-content h3 {
+      margin-bottom: 18px;
+
       font-family: "Playfair Display", Georgia, serif;
-      font-size: 36px;
-      line-height: 1.05;
+
+      font-size: clamp(35px, 4vw, 53px);
+
       font-weight: 500;
-      margin-bottom: 16px;
+
+      line-height: 0.98;
+
+      letter-spacing: -0.025em;
     }
 
     .collection-content p {
+      max-width: 500px;
+
       color: var(--marrom-claro);
+
       font-size: 14px;
-      line-height: 1.8;
+
+      line-height: 1.85;
     }
 
-    /* =========================
-       GALERIAS DAS COLEÇÕES
-    ========================= */
+
+    /* =====================================================
+       GALERIAS
+    ===================================================== */
 
     .collection-gallery {
-      margin-top: 90px;
+      margin-top: 110px;
     }
 
     .collection-gallery + .collection-gallery {
-      margin-top: 130px;
+      margin-top: 150px;
     }
 
     .gallery-heading {
-      margin-bottom: 40px;
+      margin-bottom: 48px;
     }
 
-    .gallery-heading .section-number {
-      margin-bottom: 14px;
-      font-size: clamp(25px, 2.7vw, 40px);
+    .gallery-kicker {
+      margin-bottom: 24px;
+
+      color: var(--dourado);
+
+      font-size: 10px;
+      font-weight: 700;
+
+      letter-spacing: 0.25em;
+
+      text-transform: uppercase;
+    }
+
+    .gallery-title {
+      max-width: 1150px;
+
+      margin-bottom: 30px;
+
+      color: var(--marrom);
+
+      font-family: "Playfair Display", Georgia, serif;
+
+      font-size: clamp(54px, 7vw, 105px);
+
+      font-weight: 500;
+
+      line-height: 0.93;
+
+      letter-spacing: -0.045em;
     }
 
     .gallery-heading p {
       max-width: 650px;
+
       color: var(--marrom-claro);
-      line-height: 1.8;
+
       font-size: 15px;
+
+      line-height: 1.85;
     }
 
     .photo-grid {
       display: grid;
+
       grid-template-columns: repeat(3, 1fr);
+
       gap: 18px;
     }
 
     .photo-card {
       overflow: hidden;
+
       background: #eee7dc;
+
       cursor: pointer;
     }
 
     .photo-card img {
       width: 100%;
       height: auto;
+
       object-fit: contain;
+
       transition: transform 0.6s ease;
     }
 
@@ -500,13 +647,19 @@
       transform: scale(1.025);
     }
 
-    /* =========================
+
+    /* =====================================================
        AVALIAÇÕES
-    ========================= */
+    ===================================================== */
 
     .avaliacoes {
       background: var(--creme-claro);
+
       text-align: center;
+    }
+
+    .avaliacoes .section-kicker {
+      margin-bottom: 25px;
     }
 
     .avaliacoes .section-title {
@@ -514,46 +667,71 @@
     }
 
     .rating-box {
-      margin: 65px auto 0;
-      max-width: 650px;
-      padding: 50px 35px;
+      max-width: 680px;
+
+      margin: 70px auto 0;
+
+      padding: 55px 35px;
+
       background: var(--branco);
+
       border: 1px solid var(--linha);
+
       box-shadow: var(--sombra);
     }
 
     .stars {
-      color: var(--dourado);
-      font-size: 28px;
-      letter-spacing: 5px;
       margin-bottom: 18px;
+
+      color: var(--dourado);
+
+      font-size: 28px;
+
+      letter-spacing: 5px;
     }
 
     .rating-number {
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: 55px;
-      line-height: 1;
       margin-bottom: 10px;
+
+      font-family: "Playfair Display", Georgia, serif;
+
+      font-size: 65px;
+
+      line-height: 1;
     }
 
     .rating-text {
+      margin-bottom: 32px;
+
       color: var(--marrom-claro);
+
       font-size: 14px;
-      margin-bottom: 30px;
+
+      line-height: 1.8;
     }
 
     .google-btn {
+      min-height: 51px;
+
+      padding: 0 28px;
+
       display: inline-flex;
-      min-height: 50px;
+
       align-items: center;
       justify-content: center;
-      padding: 0 28px;
+
       background: var(--marrom);
+
       color: var(--branco);
+
       font-size: 10px;
+
       font-weight: 700;
+
       letter-spacing: 0.15em;
+
       text-transform: uppercase;
+
       transition: 0.3s ease;
     }
 
@@ -561,51 +739,63 @@
       background: var(--dourado);
     }
 
-    /* =========================
+
+    /* =====================================================
        CONTATO
-    ========================= */
+    ===================================================== */
 
     .contato {
       background: var(--marrom);
+
       color: var(--branco);
     }
 
-    .contato .section-number {
-      color: var(--branco);
+    .contato .section-kicker {
+      color: var(--dourado-claro);
     }
 
     .contato .section-title {
       color: var(--branco);
-      max-width: 850px;
     }
 
     .contato-grid {
-      margin-top: 70px;
+      margin-top: 80px;
 
       display: grid;
+
       grid-template-columns: 1fr 1fr;
-      gap: 80px;
+
+      gap: 90px;
     }
 
     .contact-info {
       display: flex;
+
       flex-direction: column;
-      gap: 35px;
+
+      gap: 40px;
     }
 
     .contact-item small {
       display: block;
-      color: var(--dourado-claro);
-      font-size: 10px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
+
       margin-bottom: 8px;
+
+      color: var(--dourado-claro);
+
+      font-size: 9px;
+
       font-weight: 700;
+
+      letter-spacing: 0.2em;
+
+      text-transform: uppercase;
     }
 
     .contact-item strong,
     .contact-item a {
-      font-size: 19px;
+      font-size: 18px;
+
       font-weight: 400;
     }
 
@@ -615,91 +805,115 @@
 
     .contact-cta {
       display: flex;
+
       align-items: center;
+
       justify-content: center;
     }
 
     .contact-cta-box {
       width: 100%;
-      max-width: 520px;
-      padding: 50px;
+
+      max-width: 530px;
+
+      padding: 52px;
+
       border: 1px solid rgba(255,255,255,0.16);
+
       background: rgba(255,255,255,0.035);
     }
 
     .contact-cta-box h3 {
+      margin-bottom: 20px;
+
       font-family: "Playfair Display", Georgia, serif;
-      font-size: 38px;
-      line-height: 1.15;
+
+      font-size: clamp(35px, 4vw, 52px);
+
       font-weight: 500;
-      margin-bottom: 18px;
+
+      line-height: 1.02;
+
+      letter-spacing: -0.025em;
     }
 
     .contact-cta-box p {
-      color: rgba(255,255,255,0.72);
-      font-size: 14px;
-      line-height: 1.8;
       margin-bottom: 30px;
+
+      color: rgba(255,255,255,0.72);
+
+      font-size: 14px;
+
+      line-height: 1.85;
     }
 
-    .contact-cta-box .btn-primary {
-      background: var(--branco);
-      color: var(--marrom);
-    }
 
-    .contact-cta-box .btn-primary:hover {
-      background: var(--dourado);
-      color: var(--branco);
-    }
-
-    /* =========================
+    /* =====================================================
        FOOTER
-    ========================= */
+    ===================================================== */
 
     footer {
-      background: #2b1f1a;
-      color: rgba(255,255,255,0.7);
-      padding: 40px;
+      padding: 42px 40px;
+
+      background: var(--preto-suave);
+
+      color: rgba(255,255,255,0.68);
     }
 
     .footer-inner {
+      width: 100%;
       max-width: 1380px;
+
       margin: 0 auto;
 
       display: flex;
+
       align-items: center;
+
       justify-content: space-between;
+
       gap: 30px;
     }
 
     .footer-brand {
       color: var(--branco);
+
       font-family: "Playfair Display", Georgia, serif;
+
       font-size: 22px;
+
       letter-spacing: 0.08em;
     }
 
     .footer-copy {
-      font-size: 10px;
-      letter-spacing: 0.12em;
+      font-size: 9px;
+
+      letter-spacing: 0.15em;
+
       text-transform: uppercase;
     }
 
-    /* =========================
-       MODAL / LIGHTBOX
-    ========================= */
+
+    /* =====================================================
+       LIGHTBOX
+    ===================================================== */
 
     .modal {
       position: fixed;
+
       inset: 0;
+
       z-index: 3000;
 
       display: none;
+
       align-items: center;
+
       justify-content: center;
 
       padding: 30px;
-      background: rgba(30, 22, 18, 0.93);
+
+      background: rgba(28, 20, 16, 0.94);
     }
 
     .modal.active {
@@ -708,55 +922,71 @@
 
     .modal img {
       max-width: 95vw;
+
       max-height: 90vh;
+
       width: auto;
       height: auto;
+
       object-fit: contain;
     }
 
     .modal-close {
       position: fixed;
-      top: 22px;
+
+      top: 20px;
       right: 28px;
 
       border: none;
+
       background: transparent;
+
       color: var(--branco);
 
-      font-size: 35px;
+      font-size: 38px;
+
       line-height: 1;
+
       cursor: pointer;
     }
 
-    /* =========================
+
+    /* =====================================================
        ANIMAÇÃO
-    ========================= */
+    ===================================================== */
 
     .reveal {
       opacity: 0;
+
       transform: translateY(25px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
+
+      transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
     }
 
     .reveal.visible {
       opacity: 1;
+
       transform: translateY(0);
     }
 
-    /* =========================
-       RESPONSIVO
-    ========================= */
+
+    /* =====================================================
+       TABLET
+    ===================================================== */
 
     @media (max-width: 900px) {
 
       .header-inner {
-        min-height: 75px;
+        min-height: 76px;
+
         padding: 0 20px;
       }
 
       .brand img {
-        width: 57px;
-        height: 57px;
+        width: 56px;
+        height: 56px;
       }
 
       .brand-name {
@@ -764,7 +994,7 @@
       }
 
       .brand-sub {
-        font-size: 8px;
+        font-size: 7px;
       }
 
       .menu-toggle {
@@ -773,17 +1003,22 @@
 
       .nav-links {
         position: absolute;
-        top: 75px;
+
+        top: 76px;
         left: 0;
+
         width: 100%;
 
         display: none;
+
         flex-direction: column;
+
         align-items: flex-start;
 
         gap: 0;
 
-        background: rgba(251,248,242,0.98);
+        background: rgba(251,248,243,0.98);
+
         border-bottom: 1px solid var(--linha);
       }
 
@@ -793,7 +1028,9 @@
 
       .nav-links a {
         width: 100%;
-        padding: 18px 25px;
+
+        padding: 19px 25px;
+
         border-bottom: 1px solid var(--linha);
       }
 
@@ -802,18 +1039,19 @@
       }
 
       section {
-        padding: 85px 20px;
+        padding: 90px 20px;
       }
 
       .hero {
         min-height: 90vh;
-        padding-top: 75px;
+
+        padding-top: 76px;
 
         background:
           linear-gradient(
             90deg,
-            rgba(40, 28, 22, 0.82),
-            rgba(40, 28, 22, 0.4)
+            rgba(39, 27, 21, 0.84),
+            rgba(39, 27, 21, 0.40)
           ),
           url("padrao-03.webp") center center / cover no-repeat;
       }
@@ -823,7 +1061,7 @@
       }
 
       .hero h1 {
-        font-size: clamp(48px, 14vw, 75px);
+        font-size: clamp(50px, 13vw, 78px);
       }
 
       .hero-description {
@@ -834,23 +1072,32 @@
         padding: 0 20px;
       }
 
-      .essencia-grid,
-      .collection-grid,
+      .essencia-grid {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+      }
+
+      .collection-grid {
+        grid-template-columns: 1fr;
+      }
+
       .contato-grid {
         grid-template-columns: 1fr;
-        gap: 45px;
+
+        gap: 50px;
       }
 
       .photo-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .collection-gallery {
-        margin-top: 70px;
+        margin-top: 80px;
       }
 
       .collection-gallery + .collection-gallery {
-        margin-top: 90px;
+        margin-top: 100px;
       }
 
       .contact-cta {
@@ -859,14 +1106,25 @@
 
       .footer-inner {
         flex-direction: column;
+
         align-items: flex-start;
       }
     }
 
+
+    /* =====================================================
+       CELULAR
+    ===================================================== */
+
     @media (max-width: 600px) {
+
+      .hero {
+        min-height: 88vh;
+      }
 
       .hero-actions {
         flex-direction: column;
+
         align-items: stretch;
       }
 
@@ -874,47 +1132,64 @@
         width: 100%;
       }
 
+      .hero-bottom {
+        display: none;
+      }
+
+      .section-title {
+        font-size: clamp(46px, 13vw, 67px);
+      }
+
+      .gallery-title {
+        font-size: clamp(48px, 14vw, 72px);
+      }
+
       .photo-grid {
         grid-template-columns: 1fr;
       }
 
       .collection-content {
-        padding: 27px;
+        padding: 28px;
       }
 
       .collection-content h3 {
-        font-size: 31px;
+        font-size: 40px;
       }
 
       .contact-cta-box {
-        padding: 32px 25px;
-      }
-
-      .contact-cta-box h3 {
-        font-size: 31px;
+        padding: 35px 27px;
       }
 
       .rating-box {
-        padding: 40px 25px;
+        padding: 42px 25px;
       }
 
-      .hero-bottom {
-        display: none;
+      footer {
+        padding: 35px 20px;
       }
+
     }
+
   </style>
+
 </head>
+
 
 <body>
 
-  <!-- =========================
+
+  <!-- =====================================================
        HEADER
-  ========================= -->
+  ===================================================== -->
 
   <header>
+
     <div class="header-inner">
 
-      <a href="#inicio" class="brand">
+      <a
+        href="#inicio"
+        class="brand"
+      >
 
         <img
           src="logo-ze-decor.png"
@@ -922,13 +1197,19 @@
         >
 
         <div class="brand-text">
-          <div class="brand-name">ZÊ DECOR</div>
+
+          <div class="brand-name">
+            ZÊ DECOR
+          </div>
+
           <div class="brand-sub">
             FESTA • POCKET • CELEBRATION
           </div>
+
         </div>
 
       </a>
+
 
       <button
         class="menu-toggle"
@@ -938,7 +1219,11 @@
         ☰
       </button>
 
-      <nav class="nav-links" id="navLinks">
+
+      <nav
+        class="nav-links"
+        id="navLinks"
+      >
 
         <a href="#colecoes">
           COLEÇÕES
@@ -955,16 +1240,21 @@
       </nav>
 
     </div>
+
   </header>
 
 
-  <!-- =========================
+
+  <!-- =====================================================
        HERO
-  ========================= -->
+  ===================================================== -->
 
   <main>
 
-    <section class="hero" id="inicio">
+    <section
+      class="hero"
+      id="inicio"
+    >
 
       <div class="hero-content reveal">
 
@@ -977,9 +1267,11 @@
         </h1>
 
         <p class="hero-description">
-          Criamos experiências que unem beleza, personalidade
-          e praticidade para tornar cada celebração ainda mais especial.
+          Criamos experiências que unem beleza,
+          personalidade e praticidade para tornar
+          cada celebração ainda mais especial.
         </p>
+
 
         <div class="hero-actions">
 
@@ -995,12 +1287,13 @@
             href="#colecoes"
             class="btn btn-outline"
           >
-            CONHEÇA NOSSAS DECORAÇÕES
+            CONHEÇA NOSSAS COLEÇÕES
           </a>
 
         </div>
 
       </div>
+
 
       <div class="hero-bottom">
 
@@ -1017,15 +1310,16 @@
     </section>
 
 
-    <!-- =========================
-         ESSÊNCIA
-    ========================= -->
+
+    <!-- =====================================================
+         A NOSSA ESSÊNCIA
+    ===================================================== -->
 
     <section class="essencia">
 
       <div class="container">
 
-        <div class="section-number reveal">
+        <div class="section-kicker reveal">
           A NOSSA ESSÊNCIA
         </div>
 
@@ -1035,9 +1329,10 @@
         </h2>
 
         <p class="section-description reveal">
-          Na ZÊ DECOR, acreditamos que uma decoração não precisa
-          ser exagerada para ser inesquecível. Cada composição é
-          pensada para transformar espaços e criar memórias.
+          Na ZÊ DECOR, acreditamos que uma decoração
+          não precisa ser exagerada para ser inesquecível.
+          Cada composição é pensada para transformar espaços
+          e criar memórias.
         </p>
 
 
@@ -1062,15 +1357,16 @@
             </h3>
 
             <p>
-              Cada festa possui uma história, uma pessoa e um momento
-              especial. Por isso, nossas decorações são criadas para
-              conversar com cada celebração.
+              Cada festa possui uma história, uma pessoa
+              e um momento especial. Por isso, nossas
+              decorações são criadas para conversar
+              com cada celebração.
             </p>
 
             <p>
-              Do pequeno encontro em casa às grandes comemorações,
-              buscamos equilíbrio entre estética, praticidade e
-              experiência.
+              Do pequeno encontro em casa às grandes
+              comemorações, buscamos equilíbrio entre
+              estética, praticidade e experiência.
             </p>
 
             <div class="signature">
@@ -1086,17 +1382,22 @@
     </section>
 
 
-    <!-- =========================
-         COLEÇÕES
-    ========================= -->
 
-    <section class="colecoes" id="colecoes">
+    <!-- =====================================================
+         NOSSAS COLEÇÕES
+    ===================================================== -->
+
+    <section
+      class="colecoes"
+      id="colecoes"
+    >
 
       <div class="container">
 
-        <div class="collection-intro">
 
-          <div class="section-number reveal">
+        <div class="collections-header">
+
+          <div class="section-kicker reveal">
             NOSSAS COLEÇÕES
           </div>
 
@@ -1113,7 +1414,9 @@
         </div>
 
 
+
         <div class="collection-grid">
+
 
           <!-- POCKET -->
 
@@ -1129,11 +1432,12 @@
 
             </div>
 
+
             <div class="collection-content">
 
-              <small>
+              <div class="collection-kicker">
                 FESTA NA MESA
-              </small>
+              </div>
 
               <h3>
                 POCKET
@@ -1141,13 +1445,14 @@
 
               <p>
                 Decorações compactas e encantadoras,
-                perfeitas para celebrar em casa, apartamentos
-                e pequenos espaços.
+                perfeitas para celebrar em casa,
+                apartamentos e pequenos espaços.
               </p>
 
             </div>
 
           </article>
+
 
 
           <!-- DECORAÇÕES MAIORES -->
@@ -1164,11 +1469,12 @@
 
             </div>
 
+
             <div class="collection-content">
 
-              <small>
+              <div class="collection-kicker">
                 CELEBRATION
-              </small>
+              </div>
 
               <h3>
                 DECORAÇÕES
@@ -1177,9 +1483,9 @@
               </h3>
 
               <p>
-                Composições maiores e personalizadas para
-                aniversários, celebrações e momentos que
-                merecem uma produção especial.
+                Composições maiores e personalizadas
+                para aniversários, celebrações e momentos
+                que merecem uma produção especial.
               </p>
 
             </div>
@@ -1189,17 +1495,23 @@
         </div>
 
 
-        <!-- =========================
-             POCKET
-        ========================= -->
+
+        <!-- =================================================
+             FESTA NA MESA — POCKET
+        ================================================= -->
 
         <div class="collection-gallery">
 
+
           <div class="gallery-heading reveal">
 
-            <div class="section-number">
+            <div class="gallery-kicker">
               FESTA NA MESA — POCKET
             </div>
+
+            <h2 class="gallery-title">
+              Detalhes que fazem celebrar.
+            </h2>
 
             <p>
               Uma seleção de composições compactas,
@@ -1209,52 +1521,59 @@
           </div>
 
 
+
           <div class="photo-grid">
+
 
             <div class="photo-card reveal">
               <img
                 src="pocket-01.webp"
-                alt="Festa na Mesa Pocket 01"
+                alt=""
                 loading="lazy"
               >
             </div>
+
 
             <div class="photo-card reveal">
               <img
                 src="pocket-02.webp"
-                alt="Festa na Mesa Pocket 02"
+                alt=""
                 loading="lazy"
               >
             </div>
+
 
             <div class="photo-card reveal">
               <img
                 src="pocket-03.webp"
-                alt="Festa na Mesa Pocket 03"
+                alt=""
                 loading="lazy"
               >
             </div>
+
 
             <div class="photo-card reveal">
               <img
                 src="pocket-04.webp"
-                alt="Festa na Mesa Pocket 04"
+                alt=""
                 loading="lazy"
               >
             </div>
+
 
             <div class="photo-card reveal">
               <img
                 src="pocket-05.webp"
-                alt="Festa na Mesa Pocket 05"
+                alt=""
                 loading="lazy"
               >
             </div>
 
+
             <div class="photo-card reveal">
               <img
                 src="pocket-06.webp"
-                alt="Festa na Mesa Pocket 06"
+                alt=""
                 loading="lazy"
               >
             </div>
@@ -1264,17 +1583,24 @@
         </div>
 
 
-        <!-- =========================
+
+        <!-- =================================================
              DECORAÇÕES MAIORES
-        ========================= -->
+        ================================================= -->
 
         <div class="collection-gallery">
 
+
           <div class="gallery-heading reveal">
 
-            <div class="section-number">
+            <div class="gallery-kicker">
               DECORAÇÕES MAIORES
             </div>
+
+            <h2 class="gallery-title">
+              Momentos que merecem
+              ser celebrados.
+            </h2>
 
             <p>
               Produções maiores para transformar ambientes
@@ -1284,52 +1610,59 @@
           </div>
 
 
+
           <div class="photo-grid">
+
 
             <div class="photo-card reveal">
               <img
                 src="padrao-01.webp"
-                alt="Decoração Maior 01"
+                alt=""
                 loading="lazy"
               >
             </div>
+
 
             <div class="photo-card reveal">
               <img
                 src="padrao-02.webp"
-                alt="Decoração Maior 02"
+                alt=""
                 loading="lazy"
               >
             </div>
+
 
             <div class="photo-card reveal">
               <img
                 src="padrao-03.webp"
-                alt="Decoração Maior 03"
+                alt=""
                 loading="lazy"
               >
             </div>
+
 
             <div class="photo-card reveal">
               <img
                 src="padrao-04.webp"
-                alt="Decoração Maior 04"
+                alt=""
                 loading="lazy"
               >
             </div>
+
 
             <div class="photo-card reveal">
               <img
                 src="padrao-05.webp"
-                alt="Decoração Maior 05"
+                alt=""
                 loading="lazy"
               >
             </div>
 
+
             <div class="photo-card reveal">
               <img
                 src="padrao-06.webp"
-                alt="Decoração Maior 06"
+                alt=""
                 loading="lazy"
               >
             </div>
@@ -1343,9 +1676,10 @@
     </section>
 
 
-    <!-- =========================
+
+    <!-- =====================================================
          AVALIAÇÕES
-    ========================= -->
+    ===================================================== -->
 
     <section
       class="avaliacoes"
@@ -1354,7 +1688,7 @@
 
       <div class="container">
 
-        <div class="section-number reveal">
+        <div class="section-kicker reveal">
           O QUE NOSSOS CLIENTES DIZEM
         </div>
 
@@ -1377,7 +1711,7 @@
           <div class="rating-text">
             Avaliação no Google
             <br>
-            Avaliações reais de clientes da ZÊ DECOR.
+            Confira as avaliações reais dos nossos clientes.
           </div>
 
           <a
@@ -1385,7 +1719,7 @@
             target="_blank"
             class="google-btn"
           >
-            VER TODAS AS AVALIAÇÕES NO GOOGLE
+            VER AVALIAÇÕES NO GOOGLE
           </a>
 
         </div>
@@ -1395,9 +1729,10 @@
     </section>
 
 
-    <!-- =========================
+
+    <!-- =====================================================
          CONTATO
-    ========================= -->
+    ===================================================== -->
 
     <section
       class="contato"
@@ -1406,7 +1741,7 @@
 
       <div class="container">
 
-        <div class="section-number reveal">
+        <div class="section-kicker reveal">
           CONTATO
         </div>
 
@@ -1418,12 +1753,14 @@
 
         <div class="contato-grid">
 
+
           <div class="contact-info">
+
 
             <div class="contact-item reveal">
 
               <small>
-                WhatsApp
+                WHATSAPP
               </small>
 
               <a
@@ -1439,7 +1776,7 @@
             <div class="contact-item reveal">
 
               <small>
-                Instagram
+                INSTAGRAM
               </small>
 
               <a
@@ -1455,7 +1792,7 @@
             <div class="contact-item reveal">
 
               <small>
-                Atendimento
+                ATENDIMENTO
               </small>
 
               <strong>
@@ -1465,6 +1802,7 @@
             </div>
 
           </div>
+
 
 
           <div class="contact-cta">
@@ -1478,8 +1816,9 @@
 
               <p>
                 Entre em contato com a nossa equipe,
-                conte um pouco sobre sua celebração e
-                vamos encontrar a composição ideal para você.
+                conte um pouco sobre sua celebração
+                e vamos encontrar a composição ideal
+                para você.
               </p>
 
               <a
@@ -1503,9 +1842,10 @@
   </main>
 
 
-  <!-- =========================
+
+  <!-- =====================================================
        FOOTER
-  ========================= -->
+  ===================================================== -->
 
   <footer>
 
@@ -1528,9 +1868,10 @@
   </footer>
 
 
-  <!-- =========================
-       MODAL
-  ========================= -->
+
+  <!-- =====================================================
+       MODAL DAS FOTOS
+  ===================================================== -->
 
   <div
     class="modal"
@@ -1548,90 +1889,128 @@
     <img
       id="modalImage"
       src=""
-      alt="Imagem ampliada"
+      alt=""
     >
 
   </div>
 
 
-  <!-- =========================
+
+  <!-- =====================================================
        JAVASCRIPT
-  ========================= -->
+  ===================================================== -->
 
   <script>
 
-    /* MENU MOBILE */
 
-    const menuToggle = document.getElementById("menuToggle");
-    const navLinks = document.getElementById("navLinks");
+    /* =====================================================
+       MENU MOBILE
+    ===================================================== */
+
+    const menuToggle =
+      document.getElementById("menuToggle");
+
+    const navLinks =
+      document.getElementById("navLinks");
+
 
     menuToggle.addEventListener("click", () => {
+
       navLinks.classList.toggle("active");
-    });
-
-
-    /* FECHAR MENU AO CLICAR */
-
-    document.querySelectorAll(".nav-links a").forEach(link => {
-
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
-      });
 
     });
 
 
-    /* REVEAL */
 
-    const revealElements = document.querySelectorAll(".reveal");
+    /* =====================================================
+       FECHAR MENU
+    ===================================================== */
 
-    const revealObserver = new IntersectionObserver(
-      (entries) => {
+    document
+      .querySelectorAll(".nav-links a")
+      .forEach(link => {
 
-        entries.forEach(entry => {
+        link.addEventListener("click", () => {
 
-          if (entry.isIntersecting) {
-
-            entry.target.classList.add("visible");
-
-            revealObserver.unobserve(entry.target);
-
-          }
+          navLinks.classList.remove("active");
 
         });
 
-      },
-      {
-        threshold: 0.12
-      }
-    );
+      });
+
+
+
+    /* =====================================================
+       ANIMAÇÃO DOS ELEMENTOS
+    ===================================================== */
+
+    const revealElements =
+      document.querySelectorAll(".reveal");
+
+
+    const revealObserver =
+      new IntersectionObserver(
+
+        entries => {
+
+          entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add("visible");
+
+              revealObserver.unobserve(entry.target);
+
+            }
+
+          });
+
+        },
+
+        {
+          threshold: 0.12
+        }
+
+      );
 
 
     revealElements.forEach(element => {
+
       revealObserver.observe(element);
+
     });
 
 
-    /* MODAL DAS FOTOS */
 
-    const modal = document.getElementById("imageModal");
-    const modalImage = document.getElementById("modalImage");
-    const modalClose = document.getElementById("modalClose");
+    /* =====================================================
+       LIGHTBOX
+    ===================================================== */
 
-    document.querySelectorAll(".photo-card img").forEach(image => {
+    const modal =
+      document.getElementById("imageModal");
 
-      image.addEventListener("click", () => {
+    const modalImage =
+      document.getElementById("modalImage");
 
-        modalImage.src = image.src;
-        modalImage.alt = image.alt;
+    const modalClose =
+      document.getElementById("modalClose");
 
-        modal.classList.add("active");
 
-        document.body.style.overflow = "hidden";
+    document
+      .querySelectorAll(".photo-card img")
+      .forEach(image => {
+
+        image.addEventListener("click", () => {
+
+          modalImage.src = image.src;
+
+          modal.classList.add("active");
+
+          document.body.style.overflow = "hidden";
+
+        });
 
       });
-
-    });
 
 
     function closeModal() {
@@ -1645,27 +2024,43 @@
     }
 
 
-    modalClose.addEventListener("click", closeModal);
+    modalClose.addEventListener(
+      "click",
+      closeModal
+    );
 
 
-    modal.addEventListener("click", (event) => {
+    modal.addEventListener(
+      "click",
+      event => {
 
-      if (event.target === modal) {
-        closeModal();
+        if (event.target === modal) {
+
+          closeModal();
+
+        }
+
       }
+    );
 
-    });
 
+    document.addEventListener(
+      "keydown",
+      event => {
 
-    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
 
-      if (event.key === "Escape") {
-        closeModal();
+          closeModal();
+
+        }
+
       }
+    );
 
-    });
 
   </script>
 
+
 </body>
+
 </html>
