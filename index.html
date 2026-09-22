@@ -4,7 +4,11 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
 
 <title>ZÊ DECOR | Festa • Pocket • Celebration</title>
 
@@ -25,35 +29,40 @@
 <style>
 
 /* =========================================================
-   PALETA ZÊ DECOR
+   PALETA
 ========================================================= */
 
 :root {
 
   --fendi: #ded0bf;
+
   --fendi-claro: #e8ddd0;
+
   --fendi-suave: #eee5da;
 
-  --creme: #f5eee5;
+  --creme: #f7f0e7;
+
+  --creme-2: #f2e8dc;
 
   --marrom: #35231c;
-  --marrom-2: #563f34;
+
+  --marrom-2: #594238;
+
   --marrom-3: #765f51;
 
   --dourado: #b58a4e;
+
   --dourado-claro: #d0b27d;
 
   --escuro: #241713;
 
-  --branco: #ffffff;
-
-  --linha: rgba(53,35,28,.16);
+  --linha: rgba(53,35,28,.13);
 
   --sombra:
-    0 25px 65px rgba(53,35,28,.14);
+    0 20px 55px rgba(53,35,28,.12);
 
   --sombra-forte:
-    0 35px 85px rgba(53,35,28,.20);
+    0 30px 75px rgba(53,35,28,.18);
 
 }
 
@@ -105,7 +114,7 @@ button {
 
 
 /* =========================================================
-   TEXTURA SUTIL DO FUNDO
+   TEXTURA MUITO SUTIL
 ========================================================= */
 
 body::before {
@@ -122,17 +131,17 @@ body::before {
 
   opacity: .20;
 
-  background-image:
+  background:
 
     radial-gradient(
-      circle at 20% 20%,
-      rgba(255,255,255,.8) 0,
-      transparent 28%
+      circle at 15% 20%,
+      rgba(255,255,255,.65),
+      transparent 25%
     ),
 
     radial-gradient(
-      circle at 80% 75%,
-      rgba(181,138,78,.10) 0,
+      circle at 85% 75%,
+      rgba(181,138,78,.08),
       transparent 30%
     );
 
@@ -140,7 +149,8 @@ body::before {
 
 
 /* =========================================================
-   ARTE LATERAL GLOBAL
+   DECORAÇÃO LATERAL
+   DISCRETA
 ========================================================= */
 
 .global-decoration {
@@ -150,7 +160,7 @@ body::before {
   top: 0;
   bottom: 0;
 
-  width: 240px;
+  width: 190px;
 
   z-index: 3;
 
@@ -177,58 +187,30 @@ body::before {
 
 
 /* =========================================================
-   ELEMENTOS DA ARTE
+   ELEMENTOS DA DECORAÇÃO
 ========================================================= */
-
-.decoration-line {
-
-  fill: none;
-
-  stroke: var(--dourado);
-
-  stroke-width: 2;
-
-  stroke-linecap: round;
-
-  opacity: .72;
-
-}
-
-.decoration-line-light {
-
-  fill: none;
-
-  stroke: var(--dourado-claro);
-
-  stroke-width: 1.2;
-
-  stroke-linecap: round;
-
-  opacity: .65;
-
-}
 
 .decoration-balloon {
 
-  fill: rgba(181,138,78,.10);
+  fill:
+    rgba(255,255,255,.12);
 
-  stroke: var(--dourado);
+  stroke:
+    rgba(181,138,78,.50);
 
-  stroke-width: 1.6;
-
-  opacity: .72;
+  stroke-width: 1.4;
 
 }
 
-.decoration-balloon-light {
+.decoration-balloon-soft {
 
-  fill: rgba(255,255,255,.10);
+  fill:
+    rgba(255,255,255,.07);
 
-  stroke: #c7aa7d;
+  stroke:
+    rgba(181,138,78,.34);
 
-  stroke-width: 1.2;
-
-  opacity: .65;
+  stroke-width: 1.1;
 
 }
 
@@ -236,21 +218,10 @@ body::before {
 
   fill: none;
 
-  stroke: rgba(255,255,255,.75);
+  stroke:
+    rgba(255,255,255,.55);
 
-  stroke-width: 1.2;
-
-}
-
-.decoration-leaf {
-
-  fill: rgba(181,138,78,.09);
-
-  stroke: var(--dourado);
-
-  stroke-width: 1.1;
-
-  opacity: .68;
+  stroke-width: 1;
 
 }
 
@@ -258,27 +229,31 @@ body::before {
 
   fill: none;
 
-  stroke: var(--dourado);
+  stroke:
+    rgba(181,138,78,.52);
 
-  stroke-width: 1.3;
+  stroke-width: 1.25;
 
-  opacity: .65;
+  stroke-linecap: round;
+
+}
+
+.decoration-leaf {
+
+  fill:
+    rgba(181,138,78,.07);
+
+  stroke:
+    rgba(181,138,78,.50);
+
+  stroke-width: 1;
 
 }
 
 .decoration-dot {
 
-  fill: var(--dourado);
-
-  opacity: .75;
-
-}
-
-.decoration-dot-light {
-
-  fill: var(--dourado-claro);
-
-  opacity: .70;
+  fill:
+    rgba(181,138,78,.70);
 
 }
 
@@ -291,12 +266,12 @@ header {
 
   position: fixed;
 
-  z-index: 1000;
-
   top: 0;
   left: 0;
 
   width: 100%;
+
+  z-index: 1000;
 
   background:
     rgba(222,208,191,.94);
@@ -305,7 +280,7 @@ header {
     blur(18px);
 
   border-bottom:
-    1px solid rgba(53,35,28,.14);
+    1px solid var(--linha);
 
 }
 
@@ -317,7 +292,8 @@ header {
 
   margin: auto;
 
-  padding: 0 40px;
+  padding:
+    0 40px;
 
   display: flex;
 
@@ -397,6 +373,12 @@ nav a {
 
 }
 
+nav a:hover {
+
+  color: var(--dourado);
+
+}
+
 nav a::after {
 
   content: "";
@@ -404,20 +386,17 @@ nav a::after {
   position: absolute;
 
   left: 0;
-  bottom: -9px;
+
+  bottom: -8px;
 
   width: 0;
+
   height: 1px;
 
-  background: var(--dourado);
+  background:
+    var(--dourado);
 
   transition: .3s;
-
-}
-
-nav a:hover {
-
-  color: var(--dourado);
 
 }
 
@@ -467,8 +446,8 @@ nav a:hover::after {
     linear-gradient(
       90deg,
       rgba(38,26,21,.90) 0%,
-      rgba(38,26,21,.66) 43%,
-      rgba(38,26,21,.18) 100%
+      rgba(38,26,21,.64) 44%,
+      rgba(38,26,21,.15) 100%
     ),
 
     url("padrao-03.webp")
@@ -485,7 +464,8 @@ nav a:hover::after {
 
   margin: auto;
 
-  padding: 100px 40px;
+  padding:
+    100px 40px;
 
   color: white;
 
@@ -495,7 +475,8 @@ nav a:hover::after {
 
   margin-bottom: 25px;
 
-  color: #e4c793;
+  color:
+    #e4c793;
 
   font-size: 10px;
 
@@ -556,7 +537,8 @@ nav a:hover::after {
 
   min-height: 51px;
 
-  padding: 0 28px;
+  padding:
+    0 28px;
 
   display: inline-flex;
 
@@ -564,7 +546,8 @@ nav a:hover::after {
 
   justify-content: center;
 
-  border: 1px solid transparent;
+  border:
+    1px solid transparent;
 
   font-size: 10px;
 
@@ -586,7 +569,8 @@ nav a:hover::after {
 
 .btn-light:hover {
 
-  background: var(--dourado);
+  background:
+    var(--dourado);
 
   color: white;
 
@@ -594,10 +578,10 @@ nav a:hover::after {
 
 .btn-border {
 
+  color: white;
+
   border-color:
     rgba(255,255,255,.55);
-
-  color: white;
 
   background:
     rgba(255,255,255,.03);
@@ -623,14 +607,15 @@ nav a:hover::after {
 
   z-index: 1;
 
-  padding: 145px 40px 175px;
+  padding:
+    145px 40px 175px;
 
   background:
 
     linear-gradient(
       135deg,
       #ded0bf 0%,
-      #e5d8c9 48%,
+      #e5d8c9 50%,
       #d9c9b7 100%
     );
 
@@ -659,13 +644,14 @@ nav a:hover::after {
 
   max-width: 900px;
 
-  margin-bottom: 85px;
+  margin-bottom: 80px;
 
 }
 
 .section-name {
 
-  color: var(--marrom);
+  color:
+    var(--marrom);
 
   font-family:
     "Playfair Display",
@@ -689,7 +675,8 @@ nav a:hover::after {
 
   margin-top: 24px;
 
-  color: var(--marrom-2);
+  color:
+    var(--marrom-2);
 
   font-family:
     "Playfair Display",
@@ -709,7 +696,8 @@ nav a:hover::after {
 
   margin-top: 22px;
 
-  color: var(--marrom-3);
+  color:
+    var(--marrom-3);
 
   font-size: 14px;
 
@@ -719,7 +707,7 @@ nav a:hover::after {
 
 
 /* =========================================================
-   CARDS DAS COLEÇÕES
+   CARDS
 ========================================================= */
 
 .collection-grid {
@@ -738,10 +726,11 @@ nav a:hover::after {
   overflow: hidden;
 
   background:
-    rgba(246,237,227,.88);
+    rgba(247,240,231,.90);
 
   border:
-    1px solid rgba(181,138,78,.30);
+    1px solid
+    rgba(181,138,78,.28);
 
   border-radius:
     34px 12px 34px 12px;
@@ -765,7 +754,7 @@ nav a:hover::after {
 .collection-card:hover {
 
   transform:
-    translateY(-9px);
+    translateY(-8px);
 
   box-shadow:
     var(--sombra-forte);
@@ -778,36 +767,10 @@ nav a:hover::after {
 
   overflow: hidden;
 
+  padding: 11px;
+
   background:
-    #e6d9ca;
-
-  padding: 12px;
-
-}
-
-.collection-image::after {
-
-  content: "";
-
-  position: absolute;
-
-  inset: 12px;
-
-  border:
-    1px solid rgba(181,138,78,.28);
-
-  border-radius:
-    25px 7px 25px 7px;
-
-  pointer-events: none;
-
-}
-
-.collection-card:nth-child(2)
-.collection-image::after {
-
-  border-radius:
-    7px 25px 7px 25px;
+    var(--creme-2);
 
 }
 
@@ -820,7 +783,7 @@ nav a:hover::after {
   object-fit: contain;
 
   border-radius:
-    23px 7px 23px 7px;
+    25px 8px 25px 8px;
 
   transition:
     transform .6s ease;
@@ -831,7 +794,7 @@ nav a:hover::after {
 .collection-image img {
 
   border-radius:
-    7px 23px 7px 23px;
+    8px 25px 8px 25px;
 
 }
 
@@ -845,7 +808,8 @@ nav a:hover::after {
 
 .collection-info {
 
-  padding: 38px;
+  padding:
+    36px 38px 40px;
 
 }
 
@@ -853,7 +817,8 @@ nav a:hover::after {
 
   margin-bottom: 14px;
 
-  color: var(--dourado);
+  color:
+    var(--dourado);
 
   font-size: 10px;
 
@@ -867,7 +832,8 @@ nav a:hover::after {
 
   margin-bottom: 18px;
 
-  color: var(--marrom);
+  color:
+    var(--marrom);
 
   font-family:
     "Playfair Display",
@@ -884,7 +850,8 @@ nav a:hover::after {
 
 .collection-info p {
 
-  color: var(--marrom-3);
+  color:
+    var(--marrom-3);
 
   font-size: 14px;
 
@@ -894,7 +861,7 @@ nav a:hover::after {
 
 
 /* =========================================================
-   GALERIAS
+   GALERIA
 ========================================================= */
 
 .gallery-section {
@@ -913,7 +880,8 @@ nav a:hover::after {
 
 .gallery-name {
 
-  color: var(--marrom);
+  color:
+    var(--marrom);
 
   font-family:
     "Playfair Display",
@@ -937,7 +905,8 @@ nav a:hover::after {
 
   margin-top: 22px;
 
-  color: var(--marrom-2);
+  color:
+    var(--marrom-2);
 
   font-family:
     "Playfair Display",
@@ -957,7 +926,8 @@ nav a:hover::after {
 
   margin-top: 18px;
 
-  color: var(--marrom-3);
+  color:
+    var(--marrom-3);
 
   font-size: 14px;
 
@@ -967,7 +937,7 @@ nav a:hover::after {
 
 
 /* =========================================================
-   FOTOS — RELEVO
+   FOTOS
 ========================================================= */
 
 .photo-grid {
@@ -981,7 +951,6 @@ nav a:hover::after {
 
 }
 
-
 .photo-card {
 
   position: relative;
@@ -992,15 +961,16 @@ nav a:hover::after {
     var(--creme);
 
   border:
-    1px solid rgba(181,138,78,.32);
+    1px solid
+    rgba(181,138,78,.28);
 
   box-shadow:
 
-    0 22px 45px
-    rgba(53,35,28,.13),
+    0 20px 45px
+    rgba(53,35,28,.12),
 
-    0 5px 12px
-    rgba(53,35,28,.08);
+    0 4px 12px
+    rgba(53,35,28,.07);
 
   cursor: pointer;
 
@@ -1013,52 +983,50 @@ nav a:hover::after {
 }
 
 
-/* formatos orgânicos */
+/* formas orgânicas */
 
 .photo-card:nth-child(1) {
 
   border-radius:
-    30px 8px 30px 8px;
+    30px 9px 30px 9px;
 
 }
 
 .photo-card:nth-child(2) {
 
   border-radius:
-    8px 30px 8px 30px;
+    9px 30px 9px 30px;
 
 }
 
 .photo-card:nth-child(3) {
 
   border-radius:
-    30px 8px 8px 30px;
+    30px 9px 9px 30px;
 
 }
 
 .photo-card:nth-child(4) {
 
   border-radius:
-    8px 30px 30px 8px;
+    9px 30px 30px 9px;
 
 }
 
 .photo-card:nth-child(5) {
 
   border-radius:
-    30px 8px 30px 8px;
+    30px 9px 30px 9px;
 
 }
 
 .photo-card:nth-child(6) {
 
   border-radius:
-    8px 30px 8px 30px;
+    9px 30px 9px 30px;
 
 }
 
-
-/* camada interna */
 
 .photo-card::before {
 
@@ -1071,7 +1039,8 @@ nav a:hover::after {
   z-index: 2;
 
   border:
-    1px solid rgba(255,255,255,.48);
+    1px solid
+    rgba(255,255,255,.50);
 
   border-radius:
     inherit;
@@ -1079,37 +1048,6 @@ nav a:hover::after {
   pointer-events: none;
 
 }
-
-
-/* brilho */
-
-.photo-card::after {
-
-  content: "";
-
-  position: absolute;
-
-  left: 10%;
-
-  top: 7%;
-
-  width: 40%;
-
-  height: 20%;
-
-  background:
-    linear-gradient(
-      120deg,
-      rgba(255,255,255,.25),
-      transparent
-    );
-
-  opacity: .35;
-
-  pointer-events: none;
-
-}
-
 
 .photo-card img {
 
@@ -1120,31 +1058,29 @@ nav a:hover::after {
   object-fit: contain;
 
   transition:
-    transform .65s ease;
+    transform .6s ease;
 
 }
 
 .photo-card:hover {
 
   transform:
-    translateY(-10px)
-    rotate(-.35deg);
+    translateY(-8px);
 
   box-shadow:
 
-    0 32px 65px
-    rgba(53,35,28,.20),
+    0 30px 60px
+    rgba(53,35,28,.18),
 
     0 8px 18px
-    rgba(53,35,28,.10);
+    rgba(53,35,28,.09);
 
 }
 
 .photo-card:nth-child(even):hover {
 
   transform:
-    translateY(-10px)
-    rotate(.35deg);
+    translateY(-8px);
 
 }
 
@@ -1158,6 +1094,7 @@ nav a:hover::after {
 
 /* =========================================================
    AVALIAÇÕES
+   MESMO TOM DAS OUTRAS SEÇÕES
 ========================================================= */
 
 .reviews {
@@ -1166,14 +1103,16 @@ nav a:hover::after {
 
   z-index: 1;
 
-  padding: 145px 40px;
+  padding:
+    145px 40px;
 
   background:
 
     linear-gradient(
       135deg,
-      #eee5da,
-      #e1d3c3
+      #ded0bf 0%,
+      #e7dbcd 50%,
+      #dccdbb 100%
     );
 
   text-align: center;
@@ -1191,6 +1130,7 @@ nav a:hover::after {
 .reviews .section-phrase {
 
   margin-left: auto;
+
   margin-right: auto;
 
 }
@@ -1199,15 +1139,18 @@ nav a:hover::after {
 
   max-width: 650px;
 
-  margin: 65px auto 0;
+  margin:
+    60px auto 0;
 
-  padding: 55px 30px;
+  padding:
+    55px 30px;
 
   background:
-    rgba(250,245,238,.88);
+    rgba(247,240,231,.94);
 
   border:
-    1px solid rgba(181,138,78,.30);
+    1px solid
+    rgba(181,138,78,.28);
 
   border-radius:
     32px 10px 32px 10px;
@@ -1219,7 +1162,8 @@ nav a:hover::after {
 
 .stars {
 
-  color: var(--dourado);
+  color:
+    var(--dourado);
 
   font-size: 27px;
 
@@ -1231,7 +1175,8 @@ nav a:hover::after {
 
   margin-top: 12px;
 
-  color: var(--marrom);
+  color:
+    var(--marrom);
 
   font-family:
     "Playfair Display",
@@ -1249,7 +1194,8 @@ nav a:hover::after {
   margin:
     12px 0 28px;
 
-  color: var(--marrom-3);
+  color:
+    var(--marrom-3);
 
   font-size: 14px;
 
@@ -1259,7 +1205,8 @@ nav a:hover::after {
 
   min-height: 50px;
 
-  padding: 0 26px;
+  padding:
+    0 26px;
 
   display: inline-flex;
 
@@ -1298,30 +1245,33 @@ nav a:hover::after {
 
   z-index: 1;
 
-  padding: 145px 40px;
+  padding:
+    145px 40px;
 
   background:
 
     linear-gradient(
       135deg,
-      #493329,
-      #2b1c17
+      #e8ddd0,
+      #ded0bf
     );
 
-  color: white;
+  color:
+    var(--marrom);
 
 }
 
 .contact .section-name {
 
-  color: white;
+  color:
+    var(--marrom);
 
 }
 
 .contact .section-phrase {
 
   color:
-    #d9c3a4;
+    var(--marrom-2);
 
 }
 
@@ -1351,7 +1301,7 @@ nav a:hover::after {
   margin-bottom: 7px;
 
   color:
-    var(--dourado-claro);
+    var(--dourado);
 
   font-size: 9px;
 
@@ -1373,32 +1323,34 @@ nav a:hover::after {
 .contact-item a:hover {
 
   color:
-    var(--dourado-claro);
+    var(--dourado);
 
 }
 
 .contact-box {
 
-  padding: 48px;
+  padding:
+    48px;
 
   border:
     1px solid
-    rgba(255,255,255,.17);
+    rgba(181,138,78,.30);
 
   border-radius:
     30px 10px 30px 10px;
 
   background:
-    rgba(255,255,255,.035);
+    rgba(247,240,231,.65);
 
   box-shadow:
-    0 25px 60px rgba(0,0,0,.16);
+    var(--sombra);
 
 }
 
 .contact-box h3 {
 
-  color: white;
+  color:
+    var(--marrom);
 
   font-family:
     "Playfair Display",
@@ -1419,7 +1371,7 @@ nav a:hover::after {
     20px 0 28px;
 
   color:
-    rgba(255,255,255,.72);
+    var(--marrom-3);
 
   font-size: 14px;
 
@@ -1438,13 +1390,14 @@ footer {
 
   z-index: 1;
 
-  padding: 40px;
+  padding:
+    40px;
 
   background:
-    #211511;
+    #2b1c17;
 
   color:
-    rgba(255,255,255,.65);
+    rgba(255,255,255,.70);
 
 }
 
@@ -1531,8 +1484,7 @@ footer {
 
   object-fit: contain;
 
-  border-radius:
-    18px;
+  border-radius: 18px;
 
   box-shadow:
     0 30px 90px rgba(0,0,0,.45);
@@ -1569,7 +1521,7 @@ footer {
   opacity: 0;
 
   transform:
-    translateY(25px);
+    translateY(24px);
 
   transition:
 
@@ -1716,9 +1668,9 @@ footer {
 
   .global-decoration {
 
-    width: 145px;
+    width: 115px;
 
-    opacity: .65;
+    opacity: .72;
 
   }
 
@@ -1781,27 +1733,28 @@ footer {
 
   .global-decoration {
 
-    width: 80px;
+    width: 72px;
 
-    opacity: .40;
+    opacity: .48;
 
   }
 
   .global-decoration.left {
 
-    left: -20px;
+    left: -15px;
 
   }
 
   .global-decoration.right {
 
-    right: -20px;
+    right: -15px;
 
   }
 
   .collection-info {
 
-    padding: 28px;
+    padding:
+      28px;
 
   }
 
@@ -1813,7 +1766,8 @@ footer {
 
   .contact-box {
 
-    padding: 32px 25px;
+    padding:
+      32px 25px;
 
   }
 
@@ -1842,272 +1796,163 @@ footer {
 
 
 <!-- =======================================================
-     ARTE LATERAL ESQUERDA
+     DECORAÇÃO LATERAL ESQUERDA
+     DISCRETA
 ======================================================= -->
 
 <div class="global-decoration left">
 
 <svg
-  viewBox="0 0 240 3000"
+  viewBox="0 0 190 3000"
   preserveAspectRatio="none"
 >
 
-<!-- BALÕES SUPERIORES -->
+
+<!-- BALÃO SUPERIOR -->
 
 <ellipse
   class="decoration-balloon"
-  cx="55"
-  cy="120"
-  rx="45"
-  ry="67"
+  cx="38"
+  cy="150"
+  rx="34"
+  ry="54"
 />
-
-<ellipse
-  class="decoration-balloon-light"
-  cx="110"
-  cy="210"
-  rx="52"
-  ry="75"
-/>
-
-<ellipse
-  class="decoration-balloon"
-  cx="42"
-  cy="300"
-  rx="40"
-  ry="60"
-/>
-
-
-<!-- FITA PRINCIPAL -->
 
 <path
-  class="decoration-line"
+  class="decoration-highlight"
   d="
-    M130 0
-    C205 120 100 210 155 320
-    C205 420 75 510 130 630
-    C190 750 70 860 130 980
-    C190 1100 70 1210 130 1330
-    C190 1450 70 1570 130 1690
-    C190 1810 70 1930 130 2050
-    C190 2170 70 2290 130 2410
-    C190 2530 70 2650 130 2770
-    C170 2850 115 2930 95 3000
+    M20 120
+    C5 145 8 175 22 190
   "
 />
 
 
-<!-- FITA SECUNDÁRIA -->
-
-<path
-  class="decoration-line-light"
-  d="
-    M35 0
-    C100 130 20 240 65 360
-    C110 480 20 600 65 720
-    C110 840 20 960 65 1080
-    C110 1200 20 1320 65 1440
-    C110 1560 20 1680 65 1800
-    C110 1920 20 2040 65 2160
-    C110 2280 20 2400 65 2520
-    C110 2640 20 2760 55 2880
-    C70 2940 65 2970 60 3000
-  "
-/>
-
-
-<!-- FOLHAGEM -->
+<!-- FOLHAS -->
 
 <path
   class="decoration-stem"
   d="
-    M180 460
-    C145 550 145 650 175 740
-    C200 820 180 910 145 990
+    M78 300
+    C58 350 52 410 70 465
   "
 />
 
 <ellipse
   class="decoration-leaf"
-  cx="160"
-  cy="535"
-  rx="12"
-  ry="31"
-  transform="rotate(-30 160 535)"
+  cx="62"
+  cy="340"
+  rx="10"
+  ry="25"
+  transform="rotate(-28 62 340)"
 />
 
 <ellipse
   class="decoration-leaf"
-  cx="153"
-  cy="605"
-  rx="12"
-  ry="31"
-  transform="rotate(30 153 605)"
-/>
-
-<ellipse
-  class="decoration-leaf"
-  cx="170"
-  cy="675"
-  rx="11"
-  ry="29"
-  transform="rotate(-30 170 675)"
-/>
-
-<ellipse
-  class="decoration-leaf"
-  cx="165"
-  cy="745"
-  rx="11"
-  ry="29"
-  transform="rotate(30 165 745)"
+  cx="65"
+  cy="405"
+  rx="10"
+  ry="25"
+  transform="rotate(28 65 405)"
 />
 
 
-<!-- BALÕES DO MEIO -->
+<!-- BALÃO CENTRAL -->
 
 <ellipse
-  class="decoration-balloon-light"
-  cx="55"
-  cy="1060"
-  rx="45"
-  ry="67"
-/>
-
-<ellipse
-  class="decoration-balloon"
-  cx="110"
+  class="decoration-balloon-soft"
+  cx="32"
   cy="1150"
-  rx="52"
-  ry="75"
-/>
-
-<ellipse
-  class="decoration-balloon-light"
-  cx="42"
-  cy="1250"
-  rx="40"
-  ry="60"
+  rx="31"
+  ry="50"
 />
 
 
-<!-- FOLHAGEM 2 -->
+<!-- PEQUENOS PONTOS -->
+
+<circle
+  class="decoration-dot"
+  cx="105"
+  cy="210"
+  r="3"
+/>
+
+<circle
+  class="decoration-dot"
+  cx="86"
+  cy="560"
+  r="2.5"
+/>
+
+<circle
+  class="decoration-dot"
+  cx="115"
+  cy="1260"
+  r="3"
+/>
+
+
+<!-- FOLHAS INFERIORES -->
 
 <path
   class="decoration-stem"
   d="
-    M185 1370
-    C150 1460 150 1560 180 1650
-    C205 1730 180 1820 145 1900
+    M80 1800
+    C58 1850 55 1910 75 1970
   "
 />
 
 <ellipse
   class="decoration-leaf"
-  cx="165"
-  cy="1440"
-  rx="12"
-  ry="31"
-  transform="rotate(-30 165 1440)"
+  cx="64"
+  cy="1845"
+  rx="10"
+  ry="25"
+  transform="rotate(-28 64 1845)"
 />
 
 <ellipse
   class="decoration-leaf"
-  cx="158"
-  cy="1510"
-  rx="12"
-  ry="31"
-  transform="rotate(30 158 1510)"
-/>
-
-<ellipse
-  class="decoration-leaf"
-  cx="174"
-  cy="1580"
-  rx="11"
-  ry="29"
-  transform="rotate(-30 174 1580)"
+  cx="68"
+  cy="1910"
+  rx="10"
+  ry="25"
+  transform="rotate(28 68 1910)"
 />
 
 
-<!-- BALÕES INFERIORES -->
-
-<ellipse
-  class="decoration-balloon"
-  cx="50"
-  cy="2050"
-  rx="45"
-  ry="67"
-/>
-
-<ellipse
-  class="decoration-balloon-light"
-  cx="108"
-  cy="2140"
-  rx="52"
-  ry="75"
-/>
+<!-- BALÃO INFERIOR -->
 
 <ellipse
   class="decoration-balloon"
   cx="40"
-  cy="2240"
-  rx="40"
-  ry="60"
+  cy="2480"
+  rx="35"
+  ry="55"
 />
 
-
-<!-- FOLHAGEM 3 -->
-
 <path
-  class="decoration-stem"
+  class="decoration-highlight"
   d="
-    M180 2340
-    C150 2430 150 2520 180 2610
-    C205 2690 180 2780 145 2870
+    M23 2450
+    C10 2470 12 2500 25 2520
   "
 />
 
-<ellipse
-  class="decoration-leaf"
-  cx="162"
-  cy="2410"
-  rx="12"
-  ry="31"
-  transform="rotate(-30 162 2410)"
+
+<circle
+  class="decoration-dot"
+  cx="105"
+  cy="2350"
+  r="3"
 />
 
-<ellipse
-  class="decoration-leaf"
-  cx="155"
-  cy="2480"
-  rx="12"
-  ry="31"
-  transform="rotate(30 155 2480)"
+<circle
+  class="decoration-dot"
+  cx="88"
+  cy="2720"
+  r="2.5"
 />
 
-<ellipse
-  class="decoration-leaf"
-  cx="172"
-  cy="2550"
-  rx="11"
-  ry="29"
-  transform="rotate(-30 172 2550)"
-/>
-
-
-<!-- PONTOS -->
-
-<circle class="decoration-dot" cx="205" cy="100" r="4"/>
-<circle class="decoration-dot-light" cx="220" cy="170" r="2.5"/>
-<circle class="decoration-dot" cx="205" cy="420" r="3"/>
-<circle class="decoration-dot-light" cx="215" cy="1020" r="3"/>
-<circle class="decoration-dot" cx="205" cy="1330" r="4"/>
-<circle class="decoration-dot-light" cx="220" cy="1730" r="2.5"/>
-<circle class="decoration-dot" cx="205" cy="2030" r="3"/>
-<circle class="decoration-dot-light" cx="220" cy="2380" r="2.5"/>
-<circle class="decoration-dot" cx="205" cy="2700" r="3"/>
 
 </svg>
 
@@ -2116,236 +1961,162 @@ footer {
 
 
 <!-- =======================================================
-     ARTE LATERAL DIREITA
+     DECORAÇÃO LATERAL DIREITA
 ======================================================= -->
 
 <div class="global-decoration right">
 
 <svg
-  viewBox="0 0 240 3000"
+  viewBox="0 0 190 3000"
   preserveAspectRatio="none"
 >
 
-<ellipse
-  class="decoration-balloon-light"
-  cx="185"
-  cy="120"
-  rx="45"
-  ry="67"
-/>
+
+<!-- BALÃO SUPERIOR -->
 
 <ellipse
   class="decoration-balloon"
-  cx="130"
-  cy="210"
-  rx="52"
-  ry="75"
+  cx="152"
+  cy="150"
+  rx="34"
+  ry="54"
 />
-
-<ellipse
-  class="decoration-balloon-light"
-  cx="198"
-  cy="300"
-  rx="40"
-  ry="60"
-/>
-
 
 <path
-  class="decoration-line"
+  class="decoration-highlight"
   d="
-    M110 0
-    C35 120 140 210 85 320
-    C35 420 165 510 110 630
-    C50 750 170 860 110 980
-    C50 1100 170 1210 110 1330
-    C50 1450 170 1570 110 1690
-    C50 1810 170 1930 110 2050
-    C50 2170 170 2290 110 2410
-    C50 2530 170 2650 110 2770
-    C70 2850 125 2930 145 3000
+    M170 120
+    C185 145 182 175 168 190
   "
 />
 
 
-<path
-  class="decoration-line-light"
-  d="
-    M205 0
-    C140 130 220 240 175 360
-    C130 480 220 600 175 720
-    C130 840 220 960 175 1080
-    C130 1200 220 1320 175 1440
-    C130 1560 220 1680 175 1800
-    C130 1920 220 2040 175 2160
-    C130 2280 220 2400 175 2520
-    C130 2640 220 2760 185 2880
-    C170 2940 175 2970 180 3000
-  "
-/>
-
+<!-- FOLHAS -->
 
 <path
   class="decoration-stem"
   d="
-    M60 460
-    C95 550 95 650 65 740
-    C40 820 60 910 95 990
+    M112 300
+    C132 350 138 410 120 465
   "
 />
 
 <ellipse
   class="decoration-leaf"
-  cx="80"
-  cy="535"
-  rx="12"
-  ry="31"
-  transform="rotate(30 80 535)"
+  cx="128"
+  cy="340"
+  rx="10"
+  ry="25"
+  transform="rotate(28 128 340)"
 />
 
 <ellipse
   class="decoration-leaf"
-  cx="87"
-  cy="605"
-  rx="12"
-  ry="31"
-  transform="rotate(-30 87 605)"
-/>
-
-<ellipse
-  class="decoration-leaf"
-  cx="70"
-  cy="675"
-  rx="11"
-  ry="29"
-  transform="rotate(30 70 675)"
+  cx="125"
+  cy="405"
+  rx="10"
+  ry="25"
+  transform="rotate(-28 125 405)"
 />
 
 
-<ellipse
-  class="decoration-balloon"
-  cx="185"
-  cy="1060"
-  rx="45"
-  ry="67"
-/>
+<!-- BALÃO CENTRAL -->
 
 <ellipse
-  class="decoration-balloon-light"
-  cx="130"
+  class="decoration-balloon-soft"
+  cx="158"
   cy="1150"
-  rx="52"
-  ry="75"
-/>
-
-<ellipse
-  class="decoration-balloon"
-  cx="198"
-  cy="1250"
-  rx="40"
-  ry="60"
+  rx="31"
+  ry="50"
 />
 
 
-<path
-  class="decoration-stem"
-  d="
-    M55 1370
-    C90 1460 90 1560 60 1650
-    C35 1730 60 1820 95 1900
-  "
-/>
+<!-- PONTOS -->
 
-<ellipse
-  class="decoration-leaf"
-  cx="75"
-  cy="1440"
-  rx="12"
-  ry="31"
-  transform="rotate(30 75 1440)"
-/>
-
-<ellipse
-  class="decoration-leaf"
-  cx="82"
-  cy="1510"
-  rx="12"
-  ry="31"
-  transform="rotate(-30 82 1510)"
-/>
-
-
-<ellipse
-  class="decoration-balloon-light"
-  cx="190"
-  cy="2050"
-  rx="45"
-  ry="67"
-/>
-
-<ellipse
-  class="decoration-balloon"
-  cx="132"
-  cy="2140"
-  rx="52"
-  ry="75"
-/>
-
-<ellipse
-  class="decoration-balloon-light"
-  cx="200"
-  cy="2240"
-  rx="40"
-  ry="60"
-/>
-
-
-<path
-  class="decoration-stem"
-  d="
-    M60 2340
-    C90 2430 90 2520 60 2610
-    C35 2690 60 2780 95 2870
-  "
-/>
-
-<ellipse
-  class="decoration-leaf"
-  cx="78"
-  cy="2410"
-  rx="12"
-  ry="31"
-  transform="rotate(30 78 2410)"
-/>
-
-<ellipse
-  class="decoration-leaf"
+<circle
+  class="decoration-dot"
   cx="85"
-  cy="2480"
-  rx="12"
-  ry="31"
-  transform="rotate(-30 85 2480)"
+  cy="210"
+  r="3"
+/>
+
+<circle
+  class="decoration-dot"
+  cx="104"
+  cy="560"
+  r="2.5"
+/>
+
+<circle
+  class="decoration-dot"
+  cx="75"
+  cy="1260"
+  r="3"
+/>
+
+
+<!-- FOLHAS INFERIORES -->
+
+<path
+  class="decoration-stem"
+  d="
+    M110 1800
+    C132 1850 135 1910 115 1970
+  "
 />
 
 <ellipse
   class="decoration-leaf"
-  cx="68"
-  cy="2550"
-  rx="11"
-  ry="29"
-  transform="rotate(30 68 2550)"
+  cx="126"
+  cy="1845"
+  rx="10"
+  ry="25"
+  transform="rotate(28 126 1845)"
+/>
+
+<ellipse
+  class="decoration-leaf"
+  cx="122"
+  cy="1910"
+  rx="10"
+  ry="25"
+  transform="rotate(-28 122 1910)"
 />
 
 
-<circle class="decoration-dot" cx="35" cy="100" r="4"/>
-<circle class="decoration-dot-light" cx="20" cy="170" r="2.5"/>
-<circle class="decoration-dot" cx="35" cy="420" r="3"/>
-<circle class="decoration-dot-light" cx="25" cy="1020" r="3"/>
-<circle class="decoration-dot" cx="35" cy="1330" r="4"/>
-<circle class="decoration-dot-light" cx="20" cy="1730" r="2.5"/>
-<circle class="decoration-dot" cx="35" cy="2030" r="3"/>
-<circle class="decoration-dot-light" cx="20" cy="2380" r="2.5"/>
-<circle class="decoration-dot" cx="35" cy="2700" r="3"/>
+<!-- BALÃO INFERIOR -->
+
+<ellipse
+  class="decoration-balloon"
+  cx="150"
+  cy="2480"
+  rx="35"
+  ry="55"
+/>
+
+<path
+  class="decoration-highlight"
+  d="
+    M167 2450
+    C180 2470 178 2500 165 2520
+  "
+/>
+
+
+<circle
+  class="decoration-dot"
+  cx="85"
+  cy="2350"
+  r="3"
+/>
+
+<circle
+  class="decoration-dot"
+  cx="102"
+  cy="2720"
+  r="2.5"
+/>
+
 
 </svg>
 
@@ -2360,6 +2131,7 @@ footer {
 <header>
 
 <div class="header-inner">
+
 
 <a
   href="#inicio"
@@ -2504,10 +2276,14 @@ sempre com o cuidado e a identidade da ZÊ DECOR.
 
 
 
-<!-- CARDS -->
+<!-- =====================================================
+     CARDS PRINCIPAIS
+===================================================== -->
 
 <div class="collection-grid">
 
+
+<!-- POCKET -->
 
 <article class="collection-card reveal">
 
@@ -2544,6 +2320,8 @@ apartamentos e pequenos espaços.
 </article>
 
 
+
+<!-- DECORAÇÕES MAIORES -->
 
 <article class="collection-card reveal">
 
@@ -2587,7 +2365,7 @@ que merecem uma produção especial.
 
 
 <!-- =====================================================
-     POCKET
+     FESTA NA MESA — POCKET
 ===================================================== -->
 
 <div class="gallery-section">
@@ -2616,27 +2394,56 @@ e cheias de personalidade.
 
 
 <div class="photo-card reveal">
-<img src="pocket-01.webp" alt="" loading="lazy">
+<img
+  src="pocket-01.webp"
+  alt=""
+  loading="lazy"
+>
 </div>
 
-<div class="photo-card reveal">
-<img src="pocket-02.webp" alt="" loading="lazy">
-</div>
 
 <div class="photo-card reveal">
-<img src="pocket-03.webp" alt="" loading="lazy">
+<img
+  src="pocket-02.webp"
+  alt=""
+  loading="lazy"
+>
 </div>
 
-<div class="photo-card reveal">
-<img src="pocket-04.webp" alt="" loading="lazy">
-</div>
 
 <div class="photo-card reveal">
-<img src="pocket-05.webp" alt="" loading="lazy">
+<img
+  src="pocket-03.webp"
+  alt=""
+  loading="lazy"
+>
 </div>
 
+
 <div class="photo-card reveal">
-<img src="pocket-06.webp" alt="" loading="lazy">
+<img
+  src="pocket-04.webp"
+  alt=""
+  loading="lazy"
+>
+</div>
+
+
+<div class="photo-card reveal">
+<img
+  src="pocket-05.webp"
+  alt=""
+  loading="lazy"
+>
+</div>
+
+
+<div class="photo-card reveal">
+<img
+  src="pocket-06.webp"
+  alt=""
+  loading="lazy"
+>
 </div>
 
 
@@ -2648,6 +2455,16 @@ e cheias de personalidade.
 
 <!-- =====================================================
      DECORAÇÕES MAIORES
+     
+     IMPORTANTE:
+     SOMENTE AS FOTOS REAIS ENVIADAS PELO USUÁRIO.
+     
+     padrao-01.webp
+     padrao-02.webp
+     padrao-03.webp
+     padrao-04.webp
+     padrao-05.webp
+     padrao-06.webp
 ===================================================== -->
 
 <div class="gallery-section">
@@ -2676,27 +2493,68 @@ e criar cenários marcantes para celebrar.
 
 
 <div class="photo-card reveal">
-<img src="padrao-01.webp" alt="" loading="lazy">
+
+<img
+  src="padrao-01.webp"
+  alt=""
+  loading="lazy"
+>
+
 </div>
 
-<div class="photo-card reveal">
-<img src="padrao-02.webp" alt="" loading="lazy">
-</div>
 
 <div class="photo-card reveal">
-<img src="padrao-03.webp" alt="" loading="lazy">
+
+<img
+  src="padrao-02.webp"
+  alt=""
+  loading="lazy"
+>
+
 </div>
 
-<div class="photo-card reveal">
-<img src="padrao-04.webp" alt="" loading="lazy">
-</div>
 
 <div class="photo-card reveal">
-<img src="padrao-05.webp" alt="" loading="lazy">
+
+<img
+  src="padrao-03.webp"
+  alt=""
+  loading="lazy"
+>
+
 </div>
 
+
 <div class="photo-card reveal">
-<img src="padrao-06.webp" alt="" loading="lazy">
+
+<img
+  src="padrao-04.webp"
+  alt=""
+  loading="lazy"
+>
+
+</div>
+
+
+<div class="photo-card reveal">
+
+<img
+  src="padrao-05.webp"
+  alt=""
+  loading="lazy"
+>
+
+</div>
+
+
+<div class="photo-card reveal">
+
+<img
+  src="padrao-06.webp"
+  alt=""
+  loading="lazy"
+>
+
 </div>
 
 
@@ -2722,9 +2580,11 @@ e criar cenários marcantes para celebrar.
 
 <div class="container">
 
+
 <h2 class="section-name reveal">
 O QUE NOSSOS CLIENTES DIZEM
 </h2>
+
 
 <div class="section-phrase reveal">
 Experiências que ficam na memória.
@@ -2733,17 +2593,21 @@ Experiências que ficam na memória.
 
 <div class="rating-box reveal">
 
+
 <div class="stars">
 ★★★★★
 </div>
+
 
 <div class="rating">
 5,0
 </div>
 
+
 <p>
 Avaliação no Google
 </p>
+
 
 <a
   class="google-btn"
@@ -2752,6 +2616,7 @@ Avaliação no Google
 >
 VER AVALIAÇÕES NO GOOGLE
 </a>
+
 
 </div>
 
@@ -2772,9 +2637,11 @@ VER AVALIAÇÕES NO GOOGLE
 
 <div class="container">
 
+
 <h2 class="section-name reveal">
 CONTATO
 </h2>
+
 
 <div class="section-phrase reveal">
 Vamos transformar seu próximo momento?
@@ -2785,6 +2652,7 @@ Vamos transformar seu próximo momento?
 
 
 <div>
+
 
 <div class="contact-item reveal">
 
@@ -2830,17 +2698,20 @@ Barra • Recreio • Jacarepaguá • Vargens
 
 </div>
 
+
 </div>
 
 
 
 <div class="contact-box reveal">
 
+
 <h3>
 Seu momento.
 <br>
 Nossa decoração.
 </h3>
+
 
 <p>
 
@@ -2850,13 +2721,15 @@ para o seu momento.
 
 </p>
 
+
 <a
-  href="https://wa.me/5521999999999"
+  href="https://wa.me/5521981545015"
   target="_blank"
   class="btn btn-light"
 >
 SOLICITAR ORÇAMENTO
 </a>
+
 
 </div>
 
@@ -2877,17 +2750,21 @@ SOLICITAR ORÇAMENTO
 
 <div class="footer-inner">
 
+
 <div class="footer-logo">
 ZÊ DECOR
 </div>
+
 
 <div class="footer-small">
 FESTA • POCKET • CELEBRATION
 </div>
 
+
 <div class="footer-small">
 © 2026 ZÊ DECOR
 </div>
+
 
 </div>
 
@@ -2904,19 +2781,22 @@ FESTA • POCKET • CELEBRATION
   id="modal"
 >
 
+
 <button
   class="modal-close"
   id="modalClose"
-  aria-label="Fechar"
+  aria-label="Fechar imagem"
 >
 ×
 </button>
+
 
 <img
   id="modalImage"
   src=""
   alt=""
 >
+
 
 </div>
 
@@ -2939,7 +2819,9 @@ menuToggle.addEventListener(
   "click",
   () => {
 
-    navLinks.classList.toggle("active");
+    navLinks.classList.toggle(
+      "active"
+    );
 
   }
 );
@@ -2953,7 +2835,9 @@ document
       "click",
       () => {
 
-        navLinks.classList.remove("active");
+        navLinks.classList.remove(
+          "active"
+        );
 
       }
     );
@@ -2961,8 +2845,9 @@ document
   });
 
 
+
 /* =========================================================
-   ANIMAÇÃO
+   ANIMAÇÃO AO ROLAR
 ========================================================= */
 
 const revealElements =
@@ -3012,8 +2897,9 @@ revealElements.forEach(
 );
 
 
+
 /* =========================================================
-   LIGHTBOX
+   LIGHTBOX DAS FOTOS
 ========================================================= */
 
 const modal =
