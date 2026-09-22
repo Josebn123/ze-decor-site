@@ -1,214 +1,440 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Zê Decor — Festa na Mesa (Pocket) e Decoração Padrão. Decorações que transformam momentos.">
-<title>Zê Decor | Decorações que transformam momentos</title>
-<style>
-:root{--cream:#f7efe3;--cream2:#fffaf4;--brown:#3b2415;--gold:#b88635;--line:#d9bd8a;--text:#624a37}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:var(--cream);color:var(--brown);font-family:Arial,Helvetica,sans-serif}
-a{text-decoration:none;color:inherit}
-.container{width:min(1120px,92%);margin:auto}
-header{position:sticky;top:0;z-index:20;background:rgba(247,239,227,.95);backdrop-filter:blur(10px);border-bottom:1px solid rgba(184,134,53,.25)}
-.nav{height:72px;display:flex;align-items:center;justify-content:space-between}
-.brand{font-weight:700;letter-spacing:3px;font-size:20px}
-.navlinks{display:flex;gap:26px;font-size:12px;letter-spacing:1.6px;font-weight:700}
-.navlinks a:hover{color:var(--gold)}
-.hero{min-height:calc(100vh - 72px);display:grid;place-items:center;padding:60px 0}
-.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
-.logo{width:min(430px,100%);display:block;margin:auto;border-radius:50%;filter:drop-shadow(0 18px 25px rgba(59,36,21,.12))}
-.kicker{font-size:12px;letter-spacing:4px;color:var(--gold);font-weight:700}
-h1{font-family:Georgia,serif;font-size:clamp(42px,6vw,76px);line-height:.98;margin:15px 0;color:var(--brown)}
-.subtitle{font-size:17px;line-height:1.7;max-width:500px;color:var(--text)}
-.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-.btn{padding:14px 22px;border-radius:999px;border:1px solid var(--gold);font-size:12px;letter-spacing:1.5px;font-weight:700;display:inline-block}
-.btn.primary{background:var(--brown);color:white;border-color:var(--brown)}
-.btn:hover{transform:translateY(-1px)}
-section{padding:90px 0}
-.section-head{text-align:center;margin-bottom:42px}
-.section-head span{font-size:11px;letter-spacing:3px;color:var(--gold);font-weight:700}
-.section-head h2{font-family:Georgia,serif;font-size:42px;margin:10px 0}
-.collection-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
-.collection-card{position:relative;min-height:250px;background:var(--cream2);border:1px solid rgba(184,134,53,.3);border-radius:26px;padding:42px 36px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;transition:.25s}
-.collection-card:hover{transform:translateY(-4px);box-shadow:0 15px 35px rgba(59,36,21,.08)}
-.collection-card .tag{font-size:10px;letter-spacing:2px;color:var(--gold);font-weight:700;margin-bottom:10px}
-.collection-card h3{font-family:Georgia,serif;font-size:31px;margin:0 0 20px}
-.collection-card .btn{width:max-content}
-.gallery-section{padding-top:55px}
-.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.gallery-item{margin:0;border-radius:18px;overflow:hidden;background:#eadfce;cursor:pointer;aspect-ratio:3/4}
-.gallery-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
-.gallery-item:hover img{transform:scale(1.035)}
-.quote{text-align:center;background:var(--brown);color:white;padding:70px 20px}
-.quote p{font-family:Georgia,serif;font-size:clamp(25px,4vw,42px);margin:0 auto;max-width:850px}
-.reviews{background:var(--cream2)}
-.review-box{max-width:720px;margin:auto;text-align:center;border:1px solid rgba(184,134,53,.3);border-radius:28px;padding:50px 25px}
-.stars{font-size:25px;letter-spacing:4px;color:var(--gold)}
-.review-box h3{font-family:Georgia,serif;font-size:32px;margin:12px 0 8px}
-.review-box p{color:var(--text);line-height:1.7}
-.locations{text-align:center}
-.location-list{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:25px}
-.location{border:1px solid var(--line);padding:10px 15px;border-radius:999px;font-size:12px;letter-spacing:1px;background:var(--cream2)}
-.cta{background:var(--cream2);border:1px solid rgba(184,134,53,.3);border-radius:30px;padding:55px;text-align:center}
-.cta h2{font-family:Georgia,serif;font-size:40px;margin:0 0 12px}
-footer{padding:35px 0;border-top:1px solid rgba(184,134,53,.25);font-size:12px;color:#765f4b}
-.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-.lightbox{position:fixed;inset:0;background:rgba(25,16,10,.92);display:none;align-items:center;justify-content:center;padding:25px;z-index:100}
-.lightbox.open{display:flex}.lightbox img{max-width:min(92vw,1100px);max-height:90vh;border-radius:12px;object-fit:contain}.close{position:absolute;top:18px;right:25px;color:white;font-size:35px;cursor:pointer;line-height:1}
-@media(max-width:760px){.navlinks{gap:12px;font-size:10px}.brand{font-size:17px}.hero{padding:35px 0}.hero-grid{grid-template-columns:1fr;gap:25px;text-align:center}.subtitle{margin:auto}.buttons{justify-content:center}.collection-cards{grid-template-columns:1fr}.gallery-grid{grid-template-columns:repeat(2,1fr);gap:10px}section{padding:65px 0}.cta{padding:35px 20px}.section-head h2{font-size:36px}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Zê Decor — Festa na Mesa (Pocket) e Decoração Padrão. Decorações que transformam momentos.">
+
+  <title>Zê Decor | Decorações que transformam momentos</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background: #f7f0e5;
+      color: #3b2418;
+    }
+
+    header {
+      background: #f7f0e5;
+      padding: 25px 20px 15px;
+      text-align: center;
+      border-bottom: 1px solid #dfcfb8;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header img {
+      width: 150px;
+      max-width: 45%;
+      height: auto;
+    }
+
+    nav {
+      margin-top: 18px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    nav a {
+      color: #3b2418;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav a:hover {
+      color: #a67c38;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 70px 20px 55px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 7vw, 72px);
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      letter-spacing: 1px;
+    }
+
+    .section {
+      padding: 65px 24px;
+      max-width: 1250px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 38px;
+      margin-bottom: 40px;
+      letter-spacing: 1px;
+    }
+
+    .collections {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .collection-card {
+      background: #eadfce;
+      border-radius: 18px;
+      padding: 40px 25px;
+      text-align: center;
+      border: 1px solid #ddcdb5;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .collection-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(60, 35, 20, 0.12);
+    }
+
+    .collection-card h3 {
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+
+    .collection-card p {
+      font-size: 15px;
+      opacity: 0.8;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      display: block;
+      border-radius: 16px;
+      cursor: pointer;
+      background: #eadfce;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.015);
+      box-shadow: 0 10px 25px rgba(60, 35, 20, 0.15);
+    }
+
+    .reviews {
+      text-align: center;
+      background: #eee3d2;
+      border-radius: 22px;
+      padding: 55px 25px;
+    }
+
+    .stars {
+      font-size: 30px;
+      letter-spacing: 5px;
+      margin: 15px 0;
+      color: #b78b42;
+    }
+
+    .reviews p {
+      font-size: 17px;
+      line-height: 1.7;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 14px 25px;
+      background: #3b2418;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    .button:hover {
+      background: #a67c38;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact p {
+      font-size: 18px;
+      line-height: 1.9;
+    }
+
+    footer {
+      text-align: center;
+      padding: 35px 20px;
+      border-top: 1px solid #dfcfb8;
+      font-size: 14px;
+    }
+
+    /* Modal da foto */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      inset: 0;
+      background: rgba(20, 12, 8, 0.92);
+      align-items: center;
+      justify-content: center;
+      padding: 25px;
+    }
+
+    .modal.active {
+      display: flex;
+    }
+
+    .modal img {
+      max-width: 95%;
+      max-height: 90vh;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: white;
+      font-size: 42px;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    @media (max-width: 800px) {
+      .collections {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gallery img {
+        height: 280px;
+      }
+
+      nav {
+        gap: 15px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery img {
+        height: 380px;
+      }
+
+      .section {
+        padding: 45px 15px;
+      }
+    }
+  </style>
 </head>
+
 <body>
+
 <header>
-  <div class="container nav">
-    <a class="brand" href="#inicio">ZÊ DECOR</a>
-    <nav class="navlinks">
-      <a href="#colecoes">COLEÇÕES</a>
-      <a href="#avaliacoes">AVALIAÇÕES</a>
-      <a href="#galeria">GALERIA</a>
-      <a href="#contato">CONTATO</a>
-    </nav>
-  </div>
+  <img src="logo-ze-decor.png" alt="Zê Decor">
+
+  <nav>
+    <a href="#colecoes">COLEÇÕES</a>
+    <a href="#avaliacoes">AVALIAÇÕES</a>
+    <a href="#galeria">GALERIA</a>
+    <a href="#contato">CONTATO</a>
+  </nav>
 </header>
 
-<main id="inicio">
 <section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <div class="kicker">FESTA • POCKET • CELEBRATION</div>
-      <h1>Decorações que transformam momentos.</h1>
-      <p class="subtitle">Celebramos cada ocasião com decorações elegantes, cuidadosamente planejadas para criar memórias especiais.</p>
-      <div class="buttons">
-        <a class="btn primary" href="https://wa.me/5521981485015?text=Ol%C3%A1%2C%20Z%C3%AA%20Decor!%20Gostaria%20de%20fazer%20uma%20reserva." target="_blank">RESERVE PELO WHATSAPP</a>
-        <a class="btn" href="#colecoes">CONHEÇA AS COLEÇÕES</a>
-      </div>
+  <h1>ZÊ DECOR</h1>
+  <p>Decorações que transformam momentos.</p>
+</section>
+
+<!-- COLEÇÕES -->
+<section class="section" id="colecoes">
+
+  <h2 class="section-title">COLEÇÕES</h2>
+
+  <div class="collections">
+
+    <div class="collection-card" onclick="document.getElementById('pocket').scrollIntoView({behavior:'smooth'})">
+      <h3>FESTA NA MESA (POCKET)</h3>
+      <p>Momentos especiais em cada detalhe.</p>
     </div>
-    <div><img class="logo" src="logo-ze-decor.png" alt="Logo Zê Decor"></div>
+
+    <div class="collection-card" onclick="document.getElementById('padrao').scrollIntoView({behavior:'smooth'})">
+      <h3>DECORAÇÃO PADRÃO</h3>
+      <p>Decorações completas para celebrar.</p>
+    </div>
+
   </div>
 </section>
 
-<section id="colecoes">
-  <div class="container">
-    <div class="section-head">
-      <span>COLEÇÕES</span>
-      <h2>Nossas decorações</h2>
-    </div>
-    <div class="collection-cards">
-      <article class="collection-card">
-        <div class="tag">POCKET</div>
-        <h3>FESTA NA MESA (POCKET)</h3>
-        <a class="btn" href="#festa-na-mesa">VER FOTOS</a>
-      </article>
-      <article class="collection-card">
-        <div class="tag">DECORAÇÃO</div>
-        <h3>DECORAÇÃO PADRÃO</h3>
-        <a class="btn" href="#decoracao-padrao">VER FOTOS</a>
-      </article>
-    </div>
+<!-- FESTA NA MESA -->
+<section class="section" id="pocket">
+
+  <h2 class="section-title">FESTA NA MESA (POCKET)</h2>
+
+  <div class="gallery">
+
+    <img src="pocket-01.webp" alt="" onclick="openModal(this.src)">
+    <img src="pocket-02.webp" alt="" onclick="openModal(this.src)">
+    <img src="pocket-03.webp" alt="" onclick="openModal(this.src)">
+    <img src="pocket-04.webp" alt="" onclick="openModal(this.src)">
+    <img src="pocket-05.webp" alt="" onclick="openModal(this.src)">
+    <img src="pocket-06.webp" alt="" onclick="openModal(this.src)">
+
   </div>
+
 </section>
 
-<section id="festa-na-mesa" class="gallery-section">
-  <div class="container">
-    <div class="section-head">
-      <span>COLEÇÃO</span>
-      <h2>FESTA NA MESA (POCKET)</h2>
-    </div>
-    <div class="gallery-grid">
-      <figure class="gallery-item"><img src="imagens/pocket-01.webp" alt="Festa na Mesa Pocket — verde e prata" loading="lazy"></figure>
-      <figure class="gallery-item"><img src="imagens/pocket-02.webp" alt="Festa na Mesa Pocket — verde e dourado" loading="lazy"></figure>
-      <figure class="gallery-item"><img src="imagens/pocket-03.webp" alt="Festa na Mesa Pocket — verde e prata para casamento" loading="lazy"></figure>
-      <figure class="gallery-item"><img src="imagens/pocket-04.webp" alt="Festa na Mesa Pocket — verde e dourado" loading="lazy"></figure>
-      <figure class="gallery-item"><img src="imagens/pocket-05.webp" alt="Festa na Mesa Pocket — rosa e branco" loading="lazy"></figure>
-      <figure class="gallery-item"><img src="imagens/pocket-06.webp" alt="Festa na Mesa Pocket — preto e prata" loading="lazy"></figure>
-    </div>
+<!-- DECORAÇÃO PADRÃO -->
+<section class="section" id="padrao">
+
+  <h2 class="section-title">DECORAÇÃO PADRÃO</h2>
+
+  <div class="gallery">
+
+    <img src="padrao-01.webp" alt="" onclick="openModal(this.src)">
+    <img src="padrao-02.webp" alt="" onclick="openModal(this.src)">
+    <img src="padrao-03.webp" alt="" onclick="openModal(this.src)">
+    <img src="padrao-04.webp" alt="" onclick="openModal(this.src)">
+    <img src="padrao-05.webp" alt="" onclick="openModal(this.src)">
+    <img src="padrao-06.webp" alt="" onclick="openModal(this.src)">
+
   </div>
+
 </section>
 
-<section id="decoracao-padrao" class="gallery-section">
-  <div class="container">
-    <div class="section-head">
-      <span>COLEÇÃO</span>
-      <h2>DECORAÇÃO PADRÃO</h2>
-    </div>
-    <div class="gallery-grid">
-      <figure class="gallery-item"><img src="imagens/padrao-01.webp" alt="Decoração padrão — rosa e branco" loading="lazy"></figure>
-      <figure class="gallery-item"><img src="imagens/padrao-02.webp" alt="Decoração padrão — verde e vinho" loading="lazy"></figure>
-      <figure class="gallery-item"><img src="imagens/padrao-03.webp" alt="Decoração padrão — verde, dourado e branco" loading="lazy"></figure>
-      <figure class="gallery-item"><img src="imagens/padrao-04.webp" alt="Decoração padrão — chá de bebê verde" loading="lazy"></figure>
-      <figure class="gallery-item"><img src="imagens/padrao-05.webp" alt="Decoração padrão — chá de bebê" loading="lazy"></figure>
-      <figure class="gallery-item"><img src="imagens/padrao-06.webp" alt="Decoração padrão — ursinhos" loading="lazy"></figure>
-    </div>
+<!-- AVALIAÇÕES -->
+<section class="section" id="avaliacoes">
+
+  <div class="reviews">
+
+    <h2 class="section-title">O QUE NOSSOS CLIENTES DIZEM</h2>
+
+    <div class="stars">★★★★★</div>
+
+    <p>
+      Avaliações reais de clientes que escolheram a ZÊ DECOR
+      para transformar momentos especiais.
+    </p>
+
+    <a
+      class="button"
+      href="https://www.google.com/maps/search/?api=1&query=Z%C3%A9+Pegue+e+Monte+Rio+de+Janeiro"
+      target="_blank"
+    >
+      VER TODAS AS AVALIAÇÕES NO GOOGLE
+    </a>
+
   </div>
+
 </section>
 
-<div class="quote"><p>“Seu momento merece uma decoração pensada para ser lembrada.”</p></div>
+<!-- GALERIA -->
+<section class="section" id="galeria">
 
-<section id="avaliacoes" class="reviews">
-  <div class="container">
-    <div class="section-head">
-      <span>AVALIAÇÕES</span>
-      <h2>O que nossos clientes dizem</h2>
-    </div>
-    <div class="review-box">
-      <div class="stars">★★★★★</div>
-      <h3>Avaliações no Google</h3>
-      <p>Confira as avaliações de clientes que já escolheram a ZÊ DECOR para seus momentos especiais.</p>
-      <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Z%C3%AA%20Decor%20Rio%20de%20Janeiro" target="_blank">VER AVALIAÇÕES NO GOOGLE</a>
-    </div>
+  <h2 class="section-title">GALERIA</h2>
+
+  <div class="gallery">
+
+    <img src="pocket-01.webp" alt="" onclick="openModal(this.src)">
+    <img src="pocket-02.webp" alt="" onclick="openModal(this.src)">
+    <img src="pocket-03.webp" alt="" onclick="openModal(this.src)">
+    <img src="padrao-01.webp" alt="" onclick="openModal(this.src)">
+    <img src="padrao-02.webp" alt="" onclick="openModal(this.src)">
+    <img src="padrao-03.webp" alt="" onclick="openModal(this.src)">
+
   </div>
+
 </section>
 
-<section id="galeria">
-  <div class="container">
-    <div class="section-head">
-      <span>GALERIA</span>
-      <h2>Inspire-se</h2>
-    </div>
-    <div class="gallery-grid">
-      <figure class="gallery-item"><img src="imagens/pocket-01.webp" alt="Zê Decor — Festa na Mesa" loading="lazy"></figure>
-      <figure class="gallery-item"><img src="imagens/pocket-05.webp" alt="Zê Decor — Festa na Mesa rosa" loading="lazy"></figure>
-      <figure class="gallery-item"><img src="imagens/pocket-06.webp" alt="Zê Decor — Festa na Mesa preto e prata" loading="lazy"></figure>
-      <figure class="gallery-item"><img src="imagens/padrao-01.webp" alt="Zê Decor — decoração padrão rosa" loading="lazy"></figure>
-      <figure class="gallery-item"><img src="imagens/padrao-03.webp" alt="Zê Decor — decoração padrão verde e dourado" loading="lazy"></figure>
-      <figure class="gallery-item"><img src="imagens/padrao-05.webp" alt="Zê Decor — decoração padrão chá de bebê" loading="lazy"></figure>
-    </div>
-  </div>
-</section>
+<!-- CONTATO -->
+<section class="section contact" id="contato">
 
-<section id="contato">
-  <div class="container">
-    <div class="cta">
-      <h2>Vamos celebrar?</h2>
-      <p>Consulte disponibilidade e escolha a decoração ideal para o seu momento.</p>
-      <div class="buttons" style="justify-content:center">
-        <a class="btn primary" href="https://wa.me/5521981485015?text=Ol%C3%A1%2C%20Z%C3%AA%20Decor!%20Quero%20consultar%20uma%20decora%C3%A7%C3%A3o." target="_blank">FALAR NO WHATSAPP</a>
-        <a class="btn" href="https://instagram.com/zedecorofc" target="_blank">INSTAGRAM</a>
-      </div>
-      <div class="location-list">
-        <div class="location">BARRA</div><div class="location">RECREIO</div><div class="location">JACAREPAGUÁ</div><div class="location">VARGENS</div>
-      </div>
-    </div>
-  </div>
-</section>
-</main>
+  <h2 class="section-title">CONTATO</h2>
 
-<div class="lightbox" id="lightbox" aria-hidden="true"><button class="close" aria-label="Fechar">×</button><img id="lightbox-img" src="" alt=""></div>
+  <p>
+    📍 Barra • Recreio • Jacarepaguá • Vargens
+  </p>
+
+  <p>
+    Instagram: @zedecorofc
+  </p>
+
+  <a
+    class="button"
+    href="https://wa.me/5521999999999"
+    target="_blank"
+  >
+    FALAR PELO WHATSAPP
+  </a>
+
+</section>
 
 <footer>
-  <div class="container footer-row">
-    <div>© ZÊ DECOR</div>
-    <div>Barra • Recreio • Jacarepaguá • Vargens</div>
-  </div>
+  © ZÊ DECOR — FESTA • POCKET • CELEBRATION
 </footer>
+
+<!-- MODAL -->
+<div class="modal" id="modal" onclick="closeModal()">
+
+  <span class="close">&times;</span>
+
+  <img id="modalImage" src="" alt="">
+
+</div>
+
 <script>
-const box=document.getElementById('lightbox'),boxImg=document.getElementById('lightbox-img');
-document.querySelectorAll('.gallery-item img').forEach(img=>img.addEventListener('click',()=>{boxImg.src=img.src;boxImg.alt=img.alt;box.classList.add('open');box.setAttribute('aria-hidden','false')}));
-function closeBox(){box.classList.remove('open');box.setAttribute('aria-hidden','true');boxImg.src=''}
-box.addEventListener('click',e=>{if(e.target===box||e.target.classList.contains('close'))closeBox()});
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeBox()});
+
+  function openModal(src) {
+    document.getElementById("modalImage").src = src;
+    document.getElementById("modal").classList.add("active");
+  }
+
+  function closeModal() {
+    document.getElementById("modal").classList.remove("active");
+  }
+
+  document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+      closeModal();
+    }
+  });
+
 </script>
+
 </body>
 </html>
