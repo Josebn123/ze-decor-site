@@ -16,9 +16,14 @@
 
   <meta name="robots" content="index, follow">
 
-  <link rel="canonical" href="https://zedecor.com.br/">
+  <link
+    rel="canonical"
+    href="https://zedecor.com.br/"
+  >
 
-  <!-- OPEN GRAPH -->
+  <!-- =====================================================
+       OPEN GRAPH
+  ====================================================== -->
 
   <meta
     property="og:title"
@@ -32,7 +37,10 @@
 
   <meta property="og:type" content="website">
 
-  <meta property="og:url" content="https://zedecor.com.br/">
+  <meta
+    property="og:url"
+    content="https://zedecor.com.br/"
+  >
 
   <meta
     property="og:image"
@@ -43,9 +51,15 @@
 
   <meta property="og:site_name" content="ZÊ DECOR">
 
-  <!-- TWITTER / SOCIAL -->
 
-  <meta name="twitter:card" content="summary_large_image">
+  <!-- =====================================================
+       TWITTER / SOCIAL
+  ====================================================== -->
+
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
 
   <meta
     name="twitter:title"
@@ -65,9 +79,39 @@
   <meta name="theme-color" content="#ded0bf">
 
 
-  <!-- FONTES -->
+  <!-- =====================================================
+       GOOGLE ANALYTICS 4
+       ID: G-VKD28CEX7S
+  ====================================================== -->
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-VKD28CEX7S"
+  ></script>
+
+  <script>
+
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-VKD28CEX7S');
+
+  </script>
+
+
+  <!-- =====================================================
+       FONTES
+  ====================================================== -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
 
   <link
     rel="preconnect"
@@ -80,6 +124,10 @@
     rel="stylesheet"
   >
 
+
+  <!-- =====================================================
+       ESTILOS
+  ====================================================== -->
 
   <style>
 
@@ -152,7 +200,7 @@
 
     /* =====================================================
        LATERAIS COM RELEVO
-    ===================================================== */
+    ====================================================== */
 
     .lateral {
 
@@ -241,7 +289,7 @@
 
     /* =====================================================
        CONTAINER
-    ===================================================== */
+    ====================================================== */
 
     .container {
 
@@ -258,7 +306,7 @@
 
     /* =====================================================
        HEADER
-    ===================================================== */
+    ====================================================== */
 
     header {
 
@@ -347,7 +395,7 @@
 
     /* =====================================================
        HERO
-    ===================================================== */
+    ====================================================== */
 
     .hero {
 
@@ -379,9 +427,7 @@
 
 
     .hero-content {
-
       max-width: 690px;
-
     }
 
 
@@ -416,9 +462,7 @@
 
 
     .hero h1 span {
-
       color: #e4c78f;
-
     }
 
 
@@ -550,7 +594,7 @@
 
     /* =====================================================
        SEÇÕES
-    ===================================================== */
+    ====================================================== */
 
     section {
 
@@ -621,7 +665,7 @@
 
     /* =====================================================
        COLEÇÕES
-    ===================================================== */
+    ====================================================== */
 
     .collections {
 
@@ -769,7 +813,7 @@
 
     /* =====================================================
        GALERIAS
-    ===================================================== */
+    ====================================================== */
 
     .gallery-section {
 
@@ -848,7 +892,7 @@
 
     /* =====================================================
        AVALIAÇÕES
-    ===================================================== */
+    ====================================================== */
 
     .reviews {
 
@@ -987,7 +1031,7 @@
 
     /* =====================================================
        CONTATO
-    ===================================================== */
+    ====================================================== */
 
     .contact {
 
@@ -1137,7 +1181,7 @@
 
     /* =====================================================
        FOOTER
-    ===================================================== */
+    ====================================================== */
 
     footer {
 
@@ -1247,7 +1291,7 @@
 
     /* =====================================================
        LIGHTBOX
-    ===================================================== */
+    ====================================================== */
 
     .lightbox {
 
@@ -1328,7 +1372,7 @@
 
     /* =====================================================
        TABLET
-    ===================================================== */
+    ====================================================== */
 
     @media (max-width: 1000px) {
 
@@ -1379,7 +1423,7 @@
 
     /* =====================================================
        CELULAR
-    ===================================================== */
+    ====================================================== */
 
     @media (max-width: 680px) {
 
@@ -1591,9 +1635,7 @@
     <div class="container nav">
 
       <a href="#inicio" class="brand">
-
         ZÊ <span>DECOR</span>
-
       </a>
 
 
@@ -1624,40 +1666,28 @@
 
   <main id="inicio">
 
-
     <section class="hero">
-
 
       <div class="container">
 
-
         <div class="hero-content">
 
-
           <div class="hero-kicker">
-
             FESTA • POCKET • CELEBRATION
-
           </div>
 
 
           <h1>
-
             Decorações que
-
             <span>transformam</span>
-
             momentos.
-
           </h1>
 
 
           <p>
-
             Pegue e Monte, montagem e decorações pensadas
             para transformar cada celebração em uma
             experiência especial.
-
           </p>
 
 
@@ -1680,16 +1710,14 @@
 
           <div class="hero-buttons">
 
-
             <a
               class="btn btn-primary"
               href="https://wa.me/5521981545015?text=Ol%C3%A1!%20Quero%20conhecer%20as%20decora%C3%A7%C3%B5es%20da%20Z%C3%8A%20DECOR"
               target="_blank"
               rel="noopener"
+              onclick="gtag('event', 'click_whatsapp', {event_category: 'contato', event_label: 'Hero - Falar no WhatsApp'});"
             >
-
               FALAR NO WHATSAPP
-
             </a>
 
 
@@ -1697,20 +1725,14 @@
               class="btn btn-outline"
               href="#colecoes"
             >
-
               CONHECER COLEÇÕES
-
             </a>
-
 
           </div>
 
-
         </div>
 
-
       </div>
-
 
     </section>
 
@@ -1724,29 +1746,21 @@
       id="colecoes"
     >
 
-
       <div class="container">
 
-
         <div class="section-header">
-
 
           <div class="eyebrow">
             ZÊ DECOR
           </div>
 
-
           <h2 class="section-name">
             NOSSAS COLEÇÕES
           </h2>
 
-
           <p class="section-phrase">
-
             Do Pegue e Monte à decoração completa.
-
           </p>
-
 
         </div>
 
@@ -1757,7 +1771,6 @@
           <!-- POCKET -->
 
           <article class="collection-card">
-
 
             <div class="collection-image">
 
@@ -1772,32 +1785,23 @@
 
             <div class="collection-body">
 
-
               <h3>
                 FESTA NA MESA — POCKET
               </h3>
 
-
               <p>
-
                 Pegue e Monte ou deixe a
                 <strong>montagem com nossa equipe.</strong>
-
               </p>
-
 
               <a
                 class="collection-link"
                 href="#pocket"
               >
-
                 VER DECORAÇÕES →
-
               </a>
 
-
             </div>
-
 
           </article>
 
@@ -1805,7 +1809,6 @@
           <!-- MAIORES -->
 
           <article class="collection-card">
-
 
             <div class="collection-image">
 
@@ -1820,41 +1823,30 @@
 
             <div class="collection-body">
 
-
               <h3>
                 DECORAÇÕES MAIORES
               </h3>
 
-
               <p>
-
                 Decorações completas com
                 <strong>montagem realizada pela nossa equipe.</strong>
-
               </p>
-
 
               <a
                 class="collection-link"
                 href="#maiores"
               >
-
                 VER DECORAÇÕES →
-
               </a>
 
-
             </div>
-
 
           </article>
 
 
         </div>
 
-
       </div>
-
 
     </section>
 
@@ -1868,107 +1860,78 @@
       id="pocket"
     >
 
-
       <div class="container">
 
-
         <div class="section-header">
-
 
           <div class="eyebrow">
             PEGUE E MONTE • MONTAGEM
           </div>
 
-
           <h2 class="section-name">
             FESTA NA MESA — POCKET
           </h2>
 
-
           <p class="section-phrase">
-
             Escolha entre Pegue e Monte ou montagem com a ZÊ DECOR.
-
           </p>
-
 
         </div>
 
 
         <div class="gallery-grid">
 
-
           <div class="gallery-card">
-
             <img
               src="pocket-01.webp"
               alt="Decoração Pocket ZÊ DECOR"
               loading="lazy"
             >
-
           </div>
 
-
           <div class="gallery-card">
-
             <img
               src="pocket-02.webp"
               alt="Decoração Pocket ZÊ DECOR"
               loading="lazy"
             >
-
           </div>
 
-
           <div class="gallery-card">
-
             <img
               src="pocket-03.webp"
               alt="Decoração Pocket ZÊ DECOR"
               loading="lazy"
             >
-
           </div>
 
-
           <div class="gallery-card">
-
             <img
               src="pocket-04.webp"
               alt="Decoração Pocket ZÊ DECOR"
               loading="lazy"
             >
-
           </div>
 
-
           <div class="gallery-card">
-
             <img
               src="pocket-05.webp"
               alt="Decoração Pocket ZÊ DECOR"
               loading="lazy"
             >
-
           </div>
 
-
           <div class="gallery-card">
-
             <img
               src="pocket-06.webp"
               alt="Decoração Pocket ZÊ DECOR"
               loading="lazy"
             >
-
           </div>
-
 
         </div>
 
-
       </div>
-
 
     </section>
 
@@ -1982,107 +1945,78 @@
       id="maiores"
     >
 
-
       <div class="container">
 
-
         <div class="section-header">
-
 
           <div class="eyebrow">
             MONTAGEM • CELEBRATION
           </div>
 
-
           <h2 class="section-name">
             DECORAÇÕES MAIORES
           </h2>
 
-
           <p class="section-phrase">
-
             Decorações completas com montagem da nossa equipe.
-
           </p>
-
 
         </div>
 
 
         <div class="gallery-grid">
 
-
           <div class="gallery-card">
-
             <img
               src="padrao-01.webp"
               alt="Decoração maior ZÊ DECOR"
               loading="lazy"
             >
-
           </div>
 
-
           <div class="gallery-card">
-
             <img
               src="padrao-02.webp"
               alt="Decoração maior ZÊ DECOR"
               loading="lazy"
             >
-
           </div>
 
-
           <div class="gallery-card">
-
             <img
               src="padrao-03.webp"
               alt="Decoração maior ZÊ DECOR"
               loading="lazy"
             >
-
           </div>
 
-
           <div class="gallery-card">
-
             <img
               src="padrao-04.webp"
               alt="Decoração maior ZÊ DECOR"
               loading="lazy"
             >
-
           </div>
 
-
           <div class="gallery-card">
-
             <img
               src="padrao-05.webp"
               alt="Decoração maior ZÊ DECOR"
               loading="lazy"
             >
-
           </div>
 
-
           <div class="gallery-card">
-
             <img
               src="padrao-06.webp"
               alt="Decoração maior ZÊ DECOR"
               loading="lazy"
             >
-
           </div>
-
 
         </div>
 
-
       </div>
-
 
     </section>
 
@@ -2096,50 +2030,38 @@
       id="avaliacoes"
     >
 
-
       <div class="container">
 
-
         <div class="section-header">
-
 
           <div class="eyebrow">
             EXPERIÊNCIAS REAIS
           </div>
 
-
           <h2 class="section-name">
             O QUE NOSSOS CLIENTES DIZEM
           </h2>
 
-
           <p class="section-phrase">
-
             Experiências reais de quem celebrou com a ZÊ DECOR.
-
           </p>
-
 
         </div>
 
 
         <div class="review-top">
 
-
           <div class="stars">
             ★★★★★
           </div>
-
 
           <div class="review-score">
             5,0
           </div>
 
-
           <div class="review-source">
             Avaliação no Google
           </div>
-
 
         </div>
 
@@ -2149,71 +2071,53 @@
 
           <article class="review-card">
 
-
             <div class="stars">
               ★★★★★
             </div>
 
-
             <p>
-
               “Tudo perfeito! Foram super solícitos do início ao fim.”
-
             </p>
-
 
             <div class="review-author">
               — Elen C.
             </div>
 
-
           </article>
 
 
           <article class="review-card">
 
-
             <div class="stars">
               ★★★★★
             </div>
 
-
             <p>
-
               “Muito capricho, pontualidade...
               a ornamentação da mesa ficou linda demais.”
-
             </p>
-
 
             <div class="review-author">
               — Karina R.
             </div>
 
-
           </article>
 
 
           <article class="review-card">
 
-
             <div class="stars">
               ★★★★★
             </div>
 
-
             <p>
-
               “Trabalho de qualidade...
               comunicação efetiva e ótimo resultado.”
-
             </p>
-
 
             <div class="review-author">
               — Debora
             </div>
-
 
           </article>
 
@@ -2223,24 +2127,19 @@
 
         <div class="reviews-button">
 
-
           <a
             class="btn btn-primary"
             href="https://maps.app.goo.gl/9QeNwJrUB7NkjPqy6"
             target="_blank"
             rel="noopener"
+            onclick="gtag('event', 'click_google_reviews', {event_category: 'avaliacoes', event_label: 'Ver avaliações no Google'});"
           >
-
             VER TODAS AS AVALIAÇÕES NO GOOGLE
-
           </a>
-
 
         </div>
 
-
       </div>
-
 
     </section>
 
@@ -2254,34 +2153,25 @@
       id="contato"
     >
 
-
       <div class="container">
-
 
         <div class="contact-box">
 
-
           <div class="contact-grid">
 
-
             <div>
-
 
               <div class="eyebrow">
                 CONTATO
               </div>
 
-
               <h2>
                 Sua festa começa aqui.
               </h2>
 
-
               <p class="contact-text">
-
                 Pegue e Monte, montagem ou decoração completa?
                 Fale com a ZÊ DECOR.
-
               </p>
 
 
@@ -2294,15 +2184,13 @@
                     WhatsApp
                   </strong>
 
-
                   <a
                     href="https://wa.me/5521981545015"
                     target="_blank"
                     rel="noopener"
+                    onclick="gtag('event', 'click_whatsapp', {event_category: 'contato', event_label: 'Contato - WhatsApp'});"
                   >
-
                     (21) 98154-5015
-
                   </a>
 
                 </div>
@@ -2314,15 +2202,13 @@
                     Instagram
                   </strong>
 
-
                   <a
                     href="https://instagram.com/zedecorofc"
                     target="_blank"
                     rel="noopener"
+                    onclick="gtag('event', 'click_instagram', {event_category: 'contato', event_label: 'Instagram'});"
                   >
-
                     @zedecorofc
-
                   </a>
 
                 </div>
@@ -2334,11 +2220,8 @@
                     Atendimento
                   </strong>
 
-
                   <span>
-
                     Barra • Recreio • Jacarepaguá • Vargens
-
                   </span>
 
                 </div>
@@ -2346,46 +2229,34 @@
 
               </div>
 
-
             </div>
 
 
             <div class="contact-cta">
-
 
               <a
                 class="btn btn-primary"
                 href="https://wa.me/5521981545015?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20para%20minha%20festa"
                 target="_blank"
                 rel="noopener"
+                onclick="gtag('event', 'click_orcamento', {event_category: 'contato', event_label: 'Pedir orçamento'});"
               >
-
                 PEDIR ORÇAMENTO
-
               </a>
 
-
               <small>
-
                 Pegue e Monte • Montagem • Decoração completa
-
               </small>
-
 
             </div>
 
-
           </div>
-
 
         </div>
 
-
       </div>
 
-
     </section>
-
 
   </main>
 
@@ -2396,64 +2267,47 @@
 
   <footer>
 
-
     <div class="container">
-
 
       <div class="footer-content">
 
-
         <div>
 
-
           <div class="footer-brand">
-
             ZÊ <span>DECOR</span>
-
           </div>
-
 
           <div class="footer-tagline">
-
             DECORAÇÕES QUE TRANSFORMAM MOMENTOS.
-
           </div>
-
 
         </div>
 
 
         <div class="footer-links">
 
-
           <a href="#colecoes">
             COLEÇÕES
           </a>
-
 
           <a href="#avaliacoes">
             AVALIAÇÕES
           </a>
 
-
           <a href="#contato">
             CONTATO
           </a>
-
 
           <a
             href="https://instagram.com/zedecorofc"
             target="_blank"
             rel="noopener"
+            onclick="gtag('event', 'click_instagram', {event_category: 'contato', event_label: 'Footer Instagram'});"
           >
-
             INSTAGRAM
-
           </a>
 
-
         </div>
-
 
       </div>
 
@@ -2464,9 +2318,7 @@
 
       </div>
 
-
     </div>
-
 
   </footer>
 
@@ -2480,24 +2332,19 @@
     id="lightbox"
   >
 
-
     <button
       class="lightbox-close"
       id="lightboxClose"
       aria-label="Fechar imagem"
     >
-
       ×
-
     </button>
-
 
     <img
       id="lightboxImage"
       src=""
       alt="Imagem ampliada da decoração"
     >
-
 
   </div>
 
@@ -2598,6 +2445,11 @@
 
           document.body.style.overflow =
             "hidden";
+
+          gtag('event', 'visualizacao_imagem', {
+            event_category: 'galeria',
+            event_label: img.alt
+          });
 
         });
 
