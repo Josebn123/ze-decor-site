@@ -7,47 +7,29 @@
 
   <title>Zé Pegue e Monte | Pegue e Monte e Decoração de Festas no Rio</title>
 
-  <meta name="description"
-    content="Zé Pegue e Monte no Rio de Janeiro: pegue e monte, decoração de aniversário, festas pocket e montagem de decoração na Barra, Recreio, Jacarepaguá e Vargens.">
-
+  <meta name="description" content="Zé Pegue e Monte no Rio de Janeiro: pegue e monte, decoração de aniversário, festas pocket e montagem de decoração na Barra, Recreio, Jacarepaguá e Vargens.">
   <meta name="robots" content="index, follow">
-
   <link rel="canonical" href="https://zepeguemonte.com.br/">
 
-  <meta property="og:title"
-    content="Zé Pegue e Monte | Pegue e Monte, Montagem e Decoração de Festas">
-
-  <meta property="og:description"
-    content="Pegue e Monte, montagem e decoração de festas que transformam momentos.">
-
+  <meta property="og:title" content="Zé Pegue e Monte | Pegue e Monte, Montagem e Decoração de Festas">
+  <meta property="og:description" content="Pegue e Monte, montagem e decoração de festas que transformam momentos.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://zepeguemonte.com.br/">
-
-  <meta property="og:image"
-    content="https://zepeguemonte.com.br/logo-ze-pegue-e-monte.png">
-
+  <meta property="og:image" content="https://zepeguemonte.com.br/logo-ze-pegue-e-monte.png">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Zé Pegue e Monte">
 
   <meta name="twitter:card" content="summary_large_image">
-
-  <meta name="twitter:title"
-    content="Zé Pegue e Monte | Pegue e Monte, Montagem e Decoração de Festas">
-
-  <meta name="twitter:description"
-    content="Pegue e Monte, montagem e decoração de festas que transformam momentos.">
-
-  <meta name="twitter:image"
-    content="https://zepeguemonte.com.br/logo-ze-pegue-e-monte.png">
-
+  <meta name="twitter:title" content="Zé Pegue e Monte | Pegue e Monte e Decoração de Festas">
+  <meta name="twitter:description" content="Pegue e Monte, montagem e decoração de festas que transformam momentos.">
+  <meta name="twitter:image" content="https://zepeguemonte.com.br/logo-ze-pegue-e-monte.png">
   <meta name="theme-color" content="#fff8ed">
 
   <link rel="icon" type="image/png" href="logo-ze-pegue-e-monte.png">
 
-  <!-- GOOGLE ANALYTICS + GOOGLE ADS -->
+  <!-- GOOGLE ANALYTICS E GOOGLE ADS -->
 
-  <script async
-    src="https://www.googletagmanager.com/gtag/js?id=G-VKD28CEX7S"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VKD28CEX7S"></script>
 
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -68,8 +50,6 @@
       }
     }
 
-    /* GOOGLE ADS — CONVERSÃO DE LEAD */
-
     function reportGoogleAdsConversion() {
       if (typeof gtag === "function") {
         gtag("event", "conversion", {
@@ -84,24 +64,14 @@
   <!-- FONTES -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-    rel="stylesheet"
-  >
-
-  <!-- CSS -->
+  <!-- ESTILOS -->
 
   <style>
     :root {
-      /* Identidade visual pastel da Zé Pegue e Monte */
-
       --fendi: #e6e9d9;
       --fendi-claro: #f0f0e3;
       --fendi-suave: #eaf3f5;
@@ -116,7 +86,6 @@
 
       --verde-oliva: #62744f;
       --verde-salvia: #a6b397;
-
       --azul-pastel: #9ecbd8;
       --rosa-pastel: #f2b0bd;
       --amarelo-pastel: #f4c86f;
@@ -140,7 +109,6 @@
       color: var(--marrom);
       line-height: 1.6;
       overflow-x: hidden;
-
       background: linear-gradient(
         180deg,
         #fff8ed 0%,
@@ -160,7 +128,7 @@
       display: block;
     }
 
-    /* LATERAIS */
+    /* ELEMENTOS DECORATIVOS LATERAIS */
 
     .lateral {
       position: fixed;
@@ -246,7 +214,6 @@
       left: 0;
       width: 100%;
       z-index: 100;
-
       background: rgba(247,240,231,.91);
       backdrop-filter: blur(16px);
       border-bottom: 1px solid rgba(98,116,79,.24);
@@ -264,11 +231,9 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-
       font-family: "Playfair Display", serif;
       font-size: 20px;
       font-weight: 700;
-
       color: var(--marrom);
       white-space: nowrap;
     }
@@ -383,11 +348,9 @@
       min-height: 50px;
       padding: 0 23px;
       border-radius: 999px;
-
       display: inline-flex;
       align-items: center;
       justify-content: center;
-
       font-size: 10px;
       font-weight: 700;
       letter-spacing: .10em;
@@ -537,11 +500,14 @@
 
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(3,1fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 20px;
+      align-items: start;
     }
 
     .gallery-card {
+      width: 100%;
+      aspect-ratio: 3 / 4;
       overflow: hidden;
       cursor: pointer;
       background: white;
@@ -549,8 +515,6 @@
       border-radius: 30px 12px 30px 12px;
       box-shadow: 0 12px 32px rgba(61,73,51,.10);
       transition: .3s ease;
-
-      /* CORREÇÃO: impede o cartão de esticar até a altura dos vizinhos */
       align-self: start;
     }
 
@@ -561,10 +525,10 @@
 
     .gallery-card img {
       width: 100%;
-      height: auto;
+      height: 100%;
       display: block;
-      object-fit: contain;
-      background: var(--fendi-suave);
+      object-fit: fill;
+      background: transparent;
     }
 
     /* AVALIAÇÕES */
@@ -760,7 +724,7 @@
 
     .footer-tagline {
       margin-top: 5px;
-      color: rgba(255,255,255,.52);
+      color: rgba(255,255,255,.70);
       font-size: 9px;
       letter-spacing: .12em;
     }
@@ -781,7 +745,7 @@
       padding-top: 21px;
       text-align: center;
       font-size: 10px;
-      color: rgba(255,255,255,.40);
+      color: rgba(255,255,255,.65);
     }
 
     /* AMPLIAR FOTOS */
@@ -825,7 +789,7 @@
       cursor: pointer;
     }
 
-    /* RESPONSIVO */
+    /* RESPONSIVIDADE */
 
     @media (max-width:1000px) {
       .lateral {
@@ -841,7 +805,7 @@
       }
 
       .gallery-grid {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
       .review-grid {
@@ -868,6 +832,7 @@
 
       .nav {
         min-height: 68px;
+        gap: 8px;
       }
 
       .brand {
@@ -969,7 +934,7 @@
 
 <body>
 
-  <!-- LATERAIS -->
+  <!-- ELEMENTOS DECORATIVOS -->
 
   <div class="lateral lateral-esquerda"></div>
   <div class="lateral lateral-direita"></div>
@@ -979,11 +944,7 @@
   <header>
     <div class="container nav">
 
-      <a
-        href="#inicio"
-        class="brand"
-        data-track="brand_click"
-      >
+      <a href="#inicio" class="brand" data-track="brand_click">
         <img
           class="brand-logo"
           src="logo-ze-pegue-e-monte.png"
@@ -1058,7 +1019,6 @@
             </a>
 
           </div>
-
         </div>
       </div>
     </section>
@@ -1070,11 +1030,7 @@
 
         <div class="section-header">
           <div class="eyebrow">Zé Pegue e Monte</div>
-
-          <h2 class="section-name">
-            NOSSAS COLEÇÕES
-          </h2>
-
+          <h2 class="section-name">NOSSAS COLEÇÕES</h2>
           <p class="section-phrase">
             Do Pegue e Monte à decoração completa.
           </p>
@@ -1083,7 +1039,6 @@
         <div class="collection-grid">
 
           <article class="collection-card">
-
             <div class="collection-image">
               <img
                 src="pocket-01.webp"
@@ -1093,7 +1048,6 @@
             </div>
 
             <div class="collection-body">
-
               <h3>FESTA NA MESA — POCKET</h3>
 
               <p>
@@ -1109,12 +1063,10 @@
               >
                 VER DECORAÇÕES →
               </a>
-
             </div>
           </article>
 
           <article class="collection-card">
-
             <div class="collection-image">
               <img
                 src="padrao-03.webp"
@@ -1124,7 +1076,6 @@
             </div>
 
             <div class="collection-body">
-
               <h3>DECORAÇÕES MAIORES</h3>
 
               <p>
@@ -1140,7 +1091,6 @@
               >
                 VER DECORAÇÕES →
               </a>
-
             </div>
           </article>
 
@@ -1154,19 +1104,12 @@
       <div class="container">
 
         <div class="section-header">
-
-          <div class="eyebrow">
-            PEGUE E MONTE • MONTAGEM
-          </div>
-
-          <h2 class="section-name">
-            FESTA NA MESA — POCKET
-          </h2>
+          <div class="eyebrow">PEGUE E MONTE • MONTAGEM</div>
+          <h2 class="section-name">FESTA NA MESA — POCKET</h2>
 
           <p class="section-phrase">
             Escolha entre Pegue e Monte ou montagem com a nossa equipe.
           </p>
-
         </div>
 
         <div class="gallery-grid">
@@ -1223,25 +1166,18 @@
       </div>
     </section>
 
-    <!-- GALERIA DE DECORAÇÕES MAIORES -->
+    <!-- DECORAÇÕES MAIORES -->
 
     <section class="gallery-section" id="maiores">
       <div class="container">
 
         <div class="section-header">
-
-          <div class="eyebrow">
-            MONTAGEM • CELEBRATION
-          </div>
-
-          <h2 class="section-name">
-            DECORAÇÕES MAIORES
-          </h2>
+          <div class="eyebrow">MONTAGEM • CELEBRATION</div>
+          <h2 class="section-name">DECORAÇÕES MAIORES</h2>
 
           <p class="section-phrase">
             Decorações completas com montagem da nossa equipe.
           </p>
-
         </div>
 
         <div class="gallery-grid">
@@ -1304,19 +1240,12 @@
       <div class="container">
 
         <div class="section-header">
-
-          <div class="eyebrow">
-            EXPERIÊNCIAS REAIS
-          </div>
-
-          <h2 class="section-name">
-            O QUE NOSSOS CLIENTES DIZEM
-          </h2>
+          <div class="eyebrow">EXPERIÊNCIAS REAIS</div>
+          <h2 class="section-name">O QUE NOSSOS CLIENTES DIZEM</h2>
 
           <p class="section-phrase">
             Experiências de clientes que celebraram com a Zé Pegue e Monte.
           </p>
-
         </div>
 
         <div class="review-top">
@@ -1348,7 +1277,6 @@
         </div>
 
         <div class="reviews-button">
-
           <a
             class="btn btn-primary"
             href="https://maps.app.goo.gl/9QeNwJrUB7NkjPqy6"
@@ -1359,7 +1287,6 @@
           >
             VER TODAS AS AVALIAÇÕES NO GOOGLE
           </a>
-
         </div>
 
       </div>
@@ -1374,9 +1301,7 @@
           <div class="contact-grid">
 
             <div>
-
               <div class="eyebrow">CONTATO</div>
-
               <h2>Sua festa começa aqui.</h2>
 
               <p class="contact-text">
@@ -1388,7 +1313,6 @@
 
                 <div class="contact-item">
                   <strong>WhatsApp</strong>
-
                   <a
                     href="https://wa.me/5521981545015"
                     target="_blank"
@@ -1402,7 +1326,6 @@
 
                 <div class="contact-item">
                   <strong>Instagram</strong>
-
                   <a
                     href="https://instagram.com/zepeguemonte"
                     target="_blank"
@@ -1416,17 +1339,13 @@
 
                 <div class="contact-item">
                   <strong>Atendimento</strong>
-
-                  <span>
-                    Barra • Recreio • Jacarepaguá • Vargens
-                  </span>
+                  <span>Barra • Recreio • Jacarepaguá • Vargens</span>
                 </div>
 
               </div>
             </div>
 
             <div class="contact-cta">
-
               <a
                 class="btn btn-primary"
                 href="https://wa.me/5521981545015?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20para%20minha%20festa"
@@ -1441,12 +1360,10 @@
               <small>
                 Pegue e Monte • Montagem • Decoração completa
               </small>
-
             </div>
 
           </div>
         </div>
-
       </div>
     </section>
 
@@ -1460,7 +1377,6 @@
       <div class="footer-content">
 
         <div>
-
           <div class="footer-brand">
 
             <img
@@ -1472,31 +1388,18 @@
               loading="lazy"
             >
 
-            <span class="footer-brand-name">
-              Zé Pegue e Monte
-            </span>
-
+            <span class="footer-brand-name">Zé Pegue e Monte</span>
           </div>
 
           <div class="footer-tagline">
             DECORAÇÕES QUE TRANSFORMAM MOMENTOS.
           </div>
-
         </div>
 
         <div class="footer-links">
-
-          <a href="#colecoes" data-track="footer_colecoes">
-            COLEÇÕES
-          </a>
-
-          <a href="#avaliacoes" data-track="footer_avaliacoes">
-            AVALIAÇÕES
-          </a>
-
-          <a href="#contato" data-track="footer_contato">
-            CONTATO
-          </a>
+          <a href="#colecoes" data-track="footer_colecoes">COLEÇÕES</a>
+          <a href="#avaliacoes" data-track="footer_avaliacoes">AVALIAÇÕES</a>
+          <a href="#contato" data-track="footer_contato">CONTATO</a>
 
           <a
             href="https://instagram.com/zepeguemonte"
@@ -1507,7 +1410,6 @@
           >
             INSTAGRAM
           </a>
-
         </div>
 
       </div>
@@ -1519,24 +1421,20 @@
     </div>
   </footer>
 
-  <!-- LIGHTBOX: AMPLIAR IMAGENS -->
+  <!-- LIGHTBOX -->
 
   <div class="lightbox" id="lightbox">
-
     <button
       class="lightbox-close"
       id="lightboxClose"
       aria-label="Fechar imagem"
-    >
-      ×
-    </button>
+    >×</button>
 
     <img
       id="lightboxImage"
       src=""
       alt="Imagem ampliada da decoração"
     >
-
   </div>
 
   <!-- DADOS ESTRUTURADOS -->
@@ -1585,11 +1483,9 @@
   }
   </script>
 
-  <!-- JAVASCRIPT -->
+  <!-- RASTREAMENTO E INTERAÇÕES -->
 
   <script>
-    /* RASTREAMENTO DOS CLIQUES */
-
     document
       .querySelectorAll("[data-track]")
       .forEach(function(element) {
@@ -1609,16 +1505,11 @@
             parameters.collection = collection;
           }
 
-          /* GOOGLE ANALYTICS */
-
           trackEvent(eventName, parameters);
-
-          /* GOOGLE ADS: CLIQUES DE WHATSAPP */
 
           if (eventName.indexOf("whatsapp_") === 0) {
             reportGoogleAdsConversion();
           }
-
         });
       });
 
@@ -1644,7 +1535,6 @@
             image_name: img.getAttribute("src") || "",
             image_alt: img.getAttribute("alt") || ""
           });
-
         });
       });
 
@@ -1681,17 +1571,13 @@
             entry.isIntersecting &&
             !trackedSections.has(entry.target.id)
           ) {
-
             trackedSections.add(entry.target.id);
 
             trackEvent("section_view", {
               section: entry.target.id
             });
-
           }
-
         });
-
       },
       {
         threshold: 0.35
@@ -1703,7 +1589,6 @@
       .forEach(function(section) {
         sectionObserver.observe(section);
       });
-
   </script>
 
 </body>
